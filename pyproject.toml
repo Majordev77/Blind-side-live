@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Live football for blind and low-vision fans: synthetic match pipeline and agents"
 requires-python = ">=3.11"
 license = { text = "MIT" }
+dependencies = ["agent-framework-core>=1.23", "agent-framework-openai>=1.17", "mcp>=2.3"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "jsonschema>=4.20"]
