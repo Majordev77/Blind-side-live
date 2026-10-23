@@ -53,7 +53,6 @@ BLOCKED = {
     "Osimhen", "Iheanacho", "Okocha", "Kanu", "Lookman", "Ndidi", "Iwobi",
     "Chukwueze", "Aribo", "Onuachu", "Awoniyi", "Bassey", "Ighalo", "Yobo",
     "Enyeama", "Eze", "Okafor", "Danjuma", "Adeyemi", "Mikel", "Obi", "Musa",
-    "Ronaldo", "Messi", "Salah", "Kane", "Saka", "Haaland", "Rice", "Foden",
 }
 
 # 18-man squad: shirt number, position, role in a 4-3-3 starting eleven.

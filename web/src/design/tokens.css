@@ -1,0 +1,113 @@
+/*
+ * Blind Side design tokens: "floodlights at night".
+ * A dark pitch, chalk lines and type, and light only where it carries match
+ * information. The listener's club is warm amber and the opponent cool cyan,
+ * matching the warm and hollow tones they hear. Text pairs meet WCAG AAA.
+ * Owner: designer (docs/design/SPEC.md).
+ */
+
+:root {
+  --night: #0b0d0c;
+  --night-2: #151917;
+  --night-3: #202622;
+  --line: #343b37;
+  --chalk: #f3f1ea;
+  --chalk-2: #a9aba4;
+  --home: #f2a93b;     /* the listener's club */
+  --away: #5cc8d9;     /* the opponent */
+  --alert: #ff6b4a;    /* goals and big chances */
+  --pass: #7bd88f;     /* verifier pass */
+
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+  --text-body: 1.125rem;   /* 18px minimum for reading */
+  --text-caption: 1.375rem;
+  --text-label: 0.875rem;
+  --text-score: clamp(4rem, 22vw, 7rem);
+  --touch: 56px;
+  --radius: 14px;
+  --gutter: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+
+  color-scheme: dark;
+}
+
+/* High-contrast light theme, for low-vision users who read better on white. */
+:root[data-theme="light"] {
+  --night: #ffffff;
+  --night-2: #f1f2ee;
+  --night-3: #e2e5df;
+  --line: #5c635e;
+  --chalk: #0b0d0c;
+  --chalk-2: #3d433f;
+  --home: #8a4b00;
+  --away: #005e6e;
+  --alert: #b3261e;
+  --pass: #1d6b30;
+  color-scheme: light;
+}
+
+:root[data-text="large"] {
+  --text-body: 1.375rem;
+  --text-caption: 1.75rem;
+  --text-label: 1.0625rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--chalk);
+  font: 400 var(--text-body) / 1.5 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--chalk);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.label {
+  font: 600 var(--text-label) / 1 var(--font-display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--chalk-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
