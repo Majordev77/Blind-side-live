@@ -1,0 +1,2766 @@
+[
+ {
+  "moment_id": "mo_0001",
+  "t": 15.59,
+  "clock": 15.59,
+  "minute": 1,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_126",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000007"
+  ],
+  "facts": {
+   "passer": "Bram Ekpo",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 32,
+   "completion_chance_pct": 57
+  }
+ },
+ {
+  "moment_id": "mo_0002",
+  "t": 52.18,
+  "clock": 52.18,
+  "minute": 1,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000020"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 8,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0003",
+  "t": 86.92,
+  "clock": 86.92,
+  "minute": 2,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.35,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000034"
+  ],
+  "facts": {
+   "team": "OST",
+   "player": "Jide Okeke",
+   "first_shot_on_target_of_match": true
+  }
+ },
+ {
+  "moment_id": "mo_0004",
+  "t": 299.79,
+  "clock": 299.79,
+  "minute": 5,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [
+   "p_124"
+  ],
+  "evidence": [
+   "ev_000100",
+   "ev_000101",
+   "ev_000102",
+   "ev_000103",
+   "ev_000104",
+   "ev_000105",
+   "ev_000107",
+   "ev_000108",
+   "ev_000109",
+   "ev_000110"
+  ],
+  "facts": {
+   "team": "CRV",
+   "passes_in_move": 10,
+   "seconds_in_possession": 38
+  }
+ },
+ {
+  "moment_id": "mo_0005",
+  "t": 341.37,
+  "clock": 341.37,
+  "minute": 6,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_143"
+  ],
+  "evidence": [
+   "ev_000114",
+   "ev_000115",
+   "ev_000116",
+   "ev_000117",
+   "ev_000118",
+   "ev_000119",
+   "ev_000120",
+   "ev_000121",
+   "ev_000122",
+   "ev_000123"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 37
+  }
+ },
+ {
+  "moment_id": "mo_0006",
+  "t": 377.22,
+  "clock": 377.22,
+  "minute": 7,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_125",
+   "p_127"
+  ],
+  "evidence": [
+   "ev_000134"
+  ],
+  "facts": {
+   "passer": "Uche Saltire",
+   "receiver": "Lanre Varga",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 22,
+   "completion_chance_pct": 63
+  }
+ },
+ {
+  "moment_id": "mo_0007",
+  "t": 397.31,
+  "clock": 397.31,
+  "minute": 7,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_129"
+  ],
+  "evidence": [
+   "ev_000143"
+  ],
+  "facts": {
+   "player": "Dayo Okwu",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 10,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0008",
+  "t": 437.01,
+  "clock": 437.01,
+  "minute": 8,
+  "type": "big_chance",
+  "class": 2,
+  "score": 0.94,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000161"
+  ],
+  "facts": {
+   "shooter": "Somto Odum",
+   "team": "CRV",
+   "outcome": "blocked",
+   "chance_quality_pct": 39,
+   "shot_distance_m": 3
+  }
+ },
+ {
+  "moment_id": "mo_0009",
+  "t": 451.48,
+  "clock": 451.48,
+  "minute": 8,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "CRV",
+  "players": [
+   "p_125"
+  ],
+  "evidence": [
+   "ev_000143",
+   "ev_000155",
+   "ev_000168"
+  ],
+  "facts": {
+   "player": "Uche Saltire",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 21,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0010",
+  "t": 531.38,
+  "clock": 531.38,
+  "minute": 9,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "CRV",
+  "players": [
+   "p_127"
+  ],
+  "evidence": [
+   "ev_000143",
+   "ev_000155",
+   "ev_000168",
+   "ev_000202"
+  ],
+  "facts": {
+   "player": "Lanre Varga",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 26,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0011",
+  "t": 643.25,
+  "clock": 643.25,
+  "minute": 11,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_125",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000235"
+  ],
+  "facts": {
+   "passer": "Uche Saltire",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 17,
+   "completion_chance_pct": 65
+  }
+ },
+ {
+  "moment_id": "mo_0012",
+  "t": 854.32,
+  "clock": 854.32,
+  "minute": 15,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_147"
+  ],
+  "evidence": [
+   "ev_000304"
+  ],
+  "facts": {
+   "player": "Wale Halloran",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 24,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0013",
+  "t": 951.9,
+  "clock": 951.9,
+  "minute": 16,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_144"
+  ],
+  "evidence": [
+   "ev_000331",
+   "ev_000332",
+   "ev_000333",
+   "ev_000334",
+   "ev_000335",
+   "ev_000336",
+   "ev_000337",
+   "ev_000338",
+   "ev_000339",
+   "ev_000340"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 35
+  }
+ },
+ {
+  "moment_id": "mo_0014",
+  "t": 955.73,
+  "clock": 955.73,
+  "minute": 16,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_147",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000341"
+  ],
+  "facts": {
+   "passer": "Wale Halloran",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 23,
+   "completion_chance_pct": 65
+  }
+ },
+ {
+  "moment_id": "mo_0015",
+  "t": 961.66,
+  "clock": 961.66,
+  "minute": 17,
+  "type": "sprint",
+  "class": 3,
+  "score": 0.25,
+  "team": "OST",
+  "players": [
+   "p_147"
+  ],
+  "evidence": [
+   "ev_000343"
+  ],
+  "facts": {
+   "player": "Wale Halloran",
+   "team": "OST",
+   "speed_kmh": 30.2
+  }
+ },
+ {
+  "moment_id": "mo_0016",
+  "t": 987.86,
+  "clock": 987.86,
+  "minute": 17,
+  "type": "drought",
+  "class": 3,
+  "score": 0.35,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000356"
+  ],
+  "facts": {
+   "team": "OST",
+   "minutes_without_a_shot": 15
+  }
+ },
+ {
+  "moment_id": "mo_0017",
+  "t": 1047.15,
+  "clock": 1047.15,
+  "minute": 18,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_138"
+  ],
+  "evidence": [
+   "ev_000370",
+   "ev_000371",
+   "ev_000372",
+   "ev_000373",
+   "ev_000374",
+   "ev_000375",
+   "ev_000376",
+   "ev_000377",
+   "ev_000378",
+   "ev_000379"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 33
+  }
+ },
+ {
+  "moment_id": "mo_0018",
+  "t": 1099.04,
+  "clock": 1099.04,
+  "minute": 19,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_125",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000395"
+  ],
+  "facts": {
+   "passer": "Uche Saltire",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 27,
+   "completion_chance_pct": 65
+  }
+ },
+ {
+  "moment_id": "mo_0019",
+  "t": 1168.36,
+  "clock": 1168.36,
+  "minute": 20,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000407",
+   "ev_000408",
+   "ev_000409",
+   "ev_000410",
+   "ev_000412",
+   "ev_000413",
+   "ev_000414",
+   "ev_000415",
+   "ev_000416",
+   "ev_000420"
+  ],
+  "facts": {
+   "team": "CRV",
+   "passes_in_move": 10,
+   "seconds_in_possession": 45
+  }
+ },
+ {
+  "moment_id": "mo_0020",
+  "t": 1212.22,
+  "clock": 1212.22,
+  "minute": 21,
+  "type": "sprint",
+  "class": 3,
+  "score": 0.25,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000434"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "speed_kmh": 30.2
+  }
+ },
+ {
+  "moment_id": "mo_0021",
+  "t": 1212.22,
+  "clock": 1212.22,
+  "minute": 21,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_000346",
+   "ev_000352",
+   "ev_000362",
+   "ev_000383",
+   "ev_000405"
+  ],
+  "facts": {
+   "team": "CRV",
+   "shots_last_5min": 0,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 0,
+   "passes_last_5min": 21,
+   "opponent_passes_last_5min": 39
+  }
+ },
+ {
+  "moment_id": "mo_0022",
+  "t": 1285.96,
+  "clock": 1285.96,
+  "minute": 22,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000408",
+   "ev_000409",
+   "ev_000410",
+   "ev_000440",
+   "ev_000441"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "down",
+   "pressing_change_pct": -36,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0023",
+  "t": 1321.12,
+  "clock": 1321.12,
+  "minute": 23,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [
+   "p_126"
+  ],
+  "evidence": [
+   "ev_000455",
+   "ev_000456",
+   "ev_000457",
+   "ev_000458",
+   "ev_000459",
+   "ev_000460",
+   "ev_000461",
+   "ev_000463",
+   "ev_000464",
+   "ev_000465"
+  ],
+  "facts": {
+   "team": "CRV",
+   "passes_in_move": 10,
+   "seconds_in_possession": 35
+  }
+ },
+ {
+  "moment_id": "mo_0024",
+  "t": 1344.82,
+  "clock": 1344.82,
+  "minute": 23,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000474"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 6,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0025",
+  "t": 1389.06,
+  "clock": 1389.06,
+  "minute": 24,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_000445",
+   "ev_000446",
+   "ev_000473"
+  ],
+  "facts": {
+   "team": "CRV",
+   "direction": "down",
+   "pressing_change_pct": -31,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0026",
+  "t": 1406.46,
+  "clock": 1406.46,
+  "minute": 24,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_129",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000494"
+  ],
+  "facts": {
+   "passer": "Dayo Okwu",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 26,
+   "completion_chance_pct": 57
+  }
+ },
+ {
+  "moment_id": "mo_0027",
+  "t": 1447.44,
+  "clock": 1447.44,
+  "minute": 25,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_145",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000508"
+  ],
+  "facts": {
+   "passer": "Tobi Verhoef",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 26,
+   "completion_chance_pct": 57
+  }
+ },
+ {
+  "moment_id": "mo_0028",
+  "t": 1579.67,
+  "clock": 1579.67,
+  "minute": 27,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_147"
+  ],
+  "evidence": [
+   "ev_000549"
+  ],
+  "facts": {
+   "player": "Wale Halloran",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 18,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0029",
+  "t": 1668.69,
+  "clock": 1668.69,
+  "minute": 28,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000509",
+   "ev_000535",
+   "ev_000549",
+   "ev_000558",
+   "ev_000567"
+  ],
+  "facts": {
+   "team": "OST",
+   "shots_last_5min": 2,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 1,
+   "passes_last_5min": 21,
+   "opponent_passes_last_5min": 25
+  }
+ },
+ {
+  "moment_id": "mo_0030",
+  "t": 1688.96,
+  "clock": 1688.96,
+  "minute": 29,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_147",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000588"
+  ],
+  "facts": {
+   "passer": "Wale Halloran",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 21,
+   "completion_chance_pct": 59
+  }
+ },
+ {
+  "moment_id": "mo_0031",
+  "t": 1706.5,
+  "clock": 1706.5,
+  "minute": 29,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "OST",
+  "players": [
+   "p_145"
+  ],
+  "evidence": [
+   "ev_000549",
+   "ev_000577",
+   "ev_000596"
+  ],
+  "facts": {
+   "player": "Tobi Verhoef",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 23,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0032",
+  "t": 1717.28,
+  "clock": 1717.28,
+  "minute": 29,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "OST",
+  "players": [
+   "p_147"
+  ],
+  "evidence": [
+   "ev_000549",
+   "ev_000577",
+   "ev_000596",
+   "ev_000603"
+  ],
+  "facts": {
+   "player": "Wale Halloran",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 32,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0033",
+  "t": 1726.41,
+  "clock": 1726.41,
+  "minute": 29,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "OST",
+  "players": [
+   "p_146",
+   "p_147"
+  ],
+  "evidence": [
+   "ev_000606",
+   "ev_000607",
+   "ev_000608"
+  ],
+  "facts": {
+   "scorer": "Jide Okeke",
+   "team": "OST",
+   "minute": 29,
+   "score_home": 0,
+   "score_away": 1,
+   "shot_distance_m": 10,
+   "shot_speed_kmh": 67,
+   "goals_for_scorer": 1,
+   "assist": "Wale Halloran"
+  }
+ },
+ {
+  "moment_id": "mo_0034",
+  "t": 1816.63,
+  "clock": 1816.63,
+  "minute": 31,
+  "type": "sprint",
+  "class": 3,
+  "score": 0.25,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000617"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "speed_kmh": 31.0
+  }
+ },
+ {
+  "moment_id": "mo_0035",
+  "t": 1831.7,
+  "clock": 1831.7,
+  "minute": 31,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.8,
+  "team": "OST",
+  "players": [
+   "p_145"
+  ],
+  "evidence": [
+   "ev_000577",
+   "ev_000596",
+   "ev_000603",
+   "ev_000624"
+  ],
+  "facts": {
+   "player": "Tobi Verhoef",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 31,
+   "turnovers_in_final_third_last_5min": 5
+  }
+ },
+ {
+  "moment_id": "mo_0036",
+  "t": 1864.99,
+  "clock": 1864.99,
+  "minute": 32,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_129",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000637"
+  ],
+  "facts": {
+   "passer": "Dayo Okwu",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 31,
+   "completion_chance_pct": 61
+  }
+ },
+ {
+  "moment_id": "mo_0037",
+  "t": 1933.99,
+  "clock": 1933.99,
+  "minute": 33,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000668"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "tackle",
+   "metres_from_goal": 23,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0038",
+  "t": 2070.98,
+  "clock": 2070.98,
+  "minute": 35,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_144",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000722"
+  ],
+  "facts": {
+   "passer": "Elio Nnadi",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 20,
+   "completion_chance_pct": 60
+  }
+ },
+ {
+  "moment_id": "mo_0039",
+  "t": 2073.93,
+  "clock": 2073.93,
+  "minute": 35,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000711",
+   "ev_000712",
+   "ev_000713",
+   "ev_000714",
+   "ev_000715",
+   "ev_000716",
+   "ev_000720",
+   "ev_000721",
+   "ev_000722",
+   "ev_000723"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 41
+  }
+ },
+ {
+  "moment_id": "mo_0040",
+  "t": 2081.96,
+  "clock": 2081.96,
+  "minute": 35,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000657",
+   "ev_000690",
+   "ev_000706"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "down",
+   "pressing_change_pct": -40,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0041",
+  "t": 2099.98,
+  "clock": 2099.98,
+  "minute": 35,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000624",
+   "ev_000649",
+   "ev_000733"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "won_by": "tackle",
+   "metres_from_goal": 33,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0042",
+  "t": 2154.99,
+  "clock": 2154.99,
+  "minute": 36,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000668",
+   "ev_000680",
+   "ev_000755"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 17,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0043",
+  "t": 2190.56,
+  "clock": 2190.56,
+  "minute": 37,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_126",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000766"
+  ],
+  "facts": {
+   "passer": "Bram Ekpo",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 19,
+   "completion_chance_pct": 56
+  }
+ },
+ {
+  "moment_id": "mo_0044",
+  "t": 2202.77,
+  "clock": 2202.77,
+  "minute": 37,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [
+   "p_129"
+  ],
+  "evidence": [
+   "ev_000758",
+   "ev_000759",
+   "ev_000760",
+   "ev_000762",
+   "ev_000763",
+   "ev_000764",
+   "ev_000766",
+   "ev_000768",
+   "ev_000769",
+   "ev_000770"
+  ],
+  "facts": {
+   "team": "CRV",
+   "passes_in_move": 10,
+   "seconds_in_possession": 48
+  }
+ },
+ {
+  "moment_id": "mo_0045",
+  "t": 2231.15,
+  "clock": 2231.15,
+  "minute": 38,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_000726",
+   "ev_000739",
+   "ev_000745",
+   "ev_000755",
+   "ev_000773"
+  ],
+  "facts": {
+   "team": "CRV",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 3,
+   "passes_last_5min": 27,
+   "opponent_passes_last_5min": 31
+  }
+ },
+ {
+  "moment_id": "mo_0046",
+  "t": 2351.54,
+  "clock": 2351.54,
+  "minute": 40,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000755",
+   "ev_000824"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 12,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0047",
+  "t": 2547.19,
+  "clock": 2547.19,
+  "minute": 43,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "CRV",
+  "players": [
+   "p_129"
+  ],
+  "evidence": [
+   "ev_000824",
+   "ev_000859",
+   "ev_000881"
+  ],
+  "facts": {
+   "player": "Dayo Okwu",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 12,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0048",
+  "t": 2642.57,
+  "clock": 2642.57,
+  "minute": 45,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000824",
+   "ev_000859",
+   "ev_000881",
+   "ev_000911"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 14,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0049",
+  "t": 2651.33,
+  "clock": 2651.33,
+  "minute": 45,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_125",
+   "p_129"
+  ],
+  "evidence": [
+   "ev_000916"
+  ],
+  "facts": {
+   "passer": "Uche Saltire",
+   "receiver": "Dayo Okwu",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 33,
+   "completion_chance_pct": 65
+  }
+ },
+ {
+  "moment_id": "mo_0050",
+  "t": 2719.24,
+  "clock": 2719.24,
+  "minute": 46,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_144",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000938"
+  ],
+  "facts": {
+   "passer": "Elio Nnadi",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 18,
+   "completion_chance_pct": 59
+  }
+ },
+ {
+  "moment_id": "mo_0051",
+  "t": 2799.83,
+  "clock": 2799.83,
+  "minute": 47,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "CRV",
+  "players": [
+   "p_129"
+  ],
+  "evidence": [
+   "ev_000881",
+   "ev_000911",
+   "ev_000927",
+   "ev_000964"
+  ],
+  "facts": {
+   "player": "Dayo Okwu",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 11,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0052",
+  "t": 2839.12,
+  "clock": 2839.12,
+  "minute": 48,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_143"
+  ],
+  "evidence": [
+   "ev_000969",
+   "ev_000970",
+   "ev_000971",
+   "ev_000972",
+   "ev_000973",
+   "ev_000974",
+   "ev_000975",
+   "ev_000976",
+   "ev_000977",
+   "ev_000978"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 36
+  }
+ },
+ {
+  "moment_id": "mo_0053",
+  "t": 2914.36,
+  "clock": 2773.83,
+  "minute": 47,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000945",
+   "ev_000990"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "down",
+   "pressing_change_pct": -50,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0054",
+  "t": 2992.67,
+  "clock": 2852.14,
+  "minute": 48,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_145"
+  ],
+  "evidence": [
+   "ev_001037"
+  ],
+  "facts": {
+   "player": "Tobi Verhoef",
+   "team": "OST",
+   "won_by": "tackle",
+   "metres_from_goal": 24,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0055",
+  "t": 3032.41,
+  "clock": 2891.87,
+  "minute": 49,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "CRV",
+  "players": [
+   "p_125",
+   "p_129"
+  ],
+  "evidence": [
+   "ev_001053",
+   "ev_001054",
+   "ev_001055"
+  ],
+  "facts": {
+   "scorer": "Uche Saltire",
+   "team": "CRV",
+   "minute": 49,
+   "score_home": 1,
+   "score_away": 1,
+   "shot_distance_m": 4,
+   "shot_speed_kmh": 39,
+   "goals_for_scorer": 1,
+   "finish": "header",
+   "assist": "Dayo Okwu"
+  }
+ },
+ {
+  "moment_id": "mo_0056",
+  "t": 3120.88,
+  "clock": 2980.35,
+  "minute": 50,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001019",
+   "ev_001020",
+   "ev_001021",
+   "ev_001023",
+   "ev_001024"
+  ],
+  "facts": {
+   "team": "CRV",
+   "direction": "up",
+   "pressing_change_pct": 36,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0057",
+  "t": 3166.64,
+  "clock": 3026.11,
+  "minute": 51,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_129"
+  ],
+  "evidence": [
+   "ev_001083"
+  ],
+  "facts": {
+   "player": "Dayo Okwu",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 23,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0058",
+  "t": 3417.06,
+  "clock": 3276.53,
+  "minute": 55,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_143",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001164"
+  ],
+  "facts": {
+   "passer": "Obinna Kerrigan",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 11,
+   "completion_chance_pct": 62
+  }
+ },
+ {
+  "moment_id": "mo_0059",
+  "t": 3483.82,
+  "clock": 3343.29,
+  "minute": 56,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001104",
+   "ev_001111",
+   "ev_001118",
+   "ev_001133"
+  ],
+  "facts": {
+   "team": "OST",
+   "shots_last_5min": 0,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 0,
+   "passes_last_5min": 15,
+   "opponent_passes_last_5min": 29
+  }
+ },
+ {
+  "moment_id": "mo_0060",
+  "t": 3490.82,
+  "clock": 3350.29,
+  "minute": 56,
+  "type": "drought",
+  "class": 3,
+  "score": 0.35,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001185"
+  ],
+  "facts": {
+   "team": "OST",
+   "minutes_without_a_shot": 15
+  }
+ },
+ {
+  "moment_id": "mo_0061",
+  "t": 3504.16,
+  "clock": 3363.63,
+  "minute": 57,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_145"
+  ],
+  "evidence": [
+   "ev_001191"
+  ],
+  "facts": {
+   "player": "Tobi Verhoef",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 24,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0062",
+  "t": 3645.93,
+  "clock": 3505.4,
+  "minute": 59,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_001236"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "tackle",
+   "metres_from_goal": 24,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0063",
+  "t": 3721.7,
+  "clock": 3581.17,
+  "minute": 60,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001191",
+   "ev_001259"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 6,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0064",
+  "t": 3732.85,
+  "clock": 3592.32,
+  "minute": 60,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_143",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001264"
+  ],
+  "facts": {
+   "passer": "Obinna Kerrigan",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 16,
+   "completion_chance_pct": 66
+  }
+ },
+ {
+  "moment_id": "mo_0065",
+  "t": 3735.46,
+  "clock": 3594.92,
+  "minute": 60,
+  "type": "sprint",
+  "class": 3,
+  "score": 0.25,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001265"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "speed_kmh": 31.7
+  }
+ },
+ {
+  "moment_id": "mo_0066",
+  "t": 3782.73,
+  "clock": 3642.2,
+  "minute": 61,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001258"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "down",
+   "pressing_change_pct": -67,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0067",
+  "t": 3933.09,
+  "clock": 3792.56,
+  "minute": 64,
+  "type": "drought",
+  "class": 3,
+  "score": 0.35,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001321"
+  ],
+  "facts": {
+   "team": "CRV",
+   "minutes_without_a_shot": 15
+  }
+ },
+ {
+  "moment_id": "mo_0068",
+  "t": 3938.84,
+  "clock": 3798.31,
+  "minute": 64,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "CRV",
+  "players": [
+   "p_126"
+  ],
+  "evidence": [
+   "ev_001323"
+  ],
+  "facts": {
+   "player": "Bram Ekpo",
+   "team": "CRV",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0069",
+  "t": 3941.3,
+  "clock": 3800.76,
+  "minute": 64,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [
+   "p_124"
+  ],
+  "evidence": [
+   "ev_001314",
+   "ev_001315",
+   "ev_001316",
+   "ev_001317",
+   "ev_001319",
+   "ev_001320",
+   "ev_001321",
+   "ev_001322",
+   "ev_001323",
+   "ev_001324"
+  ],
+  "facts": {
+   "team": "CRV",
+   "passes_in_move": 10,
+   "seconds_in_possession": 34
+  }
+ },
+ {
+  "moment_id": "mo_0070",
+  "t": 3947.37,
+  "clock": 3806.84,
+  "minute": 64,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "OST",
+  "players": [
+   "p_143"
+  ],
+  "evidence": [
+   "ev_001259",
+   "ev_001285",
+   "ev_001326"
+  ],
+  "facts": {
+   "player": "Obinna Kerrigan",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 26,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0071",
+  "t": 3996.02,
+  "clock": 3855.49,
+  "minute": 65,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_129",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_001348"
+  ],
+  "facts": {
+   "passer": "Dayo Okwu",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 23,
+   "completion_chance_pct": 58
+  }
+ },
+ {
+  "moment_id": "mo_0072",
+  "t": 4165.06,
+  "clock": 4024.53,
+  "minute": 68,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_153",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001409"
+  ],
+  "facts": {
+   "passer": "Kofi Ogunleye",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 20,
+   "completion_chance_pct": 56
+  }
+ },
+ {
+  "moment_id": "mo_0073",
+  "t": 4187.63,
+  "clock": 4047.09,
+  "minute": 68,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_143"
+  ],
+  "evidence": [
+   "ev_001416"
+  ],
+  "facts": {
+   "player": "Obinna Kerrigan",
+   "team": "OST",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0074",
+  "t": 4230.61,
+  "clock": 4090.08,
+  "minute": 69,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001376",
+   "ev_001377",
+   "ev_001421",
+   "ev_001427",
+   "ev_001428"
+  ],
+  "facts": {
+   "team": "CRV",
+   "direction": "down",
+   "pressing_change_pct": -37,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0075",
+  "t": 4277.37,
+  "clock": 4136.83,
+  "minute": 69,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_144"
+  ],
+  "evidence": [
+   "ev_001453"
+  ],
+  "facts": {
+   "player": "Elio Nnadi",
+   "team": "OST",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0076",
+  "t": 4289.21,
+  "clock": 4148.67,
+  "minute": 70,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_144"
+  ],
+  "evidence": [
+   "ev_001446",
+   "ev_001447",
+   "ev_001448",
+   "ev_001449",
+   "ev_001450",
+   "ev_001453",
+   "ev_001454",
+   "ev_001455",
+   "ev_001456",
+   "ev_001457"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 45
+  }
+ },
+ {
+  "moment_id": "mo_0077",
+  "t": 4318.63,
+  "clock": 4178.09,
+  "minute": 70,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "OST",
+  "players": [
+   "p_153"
+  ],
+  "evidence": [
+   "ev_001384",
+   "ev_001468"
+  ],
+  "facts": {
+   "player": "Kofi Ogunleye",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 31,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0078",
+  "t": 4364.91,
+  "clock": 4224.38,
+  "minute": 71,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_129"
+  ],
+  "evidence": [
+   "ev_001491"
+  ],
+  "facts": {
+   "player": "Dayo Okwu",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 16,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0079",
+  "t": 4384.35,
+  "clock": 4243.81,
+  "minute": 71,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_144"
+  ],
+  "evidence": [
+   "ev_001500"
+  ],
+  "facts": {
+   "team": "OST",
+   "team_shots": 10
+  }
+ },
+ {
+  "moment_id": "mo_0080",
+  "t": 4412.37,
+  "clock": 4271.84,
+  "minute": 72,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001466",
+   "ev_001467",
+   "ev_001474",
+   "ev_001475",
+   "ev_001481"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "up",
+   "pressing_change_pct": 33,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0081",
+  "t": 4471.58,
+  "clock": 4331.04,
+  "minute": 73,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "CRV",
+  "players": [
+   "p_136"
+  ],
+  "evidence": [
+   "ev_001491",
+   "ev_001516",
+   "ev_001529"
+  ],
+  "facts": {
+   "player": "Kelechi Akande",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 15,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0082",
+  "t": 4492.67,
+  "clock": 4352.14,
+  "minute": 73,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_125",
+   "p_136"
+  ],
+  "evidence": [
+   "ev_001537"
+  ],
+  "facts": {
+   "passer": "Uche Saltire",
+   "receiver": "Kelechi Akande",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 18,
+   "completion_chance_pct": 61
+  }
+ },
+ {
+  "moment_id": "mo_0083",
+  "t": 4509.14,
+  "clock": 4368.61,
+  "minute": 73,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001479",
+   "ev_001491",
+   "ev_001512",
+   "ev_001516",
+   "ev_001529"
+  ],
+  "facts": {
+   "team": "CRV",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 3,
+   "passes_last_5min": 25,
+   "opponent_passes_last_5min": 34
+  }
+ },
+ {
+  "moment_id": "mo_0084",
+  "t": 4623.6,
+  "clock": 4483.07,
+  "minute": 75,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "CRV",
+  "players": [
+   "p_136"
+  ],
+  "evidence": [
+   "ev_001574"
+  ],
+  "facts": {
+   "team": "CRV",
+   "team_shots": 10
+  }
+ },
+ {
+  "moment_id": "mo_0085",
+  "t": 4627.64,
+  "clock": 4487.11,
+  "minute": 75,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "CRV",
+  "players": [
+   "p_136"
+  ],
+  "evidence": [
+   "ev_001491",
+   "ev_001516",
+   "ev_001529",
+   "ev_001577"
+  ],
+  "facts": {
+   "player": "Kelechi Akande",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 9,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0086",
+  "t": 4654.92,
+  "clock": 4514.38,
+  "minute": 76,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "OST",
+  "players": [
+   "p_154",
+   "p_147"
+  ],
+  "evidence": [
+   "ev_001586",
+   "ev_001588",
+   "ev_001589"
+  ],
+  "facts": {
+   "scorer": "Tariq Lunde",
+   "team": "OST",
+   "minute": 76,
+   "score_home": 1,
+   "score_away": 2,
+   "shot_distance_m": 12,
+   "shot_speed_kmh": 84,
+   "goals_for_scorer": 1,
+   "assist": "Wale Halloran"
+  }
+ },
+ {
+  "moment_id": "mo_0087",
+  "t": 4709.2,
+  "clock": 4568.66,
+  "minute": 77,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.8,
+  "team": "CRV",
+  "players": [
+   "p_136"
+  ],
+  "evidence": [
+   "ev_001529",
+   "ev_001577",
+   "ev_001600",
+   "ev_001619"
+  ],
+  "facts": {
+   "player": "Kelechi Akande",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 22,
+   "turnovers_in_final_third_last_5min": 5
+  }
+ },
+ {
+  "moment_id": "mo_0088",
+  "t": 4720.08,
+  "clock": 4579.55,
+  "minute": 77,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.87,
+  "team": "CRV",
+  "players": [
+   "p_136"
+  ],
+  "evidence": [
+   "ev_001577",
+   "ev_001600",
+   "ev_001619",
+   "ev_001625"
+  ],
+  "facts": {
+   "player": "Kelechi Akande",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 8,
+   "turnovers_in_final_third_last_5min": 6
+  }
+ },
+ {
+  "moment_id": "mo_0089",
+  "t": 4722.88,
+  "clock": 4582.35,
+  "minute": 77,
+  "type": "sprint",
+  "class": 3,
+  "score": 0.25,
+  "team": "CRV",
+  "players": [
+   "p_136"
+  ],
+  "evidence": [
+   "ev_001627"
+  ],
+  "facts": {
+   "player": "Kelechi Akande",
+   "team": "CRV",
+   "speed_kmh": 30.2
+  }
+ },
+ {
+  "moment_id": "mo_0090",
+  "t": 4729.12,
+  "clock": 4588.59,
+  "minute": 77,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.94,
+  "team": "CRV",
+  "players": [
+   "p_135"
+  ],
+  "evidence": [
+   "ev_001600",
+   "ev_001619",
+   "ev_001625",
+   "ev_001632"
+  ],
+  "facts": {
+   "player": "Dario Tamsett",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 25,
+   "turnovers_in_final_third_last_5min": 7
+  }
+ },
+ {
+  "moment_id": "mo_0091",
+  "t": 4797.21,
+  "clock": 4656.68,
+  "minute": 78,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "CRV",
+  "players": [
+   "p_136",
+   "p_135"
+  ],
+  "evidence": [
+   "ev_001664",
+   "ev_001665",
+   "ev_001666"
+  ],
+  "facts": {
+   "scorer": "Kelechi Akande",
+   "team": "CRV",
+   "minute": 78,
+   "score_home": 2,
+   "score_away": 2,
+   "shot_distance_m": 10,
+   "shot_speed_kmh": 57,
+   "goals_for_scorer": 1,
+   "finish": "header",
+   "assist": "Dario Tamsett"
+  }
+ },
+ {
+  "moment_id": "mo_0092",
+  "t": 4894.0,
+  "clock": 4753.47,
+  "minute": 80,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 1.0,
+  "team": "CRV",
+  "players": [
+   "p_131"
+  ],
+  "evidence": [
+   "ev_001632",
+   "ev_001651",
+   "ev_001660",
+   "ev_001676"
+  ],
+  "facts": {
+   "player": "Nnamdi Abiola",
+   "team": "CRV",
+   "won_by": "tackle",
+   "metres_from_goal": 34,
+   "turnovers_in_final_third_last_5min": 8
+  }
+ },
+ {
+  "moment_id": "mo_0093",
+  "t": 4982.93,
+  "clock": 4842.4,
+  "minute": 81,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001709"
+  ],
+  "facts": {
+   "player": "Tariq Lunde",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 15,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0094",
+  "t": 4992.69,
+  "clock": 4852.15,
+  "minute": 81,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_143",
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001713"
+  ],
+  "facts": {
+   "passer": "Obinna Kerrigan",
+   "receiver": "Tariq Lunde",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 14,
+   "completion_chance_pct": 66
+  }
+ },
+ {
+  "moment_id": "mo_0095",
+  "t": 5059.83,
+  "clock": 4919.29,
+  "minute": 82,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001690",
+   "ev_001699",
+   "ev_001704",
+   "ev_001709",
+   "ev_001734"
+  ],
+  "facts": {
+   "team": "OST",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 1,
+   "passes_last_5min": 25,
+   "opponent_passes_last_5min": 17
+  }
+ },
+ {
+  "moment_id": "mo_0096",
+  "t": 5138.93,
+  "clock": 4998.39,
+  "minute": 84,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "OST",
+  "players": [
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001709",
+   "ev_001759"
+  ],
+  "facts": {
+   "player": "Tariq Lunde",
+   "team": "OST",
+   "won_by": "tackle",
+   "metres_from_goal": 22,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0097",
+  "t": 5146.74,
+  "clock": 5006.21,
+  "minute": 84,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "OST",
+  "players": [
+   "p_149",
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001761",
+   "ev_001762",
+   "ev_001763"
+  ],
+  "facts": {
+   "scorer": "Obinna Morrow",
+   "team": "OST",
+   "minute": 84,
+   "score_home": 2,
+   "score_away": 3,
+   "shot_distance_m": 32,
+   "shot_speed_kmh": 65,
+   "goals_for_scorer": 1,
+   "assist": "Tariq Lunde"
+  }
+ },
+ {
+  "moment_id": "mo_0098",
+  "t": 5228.72,
+  "clock": 5088.19,
+  "minute": 85,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "CRV",
+  "players": [
+   "p_125"
+  ],
+  "evidence": [
+   "ev_001778"
+  ],
+  "facts": {
+   "player": "Uche Saltire",
+   "team": "CRV",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0099",
+  "t": 5367.44,
+  "clock": 5226.91,
+  "minute": 88,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_131",
+   "p_126"
+  ],
+  "evidence": [
+   "ev_001826"
+  ],
+  "facts": {
+   "passer": "Nnamdi Abiola",
+   "receiver": "Bram Ekpo",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 17,
+   "completion_chance_pct": 63
+  }
+ },
+ {
+  "moment_id": "mo_0100",
+  "t": 5378.79,
+  "clock": 5238.25,
+  "minute": 88,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_135"
+  ],
+  "evidence": [
+   "ev_001832"
+  ],
+  "facts": {
+   "player": "Dario Tamsett",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 11,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0101",
+  "t": 5385.33,
+  "clock": 5244.8,
+  "minute": 88,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_142"
+  ],
+  "evidence": [
+   "ev_001837"
+  ],
+  "facts": {
+   "player": "Ruben Ugwu",
+   "team": "OST",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0102",
+  "t": 5416.23,
+  "clock": 5275.69,
+  "minute": 88,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001837",
+   "ev_001838",
+   "ev_001839",
+   "ev_001840",
+   "ev_001841",
+   "ev_001842",
+   "ev_001843",
+   "ev_001844",
+   "ev_001845",
+   "ev_001846"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 33
+  }
+ },
+ {
+  "moment_id": "mo_0103",
+  "t": 5419.52,
+  "clock": 5278.99,
+  "minute": 88,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_144",
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001847"
+  ],
+  "facts": {
+   "passer": "Elio Nnadi",
+   "receiver": "Tariq Lunde",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 20,
+   "completion_chance_pct": 60
+  }
+ },
+ {
+  "moment_id": "mo_0104",
+  "t": 5543.53,
+  "clock": 5403.0,
+  "minute": 91,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001825",
+   "ev_001832",
+   "ev_001849",
+   "ev_001873",
+   "ev_001883"
+  ],
+  "facts": {
+   "team": "CRV",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 1,
+   "passes_last_5min": 28,
+   "opponent_passes_last_5min": 39
+  }
+ },
+ {
+  "moment_id": "mo_0105",
+  "t": 5596.49,
+  "clock": 5455.95,
+  "minute": 91,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_149"
+  ],
+  "evidence": [
+   "ev_001912"
+  ],
+  "facts": {
+   "player": "Obinna Morrow",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 22,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0106",
+  "t": 5628.43,
+  "clock": 5487.89,
+  "minute": 92,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_125",
+   "p_136"
+  ],
+  "evidence": [
+   "ev_001928"
+  ],
+  "facts": {
+   "passer": "Uche Saltire",
+   "receiver": "Kelechi Akande",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 24,
+   "completion_chance_pct": 65
+  }
+ },
+ {
+  "moment_id": "mo_0107",
+  "t": 5695.57,
+  "clock": 5555.04,
+  "minute": 93,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "CRV",
+  "players": [
+   "p_124"
+  ],
+  "evidence": [
+   "ev_001959"
+  ],
+  "facts": {
+   "player": "Remi Anozie",
+   "team": "CRV",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0108",
+  "t": 5720.52,
+  "clock": 5579.99,
+  "minute": 93,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_136"
+  ],
+  "evidence": [
+   "ev_001968"
+  ],
+  "facts": {
+   "player": "Kelechi Akande",
+   "team": "CRV",
+   "won_by": "tackle",
+   "metres_from_goal": 18,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0109",
+  "t": 5915.1,
+  "clock": 5774.57,
+  "minute": 97,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_144"
+  ],
+  "evidence": [
+   "ev_002024"
+  ],
+  "facts": {
+   "player": "Elio Nnadi",
+   "team": "OST",
+   "completed_passes": 75
+  }
+ },
+ {
+  "moment_id": "mo_0110",
+  "t": 5939.85,
+  "clock": 5799.32,
+  "minute": 97,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001942",
+   "ev_001965",
+   "ev_001978",
+   "ev_001995",
+   "ev_002017"
+  ],
+  "facts": {
+   "team": "OST",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 0,
+   "passes_last_5min": 21,
+   "opponent_passes_last_5min": 21
+  }
+ },
+ {
+  "moment_id": "mo_0111",
+  "t": 5942.49,
+  "clock": 5801.96,
+  "minute": 97,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001997",
+   "ev_001998",
+   "ev_002024",
+   "ev_002026"
+  ],
+  "facts": {
+   "team": "CRV",
+   "direction": "down",
+   "pressing_change_pct": -39,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0112",
+  "t": 5962.33,
+  "clock": 5821.8,
+  "minute": 98,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_143",
+   "p_153"
+  ],
+  "evidence": [
+   "ev_002042"
+  ],
+  "facts": {
+   "passer": "Obinna Kerrigan",
+   "receiver": "Kofi Ogunleye",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 19,
+   "completion_chance_pct": 63
+  }
+ }
+]

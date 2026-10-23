@@ -1,0 +1,2448 @@
+[
+ {
+  "moment_id": "mo_0001",
+  "t": 72.03,
+  "clock": 72.03,
+  "minute": 2,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "ALD",
+  "players": [
+   "p_107",
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000025"
+  ],
+  "facts": {
+   "passer": "Soren Ibekwe",
+   "receiver": "Mateo Carrow",
+   "team": "ALD",
+   "difficulty": 4,
+   "distance_m": 18,
+   "completion_chance_pct": 63
+  }
+ },
+ {
+  "moment_id": "mo_0002",
+  "t": 78.66,
+  "clock": 78.66,
+  "minute": 2,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "ALD",
+  "players": [
+   "p_108"
+  ],
+  "evidence": [
+   "ev_000013",
+   "ev_000015",
+   "ev_000016",
+   "ev_000017",
+   "ev_000019",
+   "ev_000020",
+   "ev_000024",
+   "ev_000025",
+   "ev_000026",
+   "ev_000027"
+  ],
+  "facts": {
+   "team": "ALD",
+   "passes_in_move": 10,
+   "seconds_in_possession": 53
+  }
+ },
+ {
+  "moment_id": "mo_0003",
+  "t": 144.58,
+  "clock": 144.58,
+  "minute": 3,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "ALD",
+  "players": [
+   "p_111"
+  ],
+  "evidence": [
+   "ev_000051"
+  ],
+  "facts": {
+   "player": "Dayo Reyne",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 25,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0004",
+  "t": 158.66,
+  "clock": 158.66,
+  "minute": 3,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.35,
+  "team": "ALD",
+  "players": [
+   "p_107"
+  ],
+  "evidence": [
+   "ev_000057"
+  ],
+  "facts": {
+   "team": "ALD",
+   "player": "Soren Ibekwe",
+   "first_shot_on_target_of_match": true
+  }
+ },
+ {
+  "moment_id": "mo_0005",
+  "t": 259.61,
+  "clock": 259.61,
+  "minute": 5,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000051",
+   "ev_000061",
+   "ev_000099"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 30,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0006",
+  "t": 418.84,
+  "clock": 418.84,
+  "minute": 7,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "ALD",
+  "players": [
+   "p_108",
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000154"
+  ],
+  "facts": {
+   "passer": "Arlo Adeleke",
+   "receiver": "Mateo Carrow",
+   "team": "ALD",
+   "difficulty": 4,
+   "distance_m": 20,
+   "completion_chance_pct": 60
+  }
+ },
+ {
+  "moment_id": "mo_0007",
+  "t": 450.07,
+  "clock": 450.07,
+  "minute": 8,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000061",
+   "ev_000099",
+   "ev_000162"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 12,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0008",
+  "t": 546.64,
+  "clock": 546.64,
+  "minute": 10,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_146",
+   "p_145"
+  ],
+  "evidence": [
+   "ev_000194"
+  ],
+  "facts": {
+   "passer": "Jide Okeke",
+   "receiver": "Tobi Verhoef",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 34,
+   "completion_chance_pct": 56
+  }
+ },
+ {
+  "moment_id": "mo_0009",
+  "t": 756.26,
+  "clock": 756.26,
+  "minute": 13,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "ALD",
+  "players": [
+   "p_109",
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000256"
+  ],
+  "facts": {
+   "passer": "Kofi Hesketh",
+   "receiver": "Mateo Carrow",
+   "team": "ALD",
+   "difficulty": 4,
+   "distance_m": 27,
+   "completion_chance_pct": 61
+  }
+ },
+ {
+  "moment_id": "mo_0010",
+  "t": 759.75,
+  "clock": 759.75,
+  "minute": 13,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000190",
+   "ev_000199",
+   "ev_000220",
+   "ev_000233",
+   "ev_000248"
+  ],
+  "facts": {
+   "team": "OST",
+   "shots_last_5min": 2,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 0,
+   "passes_last_5min": 28,
+   "opponent_passes_last_5min": 13
+  }
+ },
+ {
+  "moment_id": "mo_0011",
+  "t": 808.21,
+  "clock": 808.21,
+  "minute": 14,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "OST",
+  "players": [
+   "p_145",
+   "p_143"
+  ],
+  "evidence": [
+   "ev_000269",
+   "ev_000270",
+   "ev_000271"
+  ],
+  "facts": {
+   "scorer": "Tobi Verhoef",
+   "team": "OST",
+   "minute": 14,
+   "score_home": 0,
+   "score_away": 1,
+   "shot_distance_m": 34,
+   "shot_speed_kmh": 91,
+   "goals_for_scorer": 1,
+   "assist": "Obinna Kerrigan"
+  }
+ },
+ {
+  "moment_id": "mo_0012",
+  "t": 902.93,
+  "clock": 902.93,
+  "minute": 16,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_000261",
+   "ev_000262"
+  ],
+  "facts": {
+   "team": "ALD",
+   "direction": "up",
+   "pressing_change_pct": 45,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0013",
+  "t": 927.09,
+  "clock": 927.09,
+  "minute": 16,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000254",
+   "ev_000255",
+   "ev_000282",
+   "ev_000283",
+   "ev_000284"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "down",
+   "pressing_change_pct": -30,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0014",
+  "t": 1054.35,
+  "clock": 1054.35,
+  "minute": 18,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_000280",
+   "ev_000293",
+   "ev_000324"
+  ],
+  "facts": {
+   "team": "ALD",
+   "shots_last_5min": 0,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 0,
+   "passes_last_5min": 25,
+   "opponent_passes_last_5min": 18
+  }
+ },
+ {
+  "moment_id": "mo_0015",
+  "t": 1102.27,
+  "clock": 1102.27,
+  "minute": 19,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "ALD",
+  "players": [
+   "p_108",
+   "p_111"
+  ],
+  "evidence": [
+   "ev_000351"
+  ],
+  "facts": {
+   "passer": "Arlo Adeleke",
+   "receiver": "Dayo Reyne",
+   "team": "ALD",
+   "difficulty": 4,
+   "distance_m": 23,
+   "completion_chance_pct": 65
+  }
+ },
+ {
+  "moment_id": "mo_0016",
+  "t": 1190.47,
+  "clock": 1190.47,
+  "minute": 20,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000376"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 8,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0017",
+  "t": 1229.65,
+  "clock": 1229.65,
+  "minute": 21,
+  "type": "sprint",
+  "class": 3,
+  "score": 0.25,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000392"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "speed_kmh": 30.2
+  }
+ },
+ {
+  "moment_id": "mo_0018",
+  "t": 1267.9,
+  "clock": 1267.9,
+  "minute": 22,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_145",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000410"
+  ],
+  "facts": {
+   "passer": "Tobi Verhoef",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 21,
+   "completion_chance_pct": 64
+  }
+ },
+ {
+  "moment_id": "mo_0019",
+  "t": 1288.4,
+  "clock": 1288.4,
+  "minute": 22,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000420"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "won_by": "tackle",
+   "metres_from_goal": 30,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0020",
+  "t": 1328.59,
+  "clock": 1328.59,
+  "minute": 23,
+  "type": "drought",
+  "class": 3,
+  "score": 0.35,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_000437"
+  ],
+  "facts": {
+   "team": "ALD",
+   "minutes_without_a_shot": 15
+  }
+ },
+ {
+  "moment_id": "mo_0021",
+  "t": 1604.89,
+  "clock": 1604.89,
+  "minute": 27,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "ALD",
+  "players": [
+   "p_110",
+   "p_111"
+  ],
+  "evidence": [
+   "ev_000524",
+   "ev_000525",
+   "ev_000526"
+  ],
+  "facts": {
+   "scorer": "Mateo Carrow",
+   "team": "ALD",
+   "minute": 27,
+   "score_home": 1,
+   "score_away": 1,
+   "shot_distance_m": 10,
+   "shot_speed_kmh": 51,
+   "goals_for_scorer": 1,
+   "finish": "header",
+   "assist": "Dayo Reyne"
+  }
+ },
+ {
+  "moment_id": "mo_0022",
+  "t": 1663.34,
+  "clock": 1663.34,
+  "minute": 28,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_000516"
+  ],
+  "facts": {
+   "team": "ALD",
+   "direction": "up",
+   "pressing_change_pct": 58,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0023",
+  "t": 1663.34,
+  "clock": 1663.34,
+  "minute": 28,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000496",
+   "ev_000503",
+   "ev_000504",
+   "ev_000505"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "down",
+   "pressing_change_pct": -35,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0024",
+  "t": 1812.37,
+  "clock": 1812.37,
+  "minute": 31,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_145"
+  ],
+  "evidence": [
+   "ev_000564"
+  ],
+  "facts": {
+   "player": "Tobi Verhoef",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 24,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0025",
+  "t": 1891.53,
+  "clock": 1891.53,
+  "minute": 32,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "ALD",
+  "players": [
+   "p_108"
+  ],
+  "evidence": [
+   "ev_000569",
+   "ev_000574",
+   "ev_000575",
+   "ev_000577",
+   "ev_000579",
+   "ev_000580",
+   "ev_000582",
+   "ev_000583",
+   "ev_000584",
+   "ev_000586"
+  ],
+  "facts": {
+   "team": "ALD",
+   "passes_in_move": 10,
+   "seconds_in_possession": 77
+  }
+ },
+ {
+  "moment_id": "mo_0026",
+  "t": 1955.57,
+  "clock": 1955.57,
+  "minute": 33,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_145",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000612"
+  ],
+  "facts": {
+   "passer": "Tobi Verhoef",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 28,
+   "completion_chance_pct": 57
+  }
+ },
+ {
+  "moment_id": "mo_0027",
+  "t": 1955.57,
+  "clock": 1955.57,
+  "minute": 33,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000532",
+   "ev_000548",
+   "ev_000564",
+   "ev_000598",
+   "ev_000609"
+  ],
+  "facts": {
+   "team": "OST",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 1,
+   "passes_last_5min": 9,
+   "opponent_passes_last_5min": 27
+  }
+ },
+ {
+  "moment_id": "mo_0028",
+  "t": 1988.93,
+  "clock": 1988.93,
+  "minute": 34,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_141"
+  ],
+  "evidence": [
+   "ev_000611",
+   "ev_000612",
+   "ev_000613",
+   "ev_000614",
+   "ev_000616",
+   "ev_000617",
+   "ev_000618",
+   "ev_000619",
+   "ev_000621",
+   "ev_000622"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 39
+  }
+ },
+ {
+  "moment_id": "mo_0029",
+  "t": 2026.72,
+  "clock": 2026.72,
+  "minute": 34,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "OST",
+  "players": [
+   "p_146",
+   "p_144"
+  ],
+  "evidence": [
+   "ev_000634",
+   "ev_000635",
+   "ev_000636"
+  ],
+  "facts": {
+   "scorer": "Jide Okeke",
+   "team": "OST",
+   "minute": 34,
+   "score_home": 1,
+   "score_away": 2,
+   "shot_distance_m": 16,
+   "shot_speed_kmh": 93,
+   "goals_for_scorer": 1,
+   "assist": "Elio Nnadi"
+  }
+ },
+ {
+  "moment_id": "mo_0030",
+  "t": 2089.67,
+  "clock": 2089.67,
+  "minute": 35,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "OST",
+  "players": [
+   "p_145"
+  ],
+  "evidence": [
+   "ev_000564",
+   "ev_000644"
+  ],
+  "facts": {
+   "player": "Tobi Verhoef",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 31,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0031",
+  "t": 2247.84,
+  "clock": 2247.84,
+  "minute": 38,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "OST",
+  "players": [
+   "p_147"
+  ],
+  "evidence": [
+   "ev_000644",
+   "ev_000664",
+   "ev_000704"
+  ],
+  "facts": {
+   "player": "Wale Halloran",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 33,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0032",
+  "t": 2415.17,
+  "clock": 2415.17,
+  "minute": 41,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000753"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 9,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0033",
+  "t": 2423.21,
+  "clock": 2423.21,
+  "minute": 41,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "ALD",
+  "players": [
+   "p_108",
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000757"
+  ],
+  "facts": {
+   "passer": "Arlo Adeleke",
+   "receiver": "Mateo Carrow",
+   "team": "ALD",
+   "difficulty": 4,
+   "distance_m": 17,
+   "completion_chance_pct": 63
+  }
+ },
+ {
+  "moment_id": "mo_0034",
+  "t": 2479.29,
+  "clock": 2479.29,
+  "minute": 42,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_000728",
+   "ev_000742",
+   "ev_000753",
+   "ev_000774",
+   "ev_000777"
+  ],
+  "facts": {
+   "team": "ALD",
+   "shots_last_5min": 2,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 2,
+   "passes_last_5min": 30,
+   "opponent_passes_last_5min": 30
+  }
+ },
+ {
+  "moment_id": "mo_0035",
+  "t": 2673.56,
+  "clock": 2673.56,
+  "minute": 45,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000753",
+   "ev_000774",
+   "ev_000839"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 13,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0036",
+  "t": 2685.34,
+  "clock": 2685.34,
+  "minute": 45,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000790",
+   "ev_000822",
+   "ev_000823",
+   "ev_000824"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "down",
+   "pressing_change_pct": -31,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0037",
+  "t": 2686.42,
+  "clock": 2686.42,
+  "minute": 45,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000753",
+   "ev_000774",
+   "ev_000839",
+   "ev_000847"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "won_by": "tackle",
+   "metres_from_goal": 22,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0038",
+  "t": 2703.52,
+  "clock": 2703.52,
+  "minute": 46,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "ALD",
+  "players": [
+   "p_111",
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000857"
+  ],
+  "facts": {
+   "passer": "Dayo Reyne",
+   "receiver": "Mateo Carrow",
+   "team": "ALD",
+   "difficulty": 4,
+   "distance_m": 26,
+   "completion_chance_pct": 63
+  }
+ },
+ {
+  "moment_id": "mo_0039",
+  "t": 2753.74,
+  "clock": 2753.74,
+  "minute": 46,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.8,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000839",
+   "ev_000847",
+   "ev_000869",
+   "ev_000878"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "won_by": "tackle",
+   "metres_from_goal": 28,
+   "turnovers_in_final_third_last_5min": 5
+  }
+ },
+ {
+  "moment_id": "mo_0040",
+  "t": 2848.83,
+  "clock": 2740.94,
+  "minute": 46,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.87,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_000869",
+   "ev_000878",
+   "ev_000892",
+   "ev_000918"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 12,
+   "turnovers_in_final_third_last_5min": 6
+  }
+ },
+ {
+  "moment_id": "mo_0041",
+  "t": 2919.66,
+  "clock": 2811.78,
+  "minute": 47,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_144",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000937"
+  ],
+  "facts": {
+   "passer": "Elio Nnadi",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 31,
+   "completion_chance_pct": 62
+  }
+ },
+ {
+  "moment_id": "mo_0042",
+  "t": 2926.9,
+  "clock": 2819.02,
+  "minute": 47,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_145"
+  ],
+  "evidence": [
+   "ev_000942"
+  ],
+  "facts": {
+   "player": "Tobi Verhoef",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 29,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0043",
+  "t": 2926.9,
+  "clock": 2819.02,
+  "minute": 47,
+  "type": "drought",
+  "class": 3,
+  "score": 0.35,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000942"
+  ],
+  "facts": {
+   "team": "OST",
+   "minutes_without_a_shot": 15
+  }
+ },
+ {
+  "moment_id": "mo_0044",
+  "t": 3062.47,
+  "clock": 2954.59,
+  "minute": 50,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_144"
+  ],
+  "evidence": [
+   "ev_000974",
+   "ev_000975",
+   "ev_000976",
+   "ev_000977",
+   "ev_000978",
+   "ev_000979",
+   "ev_000980",
+   "ev_000986",
+   "ev_000987",
+   "ev_000988"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 52
+  }
+ },
+ {
+  "moment_id": "mo_0045",
+  "t": 3148.54,
+  "clock": 3040.66,
+  "minute": 51,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_000942",
+   "ev_001022"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 33,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0046",
+  "t": 3200.77,
+  "clock": 3092.88,
+  "minute": 52,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_000942",
+   "ev_000959",
+   "ev_000971",
+   "ev_001003",
+   "ev_001022"
+  ],
+  "facts": {
+   "team": "OST",
+   "shots_last_5min": 0,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 2,
+   "passes_last_5min": 39,
+   "opponent_passes_last_5min": 21
+  }
+ },
+ {
+  "moment_id": "mo_0047",
+  "t": 3217.51,
+  "clock": 3109.62,
+  "minute": 52,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "OST",
+  "players": [
+   "p_145"
+  ],
+  "evidence": [
+   "ev_000942",
+   "ev_001022",
+   "ev_001046"
+  ],
+  "facts": {
+   "player": "Tobi Verhoef",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 18,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0048",
+  "t": 3218.65,
+  "clock": 3110.77,
+  "minute": 52,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_145",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001048"
+  ],
+  "facts": {
+   "passer": "Tobi Verhoef",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 14,
+   "completion_chance_pct": 61
+  }
+ },
+ {
+  "moment_id": "mo_0049",
+  "t": 3252.75,
+  "clock": 3144.87,
+  "minute": 53,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_001055"
+  ],
+  "facts": {
+   "team": "ALD",
+   "direction": "down",
+   "pressing_change_pct": -41,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0050",
+  "t": 3372.22,
+  "clock": 3264.34,
+  "minute": 55,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "OST",
+  "players": [
+   "p_147"
+  ],
+  "evidence": [
+   "ev_001022",
+   "ev_001046",
+   "ev_001096"
+  ],
+  "facts": {
+   "player": "Wale Halloran",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 24,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0051",
+  "t": 3428.28,
+  "clock": 3320.39,
+  "minute": 56,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "ALD",
+  "players": [
+   "p_110"
+  ],
+  "evidence": [
+   "ev_001117"
+  ],
+  "facts": {
+   "player": "Mateo Carrow",
+   "team": "ALD",
+   "won_by": "tackle",
+   "metres_from_goal": 17,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0052",
+  "t": 3528.75,
+  "clock": 3420.87,
+  "minute": 58,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "OST",
+  "players": [
+   "p_147"
+  ],
+  "evidence": [
+   "ev_001096",
+   "ev_001147"
+  ],
+  "facts": {
+   "player": "Wale Halloran",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 21,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0053",
+  "t": 3565.92,
+  "clock": 3458.04,
+  "minute": 58,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001159"
+  ],
+  "facts": {
+   "team": "OST",
+   "team_shots": 10
+  }
+ },
+ {
+  "moment_id": "mo_0054",
+  "t": 3592.24,
+  "clock": 3484.36,
+  "minute": 59,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001096",
+   "ev_001147",
+   "ev_001164"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 17,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0055",
+  "t": 3638.42,
+  "clock": 3530.54,
+  "minute": 59,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "OST",
+  "players": [
+   "p_147"
+  ],
+  "evidence": [
+   "ev_001096",
+   "ev_001147",
+   "ev_001164",
+   "ev_001177"
+  ],
+  "facts": {
+   "player": "Wale Halloran",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 20,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0056",
+  "t": 3640.72,
+  "clock": 3532.84,
+  "minute": 59,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_147",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001179"
+  ],
+  "facts": {
+   "passer": "Wale Halloran",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 20,
+   "completion_chance_pct": 60
+  }
+ },
+ {
+  "moment_id": "mo_0057",
+  "t": 3754.1,
+  "clock": 3646.22,
+  "minute": 61,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.8,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001164",
+   "ev_001177",
+   "ev_001199",
+   "ev_001210"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 20,
+   "turnovers_in_final_third_last_5min": 5
+  }
+ },
+ {
+  "moment_id": "mo_0058",
+  "t": 3766.38,
+  "clock": 3658.5,
+  "minute": 61,
+  "type": "drought",
+  "class": 3,
+  "score": 0.35,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_001217"
+  ],
+  "facts": {
+   "team": "ALD",
+   "minutes_without_a_shot": 15
+  }
+ },
+ {
+  "moment_id": "mo_0059",
+  "t": 3801.56,
+  "clock": 3693.68,
+  "minute": 62,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "ALD",
+  "players": [
+   "p_105"
+  ],
+  "evidence": [
+   "ev_001216",
+   "ev_001217",
+   "ev_001218",
+   "ev_001219",
+   "ev_001220",
+   "ev_001221",
+   "ev_001222",
+   "ev_001223",
+   "ev_001224",
+   "ev_001226"
+  ],
+  "facts": {
+   "team": "ALD",
+   "passes_in_move": 10,
+   "seconds_in_possession": 42
+  }
+ },
+ {
+  "moment_id": "mo_0060",
+  "t": 3839.94,
+  "clock": 3732.06,
+  "minute": 63,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "ALD",
+  "players": [
+   "p_108"
+  ],
+  "evidence": [
+   "ev_001237"
+  ],
+  "facts": {
+   "player": "Arlo Adeleke",
+   "team": "ALD",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0061",
+  "t": 3924.11,
+  "clock": 3816.22,
+  "minute": 64,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_001270"
+  ],
+  "facts": {
+   "team": "ALD",
+   "direction": "down",
+   "pressing_change_pct": -38,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0062",
+  "t": 3958.87,
+  "clock": 3850.99,
+  "minute": 65,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "OST",
+  "players": [
+   "p_147"
+  ],
+  "evidence": [
+   "ev_001199",
+   "ev_001210",
+   "ev_001256",
+   "ev_001282"
+  ],
+  "facts": {
+   "player": "Wale Halloran",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 27,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0063",
+  "t": 3963.71,
+  "clock": 3855.82,
+  "minute": 65,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_147",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001285"
+  ],
+  "facts": {
+   "passer": "Wale Halloran",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 10,
+   "completion_chance_pct": 64
+  }
+ },
+ {
+  "moment_id": "mo_0064",
+  "t": 4173.37,
+  "clock": 4065.48,
+  "minute": 68,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "OST",
+  "players": [
+   "p_153"
+  ],
+  "evidence": [
+   "ev_001256",
+   "ev_001282",
+   "ev_001319",
+   "ev_001360"
+  ],
+  "facts": {
+   "player": "Kofi Ogunleye",
+   "team": "OST",
+   "won_by": "tackle",
+   "metres_from_goal": 26,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0065",
+  "t": 4222.14,
+  "clock": 4114.26,
+  "minute": 69,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_143",
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001381"
+  ],
+  "facts": {
+   "passer": "Obinna Kerrigan",
+   "receiver": "Jide Okeke",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 24,
+   "completion_chance_pct": 66
+  }
+ },
+ {
+  "moment_id": "mo_0066",
+  "t": 4225.0,
+  "clock": 4117.12,
+  "minute": 69,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_146"
+  ],
+  "evidence": [
+   "ev_001382"
+  ],
+  "facts": {
+   "player": "Jide Okeke",
+   "team": "OST",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0067",
+  "t": 4274.08,
+  "clock": 4166.2,
+  "minute": 70,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001358",
+   "ev_001359",
+   "ev_001368",
+   "ev_001369",
+   "ev_001370"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "up",
+   "pressing_change_pct": 32,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0068",
+  "t": 4341.98,
+  "clock": 4234.1,
+  "minute": 71,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "ALD",
+  "players": [
+   "p_117"
+  ],
+  "evidence": [
+   "ev_001418"
+  ],
+  "facts": {
+   "player": "Tobi Onwuka",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 19,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0069",
+  "t": 4403.47,
+  "clock": 4295.59,
+  "minute": 72,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "ALD",
+  "players": [
+   "p_117"
+  ],
+  "evidence": [
+   "ev_001425",
+   "ev_001426"
+  ],
+  "facts": {
+   "scorer": "Tobi Onwuka",
+   "team": "ALD",
+   "minute": 72,
+   "score_home": 2,
+   "score_away": 2,
+   "shot_distance_m": 11,
+   "shot_speed_kmh": 64,
+   "goals_for_scorer": 1,
+   "finish": "penalty"
+  }
+ },
+ {
+  "moment_id": "mo_0070",
+  "t": 4477.62,
+  "clock": 4369.74,
+  "minute": 73,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_001366",
+   "ev_001400",
+   "ev_001408",
+   "ev_001418",
+   "ev_001425"
+  ],
+  "facts": {
+   "team": "ALD",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 1,
+   "passes_last_5min": 9,
+   "opponent_passes_last_5min": 15
+  }
+ },
+ {
+  "moment_id": "mo_0071",
+  "t": 4552.68,
+  "clock": 4444.79,
+  "minute": 75,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "OST",
+  "players": [
+   "p_153"
+  ],
+  "evidence": [
+   "ev_001396",
+   "ev_001449"
+  ],
+  "facts": {
+   "player": "Kofi Ogunleye",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 24,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0072",
+  "t": 4555.09,
+  "clock": 4447.21,
+  "minute": 75,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_153",
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001451"
+  ],
+  "facts": {
+   "passer": "Kofi Ogunleye",
+   "receiver": "Tariq Lunde",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 23,
+   "completion_chance_pct": 63
+  }
+ },
+ {
+  "moment_id": "mo_0073",
+  "t": 4564.95,
+  "clock": 4457.07,
+  "minute": 75,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "OST",
+  "players": [
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001396",
+   "ev_001449",
+   "ev_001457"
+  ],
+  "facts": {
+   "player": "Tariq Lunde",
+   "team": "OST",
+   "won_by": "interception",
+   "metres_from_goal": 16,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0074",
+  "t": 4570.28,
+  "clock": 4462.4,
+  "minute": 75,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_144"
+  ],
+  "evidence": [
+   "ev_001460"
+  ],
+  "facts": {
+   "player": "Elio Nnadi",
+   "team": "OST",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0075",
+  "t": 4649.81,
+  "clock": 4541.92,
+  "minute": 76,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001435",
+   "ev_001449",
+   "ev_001457",
+   "ev_001462",
+   "ev_001476"
+  ],
+  "facts": {
+   "team": "OST",
+   "shots_last_5min": 2,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 2,
+   "passes_last_5min": 15,
+   "opponent_passes_last_5min": 12
+  }
+ },
+ {
+  "moment_id": "mo_0076",
+  "t": 4706.02,
+  "clock": 4598.14,
+  "minute": 77,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [
+   "p_140"
+  ],
+  "evidence": [
+   "ev_001499",
+   "ev_001500",
+   "ev_001501",
+   "ev_001502",
+   "ev_001503",
+   "ev_001505",
+   "ev_001506",
+   "ev_001507",
+   "ev_001508",
+   "ev_001509"
+  ],
+  "facts": {
+   "team": "OST",
+   "passes_in_move": 10,
+   "seconds_in_possession": 33
+  }
+ },
+ {
+  "moment_id": "mo_0077",
+  "t": 4717.13,
+  "clock": 4609.25,
+  "minute": 77,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_143"
+  ],
+  "evidence": [
+   "ev_001512"
+  ],
+  "facts": {
+   "player": "Obinna Kerrigan",
+   "team": "OST",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0078",
+  "t": 4785.03,
+  "clock": 4677.14,
+  "minute": 78,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "ALD",
+  "players": [
+   "p_107"
+  ],
+  "evidence": [
+   "ev_001538"
+  ],
+  "facts": {
+   "player": "Soren Ibekwe",
+   "team": "ALD",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0079",
+  "t": 4811.96,
+  "clock": 4704.08,
+  "minute": 79,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "ALD",
+  "players": [
+   "p_118"
+  ],
+  "evidence": [
+   "ev_001548"
+  ],
+  "facts": {
+   "player": "Chuka Delacroix",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 22,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0080",
+  "t": 4849.73,
+  "clock": 4741.85,
+  "minute": 80,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "ALD",
+  "players": [
+   "p_113"
+  ],
+  "evidence": [
+   "ev_001548",
+   "ev_001561",
+   "ev_001568"
+  ],
+  "facts": {
+   "player": "Ade Ekwueme",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 27,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0081",
+  "t": 5020.76,
+  "clock": 4912.88,
+  "minute": 82,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.73,
+  "team": "ALD",
+  "players": [
+   "p_118"
+  ],
+  "evidence": [
+   "ev_001548",
+   "ev_001561",
+   "ev_001568",
+   "ev_001615"
+  ],
+  "facts": {
+   "player": "Chuka Delacroix",
+   "team": "ALD",
+   "won_by": "tackle",
+   "metres_from_goal": 34,
+   "turnovers_in_final_third_last_5min": 4
+  }
+ },
+ {
+  "moment_id": "mo_0082",
+  "t": 5103.83,
+  "clock": 4995.94,
+  "minute": 84,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.8,
+  "team": "ALD",
+  "players": [
+   "p_118"
+  ],
+  "evidence": [
+   "ev_001561",
+   "ev_001568",
+   "ev_001615",
+   "ev_001648"
+  ],
+  "facts": {
+   "player": "Chuka Delacroix",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 21,
+   "turnovers_in_final_third_last_5min": 5
+  }
+ },
+ {
+  "moment_id": "mo_0083",
+  "t": 5110.78,
+  "clock": 5002.9,
+  "minute": 84,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_001568",
+   "ev_001592",
+   "ev_001615",
+   "ev_001637",
+   "ev_001648"
+  ],
+  "facts": {
+   "team": "ALD",
+   "shots_last_5min": 0,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 5,
+   "passes_last_5min": 37,
+   "opponent_passes_last_5min": 17
+  }
+ },
+ {
+  "moment_id": "mo_0084",
+  "t": 5120.87,
+  "clock": 5012.98,
+  "minute": 84,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001596",
+   "ev_001597",
+   "ev_001607",
+   "ev_001608",
+   "ev_001619"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "down",
+   "pressing_change_pct": -33,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0085",
+  "t": 5180.84,
+  "clock": 5072.96,
+  "minute": 85,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "ALD",
+  "players": [
+   "p_107",
+   "p_118"
+  ],
+  "evidence": [
+   "ev_001673"
+  ],
+  "facts": {
+   "passer": "Soren Ibekwe",
+   "receiver": "Chuka Delacroix",
+   "team": "ALD",
+   "difficulty": 4,
+   "distance_m": 12,
+   "completion_chance_pct": 61
+  }
+ },
+ {
+  "moment_id": "mo_0086",
+  "t": 5187.35,
+  "clock": 5079.47,
+  "minute": 85,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "ALD",
+  "players": [
+   "p_107"
+  ],
+  "evidence": [
+   "ev_001675"
+  ],
+  "facts": {
+   "team": "ALD",
+   "team_shots": 10
+  }
+ },
+ {
+  "moment_id": "mo_0087",
+  "t": 5285.45,
+  "clock": 5177.57,
+  "minute": 87,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.87,
+  "team": "ALD",
+  "players": [
+   "p_118"
+  ],
+  "evidence": [
+   "ev_001661",
+   "ev_001670",
+   "ev_001680",
+   "ev_001698"
+  ],
+  "facts": {
+   "player": "Chuka Delacroix",
+   "team": "ALD",
+   "won_by": "interception",
+   "metres_from_goal": 16,
+   "turnovers_in_final_third_last_5min": 6
+  }
+ },
+ {
+  "moment_id": "mo_0088",
+  "t": 5375.35,
+  "clock": 5267.46,
+  "minute": 88,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "OST",
+  "players": [
+   "p_153"
+  ],
+  "evidence": [
+   "ev_001725"
+  ],
+  "facts": {
+   "player": "Kofi Ogunleye",
+   "team": "OST",
+   "won_by": "tackle",
+   "metres_from_goal": 27,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0089",
+  "t": 5393.26,
+  "clock": 5285.38,
+  "minute": 89,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_144",
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001735"
+  ],
+  "facts": {
+   "passer": "Elio Nnadi",
+   "receiver": "Tariq Lunde",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 21,
+   "completion_chance_pct": 61
+  }
+ },
+ {
+  "moment_id": "mo_0090",
+  "t": 5461.52,
+  "clock": 5353.64,
+  "minute": 90,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001718",
+   "ev_001725",
+   "ev_001731",
+   "ev_001754"
+  ],
+  "facts": {
+   "team": "OST",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 3,
+   "turnovers_won_final_third_last_5min": 2,
+   "passes_last_5min": 26,
+   "opponent_passes_last_5min": 19
+  }
+ },
+ {
+  "moment_id": "mo_0091",
+  "t": 5464.11,
+  "clock": 5356.23,
+  "minute": 90,
+  "type": "big_chance",
+  "class": 2,
+  "score": 0.84,
+  "team": "OST",
+  "players": [
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001761"
+  ],
+  "facts": {
+   "shooter": "Tariq Lunde",
+   "team": "OST",
+   "outcome": "blocked",
+   "chance_quality_pct": 29,
+   "shot_distance_m": 6
+  }
+ },
+ {
+  "moment_id": "mo_0092",
+  "t": 5509.96,
+  "clock": 5402.08,
+  "minute": 91,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "OST",
+  "players": [
+   "p_140",
+   "p_153"
+  ],
+  "evidence": [
+   "ev_001768",
+   "ev_001769",
+   "ev_001770"
+  ],
+  "facts": {
+   "scorer": "Anders Strand",
+   "team": "OST",
+   "minute": 91,
+   "score_home": 2,
+   "score_away": 3,
+   "shot_distance_m": 9,
+   "shot_speed_kmh": 37,
+   "goals_for_scorer": 1,
+   "finish": "header",
+   "assist": "Kofi Ogunleye"
+  }
+ },
+ {
+  "moment_id": "mo_0093",
+  "t": 5562.5,
+  "clock": 5454.62,
+  "minute": 91,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "ALD",
+  "players": [],
+  "evidence": [
+   "ev_001750"
+  ],
+  "facts": {
+   "team": "ALD",
+   "direction": "up",
+   "pressing_change_pct": 30,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0094",
+  "t": 5605.5,
+  "clock": 5497.62,
+  "minute": 92,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "ALD",
+  "players": [
+   "p_106"
+  ],
+  "evidence": [
+   "ev_001788"
+  ],
+  "facts": {
+   "player": "Linus Aniebo",
+   "team": "ALD",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0095",
+  "t": 5666.83,
+  "clock": 5558.95,
+  "minute": 93,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "OST",
+  "players": [
+   "p_142"
+  ],
+  "evidence": [
+   "ev_001811"
+  ],
+  "facts": {
+   "player": "Ruben Ugwu",
+   "team": "OST",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0096",
+  "t": 5692.19,
+  "clock": 5584.31,
+  "minute": 94,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "OST",
+  "players": [
+   "p_154",
+   "p_143"
+  ],
+  "evidence": [
+   "ev_001816",
+   "ev_001819",
+   "ev_001820"
+  ],
+  "facts": {
+   "scorer": "Tariq Lunde",
+   "team": "OST",
+   "minute": 94,
+   "score_home": 2,
+   "score_away": 4,
+   "shot_distance_m": 13,
+   "shot_speed_kmh": 75,
+   "goals_for_scorer": 1,
+   "assist": "Obinna Kerrigan"
+  }
+ },
+ {
+  "moment_id": "mo_0097",
+  "t": 5765.98,
+  "clock": 5658.1,
+  "minute": 95,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "OST",
+  "players": [],
+  "evidence": [
+   "ev_001823",
+   "ev_001824"
+  ],
+  "facts": {
+   "team": "OST",
+   "direction": "down",
+   "pressing_change_pct": -38,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0098",
+  "t": 5806.07,
+  "clock": 5698.18,
+  "minute": 95,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "ALD",
+  "players": [
+   "p_107",
+   "p_118"
+  ],
+  "evidence": [
+   "ev_001840"
+  ],
+  "facts": {
+   "passer": "Soren Ibekwe",
+   "receiver": "Chuka Delacroix",
+   "team": "ALD",
+   "difficulty": 4,
+   "distance_m": 30,
+   "completion_chance_pct": 63
+  }
+ },
+ {
+  "moment_id": "mo_0099",
+  "t": 5816.59,
+  "clock": 5708.7,
+  "minute": 96,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "ALD",
+  "players": [
+   "p_118"
+  ],
+  "evidence": [
+   "ev_001846"
+  ],
+  "facts": {
+   "player": "Chuka Delacroix",
+   "team": "ALD",
+   "won_by": "tackle",
+   "metres_from_goal": 35,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0100",
+  "t": 5849.26,
+  "clock": 5741.37,
+  "minute": 96,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "OST",
+  "players": [
+   "p_149",
+   "p_154"
+  ],
+  "evidence": [
+   "ev_001858"
+  ],
+  "facts": {
+   "passer": "Obinna Morrow",
+   "receiver": "Tariq Lunde",
+   "team": "OST",
+   "difficulty": 4,
+   "distance_m": 20,
+   "completion_chance_pct": 64
+  }
+ }
+]

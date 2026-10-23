@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Majordev77/Blind-side-live/shared/moment.schema.json",
+  "title": "Moment",
+  "description": "Something in the match worth words, found by a rule in engine/moments.py. `facts` holds the only values a narrator may state about it; `evidence` holds the IDs of the events that prove it.",
+  "type": "object",
+  "required": ["moment_id", "t", "clock", "minute", "type", "class", "score", "team", "players", "evidence", "facts"],
+  "additionalProperties": false,
+  "properties": {
+    "moment_id": { "type": "string", "pattern": "^mo_[0-9]{4}$" },
+    "t": { "type": "number", "minimum": 0 },
+    "clock": { "type": "number", "minimum": 0 },
+    "minute": { "type": "integer", "minimum": 1, "description": "Broadcast minute: 74:37 on the clock is the 75th minute." },
+    "type": {
+      "type": "string",
+      "enum": ["goal", "big_chance", "high_turnover", "hard_pass", "long_move", "momentum_swing", "press_change", "milestone", "drought", "sprint"]
+    },
+    "class": { "type": "integer", "enum": [1, 2, 3], "description": "1: always aired, announced by code at once. 2: aired if the speaking budget allows. 3: quiet spells only." },
+    "score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "team": { "type": ["string", "null"], "pattern": "^[A-Z]{3}$" },
+    "players": { "type": "array", "items": { "type": "string", "pattern": "^p_[0-9]{3}$" } },
+    "evidence": { "type": "array", "items": { "type": "string", "pattern": "^ev_[0-9]{6}$" }, "minItems": 1 },
+    "facts": {
+      "type": "object",
+      "additionalProperties": { "type": ["string", "number", "boolean"] }
+    }
+  }
+}
