@@ -75,8 +75,21 @@ function best(test: (tag: string) => boolean, order: string[] = []): SpeechSynth
   return pick
 }
 
-/** Voice and utterance.lang for a language, or null if it cannot be voiced. */
-export function pickVoice(lang: Lang): { voice: SpeechSynthesisVoice | null; tag: string } | null {
+/** Who is speaking: the quick play-by-play caller, or the analyst with the why. */
+export type Role = 'caller' | 'analyst'
+
+/** Voice and utterance.lang for a language, or null if it cannot be voiced. The analyst gets a different voice where one exists. */
+export function pickVoice(lang: Lang, role: Role = 'caller'): { voice: SpeechSynthesisVoice | null; tag: string } | null {
+  const pick = pickCallerVoice(lang)
+  if (!pick || role === 'caller' || !pick.voice) return pick
+  const family = norm(pick.tag).slice(0, 2)
+  const other = voices
+    .filter((v) => norm(v.lang).startsWith(family) && v.name !== pick.voice?.name)
+    .sort((a, b) => Number(NATURAL.test(b.name)) - Number(NATURAL.test(a.name)))[0]
+  return other ? { voice: other, tag: other.lang } : pick
+}
+
+function pickCallerVoice(lang: Lang): { voice: SpeechSynthesisVoice | null; tag: string } | null {
   if (!voices.length) loadVoices()
   const english = () => {
     const v =
@@ -93,7 +106,7 @@ export function pickVoice(lang: Lang): { voice: SpeechSynthesisVoice | null; tag
 
 /** True if speak() would voice this language right now. */
 export function canSpeak(lang: Lang): boolean {
-  return speechSupported() && pickVoice(lang) !== null
+  return speechSupported() && pickCallerVoice(lang) !== null
 }
 
 /** Call synchronously inside the user's tap so iOS allows later speech. */
@@ -119,16 +132,18 @@ export function speak(
   text: string,
   lang: Lang,
   handlers: { onStart?: () => void; onEnd?: () => void } = {},
+  role: Role = 'caller',
 ): boolean {
   if (!speechSupported() || !text.trim()) return false
-  const pick = pickVoice(lang)
+  const pick = pickVoice(lang, role)
   if (!pick) return false
   try {
     const u = new SpeechSynthesisUtterance(text)
     u.lang = pick.tag
     if (pick.voice) u.voice = pick.voice
-    u.rate = RATE
-    u.pitch = 1
+    // The caller is quicker and a touch brighter, like a play-by-play commentator.
+    u.rate = role === 'caller' ? Math.min(2, RATE * 1.18) : RATE
+    u.pitch = role === 'caller' ? 1.08 : 0.95
     u.volume = 1
     let done = false
     const finish = () => {

@@ -1,40 +1,7 @@
 {
   "match_id": "demo_1",
-  "seed": 20376,
+  "seed": 20499,
   "home": {
-    "code": "CRV",
-    "name": "Corran Vale",
-    "formation": "4-3-3",
-    "style": {
-      "directness": 0.7,
-      "press": 0.45,
-      "width": 0.5
-    },
-    "starting": [
-      "p_119",
-      "p_120",
-      "p_121",
-      "p_122",
-      "p_123",
-      "p_124",
-      "p_125",
-      "p_126",
-      "p_127",
-      "p_128",
-      "p_129"
-    ],
-    "bench": [
-      "p_130",
-      "p_131",
-      "p_132",
-      "p_133",
-      "p_134",
-      "p_135",
-      "p_136"
-    ],
-    "goals": 2
-  },
-  "away": {
     "code": "OST",
     "name": "Ostbury Town",
     "formation": "4-3-3",
@@ -67,17 +34,50 @@
     ],
     "goals": 3
   },
+  "away": {
+    "code": "CRV",
+    "name": "Corran Vale",
+    "formation": "4-3-3",
+    "style": {
+      "directness": 0.7,
+      "press": 0.45,
+      "width": 0.5
+    },
+    "starting": [
+      "p_119",
+      "p_120",
+      "p_121",
+      "p_122",
+      "p_123",
+      "p_124",
+      "p_125",
+      "p_126",
+      "p_127",
+      "p_128",
+      "p_129"
+    ],
+    "bench": [
+      "p_130",
+      "p_131",
+      "p_132",
+      "p_133",
+      "p_134",
+      "p_135",
+      "p_136"
+    ],
+    "goals": 3
+  },
   "attacking": "home attacks toward x = 105 in both halves",
-  "events": 2043,
+  "events": 1929,
   "demo": {
-    "drama": 29.0,
-    "goals": 5,
+    "drama": 28.05,
+    "goals": 6,
     "lead_changes": 2,
-    "late_goals": 3,
-    "equalisers": 2,
+    "late_goals": 2,
+    "equalisers": 3,
     "best_three_minutes": {
-      "t": 4613.6,
-      "clock": 4474.56
+      "t": 5497.31,
+      "clock": 5353.6
     }
   }
 }

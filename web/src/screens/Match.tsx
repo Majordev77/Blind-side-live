@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { SoundEngine } from '../audio/engine'
 import { along } from '../audio/mapping'
-import { club, loadMatch } from '../match/data'
+import { club, loadAgentLines, loadMatch, SURNAMES, type AgentLine } from '../match/data'
 import { MatchPlayer, type Snapshot } from '../match/player'
 import type { Detail, MatchData } from '../match/types'
 import type { Choices } from './Setup'
@@ -18,6 +18,7 @@ const clockText = (s: number) => {
 /** The match screen: a huge score, a live caption, the ear bar and five controls in a fixed order. */
 export function Match({ engine, choices }: { engine: SoundEngine; choices: Choices }) {
   const [data, setData] = useState<MatchData | null>(null)
+  const [agentLines, setAgentLines] = useState<AgentLine[] | null | undefined>(undefined)
   const [snap, setSnap] = useState<Snapshot | null>(null)
   const [detail, setDetail] = useState<Detail>(choices.detail)
   const [announce, setAnnounce] = useState('')
@@ -26,24 +27,30 @@ export function Match({ engine, choices }: { engine: SoundEngine; choices: Choic
   useEffect(() => {
     let alive = true
     loadMatch(choices.matchId).then((d) => alive && setData(d))
+    loadAgentLines(choices.matchId)
+      .then((a) => alive && setAgentLines(a?.lines ?? null))
+      .catch(() => alive && setAgentLines(null))
     return () => {
       alive = false
     }
   }, [choices.matchId])
 
   useEffect(() => {
-    if (!data) return
+    if (!data || agentLines === undefined) return
     const name = (code: string) => club(code).name
-    const p = new MatchPlayer(engine, data, { listener: choices.listener, mode: choices.mode, detail: choices.detail, follow: null, lang: 'en' }, name)
+    const names = { home: data.info.home, away: data.info.away, club: name, player: (id: string) => SURNAMES.get(id) ?? id }
+    const p = new MatchPlayer(engine, data, { listener: choices.listener, mode: choices.mode, detail: choices.detail, follow: null, lang: choices.lang }, names, agentLines)
     p.onCaption = (line) => setAnnounce(line.text)
     player.current = p
     const from = Math.max(0, data.info.best_three_minutes.t - CONTEXT_BEFORE)
     const startCue = data.cues.find((c) => c.t >= from)
     const minute = startCue ? Math.floor(startCue.clock / 60) + 1 : 1
     const goals = data.cues.filter((c) => c.sound === 'goal' && c.t < from).at(-1)?.score ?? { [data.info.home]: 0, [data.info.away]: 0 }
+    const score = `${name(data.info.home)} ${goals[data.info.home] ?? 0}, ${name(data.info.away)} ${goals[data.info.away] ?? 0}`
     const intro =
-      `You support ${name(choices.listener)}, attacking toward your right ear. ` +
-      `${name(data.info.home)} ${goals[data.info.home] ?? 0}, ${name(data.info.away)} ${goals[data.info.away] ?? 0}, minute ${minute}.`
+      choices.lang === 'pcm'
+        ? `Welcome to the stadium. You dey support ${name(choices.listener)}, dem dey attack go your right ear. Na ${score}, minute ${minute}.`
+        : `Welcome to the stadium. You support ${name(choices.listener)}, attacking toward your right ear. It's ${score}, in minute ${minute}.`
     p.start(from, intro)
     let raf = 0
     const frame = () => {
@@ -56,7 +63,7 @@ export function Match({ engine, choices }: { engine: SoundEngine; choices: Choic
       p.destroy()
       player.current = null
     }
-  }, [data, engine, choices])
+  }, [data, agentLines, engine, choices])
 
   const changeDetail = (dir: -1 | 1) => {
     const i = Math.min(LEVELS.length - 1, Math.max(0, LEVELS.indexOf(detail) + dir))
@@ -115,7 +122,8 @@ export function Match({ engine, choices }: { engine: SoundEngine; choices: Choic
         </div>
       </header>
 
-      <section className={`caption ${caption?.priority === 1 ? 'caption-big' : ''} ${caption?.moment?.team === choices.listener ? 'caption-ours' : 'caption-theirs'}`}>
+      <section className={`caption caption-${caption?.role ?? 'caller'} ${caption?.rank === 'big' ? 'caption-big' : ''} ${ours ? 'caption-ours' : 'caption-theirs'}`}>
+        <p className="label caption-who">{caption?.role === 'analyst' ? (caption.source === 'agents' ? 'Analyst · checked by the verifier' : 'Analyst') : 'Commentary'}</p>
         <p className="caption-text">{caption ? caption.text : 'Listening…'}</p>
         {caption && caption.evidence.length > 0 && (
           <p className="evidence">

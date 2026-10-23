@@ -1,40 +1,7 @@
 {
   "match_id": "demo_2",
-  "seed": 20272,
+  "seed": 20106,
   "home": {
-    "code": "OST",
-    "name": "Ostbury Town",
-    "formation": "4-3-3",
-    "style": {
-      "directness": 0.5,
-      "press": 0.55,
-      "width": 0.45
-    },
-    "starting": [
-      "p_137",
-      "p_138",
-      "p_139",
-      "p_140",
-      "p_141",
-      "p_142",
-      "p_143",
-      "p_144",
-      "p_145",
-      "p_146",
-      "p_147"
-    ],
-    "bench": [
-      "p_148",
-      "p_149",
-      "p_150",
-      "p_151",
-      "p_152",
-      "p_153",
-      "p_154"
-    ],
-    "goals": 3
-  },
-  "away": {
     "code": "KES",
     "name": "Kestrel Wharf",
     "formation": "4-3-3",
@@ -65,19 +32,52 @@
       "p_171",
       "p_172"
     ],
-    "goals": 3
+    "goals": 4
+  },
+  "away": {
+    "code": "CRV",
+    "name": "Corran Vale",
+    "formation": "4-3-3",
+    "style": {
+      "directness": 0.7,
+      "press": 0.45,
+      "width": 0.5
+    },
+    "starting": [
+      "p_119",
+      "p_120",
+      "p_121",
+      "p_122",
+      "p_123",
+      "p_124",
+      "p_125",
+      "p_126",
+      "p_127",
+      "p_128",
+      "p_129"
+    ],
+    "bench": [
+      "p_130",
+      "p_131",
+      "p_132",
+      "p_133",
+      "p_134",
+      "p_135",
+      "p_136"
+    ],
+    "goals": 2
   },
   "attacking": "home attacks toward x = 105 in both halves",
-  "events": 1956,
+  "events": 1916,
   "demo": {
-    "drama": 27.45,
+    "drama": 26.35,
     "goals": 6,
     "lead_changes": 2,
     "late_goals": 2,
-    "equalisers": 3,
+    "equalisers": 2,
     "best_three_minutes": {
-      "t": 2250.02,
-      "clock": 2251.82
+      "t": 3910.67,
+      "clock": 3683.79
     }
   }
 }

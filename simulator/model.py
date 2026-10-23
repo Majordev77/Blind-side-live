@@ -117,6 +117,7 @@ class MatchSimulator:
         self.ax, self.ay = 52.5, 34.0
         self.restart: tuple[str, int, float, float] | None = ("kickoff", 0, 52.5, 34.0)
         self.kicked_off_first = 0
+        self.after_goal = False  # the next kickoff follows a goal celebration
 
     # ---------- clock and output ----------
 
@@ -434,6 +435,7 @@ class MatchSimulator:
             self.emit("goal", side, shooter, end)
             self.score[side] += 1
             self.adjust_styles()
+            self.after_goal = True
             self.restart = ("kickoff", 1 - side, 52.5, 34.0)
         elif outcome == "on_target":
             held = self.rng.random() < 0.55
@@ -466,8 +468,9 @@ class MatchSimulator:
         team = self.teams[side]
         dead = {"kickoff": (40, 75), "throw_in": (8, 18), "corner": (18, 32), "goal_kick": (15, 28),
                 "free_kick": (15, 35), "penalty": (45, 75)}[kind]
-        if kind == "kickoff" and not self.events[-1]["type"] == "goal":
+        if kind == "kickoff" and not self.after_goal:
             dead = (0, 1)  # the start of a half
+        self.after_goal = False
         self.advance(self.rng.uniform(*dead))
         if kind == "kickoff":
             player = team.by_role("ST")

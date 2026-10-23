@@ -11,6 +11,8 @@ export interface Cue {
   event: string
   team?: string
   player?: string
+  /** Who a pass was aimed at; for a completed pass, the player who now has the ball. */
+  recipient?: string
   outcome?: string
   subtype?: string
   pressure?: number

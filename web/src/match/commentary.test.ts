@@ -5,7 +5,8 @@ import type { Detail, Moment } from './types'
 
 const moments = JSON.parse(readFileSync(new URL('../../../data/derived/demo_1.moments.json', import.meta.url), 'utf8')) as Moment[]
 const NAMES: Record<string, string> = { CRV: 'Corran Vale', OST: 'Ostbury Town' }
-const fx: Fixture = { club: (c) => NAMES[c] ?? c, home: 'CRV', away: 'OST', listener: 'CRV' }
+// demo_1 is Ostbury Town (home) v Corran Vale (away)
+const fx: Fixture = { club: (c) => NAMES[c] ?? c, home: 'OST', away: 'CRV', listener: 'OST' }
 
 describe('template lines', () => {
   it('only uses numbers that are in the moment facts', () => {
@@ -23,7 +24,7 @@ describe('template lines', () => {
     const goals = moments.filter((m) => m.type === 'goal')
     for (const g of goals) {
       const text = templateLine(g, 'essentials', fx) ?? ''
-      expect(text).toMatch(/Corran Vale \d+, Ostbury Town \d+\./)
+      expect(text).toMatch(/Ostbury Town \d+, Corran Vale \d+\./)
       expect(text).toContain(String(g.facts.scorer))
     }
   })

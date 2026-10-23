@@ -93,8 +93,12 @@ def test_failure_drill_slow_model_falls_back_in_time() -> None:
 def test_full_match_has_a_recap_per_club_and_language() -> None:
     desk = run_with(OfflineWriter(), ModelInfo("offline", "templates", False), full=True)
     recaps = [line for line in desk.aired if line["moment_id"] == "recap"]
-    assert {line["variant"] for line in recaps} == {f"{lang}:{club}:full" for lang in ("en", "pcm") for club in ("CRV", "OST")}
-    assert all("2" in line["text"] and "3" in line["text"] for line in recaps)  # Corran Vale 2, Ostbury Town 3
+    tools = desk.tools
+    clubs = (tools.home, tools.away)
+    assert {line["variant"] for line in recaps} == {f"{lang}:{club}:full" for lang in ("en", "pcm") for club in clubs}
+    score = tools.engine.state.score
+    final = f"{tools.club_name(tools.home)} {score[tools.home]}, {tools.club_name(tools.away)} {score[tools.away]}."
+    assert all(final in line["text"] for line in recaps), final
 
 
 @pytest.mark.parametrize("level", ["essentials", "full", "analyst"])

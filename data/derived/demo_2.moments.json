@@ -1,34 +1,230 @@
 [
  {
   "moment_id": "mo_0001",
-  "t": 15.01,
-  "clock": 15.01,
+  "t": 12.14,
+  "clock": 12.14,
   "minute": 1,
   "type": "hard_pass",
   "class": 3,
   "score": 0.5,
   "team": "KES",
   "players": [
-   "p_164",
-   "p_161"
+   "p_161",
+   "p_164"
   ],
   "evidence": [
-   "ev_000010"
+   "ev_000007"
   ],
   "facts": {
-   "passer": "Idris Sandeman",
-   "receiver": "Ikenna Amadi",
+   "passer": "Ikenna Amadi",
+   "receiver": "Idris Sandeman",
    "team": "KES",
    "difficulty": 4,
-   "distance_m": 18,
-   "completion_chance_pct": 66
+   "distance_m": 22,
+   "completion_chance_pct": 56
   }
  },
  {
   "moment_id": "mo_0002",
-  "t": 119.35,
-  "clock": 119.35,
-  "minute": 2,
+  "t": 30.49,
+  "clock": 30.49,
+  "minute": 1,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "KES",
+  "players": [
+   "p_164"
+  ],
+  "evidence": [
+   "ev_000015"
+  ],
+  "facts": {
+   "player": "Idris Sandeman",
+   "team": "KES",
+   "won_by": "interception",
+   "metres_from_goal": 25,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0003",
+  "t": 337.14,
+  "clock": 337.14,
+  "minute": 6,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "KES",
+  "players": [
+   "p_163",
+   "p_164"
+  ],
+  "evidence": [
+   "ev_000119"
+  ],
+  "facts": {
+   "passer": "Ade Kessler",
+   "receiver": "Idris Sandeman",
+   "team": "KES",
+   "difficulty": 4,
+   "distance_m": 15,
+   "completion_chance_pct": 60
+  }
+ },
+ {
+  "moment_id": "mo_0004",
+  "t": 464.4,
+  "clock": 464.4,
+  "minute": 8,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "KES",
+  "players": [
+   "p_162"
+  ],
+  "evidence": [
+   "ev_000142",
+   "ev_000143",
+   "ev_000144",
+   "ev_000145",
+   "ev_000146",
+   "ev_000147",
+   "ev_000148",
+   "ev_000149",
+   "ev_000153",
+   "ev_000155"
+  ],
+  "facts": {
+   "team": "KES",
+   "passes_in_move": 10,
+   "seconds_in_possession": 47
+  }
+ },
+ {
+  "moment_id": "mo_0005",
+  "t": 479.56,
+  "clock": 479.56,
+  "minute": 8,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "KES",
+  "players": [
+   "p_163"
+  ],
+  "evidence": [
+   "ev_000161"
+  ],
+  "facts": {
+   "player": "Ade Kessler",
+   "team": "KES",
+   "won_by": "interception",
+   "metres_from_goal": 15,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0006",
+  "t": 489.59,
+  "clock": 489.59,
+  "minute": 9,
+  "type": "big_chance",
+  "class": 2,
+  "score": 0.77,
+  "team": "KES",
+  "players": [
+   "p_164"
+  ],
+  "evidence": [
+   "ev_000165"
+  ],
+  "facts": {
+   "shooter": "Idris Sandeman",
+   "team": "KES",
+   "outcome": "blocked",
+   "chance_quality_pct": 22,
+   "shot_distance_m": 9
+  }
+ },
+ {
+  "moment_id": "mo_0007",
+  "t": 600.63,
+  "clock": 600.63,
+  "minute": 11,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_000140",
+   "ev_000161",
+   "ev_000165",
+   "ev_000186",
+   "ev_000197"
+  ],
+  "facts": {
+   "team": "KES",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 1,
+   "passes_last_5min": 28,
+   "opponent_passes_last_5min": 25
+  }
+ },
+ {
+  "moment_id": "mo_0008",
+  "t": 647.02,
+  "clock": 647.02,
+  "minute": 11,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000221"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "tackle",
+   "metres_from_goal": 15,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0009",
+  "t": 721.21,
+  "clock": 721.21,
+  "minute": 13,
+  "type": "big_chance",
+  "class": 2,
+  "score": 0.79,
+  "team": "KES",
+  "players": [
+   "p_164"
+  ],
+  "evidence": [
+   "ev_000246"
+  ],
+  "facts": {
+   "shooter": "Idris Sandeman",
+   "team": "KES",
+   "outcome": "on_target",
+   "chance_quality_pct": 24,
+   "shot_distance_m": 5
+  }
+ },
+ {
+  "moment_id": "mo_0010",
+  "t": 721.21,
+  "clock": 721.21,
+  "minute": 13,
   "type": "milestone",
   "class": 3,
   "score": 0.35,
@@ -37,7 +233,7 @@
    "p_164"
   ],
   "evidence": [
-   "ev_000049"
+   "ev_000246"
   ],
   "facts": {
    "team": "KES",
@@ -46,446 +242,158 @@
   }
  },
  {
-  "moment_id": "mo_0003",
-  "t": 137.78,
-  "clock": 137.78,
-  "minute": 3,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "KES",
-  "players": [
-   "p_164"
-  ],
-  "evidence": [
-   "ev_000060"
-  ],
-  "facts": {
-   "player": "Idris Sandeman",
-   "team": "KES",
-   "won_by": "interception",
-   "metres_from_goal": 22,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0004",
-  "t": 195.3,
-  "clock": 195.3,
-  "minute": 4,
+  "moment_id": "mo_0011",
+  "t": 802.42,
+  "clock": 802.42,
+  "minute": 14,
   "type": "hard_pass",
   "class": 3,
   "score": 0.5,
-  "team": "OST",
+  "team": "CRV",
   "players": [
-   "p_145",
-   "p_146"
+   "p_126",
+   "p_128"
   ],
   "evidence": [
-   "ev_000076"
+   "ev_000261"
   ],
   "facts": {
-   "passer": "Tobi Verhoef",
-   "receiver": "Jide Okeke",
-   "team": "OST",
-   "difficulty": 4,
-   "distance_m": 27,
-   "completion_chance_pct": 62
-  }
- },
- {
-  "moment_id": "mo_0005",
-  "t": 257.66,
-  "clock": 257.66,
-  "minute": 5,
-  "type": "long_move",
-  "class": 3,
-  "score": 0.4,
-  "team": "KES",
-  "players": [
-   "p_160"
-  ],
-  "evidence": [
-   "ev_000089",
-   "ev_000090",
-   "ev_000091",
-   "ev_000092",
-   "ev_000093",
-   "ev_000094",
-   "ev_000095",
-   "ev_000096",
-   "ev_000097",
-   "ev_000098"
-  ],
-  "facts": {
-   "team": "KES",
-   "passes_in_move": 10,
-   "seconds_in_possession": 37
-  }
- },
- {
-  "moment_id": "mo_0006",
-  "t": 393.1,
-  "clock": 393.1,
-  "minute": 7,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "OST",
-  "players": [
-   "p_147"
-  ],
-  "evidence": [
-   "ev_000135"
-  ],
-  "facts": {
-   "player": "Wale Halloran",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 26,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0007",
-  "t": 465.56,
-  "clock": 465.56,
-  "minute": 8,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "KES",
-  "players": [
-   "p_162",
-   "p_164"
-  ],
-  "evidence": [
-   "ev_000162"
-  ],
-  "facts": {
-   "passer": "Somto Nwosu",
-   "receiver": "Idris Sandeman",
-   "team": "KES",
-   "difficulty": 4,
-   "distance_m": 18,
-   "completion_chance_pct": 61
-  }
- },
- {
-  "moment_id": "mo_0008",
-  "t": 490.54,
-  "clock": 490.54,
-  "minute": 9,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "KES",
-  "players": [
-   "p_164"
-  ],
-  "evidence": [
-   "ev_000171"
-  ],
-  "facts": {
-   "player": "Idris Sandeman",
-   "team": "KES",
-   "won_by": "interception",
-   "metres_from_goal": 32,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0009",
-  "t": 554.62,
-  "clock": 554.62,
-  "minute": 10,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "OST",
-  "players": [
-   "p_143",
-   "p_146"
-  ],
-  "evidence": [
-   "ev_000186"
-  ],
-  "facts": {
-   "passer": "Obinna Kerrigan",
-   "receiver": "Jide Okeke",
-   "team": "OST",
+   "passer": "Bram Ekpo",
+   "receiver": "Somto Odum",
+   "team": "CRV",
    "difficulty": 4,
    "distance_m": 20,
-   "completion_chance_pct": 62
-  }
- },
- {
-  "moment_id": "mo_0010",
-  "t": 608.46,
-  "clock": 608.46,
-  "minute": 11,
-  "type": "momentum_swing",
-  "class": 2,
-  "score": 0.55,
-  "team": "OST",
-  "players": [],
-  "evidence": [
-   "ev_000135",
-   "ev_000143",
-   "ev_000165",
-   "ev_000195",
-   "ev_000199"
-  ],
-  "facts": {
-   "team": "OST",
-   "shots_last_5min": 1,
-   "opponent_shots_last_5min": 1,
-   "turnovers_won_final_third_last_5min": 1,
-   "passes_last_5min": 27,
-   "opponent_passes_last_5min": 15
-  }
- },
- {
-  "moment_id": "mo_0011",
-  "t": 714.19,
-  "clock": 714.19,
-  "minute": 12,
-  "type": "sprint",
-  "class": 3,
-  "score": 0.25,
-  "team": "OST",
-  "players": [
-   "p_146"
-  ],
-  "evidence": [
-   "ev_000236"
-  ],
-  "facts": {
-   "player": "Jide Okeke",
-   "team": "OST",
-   "speed_kmh": 32.0
+   "completion_chance_pct": 57
   }
  },
  {
   "moment_id": "mo_0012",
-  "t": 855.15,
-  "clock": 855.15,
-  "minute": 15,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "KES",
+  "t": 806.8,
+  "clock": 806.8,
+  "minute": 14,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "CRV",
   "players": [
-   "p_162",
-   "p_164"
+   "p_128",
+   "p_126"
   ],
   "evidence": [
-   "ev_000285"
+   "ev_000261",
+   "ev_000262",
+   "ev_000263"
   ],
   "facts": {
-   "passer": "Somto Nwosu",
-   "receiver": "Idris Sandeman",
-   "team": "KES",
-   "difficulty": 4,
-   "distance_m": 27,
-   "completion_chance_pct": 55
+   "scorer": "Somto Odum",
+   "team": "CRV",
+   "minute": 14,
+   "score_home": 0,
+   "score_away": 1,
+   "shot_distance_m": 11,
+   "shot_speed_kmh": 64,
+   "goals_for_scorer": 1,
+   "assist": "Bram Ekpo"
   }
  },
  {
   "moment_id": "mo_0013",
-  "t": 1036.74,
-  "clock": 1036.74,
-  "minute": 18,
+  "t": 900.25,
+  "clock": 900.25,
+  "minute": 16,
   "type": "press_change",
   "class": 3,
   "score": 0.4,
-  "team": "OST",
+  "team": "CRV",
   "players": [],
   "evidence": [
-   "ev_000316",
-   "ev_000330"
+   "ev_000266"
   ],
   "facts": {
-   "team": "OST",
+   "team": "CRV",
    "direction": "down",
-   "pressing_change_pct": -44,
+   "pressing_change_pct": -38,
    "window_min": 3
   }
  },
  {
   "moment_id": "mo_0014",
-  "t": 1083.08,
-  "clock": 1083.08,
-  "minute": 19,
-  "type": "momentum_swing",
-  "class": 2,
-  "score": 0.55,
+  "t": 945.56,
+  "clock": 945.56,
+  "minute": 16,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
   "team": "KES",
-  "players": [],
+  "players": [
+   "p_163",
+   "p_164"
+  ],
   "evidence": [
-   "ev_000305",
-   "ev_000341"
+   "ev_000290"
   ],
   "facts": {
+   "passer": "Ade Kessler",
+   "receiver": "Idris Sandeman",
    "team": "KES",
-   "shots_last_5min": 0,
-   "opponent_shots_last_5min": 0,
-   "turnovers_won_final_third_last_5min": 0,
-   "passes_last_5min": 23,
-   "opponent_passes_last_5min": 28
+   "difficulty": 4,
+   "distance_m": 27,
+   "completion_chance_pct": 61
   }
  },
  {
   "moment_id": "mo_0015",
-  "t": 1096.69,
-  "clock": 1096.69,
+  "t": 1117.13,
+  "clock": 1117.13,
   "minute": 19,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "OST",
-  "players": [
-   "p_145"
-  ],
-  "evidence": [
-   "ev_000371"
-  ],
-  "facts": {
-   "player": "Tobi Verhoef",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 21,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0016",
-  "t": 1140.96,
-  "clock": 1140.96,
-  "minute": 20,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "OST",
-  "players": [
-   "p_145",
-   "p_146"
-  ],
-  "evidence": [
-   "ev_000388"
-  ],
-  "facts": {
-   "passer": "Tobi Verhoef",
-   "receiver": "Jide Okeke",
-   "team": "OST",
-   "difficulty": 4,
-   "distance_m": 28,
-   "completion_chance_pct": 65
-  }
- },
- {
-  "moment_id": "mo_0017",
-  "t": 1175.75,
-  "clock": 1175.75,
-  "minute": 20,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.66,
-  "team": "OST",
-  "players": [
-   "p_145"
-  ],
-  "evidence": [
-   "ev_000371",
-   "ev_000396",
-   "ev_000405"
-  ],
-  "facts": {
-   "player": "Tobi Verhoef",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 23,
-   "turnovers_in_final_third_last_5min": 3
-  }
- },
- {
-  "moment_id": "mo_0018",
-  "t": 1194.95,
-  "clock": 1194.95,
-  "minute": 20,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.73,
-  "team": "OST",
-  "players": [
-   "p_147"
-  ],
-  "evidence": [
-   "ev_000371",
-   "ev_000396",
-   "ev_000405",
-   "ev_000414"
-  ],
-  "facts": {
-   "player": "Wale Halloran",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 20,
-   "turnovers_in_final_third_last_5min": 4
-  }
- },
- {
-  "moment_id": "mo_0019",
-  "t": 1222.19,
-  "clock": 1222.19,
-  "minute": 21,
-  "type": "momentum_swing",
-  "class": 2,
-  "score": 0.55,
-  "team": "OST",
-  "players": [],
-  "evidence": [
-   "ev_000363",
-   "ev_000371",
-   "ev_000396",
-   "ev_000405",
-   "ev_000414"
-  ],
-  "facts": {
-   "team": "OST",
-   "shots_last_5min": 0,
-   "opponent_shots_last_5min": 0,
-   "turnovers_won_final_third_last_5min": 4,
-   "passes_last_5min": 32,
-   "opponent_passes_last_5min": 25
-  }
- },
- {
-  "moment_id": "mo_0020",
-  "t": 1225.5,
-  "clock": 1225.5,
-  "minute": 21,
   "type": "press_change",
   "class": 3,
   "score": 0.4,
   "team": "KES",
   "players": [],
   "evidence": [
-   "ev_000355",
-   "ev_000357",
-   "ev_000424"
+   "ev_000299",
+   "ev_000307",
+   "ev_000318",
+   "ev_000319",
+   "ev_000325"
   ],
   "facts": {
    "team": "KES",
    "direction": "down",
-   "pressing_change_pct": -67,
+   "pressing_change_pct": -41,
    "window_min": 3
   }
  },
  {
-  "moment_id": "mo_0021",
-  "t": 1267.85,
-  "clock": 1267.85,
+  "moment_id": "mo_0016",
+  "t": 1271.04,
+  "clock": 1271.04,
+  "minute": 22,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "KES",
+  "players": [
+   "p_163",
+   "p_164"
+  ],
+  "evidence": [
+   "ev_000385"
+  ],
+  "facts": {
+   "passer": "Ade Kessler",
+   "receiver": "Idris Sandeman",
+   "team": "KES",
+   "difficulty": 4,
+   "distance_m": 30,
+   "completion_chance_pct": 58
+  }
+ },
+ {
+  "moment_id": "mo_0017",
+  "t": 1288.43,
+  "clock": 1288.43,
   "minute": 22,
   "type": "high_turnover",
   "class": 2,
@@ -495,617 +403,253 @@
    "p_164"
   ],
   "evidence": [
-   "ev_000439"
+   "ev_000392"
   ],
   "facts": {
    "player": "Idris Sandeman",
    "team": "KES",
    "won_by": "interception",
-   "metres_from_goal": 28,
+   "metres_from_goal": 9,
    "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0018",
+  "t": 1404.75,
+  "clock": 1404.75,
+  "minute": 24,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "KES",
+  "players": [
+   "p_161"
+  ],
+  "evidence": [
+   "ev_000424",
+   "ev_000425",
+   "ev_000426",
+   "ev_000427",
+   "ev_000432",
+   "ev_000433",
+   "ev_000434",
+   "ev_000435",
+   "ev_000436",
+   "ev_000437"
+  ],
+  "facts": {
+   "team": "KES",
+   "passes_in_move": 10,
+   "seconds_in_possession": 52
+  }
+ },
+ {
+  "moment_id": "mo_0019",
+  "t": 1553.94,
+  "clock": 1553.94,
+  "minute": 26,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "KES",
+  "players": [
+   "p_164",
+   "p_161"
+  ],
+  "evidence": [
+   "ev_000487"
+  ],
+  "facts": {
+   "passer": "Idris Sandeman",
+   "receiver": "Ikenna Amadi",
+   "team": "KES",
+   "difficulty": 4,
+   "distance_m": 31,
+   "completion_chance_pct": 66
+  }
+ },
+ {
+  "moment_id": "mo_0020",
+  "t": 1601.98,
+  "clock": 1601.98,
+  "minute": 27,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000504"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 23,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0021",
+  "t": 1640.67,
+  "clock": 1640.67,
+  "minute": 28,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_000503",
+   "ev_000510",
+   "ev_000511",
+   "ev_000513",
+   "ev_000514"
+  ],
+  "facts": {
+   "team": "CRV",
+   "direction": "up",
+   "pressing_change_pct": 30,
+   "window_min": 3
   }
  },
  {
   "moment_id": "mo_0022",
-  "t": 1553.57,
-  "clock": 1553.57,
-  "minute": 26,
-  "type": "drought",
+  "t": 1648.01,
+  "clock": 1648.01,
+  "minute": 28,
+  "type": "hard_pass",
   "class": 3,
-  "score": 0.35,
-  "team": "KES",
-  "players": [],
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_129",
+   "p_128"
+  ],
   "evidence": [
-   "ev_000535"
+   "ev_000522"
   ],
   "facts": {
-   "team": "KES",
-   "minutes_without_a_shot": 15
+   "passer": "Dayo Okwu",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 23,
+   "completion_chance_pct": 66
   }
  },
  {
   "moment_id": "mo_0023",
-  "t": 1602.6,
-  "clock": 1602.6,
-  "minute": 27,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "KES",
-  "players": [
-   "p_162",
-   "p_164"
-  ],
-  "evidence": [
-   "ev_000556"
-  ],
-  "facts": {
-   "passer": "Somto Nwosu",
-   "receiver": "Idris Sandeman",
-   "team": "KES",
-   "difficulty": 4,
-   "distance_m": 22,
-   "completion_chance_pct": 61
-  }
- },
- {
-  "moment_id": "mo_0024",
-  "t": 1646.8,
-  "clock": 1646.8,
-  "minute": 28,
-  "type": "long_move",
-  "class": 3,
-  "score": 0.4,
-  "team": "OST",
-  "players": [
-   "p_145"
-  ],
-  "evidence": [
-   "ev_000561",
-   "ev_000562",
-   "ev_000563",
-   "ev_000564",
-   "ev_000565",
-   "ev_000566",
-   "ev_000567",
-   "ev_000568",
-   "ev_000569",
-   "ev_000570"
-  ],
-  "facts": {
-   "team": "OST",
-   "passes_in_move": 10,
-   "seconds_in_possession": 39
-  }
- },
- {
-  "moment_id": "mo_0025",
-  "t": 1702.74,
-  "clock": 1702.74,
+  "t": 1701.6,
+  "clock": 1701.6,
   "minute": 29,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "OST",
-  "players": [
-   "p_145"
-  ],
-  "evidence": [
-   "ev_000590"
-  ],
-  "facts": {
-   "player": "Tobi Verhoef",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 13,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0026",
-  "t": 1705.25,
-  "clock": 1705.25,
-  "minute": 29,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "OST",
-  "players": [
-   "p_145",
-   "p_146"
-  ],
-  "evidence": [
-   "ev_000592"
-  ],
-  "facts": {
-   "passer": "Tobi Verhoef",
-   "receiver": "Jide Okeke",
-   "team": "OST",
-   "difficulty": 4,
-   "distance_m": 12,
-   "completion_chance_pct": 65
-  }
- },
- {
-  "moment_id": "mo_0027",
-  "t": 1827.89,
-  "clock": 1827.89,
-  "minute": 31,
-  "type": "press_change",
-  "class": 3,
-  "score": 0.4,
-  "team": "KES",
-  "players": [],
-  "evidence": [
-   "ev_000571",
-   "ev_000623",
-   "ev_000625"
-  ],
-  "facts": {
-   "team": "KES",
-   "direction": "down",
-   "pressing_change_pct": -31,
-   "window_min": 3
-  }
- },
- {
-  "moment_id": "mo_0028",
-  "t": 2017.19,
-  "clock": 2017.19,
-  "minute": 34,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "OST",
-  "players": [
-   "p_143",
-   "p_146"
-  ],
-  "evidence": [
-   "ev_000685"
-  ],
-  "facts": {
-   "passer": "Obinna Kerrigan",
-   "receiver": "Jide Okeke",
-   "team": "OST",
-   "difficulty": 4,
-   "distance_m": 25,
-   "completion_chance_pct": 61
-  }
- },
- {
-  "moment_id": "mo_0029",
-  "t": 2045.98,
-  "clock": 2045.98,
-  "minute": 35,
-  "type": "press_change",
-  "class": 3,
-  "score": 0.4,
-  "team": "OST",
-  "players": [],
-  "evidence": [
-   "ev_000655"
-  ],
-  "facts": {
-   "team": "OST",
-   "direction": "down",
-   "pressing_change_pct": -64,
-   "window_min": 3
-  }
- },
- {
-  "moment_id": "mo_0030",
-  "t": 2049.96,
-  "clock": 2049.96,
-  "minute": 35,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "OST",
-  "players": [
-   "p_147"
-  ],
-  "evidence": [
-   "ev_000691"
-  ],
-  "facts": {
-   "player": "Wale Halloran",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 20,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0031",
-  "t": 2079.14,
-  "clock": 2079.14,
-  "minute": 35,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "KES",
-  "players": [
-   "p_165",
-   "p_164"
-  ],
-  "evidence": [
-   "ev_000707"
-  ],
-  "facts": {
-   "passer": "Luca Oyelaran",
-   "receiver": "Idris Sandeman",
-   "team": "KES",
-   "difficulty": 4,
-   "distance_m": 32,
-   "completion_chance_pct": 65
-  }
- },
- {
-  "moment_id": "mo_0032",
-  "t": 2188.37,
-  "clock": 2188.37,
-  "minute": 37,
   "type": "high_turnover",
   "class": 2,
   "score": 0.66,
-  "team": "OST",
+  "team": "CRV",
   "players": [
-   "p_147"
+   "p_127"
   ],
   "evidence": [
-   "ev_000691",
-   "ev_000699",
-   "ev_000751"
+   "ev_000504",
+   "ev_000532",
+   "ev_000541"
   ],
   "facts": {
-   "player": "Wale Halloran",
-   "team": "OST",
-   "won_by": "interception",
+   "player": "Lanre Varga",
+   "team": "CRV",
+   "won_by": "tackle",
    "metres_from_goal": 34,
    "turnovers_in_final_third_last_5min": 3
   }
  },
  {
-  "moment_id": "mo_0033",
-  "t": 2379.45,
-  "clock": 2379.45,
-  "minute": 40,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "KES",
-  "players": [
-   "p_165"
-  ],
-  "evidence": [
-   "ev_000822"
-  ],
-  "facts": {
-   "player": "Luca Oyelaran",
-   "team": "KES",
-   "won_by": "tackle",
-   "metres_from_goal": 28,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0034",
-  "t": 2405.23,
-  "clock": 2405.23,
-  "minute": 41,
-  "type": "hard_pass",
+  "moment_id": "mo_0024",
+  "t": 1709.02,
+  "clock": 1709.02,
+  "minute": 29,
+  "type": "drought",
   "class": 3,
-  "score": 0.5,
-  "team": "OST",
-  "players": [
-   "p_145",
-   "p_146"
-  ],
-  "evidence": [
-   "ev_000833"
-  ],
-  "facts": {
-   "passer": "Tobi Verhoef",
-   "receiver": "Jide Okeke",
-   "team": "OST",
-   "difficulty": 4,
-   "distance_m": 22,
-   "completion_chance_pct": 66
-  }
- },
- {
-  "moment_id": "mo_0035",
-  "t": 2438.21,
-  "clock": 2438.21,
-  "minute": 41,
-  "type": "goal",
-  "class": 1,
-  "score": 1.0,
-  "team": "OST",
-  "players": [
-   "p_140",
-   "p_145"
-  ],
-  "evidence": [
-   "ev_000837",
-   "ev_000838",
-   "ev_000839"
-  ],
-  "facts": {
-   "scorer": "Anders Strand",
-   "team": "OST",
-   "minute": 41,
-   "score_home": 1,
-   "score_away": 0,
-   "shot_distance_m": 6,
-   "shot_speed_kmh": 50,
-   "goals_for_scorer": 1,
-   "finish": "header",
-   "assist": "Tobi Verhoef"
-  }
- },
- {
-  "moment_id": "mo_0036",
-  "t": 2498.16,
-  "clock": 2498.16,
-  "minute": 42,
-  "type": "press_change",
-  "class": 3,
-  "score": 0.4,
-  "team": "KES",
+  "score": 0.35,
+  "team": "CRV",
   "players": [],
   "evidence": [
-   "ev_000804",
-   "ev_000805",
-   "ev_000821",
-   "ev_000827",
-   "ev_000828"
+   "ev_000545"
   ],
   "facts": {
-   "team": "KES",
-   "direction": "down",
-   "pressing_change_pct": -32,
-   "window_min": 3
+   "team": "CRV",
+   "minutes_without_a_shot": 15
   }
  },
  {
-  "moment_id": "mo_0037",
-  "t": 2559.46,
-  "clock": 2559.46,
-  "minute": 43,
+  "moment_id": "mo_0025",
+  "t": 1733.43,
+  "clock": 1733.43,
+  "minute": 29,
   "type": "high_turnover",
   "class": 2,
-  "score": 0.59,
-  "team": "KES",
+  "score": 0.73,
+  "team": "CRV",
   "players": [
-   "p_164"
+   "p_128"
   ],
   "evidence": [
-   "ev_000822",
-   "ev_000866"
+   "ev_000504",
+   "ev_000532",
+   "ev_000541",
+   "ev_000555"
   ],
   "facts": {
-   "player": "Idris Sandeman",
-   "team": "KES",
-   "won_by": "interception",
-   "metres_from_goal": 13,
-   "turnovers_in_final_third_last_5min": 2
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "tackle",
+   "metres_from_goal": 20,
+   "turnovers_in_final_third_last_5min": 4
   }
  },
  {
-  "moment_id": "mo_0038",
-  "t": 2604.76,
-  "clock": 2604.76,
-  "minute": 44,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "KES",
-  "players": [
-   "p_165",
-   "p_164"
-  ],
-  "evidence": [
-   "ev_000882"
-  ],
-  "facts": {
-   "passer": "Luca Oyelaran",
-   "receiver": "Idris Sandeman",
-   "team": "KES",
-   "difficulty": 4,
-   "distance_m": 25,
-   "completion_chance_pct": 59
-  }
- },
- {
-  "moment_id": "mo_0039",
-  "t": 2668.9,
-  "clock": 2668.9,
-  "minute": 45,
+  "moment_id": "mo_0026",
+  "t": 1776.7,
+  "clock": 1776.7,
+  "minute": 30,
   "type": "momentum_swing",
   "class": 2,
   "score": 0.55,
-  "team": "KES",
+  "team": "CRV",
   "players": [],
   "evidence": [
-   "ev_000855",
-   "ev_000866",
-   "ev_000883",
-   "ev_000902",
-   "ev_000909"
+   "ev_000504",
+   "ev_000516",
+   "ev_000532",
+   "ev_000541",
+   "ev_000555"
   ],
   "facts": {
-   "team": "KES",
-   "shots_last_5min": 1,
-   "opponent_shots_last_5min": 2,
-   "turnovers_won_final_third_last_5min": 2,
-   "passes_last_5min": 19,
-   "opponent_passes_last_5min": 21
+   "team": "CRV",
+   "shots_last_5min": 0,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 4,
+   "passes_last_5min": 26,
+   "opponent_passes_last_5min": 24
   }
  },
  {
-  "moment_id": "mo_0040",
-  "t": 2905.61,
-  "clock": 2905.61,
-  "minute": 49,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "KES",
-  "players": [
-   "p_164"
-  ],
-  "evidence": [
-   "ev_000980"
-  ],
-  "facts": {
-   "player": "Idris Sandeman",
-   "team": "KES",
-   "won_by": "interception",
-   "metres_from_goal": 8,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0041",
-  "t": 2964.78,
-  "clock": 2736.79,
-  "minute": 46,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "KES",
-  "players": [
-   "p_165",
-   "p_164"
-  ],
-  "evidence": [
-   "ev_001000"
-  ],
-  "facts": {
-   "passer": "Luca Oyelaran",
-   "receiver": "Idris Sandeman",
-   "team": "KES",
-   "difficulty": 4,
-   "distance_m": 32,
-   "completion_chance_pct": 57
-  }
- },
- {
-  "moment_id": "mo_0042",
-  "t": 2974.67,
-  "clock": 2746.68,
-  "minute": 46,
-  "type": "goal",
-  "class": 1,
-  "score": 1.0,
-  "team": "KES",
-  "players": [
-   "p_164",
-   "p_165"
-  ],
-  "evidence": [
-   "ev_001000",
-   "ev_001003",
-   "ev_001004"
-  ],
-  "facts": {
-   "scorer": "Idris Sandeman",
-   "team": "KES",
-   "minute": 46,
-   "score_home": 1,
-   "score_away": 1,
-   "shot_distance_m": 6,
-   "shot_speed_kmh": 93,
-   "goals_for_scorer": 1,
-   "assist": "Luca Oyelaran"
-  }
- },
- {
-  "moment_id": "mo_0043",
-  "t": 3113.59,
-  "clock": 2885.6,
-  "minute": 49,
-  "type": "press_change",
-  "class": 3,
-  "score": 0.4,
-  "team": "OST",
-  "players": [],
-  "evidence": [
-   "ev_000992"
-  ],
-  "facts": {
-   "team": "OST",
-   "direction": "down",
-   "pressing_change_pct": -59,
-   "window_min": 3
-  }
- },
- {
-  "moment_id": "mo_0044",
-  "t": 3177.95,
-  "clock": 2949.96,
-  "minute": 50,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "OST",
-  "players": [
-   "p_146"
-  ],
-  "evidence": [
-   "ev_001068"
-  ],
-  "facts": {
-   "player": "Jide Okeke",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 14,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0045",
-  "t": 3211.59,
-  "clock": 2983.6,
-  "minute": 50,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "KES",
-  "players": [
-   "p_162",
-   "p_164"
-  ],
-  "evidence": [
-   "ev_001081"
-  ],
-  "facts": {
-   "passer": "Somto Nwosu",
-   "receiver": "Idris Sandeman",
-   "team": "KES",
-   "difficulty": 4,
-   "distance_m": 16,
-   "completion_chance_pct": 63
-  }
- },
- {
-  "moment_id": "mo_0046",
-  "t": 3263.0,
-  "clock": 3035.0,
-  "minute": 51,
+  "moment_id": "mo_0027",
+  "t": 1790.48,
+  "clock": 1790.48,
+  "minute": 30,
   "type": "press_change",
   "class": 3,
   "score": 0.4,
   "team": "KES",
   "players": [],
   "evidence": [
-   "ev_001042",
-   "ev_001043",
-   "ev_001044",
-   "ev_001045",
-   "ev_001064"
+   "ev_000518",
+   "ev_000519",
+   "ev_000575",
+   "ev_000576"
   ],
   "facts": {
    "team": "KES",
@@ -1115,417 +659,164 @@
   }
  },
  {
-  "moment_id": "mo_0047",
-  "t": 3283.78,
-  "clock": 3055.79,
-  "minute": 51,
-  "type": "milestone",
-  "class": 3,
-  "score": 0.3,
-  "team": "KES",
-  "players": [
-   "p_164"
-  ],
-  "evidence": [
-   "ev_001098"
-  ],
-  "facts": {
-   "team": "KES",
-   "team_shots": 10
-  }
- },
- {
-  "moment_id": "mo_0048",
-  "t": 3313.0,
-  "clock": 3085.01,
-  "minute": 52,
+  "moment_id": "mo_0028",
+  "t": 1819.43,
+  "clock": 1819.43,
+  "minute": 31,
   "type": "high_turnover",
   "class": 2,
-  "score": 0.59,
-  "team": "KES",
+  "score": 0.8,
+  "team": "CRV",
   "players": [
-   "p_164"
+   "p_127"
   ],
   "evidence": [
-   "ev_001018",
-   "ev_001104"
+   "ev_000532",
+   "ev_000541",
+   "ev_000555",
+   "ev_000588"
   ],
   "facts": {
-   "player": "Idris Sandeman",
-   "team": "KES",
+   "player": "Lanre Varga",
+   "team": "CRV",
    "won_by": "interception",
-   "metres_from_goal": 21,
-   "turnovers_in_final_third_last_5min": 2
+   "metres_from_goal": 28,
+   "turnovers_in_final_third_last_5min": 5
   }
  },
  {
-  "moment_id": "mo_0049",
-  "t": 3336.67,
-  "clock": 3108.68,
-  "minute": 52,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.59,
-  "team": "OST",
-  "players": [
-   "p_146"
-  ],
-  "evidence": [
-   "ev_001068",
-   "ev_001117"
-  ],
-  "facts": {
-   "player": "Jide Okeke",
-   "team": "OST",
-   "won_by": "tackle",
-   "metres_from_goal": 26,
-   "turnovers_in_final_third_last_5min": 2
-  }
- },
- {
-  "moment_id": "mo_0050",
-  "t": 3338.28,
-  "clock": 3110.29,
-  "minute": 52,
-  "type": "drought",
-  "class": 3,
-  "score": 0.35,
-  "team": "OST",
-  "players": [],
-  "evidence": [
-   "ev_001119"
-  ],
-  "facts": {
-   "team": "OST",
-   "minutes_without_a_shot": 15
-  }
- },
- {
-  "moment_id": "mo_0051",
-  "t": 3516.39,
-  "clock": 3288.4,
-  "minute": 55,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.59,
-  "team": "KES",
-  "players": [
-   "p_165"
-  ],
-  "evidence": [
-   "ev_001104",
-   "ev_001165"
-  ],
-  "facts": {
-   "player": "Luca Oyelaran",
-   "team": "KES",
-   "won_by": "tackle",
-   "metres_from_goal": 34,
-   "turnovers_in_final_third_last_5min": 2
-  }
- },
- {
-  "moment_id": "mo_0052",
-  "t": 3576.7,
-  "clock": 3348.71,
-  "minute": 56,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.59,
-  "team": "OST",
-  "players": [
-   "p_145"
-  ],
-  "evidence": [
-   "ev_001117",
-   "ev_001188"
-  ],
-  "facts": {
-   "player": "Tobi Verhoef",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 30,
-   "turnovers_in_final_third_last_5min": 2
-  }
- },
- {
-  "moment_id": "mo_0053",
-  "t": 3580.22,
-  "clock": 3352.23,
-  "minute": 56,
+  "moment_id": "mo_0029",
+  "t": 1948.71,
+  "clock": 1948.71,
+  "minute": 33,
   "type": "hard_pass",
   "class": 3,
   "score": 0.5,
-  "team": "OST",
+  "team": "KES",
   "players": [
-   "p_145",
-   "p_146"
+   "p_161",
+   "p_164"
   ],
   "evidence": [
-   "ev_001191"
+   "ev_000634"
   ],
   "facts": {
-   "passer": "Tobi Verhoef",
-   "receiver": "Jide Okeke",
-   "team": "OST",
+   "passer": "Ikenna Amadi",
+   "receiver": "Idris Sandeman",
+   "team": "KES",
    "difficulty": 4,
    "distance_m": 21,
-   "completion_chance_pct": 57
-  }
- },
- {
-  "moment_id": "mo_0054",
-  "t": 3670.69,
-  "clock": 3442.7,
-  "minute": 58,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.66,
-  "team": "OST",
-  "players": [
-   "p_146"
-  ],
-  "evidence": [
-   "ev_001188",
-   "ev_001220",
-   "ev_001231"
-  ],
-  "facts": {
-   "player": "Jide Okeke",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 14,
-   "turnovers_in_final_third_last_5min": 3
-  }
- },
- {
-  "moment_id": "mo_0055",
-  "t": 3708.65,
-  "clock": 3480.66,
-  "minute": 59,
-  "type": "momentum_swing",
-  "class": 2,
-  "score": 0.55,
-  "team": "OST",
-  "players": [],
-  "evidence": [
-   "ev_001188",
-   "ev_001210",
-   "ev_001220",
-   "ev_001231",
-   "ev_001238"
-  ],
-  "facts": {
-   "team": "OST",
-   "shots_last_5min": 0,
-   "opponent_shots_last_5min": 2,
-   "turnovers_won_final_third_last_5min": 3,
-   "passes_last_5min": 26,
-   "opponent_passes_last_5min": 25
-  }
- },
- {
-  "moment_id": "mo_0056",
-  "t": 3789.04,
-  "clock": 3561.05,
-  "minute": 60,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.59,
-  "team": "KES",
-  "players": [
-   "p_164"
-  ],
-  "evidence": [
-   "ev_001165",
-   "ev_001282"
-  ],
-  "facts": {
-   "player": "Idris Sandeman",
-   "team": "KES",
-   "won_by": "interception",
-   "metres_from_goal": 7,
-   "turnovers_in_final_third_last_5min": 2
-  }
- },
- {
-  "moment_id": "mo_0057",
-  "t": 3806.62,
-  "clock": 3578.63,
-  "minute": 60,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.66,
-  "team": "KES",
-  "players": [
-   "p_161"
-  ],
-  "evidence": [
-   "ev_001165",
-   "ev_001282",
-   "ev_001291"
-  ],
-  "facts": {
-   "player": "Ikenna Amadi",
-   "team": "KES",
-   "won_by": "interception",
-   "metres_from_goal": 35,
-   "turnovers_in_final_third_last_5min": 3
-  }
- },
- {
-  "moment_id": "mo_0058",
-  "t": 3969.38,
-  "clock": 3741.39,
-  "minute": 63,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.59,
-  "team": "OST",
-  "players": [
-   "p_146"
-  ],
-  "evidence": [
-   "ev_001231",
-   "ev_001343"
-  ],
-  "facts": {
-   "player": "Jide Okeke",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 14,
-   "turnovers_in_final_third_last_5min": 2
-  }
- },
- {
-  "moment_id": "mo_0059",
-  "t": 3981.16,
-  "clock": 3753.17,
-  "minute": 63,
-  "type": "press_change",
-  "class": 3,
-  "score": 0.4,
-  "team": "KES",
-  "players": [],
-  "evidence": [
-   "ev_001289",
-   "ev_001290",
-   "ev_001297",
-   "ev_001324"
-  ],
-  "facts": {
-   "team": "KES",
-   "direction": "down",
-   "pressing_change_pct": -32,
-   "window_min": 3
-  }
- },
- {
-  "moment_id": "mo_0060",
-  "t": 4008.84,
-  "clock": 3780.85,
-  "minute": 64,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "OST",
-  "players": [
-   "p_144",
-   "p_153"
-  ],
-  "evidence": [
-   "ev_001362"
-  ],
-  "facts": {
-   "passer": "Elio Nnadi",
-   "receiver": "Kofi Ogunleye",
-   "team": "OST",
-   "difficulty": 4,
-   "distance_m": 34,
    "completion_chance_pct": 61
   }
  },
  {
-  "moment_id": "mo_0061",
-  "t": 4028.38,
-  "clock": 3800.39,
-  "minute": 64,
+  "moment_id": "mo_0030",
+  "t": 1954.71,
+  "clock": 1954.71,
+  "minute": 33,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "KES",
+  "players": [
+   "p_162"
+  ],
+  "evidence": [
+   "ev_000624",
+   "ev_000625",
+   "ev_000628",
+   "ev_000629",
+   "ev_000630",
+   "ev_000632",
+   "ev_000633",
+   "ev_000634",
+   "ev_000635",
+   "ev_000636"
+  ],
+  "facts": {
+   "team": "KES",
+   "passes_in_move": 10,
+   "seconds_in_possession": 43
+  }
+ },
+ {
+  "moment_id": "mo_0031",
+  "t": 1969.27,
+  "clock": 1969.27,
+  "minute": 33,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_127",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000642"
+  ],
+  "facts": {
+   "passer": "Lanre Varga",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 23,
+   "completion_chance_pct": 59
+  }
+ },
+ {
+  "moment_id": "mo_0032",
+  "t": 2181.52,
+  "clock": 2181.52,
+  "minute": 37,
   "type": "high_turnover",
   "class": 2,
-  "score": 0.66,
-  "team": "OST",
+  "score": 0.52,
+  "team": "CRV",
   "players": [
-   "p_147"
+   "p_125"
   ],
   "evidence": [
-   "ev_001343",
-   "ev_001350",
-   "ev_001370"
+   "ev_000711"
   ],
   "facts": {
-   "player": "Wale Halloran",
-   "team": "OST",
+   "player": "Uche Saltire",
+   "team": "CRV",
    "won_by": "interception",
-   "metres_from_goal": 20,
-   "turnovers_in_final_third_last_5min": 3
+   "metres_from_goal": 33,
+   "turnovers_in_final_third_last_5min": 1
   }
  },
  {
-  "moment_id": "mo_0062",
-  "t": 4172.24,
-  "clock": 3944.25,
-  "minute": 66,
-  "type": "milestone",
+  "moment_id": "mo_0033",
+  "t": 2308.82,
+  "clock": 2308.82,
+  "minute": 39,
+  "type": "hard_pass",
   "class": 3,
-  "score": 0.3,
-  "team": "OST",
+  "score": 0.5,
+  "team": "CRV",
   "players": [
-   "p_146"
+   "p_125",
+   "p_128"
   ],
   "evidence": [
-   "ev_001422"
+   "ev_000755"
   ],
   "facts": {
-   "team": "OST",
-   "team_shots": 10
+   "passer": "Uche Saltire",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 16,
+   "completion_chance_pct": 62
   }
  },
  {
-  "moment_id": "mo_0063",
-  "t": 4172.54,
-  "clock": 3944.55,
-  "minute": 66,
-  "type": "goal",
-  "class": 1,
-  "score": 1.0,
-  "team": "OST",
-  "players": [
-   "p_146",
-   "p_153"
-  ],
-  "evidence": [
-   "ev_001421",
-   "ev_001422",
-   "ev_001423"
-  ],
-  "facts": {
-   "scorer": "Jide Okeke",
-   "team": "OST",
-   "minute": 66,
-   "score_home": 2,
-   "score_away": 1,
-   "shot_distance_m": 5,
-   "shot_speed_kmh": 55,
-   "goals_for_scorer": 1,
-   "finish": "header",
-   "assist": "Kofi Ogunleye"
-  }
- },
- {
-  "moment_id": "mo_0064",
-  "t": 4249.72,
-  "clock": 4021.73,
-  "minute": 68,
+  "moment_id": "mo_0034",
+  "t": 2357.32,
+  "clock": 2357.32,
+  "minute": 40,
   "type": "high_turnover",
   "class": 2,
   "score": 0.52,
@@ -1534,67 +825,598 @@
    "p_164"
   ],
   "evidence": [
-   "ev_001452"
+   "ev_000777"
   ],
   "facts": {
    "player": "Idris Sandeman",
    "team": "KES",
    "won_by": "interception",
-   "metres_from_goal": 34,
+   "metres_from_goal": 7,
    "turnovers_in_final_third_last_5min": 1
   }
  },
  {
-  "moment_id": "mo_0065",
-  "t": 4261.31,
-  "clock": 4033.32,
-  "minute": 68,
-  "type": "milestone",
-  "class": 3,
-  "score": 0.3,
-  "team": "OST",
-  "players": [
-   "p_143"
-  ],
-  "evidence": [
-   "ev_001459"
-  ],
-  "facts": {
-   "player": "Obinna Kerrigan",
-   "team": "OST",
-   "completed_passes": 50
-  }
- },
- {
-  "moment_id": "mo_0066",
-  "t": 4269.7,
-  "clock": 4041.71,
-  "minute": 68,
+  "moment_id": "mo_0035",
+  "t": 2443.18,
+  "clock": 2443.18,
+  "minute": 41,
   "type": "hard_pass",
   "class": 3,
   "score": 0.5,
   "team": "KES",
   "players": [
-   "p_171",
+   "p_164",
    "p_164"
   ],
   "evidence": [
-   "ev_001463"
+   "ev_000814"
   ],
   "facts": {
-   "passer": "Dayo Babatunde",
+   "passer": "Idris Sandeman",
    "receiver": "Idris Sandeman",
    "team": "KES",
    "difficulty": 4,
-   "distance_m": 17,
-   "completion_chance_pct": 66
+   "distance_m": 27,
+   "completion_chance_pct": 62
   }
  },
  {
-  "moment_id": "mo_0067",
-  "t": 4308.49,
-  "clock": 4080.5,
-  "minute": 69,
+  "moment_id": "mo_0036",
+  "t": 2448.29,
+  "clock": 2448.29,
+  "minute": 41,
+  "type": "drought",
+  "class": 3,
+  "score": 0.35,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_000816"
+  ],
+  "facts": {
+   "team": "KES",
+   "minutes_without_a_shot": 15
+  }
+ },
+ {
+  "moment_id": "mo_0037",
+  "t": 2524.72,
+  "clock": 2524.72,
+  "minute": 43,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_000799",
+   "ev_000812",
+   "ev_000813",
+   "ev_000814"
+  ],
+  "facts": {
+   "team": "CRV",
+   "direction": "down",
+   "pressing_change_pct": -47,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0038",
+  "t": 2525.22,
+  "clock": 2525.22,
+  "minute": 43,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "KES",
+  "players": [
+   "p_164",
+   "p_161"
+  ],
+  "evidence": [
+   "ev_000818",
+   "ev_000826",
+   "ev_000827"
+  ],
+  "facts": {
+   "scorer": "Idris Sandeman",
+   "team": "KES",
+   "minute": 43,
+   "score_home": 1,
+   "score_away": 1,
+   "shot_distance_m": 11,
+   "shot_speed_kmh": 80,
+   "goals_for_scorer": 1,
+   "finish": "penalty",
+   "assist": "Ikenna Amadi"
+  }
+ },
+ {
+  "moment_id": "mo_0039",
+  "t": 2573.12,
+  "clock": 2573.12,
+  "minute": 43,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_000796"
+  ],
+  "facts": {
+   "team": "KES",
+   "direction": "up",
+   "pressing_change_pct": 88,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0040",
+  "t": 2585.4,
+  "clock": 2585.4,
+  "minute": 44,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_000768",
+   "ev_000777",
+   "ev_000784",
+   "ev_000810",
+   "ev_000826"
+  ],
+  "facts": {
+   "team": "KES",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 2,
+   "passes_last_5min": 23,
+   "opponent_passes_last_5min": 21
+  }
+ },
+ {
+  "moment_id": "mo_0041",
+  "t": 2659.66,
+  "clock": 2659.66,
+  "minute": 45,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "KES",
+  "players": [
+   "p_164"
+  ],
+  "evidence": [
+   "ev_000784",
+   "ev_000853"
+  ],
+  "facts": {
+   "player": "Idris Sandeman",
+   "team": "KES",
+   "won_by": "interception",
+   "metres_from_goal": 19,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0042",
+  "t": 2840.43,
+  "clock": 2840.43,
+  "minute": 48,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "KES",
+  "players": [
+   "p_162",
+   "p_164"
+  ],
+  "evidence": [
+   "ev_000912"
+  ],
+  "facts": {
+   "passer": "Somto Nwosu",
+   "receiver": "Idris Sandeman",
+   "team": "KES",
+   "difficulty": 4,
+   "distance_m": 26,
+   "completion_chance_pct": 63
+  }
+ },
+ {
+  "moment_id": "mo_0043",
+  "t": 2874.2,
+  "clock": 2874.2,
+  "minute": 48,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_129",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_000924"
+  ],
+  "facts": {
+   "passer": "Dayo Okwu",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 26,
+   "completion_chance_pct": 63
+  }
+ },
+ {
+  "moment_id": "mo_0044",
+  "t": 2907.6,
+  "clock": 2907.6,
+  "minute": 49,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [
+   "p_129"
+  ],
+  "evidence": [
+   "ev_000919",
+   "ev_000920",
+   "ev_000921",
+   "ev_000922",
+   "ev_000923",
+   "ev_000924",
+   "ev_000925",
+   "ev_000926",
+   "ev_000927",
+   "ev_000931"
+  ],
+  "facts": {
+   "team": "CRV",
+   "passes_in_move": 10,
+   "seconds_in_possession": 54
+  }
+ },
+ {
+  "moment_id": "mo_0045",
+  "t": 2967.38,
+  "clock": 2739.09,
+  "minute": 46,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_129"
+  ],
+  "evidence": [
+   "ev_000954"
+  ],
+  "facts": {
+   "player": "Dayo Okwu",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 11,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0046",
+  "t": 2968.75,
+  "clock": 2740.45,
+  "minute": 46,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_000917",
+   "ev_000928",
+   "ev_000932",
+   "ev_000949",
+   "ev_000954"
+  ],
+  "facts": {
+   "team": "CRV",
+   "shots_last_5min": 3,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 1,
+   "passes_last_5min": 34,
+   "opponent_passes_last_5min": 15
+  }
+ },
+ {
+  "moment_id": "mo_0047",
+  "t": 3101.02,
+  "clock": 2872.73,
+  "minute": 48,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.66,
+  "team": "CRV",
+  "players": [
+   "p_127"
+  ],
+  "evidence": [
+   "ev_000954",
+   "ev_000998",
+   "ev_001006"
+  ],
+  "facts": {
+   "player": "Lanre Varga",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 20,
+   "turnovers_in_final_third_last_5min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0048",
+  "t": 3142.94,
+  "clock": 2914.65,
+  "minute": 49,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_129",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_001024"
+  ],
+  "facts": {
+   "passer": "Dayo Okwu",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 29,
+   "completion_chance_pct": 62
+  }
+ },
+ {
+  "moment_id": "mo_0049",
+  "t": 3175.17,
+  "clock": 2946.88,
+  "minute": 50,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_000991"
+  ],
+  "facts": {
+   "team": "KES",
+   "direction": "down",
+   "pressing_change_pct": -100,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0050",
+  "t": 3184.34,
+  "clock": 2956.05,
+  "minute": 50,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "KES",
+  "players": [
+   "p_162"
+  ],
+  "evidence": [
+   "ev_001028",
+   "ev_001029",
+   "ev_001031",
+   "ev_001033",
+   "ev_001034",
+   "ev_001035",
+   "ev_001036",
+   "ev_001037",
+   "ev_001038",
+   "ev_001039"
+  ],
+  "facts": {
+   "team": "KES",
+   "passes_in_move": 10,
+   "seconds_in_possession": 36
+  }
+ },
+ {
+  "moment_id": "mo_0051",
+  "t": 3492.29,
+  "clock": 3264.0,
+  "minute": 55,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001137",
+   "ev_001144",
+   "ev_001145",
+   "ev_001146",
+   "ev_001147"
+  ],
+  "facts": {
+   "team": "CRV",
+   "direction": "down",
+   "pressing_change_pct": -33,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0052",
+  "t": 3514.35,
+  "clock": 3286.06,
+  "minute": 55,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "KES",
+  "players": [
+   "p_161"
+  ],
+  "evidence": [
+   "ev_001155"
+  ],
+  "facts": {
+   "player": "Ikenna Amadi",
+   "team": "KES",
+   "won_by": "interception",
+   "metres_from_goal": 32,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0053",
+  "t": 3572.99,
+  "clock": 3344.7,
+  "minute": 56,
+  "type": "drought",
+  "class": 3,
+  "score": 0.35,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_001179"
+  ],
+  "facts": {
+   "team": "KES",
+   "minutes_without_a_shot": 15
+  }
+ },
+ {
+  "moment_id": "mo_0054",
+  "t": 3594.9,
+  "clock": 3366.61,
+  "minute": 57,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "KES",
+  "players": [
+   "p_164"
+  ],
+  "evidence": [
+   "ev_001187"
+  ],
+  "facts": {
+   "player": "Idris Sandeman",
+   "team": "KES",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0055",
+  "t": 3716.26,
+  "clock": 3487.97,
+  "minute": 59,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "KES",
+  "players": [
+   "p_161",
+   "p_164"
+  ],
+  "evidence": [
+   "ev_001226"
+  ],
+  "facts": {
+   "passer": "Ikenna Amadi",
+   "receiver": "Idris Sandeman",
+   "team": "KES",
+   "difficulty": 4,
+   "distance_m": 24,
+   "completion_chance_pct": 54
+  }
+ },
+ {
+  "moment_id": "mo_0056",
+  "t": 3736.77,
+  "clock": 3508.48,
+  "minute": 59,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "KES",
+  "players": [
+   "p_164"
+  ],
+  "evidence": [
+   "ev_001233"
+  ],
+  "facts": {
+   "team": "KES",
+   "team_shots": 10
+  }
+ },
+ {
+  "moment_id": "mo_0057",
+  "t": 3762.81,
+  "clock": 3534.52,
+  "minute": 59,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "KES",
+  "players": [
+   "p_165"
+  ],
+  "evidence": [
+   "ev_001155",
+   "ev_001238"
+  ],
+  "facts": {
+   "player": "Luca Oyelaran",
+   "team": "KES",
+   "won_by": "interception",
+   "metres_from_goal": 21,
+   "turnovers_in_final_third_last_5min": 2
+  }
+ },
+ {
+  "moment_id": "mo_0058",
+  "t": 3797.57,
+  "clock": 3569.28,
+  "minute": 60,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_001182",
+   "ev_001198",
+   "ev_001216",
+   "ev_001233",
+   "ev_001238"
+  ],
+  "facts": {
+   "team": "KES",
+   "shots_last_5min": 1,
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 2,
+   "passes_last_5min": 34,
+   "opponent_passes_last_5min": 17
+  }
+ },
+ {
+  "moment_id": "mo_0059",
+  "t": 3813.39,
+  "clock": 3585.1,
+  "minute": 60,
   "type": "high_turnover",
   "class": 2,
   "score": 0.66,
@@ -1603,9 +1425,9 @@
    "p_165"
   ],
   "evidence": [
-   "ev_001452",
-   "ev_001461",
-   "ev_001477"
+   "ev_001155",
+   "ev_001238",
+   "ev_001253"
   ],
   "facts": {
    "player": "Luca Oyelaran",
@@ -1616,241 +1438,210 @@
   }
  },
  {
-  "moment_id": "mo_0068",
-  "t": 4359.59,
-  "clock": 4131.6,
-  "minute": 69,
-  "type": "drought",
+  "moment_id": "mo_0060",
+  "t": 3868.82,
+  "clock": 3640.53,
+  "minute": 61,
+  "type": "hard_pass",
   "class": 3,
-  "score": 0.35,
-  "team": "KES",
-  "players": [],
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_127",
+   "p_128"
+  ],
   "evidence": [
-   "ev_001495"
+   "ev_001274"
   ],
   "facts": {
-   "team": "KES",
-   "minutes_without_a_shot": 15
+   "passer": "Lanre Varga",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 23,
+   "completion_chance_pct": 64
   }
  },
  {
-  "moment_id": "mo_0069",
-  "t": 4418.81,
-  "clock": 4190.82,
-  "minute": 70,
+  "moment_id": "mo_0061",
+  "t": 3932.44,
+  "clock": 3704.15,
+  "minute": 62,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "CRV",
+  "players": [
+   "p_125"
+  ],
+  "evidence": [
+   "ev_001302"
+  ],
+  "facts": {
+   "team": "CRV",
+   "team_shots": 10
+  }
+ },
+ {
+  "moment_id": "mo_0062",
+  "t": 3959.27,
+  "clock": 3730.98,
+  "minute": 63,
   "type": "goal",
   "class": 1,
   "score": 1.0,
-  "team": "KES",
+  "team": "CRV",
   "players": [
-   "p_157",
-   "p_171"
+   "p_128",
+   "p_127"
   ],
   "evidence": [
-   "ev_001510",
-   "ev_001511",
-   "ev_001512"
+   "ev_001305",
+   "ev_001306",
+   "ev_001307"
   ],
   "facts": {
-   "scorer": "Lanre Tessaro",
-   "team": "KES",
-   "minute": 70,
-   "score_home": 2,
+   "scorer": "Somto Odum",
+   "team": "CRV",
+   "minute": 63,
+   "score_home": 1,
    "score_away": 2,
-   "shot_distance_m": 8,
-   "shot_speed_kmh": 46,
-   "goals_for_scorer": 1,
+   "shot_distance_m": 10,
+   "shot_speed_kmh": 39,
+   "goals_for_scorer": 2,
    "finish": "header",
-   "assist": "Dayo Babatunde"
+   "assist": "Lanre Varga"
   }
  },
  {
-  "moment_id": "mo_0070",
-  "t": 4481.18,
-  "clock": 4253.19,
-  "minute": 71,
+  "moment_id": "mo_0063",
+  "t": 4029.14,
+  "clock": 3800.84,
+  "minute": 64,
   "type": "momentum_swing",
   "class": 2,
   "score": 0.55,
-  "team": "KES",
+  "team": "CRV",
   "players": [],
   "evidence": [
-   "ev_001461",
-   "ev_001477",
-   "ev_001487",
-   "ev_001503",
-   "ev_001511"
+   "ev_001262",
+   "ev_001283",
+   "ev_001296",
+   "ev_001302",
+   "ev_001306"
   ],
   "facts": {
-   "team": "KES",
-   "shots_last_5min": 1,
-   "opponent_shots_last_5min": 0,
-   "turnovers_won_final_third_last_5min": 3,
-   "passes_last_5min": 23,
+   "team": "CRV",
+   "shots_last_5min": 2,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 0,
+   "passes_last_5min": 20,
    "opponent_passes_last_5min": 17
   }
  },
  {
-  "moment_id": "mo_0071",
-  "t": 4496.51,
-  "clock": 4268.51,
-  "minute": 72,
-  "type": "milestone",
-  "class": 3,
-  "score": 0.3,
-  "team": "KES",
-  "players": [
-   "p_161"
-  ],
-  "evidence": [
-   "ev_001520"
-  ],
-  "facts": {
-   "player": "Ikenna Amadi",
-   "team": "KES",
-   "completed_passes": 50
-  }
- },
- {
-  "moment_id": "mo_0072",
-  "t": 4503.78,
-  "clock": 4275.79,
-  "minute": 72,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "OST",
-  "players": [
-   "p_153"
-  ],
-  "evidence": [
-   "ev_001523"
-  ],
-  "facts": {
-   "player": "Kofi Ogunleye",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 30,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0073",
-  "t": 4505.35,
-  "clock": 4277.36,
-  "minute": 72,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "OST",
-  "players": [
-   "p_153",
-   "p_146"
-  ],
-  "evidence": [
-   "ev_001525"
-  ],
-  "facts": {
-   "passer": "Kofi Ogunleye",
-   "receiver": "Jide Okeke",
-   "team": "OST",
-   "difficulty": 4,
-   "distance_m": 20,
-   "completion_chance_pct": 65
-  }
- },
- {
-  "moment_id": "mo_0074",
-  "t": 4629.35,
-  "clock": 4401.36,
-  "minute": 74,
-  "type": "momentum_swing",
-  "class": 2,
-  "score": 0.55,
-  "team": "OST",
-  "players": [],
-  "evidence": [
-   "ev_001523",
-   "ev_001547"
-  ],
-  "facts": {
-   "team": "OST",
-   "shots_last_5min": 0,
-   "opponent_shots_last_5min": 1,
-   "turnovers_won_final_third_last_5min": 2,
-   "passes_last_5min": 18,
-   "opponent_passes_last_5min": 14
-  }
- },
- {
-  "moment_id": "mo_0075",
-  "t": 4629.35,
-  "clock": 4401.36,
-  "minute": 74,
-  "type": "big_chance",
-  "class": 2,
-  "score": 1.0,
-  "team": "OST",
-  "players": [
-   "p_153"
-  ],
-  "evidence": [
-   "ev_001553"
-  ],
-  "facts": {
-   "shooter": "Kofi Ogunleye",
-   "team": "OST",
-   "outcome": "on_target",
-   "chance_quality_pct": 76,
-   "shot_distance_m": 11
-  }
- },
- {
-  "moment_id": "mo_0076",
-  "t": 4644.47,
-  "clock": 4416.48,
-  "minute": 74,
+  "moment_id": "mo_0064",
+  "t": 4029.14,
+  "clock": 3800.84,
+  "minute": 64,
   "type": "press_change",
   "class": 3,
   "score": 0.4,
   "team": "KES",
   "players": [],
   "evidence": [
-   "ev_001562"
+   "ev_001269",
+   "ev_001298"
   ],
   "facts": {
    "team": "KES",
    "direction": "down",
-   "pressing_change_pct": -53,
+   "pressing_change_pct": -30,
    "window_min": 3
   }
  },
  {
-  "moment_id": "mo_0077",
-  "t": 4648.71,
-  "clock": 4420.72,
-  "minute": 74,
-  "type": "milestone",
-  "class": 3,
-  "score": 0.3,
-  "team": "OST",
+  "moment_id": "mo_0065",
+  "t": 4082.88,
+  "clock": 3854.59,
+  "minute": 65,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "KES",
   "players": [
-   "p_144"
+   "p_158",
+   "p_165"
   ],
   "evidence": [
-   "ev_001563"
+   "ev_001324",
+   "ev_001325",
+   "ev_001326"
   ],
   "facts": {
-   "player": "Elio Nnadi",
-   "team": "OST",
-   "completed_passes": 50
+   "scorer": "Somto Oguike",
+   "team": "KES",
+   "minute": 65,
+   "score_home": 2,
+   "score_away": 2,
+   "shot_distance_m": 7,
+   "shot_speed_kmh": 36,
+   "goals_for_scorer": 1,
+   "finish": "header",
+   "assist": "Luca Oyelaran"
   }
  },
  {
-  "moment_id": "mo_0078",
-  "t": 4735.09,
-  "clock": 4507.1,
-  "minute": 76,
+  "moment_id": "mo_0066",
+  "t": 4146.31,
+  "clock": 3918.01,
+  "minute": 66,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_001277",
+   "ev_001286",
+   "ev_001316",
+   "ev_001321",
+   "ev_001325"
+  ],
+  "facts": {
+   "team": "KES",
+   "shots_last_5min": 2,
+   "opponent_shots_last_5min": 2,
+   "turnovers_won_final_third_last_5min": 0,
+   "passes_last_5min": 16,
+   "opponent_passes_last_5min": 14
+  }
+ },
+ {
+  "moment_id": "mo_0067",
+  "t": 4168.55,
+  "clock": 3940.26,
+  "minute": 66,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001337"
+  ],
+  "facts": {
+   "team": "CRV",
+   "direction": "up",
+   "pressing_change_pct": 43,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0068",
+  "t": 4232.11,
+  "clock": 4003.82,
+  "minute": 67,
   "type": "milestone",
   "class": 3,
   "score": 0.3,
@@ -1859,7 +1650,7 @@
    "p_162"
   ],
   "evidence": [
-   "ev_001599"
+   "ev_001358"
   ],
   "facts": {
    "player": "Somto Nwosu",
@@ -1868,179 +1659,77 @@
   }
  },
  {
-  "moment_id": "mo_0079",
-  "t": 4742.0,
-  "clock": 4514.01,
-  "minute": 76,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.66,
-  "team": "OST",
-  "players": [
-   "p_154"
-  ],
-  "evidence": [
-   "ev_001523",
-   "ev_001547",
-   "ev_001602"
-  ],
-  "facts": {
-   "player": "Tariq Lunde",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 30,
-   "turnovers_in_final_third_last_5min": 3
-  }
- },
- {
-  "moment_id": "mo_0080",
-  "t": 4791.18,
-  "clock": 4563.19,
-  "minute": 77,
-  "type": "hard_pass",
+  "moment_id": "mo_0069",
+  "t": 4263.78,
+  "clock": 4035.49,
+  "minute": 68,
+  "type": "milestone",
   "class": 3,
-  "score": 0.5,
-  "team": "OST",
+  "score": 0.3,
+  "team": "CRV",
   "players": [
-   "p_153",
-   "p_146"
+   "p_125"
   ],
   "evidence": [
-   "ev_001622"
+   "ev_001367"
   ],
   "facts": {
-   "passer": "Kofi Ogunleye",
-   "receiver": "Jide Okeke",
-   "team": "OST",
-   "difficulty": 4,
-   "distance_m": 28,
-   "completion_chance_pct": 63
+   "player": "Uche Saltire",
+   "team": "CRV",
+   "completed_passes": 50
   }
  },
  {
-  "moment_id": "mo_0081",
-  "t": 4897.58,
-  "clock": 4669.59,
-  "minute": 78,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.52,
-  "team": "KES",
-  "players": [
-   "p_172"
-  ],
-  "evidence": [
-   "ev_001649"
-  ],
-  "facts": {
-   "player": "Bayo Arbery",
-   "team": "KES",
-   "won_by": "interception",
-   "metres_from_goal": 33,
-   "turnovers_in_final_third_last_5min": 1
-  }
- },
- {
-  "moment_id": "mo_0082",
-  "t": 4902.03,
-  "clock": 4674.04,
-  "minute": 78,
+  "moment_id": "mo_0070",
+  "t": 4303.74,
+  "clock": 4075.44,
+  "minute": 68,
   "type": "hard_pass",
   "class": 3,
   "score": 0.5,
   "team": "KES",
   "players": [
-   "p_171",
+   "p_165",
    "p_172"
   ],
   "evidence": [
-   "ev_001652"
+   "ev_001380"
   ],
   "facts": {
-   "passer": "Dayo Babatunde",
+   "passer": "Luca Oyelaran",
    "receiver": "Bayo Arbery",
    "team": "KES",
    "difficulty": 4,
-   "distance_m": 25,
-   "completion_chance_pct": 60
+   "distance_m": 27,
+   "completion_chance_pct": 62
   }
  },
  {
-  "moment_id": "mo_0083",
-  "t": 5037.38,
-  "clock": 4809.38,
-  "minute": 81,
-  "type": "press_change",
+  "moment_id": "mo_0071",
+  "t": 4349.97,
+  "clock": 4121.68,
+  "minute": 69,
+  "type": "milestone",
   "class": 3,
-  "score": 0.4,
-  "team": "OST",
-  "players": [],
-  "evidence": [
-   "ev_001641"
-  ],
-  "facts": {
-   "team": "OST",
-   "direction": "down",
-   "pressing_change_pct": -42,
-   "window_min": 3
-  }
- },
- {
-  "moment_id": "mo_0084",
-  "t": 5042.97,
-  "clock": 4814.98,
-  "minute": 81,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.66,
-  "team": "KES",
+  "score": 0.3,
+  "team": "CRV",
   "players": [
-   "p_165"
+   "p_128"
   ],
   "evidence": [
-   "ev_001649",
-   "ev_001678",
-   "ev_001693"
+   "ev_001398"
   ],
   "facts": {
-   "player": "Luca Oyelaran",
-   "team": "KES",
-   "won_by": "interception",
-   "metres_from_goal": 10,
-   "turnovers_in_final_third_last_5min": 3
+   "player": "Somto Odum",
+   "team": "CRV",
+   "completed_passes": 50
   }
  },
  {
-  "moment_id": "mo_0085",
-  "t": 5082.62,
-  "clock": 4854.63,
-  "minute": 81,
-  "type": "momentum_swing",
-  "class": 2,
-  "score": 0.55,
-  "team": "KES",
-  "players": [],
-  "evidence": [
-   "ev_001649",
-   "ev_001659",
-   "ev_001678",
-   "ev_001693",
-   "ev_001706"
-  ],
-  "facts": {
-   "team": "KES",
-   "shots_last_5min": 1,
-   "opponent_shots_last_5min": 0,
-   "turnovers_won_final_third_last_5min": 3,
-   "passes_last_5min": 18,
-   "opponent_passes_last_5min": 26
-  }
- },
- {
-  "moment_id": "mo_0086",
-  "t": 5103.65,
-  "clock": 4875.65,
-  "minute": 82,
+  "moment_id": "mo_0072",
+  "t": 4423.0,
+  "clock": 4194.71,
+  "minute": 70,
   "type": "milestone",
   "class": 3,
   "score": 0.3,
@@ -2049,7 +1738,7 @@
    "p_160"
   ],
   "evidence": [
-   "ev_001721"
+   "ev_001433"
   ],
   "facts": {
    "player": "Uche Fashola",
@@ -2058,151 +1747,350 @@
   }
  },
  {
-  "moment_id": "mo_0087",
-  "t": 5124.17,
-  "clock": 4896.18,
-  "minute": 82,
+  "moment_id": "mo_0073",
+  "t": 4472.65,
+  "clock": 4244.36,
+  "minute": 71,
   "type": "milestone",
   "class": 3,
   "score": 0.3,
-  "team": "OST",
+  "team": "CRV",
   "players": [
-   "p_142"
+   "p_126"
   ],
   "evidence": [
-   "ev_001729"
+   "ev_001455"
   ],
   "facts": {
-   "player": "Ruben Ugwu",
-   "team": "OST",
+   "player": "Bram Ekpo",
+   "team": "CRV",
    "completed_passes": 50
   }
  },
  {
-  "moment_id": "mo_0088",
-  "t": 5135.04,
-  "clock": 4907.05,
-  "minute": 82,
+  "moment_id": "mo_0074",
+  "t": 4695.48,
+  "clock": 4467.19,
+  "minute": 75,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.52,
+  "team": "CRV",
+  "players": [
+   "p_128"
+  ],
+  "evidence": [
+   "ev_001527"
+  ],
+  "facts": {
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 15,
+   "turnovers_in_final_third_last_5min": 1
+  }
+ },
+ {
+  "moment_id": "mo_0075",
+  "t": 4717.02,
+  "clock": 4488.73,
+  "minute": 75,
   "type": "hard_pass",
   "class": 3,
   "score": 0.5,
-  "team": "OST",
+  "team": "CRV",
   "players": [
-   "p_143",
-   "p_149"
+   "p_126",
+   "p_128"
   ],
   "evidence": [
-   "ev_001733"
+   "ev_001534"
   ],
   "facts": {
-   "passer": "Obinna Kerrigan",
-   "receiver": "Obinna Morrow",
-   "team": "OST",
+   "passer": "Bram Ekpo",
+   "receiver": "Somto Odum",
+   "team": "CRV",
    "difficulty": 4,
-   "distance_m": 22,
-   "completion_chance_pct": 61
+   "distance_m": 17,
+   "completion_chance_pct": 62
   }
  },
  {
-  "moment_id": "mo_0089",
-  "t": 5288.62,
-  "clock": 5060.62,
-  "minute": 85,
+  "moment_id": "mo_0076",
+  "t": 4753.07,
+  "clock": 4524.78,
+  "minute": 76,
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "KES",
+  "players": [
+   "p_161"
+  ],
+  "evidence": [
+   "ev_001547"
+  ],
+  "facts": {
+   "player": "Ikenna Amadi",
+   "team": "KES",
+   "completed_passes": 50
+  }
+ },
+ {
+  "moment_id": "mo_0077",
+  "t": 4756.43,
+  "clock": 4528.14,
+  "minute": 76,
   "type": "momentum_swing",
   "class": 2,
   "score": 0.55,
-  "team": "OST",
+  "team": "CRV",
   "players": [],
   "evidence": [
-   "ev_001696",
-   "ev_001709",
-   "ev_001726",
-   "ev_001753",
-   "ev_001766"
+   "ev_001464",
+   "ev_001488",
+   "ev_001496",
+   "ev_001517",
+   "ev_001527"
   ],
   "facts": {
-   "team": "OST",
-   "shots_last_5min": 1,
+   "team": "CRV",
+   "shots_last_5min": 0,
    "opponent_shots_last_5min": 0,
-   "turnovers_won_final_third_last_5min": 0,
-   "passes_last_5min": 27,
-   "opponent_passes_last_5min": 22
+   "turnovers_won_final_third_last_5min": 1,
+   "passes_last_5min": 44,
+   "opponent_passes_last_5min": 14
   }
  },
  {
-  "moment_id": "mo_0090",
-  "t": 5305.92,
-  "clock": 5077.93,
-  "minute": 85,
+  "moment_id": "mo_0078",
+  "t": 4778.31,
+  "clock": 4550.01,
+  "minute": 76,
   "type": "press_change",
   "class": 3,
   "score": 0.4,
   "team": "KES",
   "players": [],
   "evidence": [
-   "ev_001768"
+   "ev_001500"
   ],
   "facts": {
    "team": "KES",
-   "direction": "down",
-   "pressing_change_pct": -44,
+   "direction": "up",
+   "pressing_change_pct": 63,
    "window_min": 3
   }
  },
  {
-  "moment_id": "mo_0091",
-  "t": 5392.18,
-  "clock": 5164.19,
-  "minute": 87,
+  "moment_id": "mo_0079",
+  "t": 4923.61,
+  "clock": 4695.32,
+  "minute": 79,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "KES",
+  "players": [
+   "p_160"
+  ],
+  "evidence": [
+   "ev_001587",
+   "ev_001588",
+   "ev_001589",
+   "ev_001591",
+   "ev_001593",
+   "ev_001594",
+   "ev_001595",
+   "ev_001596",
+   "ev_001597",
+   "ev_001599"
+  ],
+  "facts": {
+   "team": "KES",
+   "passes_in_move": 10,
+   "seconds_in_possession": 45
+  }
+ },
+ {
+  "moment_id": "mo_0080",
+  "t": 5062.24,
+  "clock": 4833.95,
+  "minute": 81,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001595",
+   "ev_001598",
+   "ev_001599",
+   "ev_001611",
+   "ev_001633"
+  ],
+  "facts": {
+   "team": "CRV",
+   "direction": "up",
+   "pressing_change_pct": 31,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0081",
+  "t": 5168.51,
+  "clock": 4940.22,
+  "minute": 83,
   "type": "high_turnover",
   "class": 2,
   "score": 0.52,
-  "team": "KES",
+  "team": "CRV",
   "players": [
-   "p_172"
+   "p_128"
   ],
   "evidence": [
-   "ev_001800"
+   "ev_001685"
   ],
   "facts": {
-   "player": "Bayo Arbery",
-   "team": "KES",
+   "player": "Somto Odum",
+   "team": "CRV",
    "won_by": "interception",
-   "metres_from_goal": 20,
+   "metres_from_goal": 11,
    "turnovers_in_final_third_last_5min": 1
   }
  },
  {
-  "moment_id": "mo_0092",
-  "t": 5401.47,
-  "clock": 5173.47,
-  "minute": 87,
+  "moment_id": "mo_0082",
+  "t": 5172.34,
+  "clock": 4944.05,
+  "minute": 83,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_125",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_001688"
+  ],
+  "facts": {
+   "passer": "Uche Saltire",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 13,
+   "completion_chance_pct": 66
+  }
+ },
+ {
+  "moment_id": "mo_0083",
+  "t": 5219.45,
+  "clock": 4991.16,
+  "minute": 84,
+  "type": "drought",
+  "class": 3,
+  "score": 0.35,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_001704"
+  ],
+  "facts": {
+   "team": "KES",
+   "minutes_without_a_shot": 15
+  }
+ },
+ {
+  "moment_id": "mo_0084",
+  "t": 5259.56,
+  "clock": 5031.27,
+  "minute": 84,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "CRV",
+  "players": [
+   "p_131"
+  ],
+  "evidence": [
+   "ev_001706",
+   "ev_001708",
+   "ev_001709",
+   "ev_001710",
+   "ev_001711",
+   "ev_001712",
+   "ev_001713",
+   "ev_001715",
+   "ev_001716",
+   "ev_001717"
+  ],
+  "facts": {
+   "team": "CRV",
+   "passes_in_move": 10,
+   "seconds_in_possession": 40
+  }
+ },
+ {
+  "moment_id": "mo_0085",
+  "t": 5381.23,
+  "clock": 5152.94,
+  "minute": 86,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "KES",
+  "players": [
+   "p_162",
+   "p_172"
+  ],
+  "evidence": [
+   "ev_001760"
+  ],
+  "facts": {
+   "passer": "Somto Nwosu",
+   "receiver": "Bayo Arbery",
+   "team": "KES",
+   "difficulty": 4,
+   "distance_m": 21,
+   "completion_chance_pct": 64
+  }
+ },
+ {
+  "moment_id": "mo_0086",
+  "t": 5450.24,
+  "clock": 5221.95,
+  "minute": 88,
   "type": "goal",
   "class": 1,
   "score": 1.0,
   "team": "KES",
   "players": [
-   "p_172"
+   "p_172",
+   "p_171"
   ],
   "evidence": [
-   "ev_001804",
-   "ev_001805"
+   "ev_001783",
+   "ev_001784",
+   "ev_001785"
   ],
   "facts": {
    "scorer": "Bayo Arbery",
    "team": "KES",
-   "minute": 87,
-   "score_home": 2,
-   "score_away": 3,
-   "shot_distance_m": 12,
-   "shot_speed_kmh": 62,
-   "goals_for_scorer": 1
+   "minute": 88,
+   "score_home": 3,
+   "score_away": 2,
+   "shot_distance_m": 15,
+   "shot_speed_kmh": 64,
+   "goals_for_scorer": 1,
+   "assist": "Dayo Babatunde"
   }
  },
  {
-  "moment_id": "mo_0093",
-  "t": 5461.53,
-  "clock": 5233.54,
+  "moment_id": "mo_0087",
+  "t": 5503.29,
+  "clock": 5275.0,
   "minute": 88,
   "type": "momentum_swing",
   "class": 2,
@@ -2210,197 +2098,268 @@
   "team": "KES",
   "players": [],
   "evidence": [
-   "ev_001776",
-   "ev_001800",
-   "ev_001804"
+   "ev_001699",
+   "ev_001719",
+   "ev_001740",
+   "ev_001784"
   ],
   "facts": {
    "team": "KES",
    "shots_last_5min": 1,
-   "opponent_shots_last_5min": 2,
-   "turnovers_won_final_third_last_5min": 1,
-   "passes_last_5min": 16,
-   "opponent_passes_last_5min": 14
+   "opponent_shots_last_5min": 0,
+   "turnovers_won_final_third_last_5min": 0,
+   "passes_last_5min": 29,
+   "opponent_passes_last_5min": 24
   }
  },
  {
-  "moment_id": "mo_0094",
-  "t": 5524.83,
-  "clock": 5296.84,
+  "moment_id": "mo_0088",
+  "t": 5536.02,
+  "clock": 5307.73,
   "minute": 89,
+  "type": "press_change",
+  "class": 3,
+  "score": 0.4,
+  "team": "KES",
+  "players": [],
+  "evidence": [
+   "ev_001754",
+   "ev_001770"
+  ],
+  "facts": {
+   "team": "KES",
+   "direction": "up",
+   "pressing_change_pct": 39,
+   "window_min": 3
+  }
+ },
+ {
+  "moment_id": "mo_0089",
+  "t": 5657.76,
+  "clock": 5429.47,
+  "minute": 91,
   "type": "high_turnover",
   "class": 2,
   "score": 0.52,
-  "team": "OST",
+  "team": "CRV",
   "players": [
-   "p_153"
+   "p_131"
   ],
   "evidence": [
-   "ev_001832"
+   "ev_001835"
   ],
   "facts": {
-   "player": "Kofi Ogunleye",
-   "team": "OST",
+   "player": "Nnamdi Abiola",
+   "team": "CRV",
    "won_by": "interception",
-   "metres_from_goal": 13,
+   "metres_from_goal": 11,
    "turnovers_in_final_third_last_5min": 1
   }
  },
  {
-  "moment_id": "mo_0095",
-  "t": 5629.96,
-  "clock": 5401.97,
-  "minute": 91,
+  "moment_id": "mo_0090",
+  "t": 5724.14,
+  "clock": 5495.85,
+  "minute": 92,
+  "type": "momentum_swing",
+  "class": 2,
+  "score": 0.55,
+  "team": "CRV",
+  "players": [],
+  "evidence": [
+   "ev_001799",
+   "ev_001831",
+   "ev_001835",
+   "ev_001839"
+  ],
+  "facts": {
+   "team": "CRV",
+   "shots_last_5min": 2,
+   "opponent_shots_last_5min": 1,
+   "turnovers_won_final_third_last_5min": 1,
+   "passes_last_5min": 13,
+   "opponent_passes_last_5min": 20
+  }
+ },
+ {
+  "moment_id": "mo_0091",
+  "t": 5764.36,
+  "clock": 5536.07,
+  "minute": 93,
   "type": "hard_pass",
   "class": 3,
   "score": 0.5,
   "team": "KES",
   "players": [
-   "p_171",
-   "p_172"
+   "p_162",
+   "p_167"
   ],
   "evidence": [
-   "ev_001865"
+   "ev_001860"
   ],
   "facts": {
-   "passer": "Dayo Babatunde",
-   "receiver": "Bayo Arbery",
+   "passer": "Somto Nwosu",
+   "receiver": "Teodor Ogbu",
    "team": "KES",
    "difficulty": 4,
-   "distance_m": 24,
-   "completion_chance_pct": 66
+   "distance_m": 22,
+   "completion_chance_pct": 65
+  }
+ },
+ {
+  "moment_id": "mo_0092",
+  "t": 5764.36,
+  "clock": 5536.07,
+  "minute": 93,
+  "type": "long_move",
+  "class": 3,
+  "score": 0.4,
+  "team": "KES",
+  "players": [
+   "p_162"
+  ],
+  "evidence": [
+   "ev_001849",
+   "ev_001851",
+   "ev_001852",
+   "ev_001853",
+   "ev_001854",
+   "ev_001855",
+   "ev_001857",
+   "ev_001858",
+   "ev_001859",
+   "ev_001860"
+  ],
+  "facts": {
+   "team": "KES",
+   "passes_in_move": 10,
+   "seconds_in_possession": 47
+  }
+ },
+ {
+  "moment_id": "mo_0093",
+  "t": 5846.11,
+  "clock": 5617.82,
+  "minute": 94,
+  "type": "goal",
+  "class": 1,
+  "score": 1.0,
+  "team": "KES",
+  "players": [
+   "p_161",
+   "p_167"
+  ],
+  "evidence": [
+   "ev_001887",
+   "ev_001888",
+   "ev_001889"
+  ],
+  "facts": {
+   "scorer": "Ikenna Amadi",
+   "team": "KES",
+   "minute": 94,
+   "score_home": 4,
+   "score_away": 2,
+   "shot_distance_m": 7,
+   "shot_speed_kmh": 36,
+   "goals_for_scorer": 1,
+   "finish": "header",
+   "assist": "Teodor Ogbu"
+  }
+ },
+ {
+  "moment_id": "mo_0094",
+  "t": 5894.85,
+  "clock": 5666.56,
+  "minute": 95,
+  "type": "hard_pass",
+  "class": 3,
+  "score": 0.5,
+  "team": "CRV",
+  "players": [
+   "p_136",
+   "p_128"
+  ],
+  "evidence": [
+   "ev_001892"
+  ],
+  "facts": {
+   "passer": "Kelechi Akande",
+   "receiver": "Somto Odum",
+   "team": "CRV",
+   "difficulty": 4,
+   "distance_m": 23,
+   "completion_chance_pct": 64
+  }
+ },
+ {
+  "moment_id": "mo_0095",
+  "t": 5906.92,
+  "clock": 5678.62,
+  "minute": 95,
+  "type": "high_turnover",
+  "class": 2,
+  "score": 0.59,
+  "team": "CRV",
+  "players": [
+   "p_125"
+  ],
+  "evidence": [
+   "ev_001835",
+   "ev_001898"
+  ],
+  "facts": {
+   "player": "Uche Saltire",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 30,
+   "turnovers_in_final_third_last_5min": 2
   }
  },
  {
   "moment_id": "mo_0096",
-  "t": 5671.41,
-  "clock": 5443.42,
-  "minute": 91,
-  "type": "momentum_swing",
-  "class": 2,
-  "score": 0.55,
-  "team": "OST",
-  "players": [],
-  "evidence": [
-   "ev_001815",
-   "ev_001820",
-   "ev_001832",
-   "ev_001847",
-   "ev_001869"
-  ],
-  "facts": {
-   "team": "OST",
-   "shots_last_5min": 1,
-   "opponent_shots_last_5min": 1,
-   "turnovers_won_final_third_last_5min": 2,
-   "passes_last_5min": 17,
-   "opponent_passes_last_5min": 23
-  }
- },
- {
-  "moment_id": "mo_0097",
-  "t": 5766.4,
-  "clock": 5538.41,
-  "minute": 93,
+  "t": 5916.13,
+  "clock": 5687.84,
+  "minute": 95,
   "type": "high_turnover",
   "class": 2,
   "score": 0.66,
-  "team": "OST",
+  "team": "CRV",
   "players": [
-   "p_154"
+   "p_128"
   ],
   "evidence": [
-   "ev_001832",
-   "ev_001847",
-   "ev_001912"
+   "ev_001835",
+   "ev_001898",
+   "ev_001905"
   ],
   "facts": {
-   "player": "Tariq Lunde",
-   "team": "OST",
-   "won_by": "tackle",
-   "metres_from_goal": 34,
+   "player": "Somto Odum",
+   "team": "CRV",
+   "won_by": "interception",
+   "metres_from_goal": 16,
    "turnovers_in_final_third_last_5min": 3
   }
  },
  {
-  "moment_id": "mo_0098",
-  "t": 5777.19,
-  "clock": 5549.2,
-  "minute": 93,
-  "type": "high_turnover",
-  "class": 2,
-  "score": 0.73,
-  "team": "OST",
-  "players": [
-   "p_149"
-  ],
-  "evidence": [
-   "ev_001832",
-   "ev_001847",
-   "ev_001912",
-   "ev_001919"
-  ],
-  "facts": {
-   "player": "Obinna Morrow",
-   "team": "OST",
-   "won_by": "interception",
-   "metres_from_goal": 6,
-   "turnovers_in_final_third_last_5min": 4
-  }
- },
- {
-  "moment_id": "mo_0099",
-  "t": 5864.35,
-  "clock": 5636.36,
-  "minute": 94,
-  "type": "hard_pass",
-  "class": 3,
-  "score": 0.5,
-  "team": "OST",
-  "players": [
-   "p_143",
-   "p_149"
-  ],
-  "evidence": [
-   "ev_001953"
-  ],
-  "facts": {
-   "passer": "Obinna Kerrigan",
-   "receiver": "Obinna Morrow",
-   "team": "OST",
-   "difficulty": 4,
-   "distance_m": 18,
-   "completion_chance_pct": 66
-  }
- },
- {
-  "moment_id": "mo_0100",
-  "t": 5868.12,
-  "clock": 5640.12,
+  "moment_id": "mo_0097",
+  "t": 5919.16,
+  "clock": 5690.87,
   "minute": 95,
-  "type": "goal",
-  "class": 1,
-  "score": 1.0,
-  "team": "OST",
+  "type": "milestone",
+  "class": 3,
+  "score": 0.3,
+  "team": "CRV",
   "players": [
-   "p_149",
-   "p_143"
+   "p_128"
   ],
   "evidence": [
-   "ev_001953",
-   "ev_001954",
-   "ev_001955"
+   "ev_001907"
   ],
   "facts": {
-   "scorer": "Obinna Morrow",
-   "team": "OST",
-   "minute": 95,
-   "score_home": 3,
-   "score_away": 3,
-   "shot_distance_m": 11,
-   "shot_speed_kmh": 68,
-   "goals_for_scorer": 1,
-   "assist": "Obinna Kerrigan"
+   "player": "Somto Odum",
+   "team": "CRV",
+   "completed_passes": 75
   }
  }
 ]

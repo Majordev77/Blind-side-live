@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { speak } from '../audio/speech'
 import { club, DEMOS } from '../match/data'
+import type { Lang } from '../audio/speech'
 import type { AudioMode, Detail } from '../match/types'
 
 export interface Choices {
+  lang: Lang
   matchId: string
   listener: string
   mode: AudioMode
@@ -23,6 +25,14 @@ interface Step {
 }
 
 const STEPS: Step[] = [
+  {
+    key: 'lang',
+    question: 'Which language?',
+    options: () => [
+      { value: 'en', label: 'English' },
+      { value: 'pcm', label: 'Nigerian Pidgin', hint: 'Commentary in Pidgin' },
+    ],
+  },
   {
     key: 'matchId',
     question: 'Which match?',

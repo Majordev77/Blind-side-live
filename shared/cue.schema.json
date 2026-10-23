@@ -4,26 +4,115 @@
   "title": "Sound cue",
   "description": "One timed sound for the phone, built by rule from one event with no AI. The phone glides the ball from `from` to `to` over `duration` seconds on its own audio clock. The same stream drives the companion screen's pitch and is the machine-readable overlay feed.",
   "type": "object",
-  "required": ["t", "clock", "type", "sound", "event"],
+  "required": [
+    "t",
+    "clock",
+    "type",
+    "sound",
+    "event"
+  ],
   "additionalProperties": false,
   "properties": {
-    "t": { "type": "number", "minimum": 0, "description": "Play time of the event the cue comes from; the phone schedules on this." },
-    "clock": { "type": "number", "minimum": 0 },
-    "type": { "const": "sound" },
-    "sound": { "type": "string", "enum": ["pass", "carry", "shot", "save", "goal", "tackle", "clearance", "out", "whistle", "restart"] },
-    "event": { "type": "string", "pattern": "^ev_[0-9]{6}$" },
-    "team": { "type": "string", "pattern": "^[A-Z]{3}$" },
-    "player": { "type": "string", "pattern": "^p_[0-9]{3}$" },
-    "outcome": { "type": "string" },
-    "subtype": { "type": "string" },
-    "pressure": { "type": "number", "minimum": 0, "maximum": 1 },
-    "from": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
-    "to": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
-    "duration": { "type": "number", "minimum": 0 },
-    "speed_kmh": { "type": "number", "minimum": 0 },
-    "distance_m": { "type": "number", "minimum": 0 },
-    "difficulty": { "type": "integer", "minimum": 1, "maximum": 5, "description": "Pass difficulty from 1 (routine) to 5 (very hard)." },
-    "xg": { "type": "number", "minimum": 0, "maximum": 1, "description": "Shot quality: the chance this shot becomes a goal." },
-    "score": { "type": "object", "additionalProperties": { "type": "integer" } }
+    "t": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Play time of the event the cue comes from; the phone schedules on this."
+    },
+    "clock": {
+      "type": "number",
+      "minimum": 0
+    },
+    "type": {
+      "const": "sound"
+    },
+    "sound": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "carry",
+        "shot",
+        "save",
+        "goal",
+        "tackle",
+        "clearance",
+        "out",
+        "whistle",
+        "restart"
+      ]
+    },
+    "event": {
+      "type": "string",
+      "pattern": "^ev_[0-9]{6}$"
+    },
+    "team": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "player": {
+      "type": "string",
+      "pattern": "^p_[0-9]{3}$"
+    },
+    "recipient": {
+      "type": "string",
+      "pattern": "^p_[0-9]{3}$",
+      "description": "Who a pass was aimed at; for a completed pass, the player who now has the ball."
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "subtype": {
+      "type": "string"
+    },
+    "pressure": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "from": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "to": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "duration": {
+      "type": "number",
+      "minimum": 0
+    },
+    "speed_kmh": {
+      "type": "number",
+      "minimum": 0
+    },
+    "distance_m": {
+      "type": "number",
+      "minimum": 0
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Pass difficulty from 1 (routine) to 5 (very hard)."
+    },
+    "xg": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Shot quality: the chance this shot becomes a goal."
+    },
+    "score": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    }
   }
 }

@@ -25,7 +25,7 @@ def sound_cue(e: dict, state: MatchState) -> dict | None:
     if sound is None:
         return None
     cue: dict = {"t": e["t"], "clock": e["clock"], "type": "sound", "sound": sound, "event": e["id"]}
-    for k in ("team", "player", "outcome", "subtype", "pressure"):
+    for k in ("team", "player", "recipient", "outcome", "subtype", "pressure"):
         if k in e:
             cue[k] = e[k]
     if "x" in e:

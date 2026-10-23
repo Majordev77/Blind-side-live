@@ -1,19 +1,30 @@
 /**
- * Plays one match: feeds sound cues to the engine on the audio clock and
- * voices commentary lines, with the priority rules from the build guide:
- * a class 1 line replaces whatever is speaking, class 2 waits for the
- * current line, class 3 is dropped if anything is speaking, and no line
- * starts after its expiry.
+ * Plays one match: feeds the sound cues to the engine on the audio clock, and
+ * directs two voices like a broadcast.
+ *
+ * The caller (play-by-play) names the player on the ball and where they are,
+ * and calls shots, saves and goals the instant they happen. The analyst
+ * (the agents' verified lines, or the templates when there are none) explains
+ * why a moment matters, in the lulls.
+ *
+ * Rules:
+ * - shots, saves and goals interrupt anything;
+ * - a name call is spoken only while it is fresh, or dropped;
+ * - the goal build-up and the analyst wait for silence, and expire;
+ * - the match ducks under the analyst, not under the caller, so the roar
+ *   for a goal is never pushed down.
  */
 
 import { dueCues, MatchClock } from '../audio/clock'
 import type { SoundEngine } from '../audio/engine'
-import { cancelSpeech, speak, type Lang } from '../audio/speech'
-import { pickLines, type Fixture, type Line } from './commentary'
+import { cancelSpeech, speak, type Lang, type Role } from '../audio/speech'
+import { pickLines, type Fixture } from './commentary'
+import type { AgentLine } from './data'
+import { buildCalls, type Call, type Names } from './playbyplay'
 import type { AudioMode, Cue, Detail, MatchData, Point } from './types'
 
-const LOOKAHEAD = 2.0 // seconds of cues handed to the engine ahead of time
-const TICK_MS = 100
+const LOOKAHEAD = 2.0
+const TICK_MS = 50
 
 export interface PlayerSettings {
   listener: string
@@ -23,12 +34,27 @@ export interface PlayerSettings {
   lang: Lang
 }
 
+/** Something one of the two voices may say. */
+export interface Spoken {
+  id: string
+  t: number
+  expires: number
+  role: Role
+  /** big interrupts; call is spoken if fresh; wait waits for silence. */
+  rank: 'big' | 'call' | 'wait'
+  text: string
+  evidence: string[]
+  /** The team the line is about, for the caption colour. */
+  team?: string | null
+  source: 'caller' | 'agents' | 'template'
+}
+
 export interface Snapshot {
   clock: number
   score: Record<string, number>
   ball: Point
   team: string | undefined
-  caption: Line | null
+  caption: Spoken | null
   speaking: boolean
   paused: boolean
   ended: boolean
@@ -37,49 +63,40 @@ export interface Snapshot {
 export class MatchPlayer {
   private clock: MatchClock
   private next = 0
-  private lines: Line[] = []
-  private lineIdx = 0
-  private waiting: Line | null = null
-  private current: Line | null = null
-  private lastSpoken: Line | null = null
+  private queue: Spoken[] = []
+  private qi = 0
+  private waiting: Spoken[] = []
+  private current: Spoken | null = null
+  private lastSpoken: Spoken | null = null
   private timer: number | null = null
   private paused = false
   private ended = false
-  private speakingNow = false
-  private startT = 0
   readonly fixture: Fixture
 
-  onCaption: ((line: Line) => void) | null = null
+  onCaption: ((line: Spoken) => void) | null = null
 
   constructor(
     private readonly engine: SoundEngine,
     private readonly data: MatchData,
     private settings: PlayerSettings,
-    clubName: (code: string) => string,
+    private readonly names: Names,
+    private readonly agentLines: AgentLine[] | null,
   ) {
     this.clock = new MatchClock(() => engine.now)
-    this.fixture = { club: clubName, home: data.info.home, away: data.info.away, listener: settings.listener }
-    this.relines()
+    this.fixture = { club: names.club, home: data.info.home, away: data.info.away, listener: settings.listener }
+    this.build()
   }
 
-  /** Start playing from match time `fromT` (seconds of play), after a spoken orientation line. */
+  /** Start playing from match time `fromT`, after a spoken orientation line. */
   start(fromT: number, intro?: string): void {
-    this.startT = fromT
-    this.next = this.data.cues.findIndex((c) => c.t >= fromT)
-    if (this.next < 0) this.next = this.data.cues.length
-    this.lineIdx = this.lines.findIndex((l) => l.t >= fromT)
-    if (this.lineIdx < 0) this.lineIdx = this.lines.length
-    this.engine.configure({
-      listenerClub: this.settings.listener,
-      homeClub: this.data.info.home,
-      mode: this.settings.mode,
-      follow: this.settings.follow,
-      pressureLayer: this.settings.detail !== 'essentials',
-    })
-    const lead = intro ? 4.5 : 0.5
+    this.next = Math.max(0, this.data.cues.findIndex((c) => c.t >= fromT))
+    this.qi = this.queue.findIndex((s) => s.t >= fromT)
+    if (this.qi < 0) this.qi = this.queue.length
+    this.configureEngine()
+    const lead = intro ? 5.5 : 0.5
     this.clock.anchor(fromT - lead)
     this.engine.start()
-    if (intro) this.say({ id: 'intro', t: fromT - lead, expires: fromT + 5, priority: 1, text: intro, evidence: [], moment: null })
+    if (intro) this.say({ id: 'intro', t: fromT - lead, expires: fromT + 5, role: 'analyst', rank: 'big', text: intro, evidence: [], source: 'caller' })
     this.timer = window.setInterval(() => this.tick(), TICK_MS)
     this.tick()
   }
@@ -97,6 +114,7 @@ export class MatchPlayer {
       this.paused = false
     } else {
       cancelSpeech()
+      this.current = null
       await this.engine.ctx.suspend()
       this.paused = true
     }
@@ -105,23 +123,15 @@ export class MatchPlayer {
   /** Say the last line again. */
   repeat(): void {
     const line = this.lastSpoken
-    if (!line) return
-    this.say({ ...line, expires: this.clock.matchTime() + 10, priority: 1 })
+    if (line) this.say({ ...line, expires: this.clock.matchTime() + 10 })
   }
 
   setDetail(detail: Detail): void {
     this.settings = { ...this.settings, detail }
-    this.relines()
     const now = this.clock.matchTime()
-    this.lineIdx = this.lines.findIndex((l) => l.t >= now)
-    if (this.lineIdx < 0) this.lineIdx = this.lines.length
-    this.engine.configure({
-      listenerClub: this.settings.listener,
-      homeClub: this.data.info.home,
-      mode: this.settings.mode,
-      follow: this.settings.follow,
-      pressureLayer: detail !== 'essentials',
-    })
+    this.build()
+    this.qi = this.queue.findIndex((s) => s.t >= now)
+    if (this.qi < 0) this.qi = this.queue.length
   }
 
   get detail(): Detail {
@@ -135,9 +145,9 @@ export class MatchPlayer {
       clock: cue ? cue.clock + Math.max(0, t - cue.t) : 0,
       score: this.scoreAt(t),
       ball: cue ? ballAt(cue, t) : [52.5, 34],
-      team: this.teamAt(t),
+      team: cue?.team,
       caption: this.current ?? this.lastSpoken,
-      speaking: this.speakingNow,
+      speaking: this.current !== null,
       paused: this.paused,
       ended: this.ended,
     }
@@ -145,66 +155,91 @@ export class MatchPlayer {
 
   // ---------------------------------------------------------------- internals
 
-  private relines(): void {
-    this.lines = pickLines(this.data.moments, this.settings.detail, this.fixture)
+  private configureEngine(): void {
+    this.engine.configure({
+      listenerClub: this.settings.listener,
+      homeClub: this.data.info.home,
+      mode: this.settings.mode,
+      follow: this.settings.follow,
+    })
+  }
+
+  /** Merge the caller's calls and the analyst's lines into one time-ordered queue. */
+  private build(): void {
+    const { lang, detail, listener } = this.settings
+    const calls: Spoken[] = buildCalls(this.data.cues, this.names, lang).map((c: Call, i) => ({
+      id: `call_${i}`,
+      t: c.t,
+      expires: c.expires,
+      role: c.kind === 'buildup' ? 'analyst' : 'caller',
+      rank: c.kind === 'big' ? 'big' : c.kind === 'buildup' ? 'wait' : 'call',
+      text: c.text,
+      evidence: c.evidence,
+      source: 'caller',
+    }))
+    // Analyst lines: the agents' verified lines for this listener's variant when they exist, else templates.
+    // Goals are left to the caller, who calls them at once and then gives the build-up.
+    const variant = `${lang}:${listener}:${detail}`
+    let analyst: Spoken[]
+    const fromAgents = this.agentLines?.filter((l) => l.variant === variant && l.type !== 'goal') ?? []
+    if (fromAgents.length) {
+      analyst = fromAgents.map((l) => ({
+        id: `${l.moment_id}:${variant}`, t: l.t + 1.2, expires: l.expires_t + 2, role: 'analyst', rank: 'wait',
+        text: l.text, evidence: l.evidence, source: 'agents',
+      }))
+    } else {
+      analyst = pickLines(this.data.moments, detail, this.fixture)
+        .filter((l) => l.moment?.type !== 'goal')
+        .map((l) => ({ id: l.id, t: l.t + 1.2, expires: l.expires + 2, role: 'analyst' as Role, rank: 'wait' as const,
+          text: l.text, evidence: l.evidence, team: l.moment?.team ?? null, source: 'template' as const }))
+    }
+    this.queue = [...calls, ...analyst].sort((a, b) => a.t - b.t)
   }
 
   private tick(): void {
     if (this.paused) return
     const { due, next } = dueCues(this.data.cues, this.next, this.clock, LOOKAHEAD)
-    for (const cue of due) {
-      if (!this.clock.isLate(cue.t)) this.engine.play(cue, this.clock.audioTime(cue.t))
-    }
+    for (const cue of due) if (!this.clock.isLate(cue.t)) this.engine.play(cue, this.clock.audioTime(cue.t))
     this.next = next
+
     const now = this.clock.matchTime()
-    while (this.lineIdx < this.lines.length && (this.lines[this.lineIdx] as Line).t <= now) {
-      this.offer(this.lines[this.lineIdx] as Line, now)
-      this.lineIdx++
+    while (this.qi < this.queue.length && (this.queue[this.qi] as Spoken).t <= now) {
+      const s = this.queue[this.qi] as Spoken
+      this.qi++
+      if (now > s.expires) continue
+      if (s.rank === 'big') this.say(s)
+      else if (s.rank === 'call') {
+        if (!this.current) this.say(s)
+      } else this.waiting.push(s)
     }
-    if (this.waiting && !this.speakingNow) {
-      const w = this.waiting
-      this.waiting = null
-      if (now <= w.expires) this.say(w)
+    if (!this.current) {
+      this.waiting = this.waiting.filter((w) => now <= w.expires)
+      // the build-up first, then the oldest analyst line
+      this.waiting.sort((a, b) => Number(b.source === 'caller') - Number(a.source === 'caller') || a.t - b.t)
+      const w = this.waiting.shift()
+      if (w) this.say(w)
     }
+
     const last = this.data.cues[this.data.cues.length - 1]
-    if (!this.ended && last && now > last.t + 3) {
+    if (!this.ended && last && now > last.t + 4) {
       this.ended = true
       this.engine.stop()
     }
   }
 
-  private offer(line: Line, now: number): void {
-    if (now > line.expires) return
-    if (!this.speakingNow) return this.say(line)
-    if (line.priority === 1) return this.say(line)
-    if (line.priority === 2) {
-      if (!this.waiting || this.waiting.priority > 2) this.waiting = line
-      return
-    }
-    // class 3: dropped while anything is speaking
-  }
-
-  private say(line: Line): void {
-    if (this.speakingNow) cancelSpeech()
-    this.current = line
-    this.lastSpoken = line
-    this.onCaption?.(line)
-    this.speakingNow = true
-    this.engine.setDuck(true)
-    const ok = speak(line.text, this.settings.lang, {
-      onEnd: () => {
-        if (this.current !== line) return
-        this.speakingNow = false
-        this.current = null
-        this.engine.setDuck(false)
-      },
-    })
-    if (!ok) {
-      // No voice available: the caption still shows, and the sound comes back up.
-      this.speakingNow = false
+  private say(s: Spoken): void {
+    if (this.current) cancelSpeech()
+    this.current = s
+    this.lastSpoken = s
+    this.onCaption?.(s)
+    const analyst = s.role === 'analyst'
+    if (analyst) this.engine.setDuck(true)
+    const done = () => {
+      if (this.current !== s) return
       this.current = null
-      this.engine.setDuck(false)
+      if (analyst) this.engine.setDuck(false)
     }
+    if (!speak(s.text, this.settings.lang, { onEnd: done }, s.role)) done()
   }
 
   private cueAt(t: number): Cue | undefined {
@@ -233,15 +268,6 @@ export class MatchPlayer {
       if (c.sound === 'goal' && c.score) score = c.score
     }
     return score
-  }
-
-  private teamAt(t: number): string | undefined {
-    const c = this.cueAt(t)
-    return c?.team
-  }
-
-  get startedAt(): number {
-    return this.startT
   }
 }
 
