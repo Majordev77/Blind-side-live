@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Majordev77/Blind-side-live/shared/event.schema.json",
+  "title": "Match event",
+  "description": "One synthetic match event. Matches are stored as JSON lines, one event per line, sorted by t. Pitch is 105 by 68 metres; x runs from the home goal line (0) to the away goal line (105) in both halves, and y from the near touchline (0) to the far touchline (68).",
+  "type": "object",
+  "required": ["id", "match_id", "t", "clock", "period", "type"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^ev_[0-9]{6}$" },
+    "match_id": { "type": "string" },
+    "t": { "type": "number", "minimum": 0, "description": "Seconds of play elapsed since kickoff, ignoring half time. Always increases, so it drives the replay." },
+    "clock": { "type": "number", "minimum": 0, "description": "Match clock in seconds as a broadcast shows it: the second half starts at 2700, so 4032 shows as 67:12." },
+    "period": { "type": "integer", "enum": [1, 2] },
+    "type": {
+      "type": "string",
+      "enum": ["pass", "carry", "shot", "save", "goal", "tackle", "interception", "clearance", "foul", "out", "set_piece", "possession_change", "period_start", "period_end", "substitution"]
+    },
+    "team": { "type": "string", "pattern": "^[A-Z]{3}$", "description": "Club code of the team that performs the event." },
+    "player": { "type": "string", "pattern": "^p_[0-9]{3}$" },
+    "x": { "type": "number", "minimum": 0, "maximum": 105 },
+    "y": { "type": "number", "minimum": 0, "maximum": 68 },
+    "end_x": { "type": "number", "minimum": 0, "maximum": 105 },
+    "end_y": { "type": "number", "minimum": 0, "maximum": 68 },
+    "recipient": { "type": "string", "pattern": "^p_[0-9]{3}$", "description": "Intended receiver of a pass, or the player coming on in a substitution." },
+    "outcome": {
+      "type": "string",
+      "enum": ["complete", "incomplete", "on_target", "off_target", "blocked", "goal", "won", "lost", "held", "parried", "awarded"]
+    },
+    "subtype": {
+      "type": "string",
+      "enum": ["throw_in", "corner", "free_kick", "goal_kick", "kickoff", "penalty", "touchline", "goal_line", "header", "long_ball", "cross"],
+      "description": "Detail for set pieces, the line the ball went out over, and kinds of pass."
+    },
+    "pressure": { "type": "number", "minimum": 0, "maximum": 1, "description": "How closely the player on the ball is being closed down." },
+    "speed_mps": { "type": "number", "minimum": 0, "description": "Metres per second: ball speed for passes and shots, the player's running speed for carries." }
+  }
+}

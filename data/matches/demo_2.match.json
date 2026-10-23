@@ -1,0 +1,83 @@
+{
+  "match_id": "demo_2",
+  "seed": 20272,
+  "home": {
+    "code": "OST",
+    "name": "Ostbury Town",
+    "formation": "4-3-3",
+    "style": {
+      "directness": 0.5,
+      "press": 0.55,
+      "width": 0.45
+    },
+    "starting": [
+      "p_137",
+      "p_138",
+      "p_139",
+      "p_140",
+      "p_141",
+      "p_142",
+      "p_143",
+      "p_144",
+      "p_145",
+      "p_146",
+      "p_147"
+    ],
+    "bench": [
+      "p_148",
+      "p_149",
+      "p_150",
+      "p_151",
+      "p_152",
+      "p_153",
+      "p_154"
+    ],
+    "goals": 3
+  },
+  "away": {
+    "code": "KES",
+    "name": "Kestrel Wharf",
+    "formation": "4-3-3",
+    "style": {
+      "directness": 0.62,
+      "press": 0.3,
+      "width": 0.7
+    },
+    "starting": [
+      "p_155",
+      "p_156",
+      "p_157",
+      "p_158",
+      "p_159",
+      "p_160",
+      "p_161",
+      "p_162",
+      "p_163",
+      "p_164",
+      "p_165"
+    ],
+    "bench": [
+      "p_166",
+      "p_167",
+      "p_168",
+      "p_169",
+      "p_170",
+      "p_171",
+      "p_172"
+    ],
+    "goals": 3
+  },
+  "attacking": "home attacks toward x = 105 in both halves",
+  "events": 1956,
+  "demo": {
+    "drama": 27.45,
+    "goals": 6,
+    "lead_changes": 2,
+    "late_goals": 2,
+    "equalisers": 3,
+    "best_three_minutes": {
+      "t": 2250.02,
+      "clock": 2251.82
+    }
+  }
+}

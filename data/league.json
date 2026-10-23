@@ -1,0 +1,846 @@
+{
+  "league": "Blind Side Invented League",
+  "note": "All clubs and players are fictional. Any resemblance to real clubs or people is unintended.",
+  "clubs": [
+    {
+      "code": "ALD",
+      "name": "Aldmere Rovers",
+      "formation": "4-3-3",
+      "style": {
+        "directness": 0.35,
+        "press": 0.7,
+        "width": 0.6
+      },
+      "players": [
+        {
+          "id": "p_101",
+          "name": "Tunde Obiora",
+          "short_name": "Obiora",
+          "shirt": 1,
+          "position": "GK",
+          "role": "GK",
+          "passing": 47,
+          "pace": 43,
+          "finishing": 20
+        },
+        {
+          "id": "p_102",
+          "name": "Ifeanyi Castell",
+          "short_name": "Castell",
+          "shirt": 2,
+          "position": "DF",
+          "role": "RB",
+          "passing": 66,
+          "pace": 65,
+          "finishing": 40
+        },
+        {
+          "id": "p_103",
+          "name": "Ade Igwe",
+          "short_name": "Igwe",
+          "shirt": 5,
+          "position": "DF",
+          "role": "RCB",
+          "passing": 69,
+          "pace": 83,
+          "finishing": 39
+        },
+        {
+          "id": "p_104",
+          "name": "Nils Falk",
+          "short_name": "Falk",
+          "shirt": 4,
+          "position": "DF",
+          "role": "LCB",
+          "passing": 75,
+          "pace": 70,
+          "finishing": 37
+        },
+        {
+          "id": "p_105",
+          "name": "Kelechi Vossberg",
+          "short_name": "Vossberg",
+          "shirt": 3,
+          "position": "DF",
+          "role": "LB",
+          "passing": 74,
+          "pace": 69,
+          "finishing": 40
+        },
+        {
+          "id": "p_106",
+          "name": "Linus Aniebo",
+          "short_name": "Aniebo",
+          "shirt": 6,
+          "position": "MF",
+          "role": "DM",
+          "passing": 91,
+          "pace": 69,
+          "finishing": 57
+        },
+        {
+          "id": "p_107",
+          "name": "Soren Ibekwe",
+          "short_name": "Ibekwe",
+          "shirt": 8,
+          "position": "MF",
+          "role": "RCM",
+          "passing": 76,
+          "pace": 72,
+          "finishing": 61
+        },
+        {
+          "id": "p_108",
+          "name": "Arlo Adeleke",
+          "short_name": "Adeleke",
+          "shirt": 10,
+          "position": "MF",
+          "role": "LCM",
+          "passing": 76,
+          "pace": 70,
+          "finishing": 64
+        },
+        {
+          "id": "p_109",
+          "name": "Kofi Hesketh",
+          "short_name": "Hesketh",
+          "shirt": 7,
+          "position": "FW",
+          "role": "RW",
+          "passing": 79,
+          "pace": 82,
+          "finishing": 80
+        },
+        {
+          "id": "p_110",
+          "name": "Mateo Carrow",
+          "short_name": "Carrow",
+          "shirt": 9,
+          "position": "FW",
+          "role": "ST",
+          "passing": 70,
+          "pace": 81,
+          "finishing": 76
+        },
+        {
+          "id": "p_111",
+          "name": "Dayo Reyne",
+          "short_name": "Reyne",
+          "shirt": 11,
+          "position": "FW",
+          "role": "LW",
+          "passing": 68,
+          "pace": 73,
+          "finishing": 77
+        },
+        {
+          "id": "p_112",
+          "name": "Bram Mbah",
+          "short_name": "Mbah",
+          "shirt": 13,
+          "position": "GK",
+          "role": "SUB",
+          "passing": 49,
+          "pace": 51,
+          "finishing": 20
+        },
+        {
+          "id": "p_113",
+          "name": "Ade Ekwueme",
+          "short_name": "Ekwueme",
+          "shirt": 14,
+          "position": "DF",
+          "role": "SUB",
+          "passing": 63,
+          "pace": 71,
+          "finishing": 32
+        },
+        {
+          "id": "p_114",
+          "name": "Kunle Nwankwo",
+          "short_name": "Nwankwo",
+          "shirt": 15,
+          "position": "DF",
+          "role": "SUB",
+          "passing": 66,
+          "pace": 64,
+          "finishing": 36
+        },
+        {
+          "id": "p_115",
+          "name": "Linus Prentiss",
+          "short_name": "Prentiss",
+          "shirt": 16,
+          "position": "MF",
+          "role": "SUB",
+          "passing": 73,
+          "pace": 64,
+          "finishing": 53
+        },
+        {
+          "id": "p_116",
+          "name": "Ruben Olatunji",
+          "short_name": "Olatunji",
+          "shirt": 18,
+          "position": "MF",
+          "role": "SUB",
+          "passing": 76,
+          "pace": 68,
+          "finishing": 52
+        },
+        {
+          "id": "p_117",
+          "name": "Tobi Onwuka",
+          "short_name": "Onwuka",
+          "shirt": 19,
+          "position": "FW",
+          "role": "SUB",
+          "passing": 77,
+          "pace": 73,
+          "finishing": 82
+        },
+        {
+          "id": "p_118",
+          "name": "Chuka Delacroix",
+          "short_name": "Delacroix",
+          "shirt": 20,
+          "position": "FW",
+          "role": "SUB",
+          "passing": 67,
+          "pace": 77,
+          "finishing": 80
+        }
+      ]
+    },
+    {
+      "code": "CRV",
+      "name": "Corran Vale",
+      "formation": "4-3-3",
+      "style": {
+        "directness": 0.7,
+        "press": 0.45,
+        "width": 0.5
+      },
+      "players": [
+        {
+          "id": "p_119",
+          "name": "Elio Brekke",
+          "short_name": "Brekke",
+          "shirt": 1,
+          "position": "GK",
+          "role": "GK",
+          "passing": 48,
+          "pace": 44,
+          "finishing": 20
+        },
+        {
+          "id": "p_120",
+          "name": "Kunle Rask",
+          "short_name": "Rask",
+          "shirt": 2,
+          "position": "DF",
+          "role": "RB",
+          "passing": 65,
+          "pace": 64,
+          "finishing": 33
+        },
+        {
+          "id": "p_121",
+          "name": "Oskar Brannick",
+          "short_name": "Brannick",
+          "shirt": 5,
+          "position": "DF",
+          "role": "RCB",
+          "passing": 63,
+          "pace": 70,
+          "finishing": 32
+        },
+        {
+          "id": "p_122",
+          "name": "Jide Ilori",
+          "short_name": "Ilori",
+          "shirt": 4,
+          "position": "DF",
+          "role": "LCB",
+          "passing": 61,
+          "pace": 73,
+          "finishing": 44
+        },
+        {
+          "id": "p_123",
+          "name": "Jide Adewale",
+          "short_name": "Adewale",
+          "shirt": 3,
+          "position": "DF",
+          "role": "LB",
+          "passing": 60,
+          "pace": 60,
+          "finishing": 43
+        },
+        {
+          "id": "p_124",
+          "name": "Remi Anozie",
+          "short_name": "Anozie",
+          "shirt": 6,
+          "position": "MF",
+          "role": "DM",
+          "passing": 82,
+          "pace": 70,
+          "finishing": 61
+        },
+        {
+          "id": "p_125",
+          "name": "Uche Saltire",
+          "short_name": "Saltire",
+          "shirt": 8,
+          "position": "MF",
+          "role": "RCM",
+          "passing": 83,
+          "pace": 71,
+          "finishing": 55
+        },
+        {
+          "id": "p_126",
+          "name": "Bram Ekpo",
+          "short_name": "Ekpo",
+          "shirt": 10,
+          "position": "MF",
+          "role": "LCM",
+          "passing": 73,
+          "pace": 72,
+          "finishing": 62
+        },
+        {
+          "id": "p_127",
+          "name": "Lanre Varga",
+          "short_name": "Varga",
+          "shirt": 7,
+          "position": "FW",
+          "role": "RW",
+          "passing": 68,
+          "pace": 87,
+          "finishing": 82
+        },
+        {
+          "id": "p_128",
+          "name": "Somto Odum",
+          "short_name": "Odum",
+          "shirt": 9,
+          "position": "FW",
+          "role": "ST",
+          "passing": 65,
+          "pace": 79,
+          "finishing": 82
+        },
+        {
+          "id": "p_129",
+          "name": "Dayo Okwu",
+          "short_name": "Okwu",
+          "shirt": 11,
+          "position": "FW",
+          "role": "LW",
+          "passing": 78,
+          "pace": 81,
+          "finishing": 78
+        },
+        {
+          "id": "p_130",
+          "name": "Nnamdi Okoro",
+          "short_name": "Okoro",
+          "shirt": 13,
+          "position": "GK",
+          "role": "SUB",
+          "passing": 51,
+          "pace": 35,
+          "finishing": 20
+        },
+        {
+          "id": "p_131",
+          "name": "Nnamdi Abiola",
+          "short_name": "Abiola",
+          "shirt": 14,
+          "position": "DF",
+          "role": "SUB",
+          "passing": 63,
+          "pace": 54,
+          "finishing": 30
+        },
+        {
+          "id": "p_132",
+          "name": "Chidi Edoho",
+          "short_name": "Edoho",
+          "shirt": 15,
+          "position": "DF",
+          "role": "SUB",
+          "passing": 58,
+          "pace": 68,
+          "finishing": 23
+        },
+        {
+          "id": "p_133",
+          "name": "Ikenna Adebanjo",
+          "short_name": "Adebanjo",
+          "shirt": 16,
+          "position": "MF",
+          "role": "SUB",
+          "passing": 64,
+          "pace": 58,
+          "finishing": 50
+        },
+        {
+          "id": "p_134",
+          "name": "Uche Ikpeba",
+          "short_name": "Ikpeba",
+          "shirt": 18,
+          "position": "MF",
+          "role": "SUB",
+          "passing": 70,
+          "pace": 59,
+          "finishing": 50
+        },
+        {
+          "id": "p_135",
+          "name": "Dario Tamsett",
+          "short_name": "Tamsett",
+          "shirt": 19,
+          "position": "FW",
+          "role": "SUB",
+          "passing": 59,
+          "pace": 67,
+          "finishing": 74
+        },
+        {
+          "id": "p_136",
+          "name": "Kelechi Akande",
+          "short_name": "Akande",
+          "shirt": 20,
+          "position": "FW",
+          "role": "SUB",
+          "passing": 70,
+          "pace": 69,
+          "finishing": 71
+        }
+      ]
+    },
+    {
+      "code": "OST",
+      "name": "Ostbury Town",
+      "formation": "4-3-3",
+      "style": {
+        "directness": 0.5,
+        "press": 0.55,
+        "width": 0.45
+      },
+      "players": [
+        {
+          "id": "p_137",
+          "name": "Wale Quist",
+          "short_name": "Quist",
+          "shirt": 1,
+          "position": "GK",
+          "role": "GK",
+          "passing": 50,
+          "pace": 43,
+          "finishing": 20
+        },
+        {
+          "id": "p_138",
+          "name": "Obinna Chukwu",
+          "short_name": "Chukwu",
+          "shirt": 2,
+          "position": "DF",
+          "role": "RB",
+          "passing": 66,
+          "pace": 75,
+          "finishing": 38
+        },
+        {
+          "id": "p_139",
+          "name": "Ifeanyi Dunmore",
+          "short_name": "Dunmore",
+          "shirt": 5,
+          "position": "DF",
+          "role": "RCB",
+          "passing": 65,
+          "pace": 63,
+          "finishing": 35
+        },
+        {
+          "id": "p_140",
+          "name": "Anders Strand",
+          "short_name": "Strand",
+          "shirt": 4,
+          "position": "DF",
+          "role": "LCB",
+          "passing": 65,
+          "pace": 74,
+          "finishing": 38
+        },
+        {
+          "id": "p_141",
+          "name": "Kunle Corvin",
+          "short_name": "Corvin",
+          "shirt": 3,
+          "position": "DF",
+          "role": "LB",
+          "passing": 71,
+          "pace": 67,
+          "finishing": 34
+        },
+        {
+          "id": "p_142",
+          "name": "Ruben Ugwu",
+          "short_name": "Ugwu",
+          "shirt": 6,
+          "position": "MF",
+          "role": "DM",
+          "passing": 84,
+          "pace": 78,
+          "finishing": 56
+        },
+        {
+          "id": "p_143",
+          "name": "Obinna Kerrigan",
+          "short_name": "Kerrigan",
+          "shirt": 8,
+          "position": "MF",
+          "role": "RCM",
+          "passing": 80,
+          "pace": 69,
+          "finishing": 56
+        },
+        {
+          "id": "p_144",
+          "name": "Elio Nnadi",
+          "short_name": "Nnadi",
+          "shirt": 10,
+          "position": "MF",
+          "role": "LCM",
+          "passing": 81,
+          "pace": 74,
+          "finishing": 59
+        },
+        {
+          "id": "p_145",
+          "name": "Tobi Verhoef",
+          "short_name": "Verhoef",
+          "shirt": 7,
+          "position": "FW",
+          "role": "RW",
+          "passing": 68,
+          "pace": 87,
+          "finishing": 75
+        },
+        {
+          "id": "p_146",
+          "name": "Jide Okeke",
+          "short_name": "Okeke",
+          "shirt": 9,
+          "position": "FW",
+          "role": "ST",
+          "passing": 65,
+          "pace": 86,
+          "finishing": 78
+        },
+        {
+          "id": "p_147",
+          "name": "Wale Halloran",
+          "short_name": "Halloran",
+          "shirt": 11,
+          "position": "FW",
+          "role": "LW",
+          "passing": 66,
+          "pace": 79,
+          "finishing": 79
+        },
+        {
+          "id": "p_148",
+          "name": "Teodor Marlow",
+          "short_name": "Marlow",
+          "shirt": 13,
+          "position": "GK",
+          "role": "SUB",
+          "passing": 47,
+          "pace": 44,
+          "finishing": 20
+        },
+        {
+          "id": "p_149",
+          "name": "Obinna Morrow",
+          "short_name": "Morrow",
+          "shirt": 14,
+          "position": "DF",
+          "role": "SUB",
+          "passing": 53,
+          "pace": 72,
+          "finishing": 24
+        },
+        {
+          "id": "p_150",
+          "name": "Tunde Haldane",
+          "short_name": "Haldane",
+          "shirt": 15,
+          "position": "DF",
+          "role": "SUB",
+          "passing": 69,
+          "pace": 67,
+          "finishing": 27
+        },
+        {
+          "id": "p_151",
+          "name": "Oskar Oduya",
+          "short_name": "Oduya",
+          "shirt": 16,
+          "position": "MF",
+          "role": "SUB",
+          "passing": 71,
+          "pace": 75,
+          "finishing": 50
+        },
+        {
+          "id": "p_152",
+          "name": "Ikenna Ezeh",
+          "short_name": "Ezeh",
+          "shirt": 18,
+          "position": "MF",
+          "role": "SUB",
+          "passing": 72,
+          "pace": 58,
+          "finishing": 59
+        },
+        {
+          "id": "p_153",
+          "name": "Kofi Ogunleye",
+          "short_name": "Ogunleye",
+          "shirt": 19,
+          "position": "FW",
+          "role": "SUB",
+          "passing": 68,
+          "pace": 76,
+          "finishing": 90
+        },
+        {
+          "id": "p_154",
+          "name": "Tariq Lunde",
+          "short_name": "Lunde",
+          "shirt": 20,
+          "position": "FW",
+          "role": "SUB",
+          "passing": 70,
+          "pace": 75,
+          "finishing": 73
+        }
+      ]
+    },
+    {
+      "code": "KES",
+      "name": "Kestrel Wharf",
+      "formation": "4-3-3",
+      "style": {
+        "directness": 0.62,
+        "press": 0.3,
+        "width": 0.7
+      },
+      "players": [
+        {
+          "id": "p_155",
+          "name": "Bram Ezenwa",
+          "short_name": "Ezenwa",
+          "shirt": 1,
+          "position": "GK",
+          "role": "GK",
+          "passing": 46,
+          "pace": 42,
+          "finishing": 20
+        },
+        {
+          "id": "p_156",
+          "name": "Tunde Wendel",
+          "short_name": "Wendel",
+          "shirt": 2,
+          "position": "DF",
+          "role": "RB",
+          "passing": 65,
+          "pace": 64,
+          "finishing": 31
+        },
+        {
+          "id": "p_157",
+          "name": "Lanre Tessaro",
+          "short_name": "Tessaro",
+          "shirt": 5,
+          "position": "DF",
+          "role": "RCB",
+          "passing": 60,
+          "pace": 74,
+          "finishing": 28
+        },
+        {
+          "id": "p_158",
+          "name": "Somto Oguike",
+          "short_name": "Oguike",
+          "shirt": 4,
+          "position": "DF",
+          "role": "LCB",
+          "passing": 59,
+          "pace": 61,
+          "finishing": 31
+        },
+        {
+          "id": "p_159",
+          "name": "Kofi Uzor",
+          "short_name": "Uzor",
+          "shirt": 3,
+          "position": "DF",
+          "role": "LB",
+          "passing": 64,
+          "pace": 63,
+          "finishing": 33
+        },
+        {
+          "id": "p_160",
+          "name": "Uche Fashola",
+          "short_name": "Fashola",
+          "shirt": 6,
+          "position": "MF",
+          "role": "DM",
+          "passing": 81,
+          "pace": 72,
+          "finishing": 54
+        },
+        {
+          "id": "p_161",
+          "name": "Ikenna Amadi",
+          "short_name": "Amadi",
+          "shirt": 8,
+          "position": "MF",
+          "role": "RCM",
+          "passing": 78,
+          "pace": 70,
+          "finishing": 59
+        },
+        {
+          "id": "p_162",
+          "name": "Somto Nwosu",
+          "short_name": "Nwosu",
+          "shirt": 10,
+          "position": "MF",
+          "role": "LCM",
+          "passing": 76,
+          "pace": 59,
+          "finishing": 51
+        },
+        {
+          "id": "p_163",
+          "name": "Ade Kessler",
+          "short_name": "Kessler",
+          "shirt": 7,
+          "position": "FW",
+          "role": "RW",
+          "passing": 70,
+          "pace": 76,
+          "finishing": 70
+        },
+        {
+          "id": "p_164",
+          "name": "Idris Sandeman",
+          "short_name": "Sandeman",
+          "shirt": 9,
+          "position": "FW",
+          "role": "ST",
+          "passing": 67,
+          "pace": 80,
+          "finishing": 77
+        },
+        {
+          "id": "p_165",
+          "name": "Luca Oyelaran",
+          "short_name": "Oyelaran",
+          "shirt": 11,
+          "position": "FW",
+          "role": "LW",
+          "passing": 55,
+          "pace": 82,
+          "finishing": 74
+        },
+        {
+          "id": "p_166",
+          "name": "Callum Ferrand",
+          "short_name": "Ferrand",
+          "shirt": 13,
+          "position": "GK",
+          "role": "SUB",
+          "passing": 38,
+          "pace": 41,
+          "finishing": 20
+        },
+        {
+          "id": "p_167",
+          "name": "Teodor Ogbu",
+          "short_name": "Ogbu",
+          "shirt": 14,
+          "position": "DF",
+          "role": "SUB",
+          "passing": 63,
+          "pace": 61,
+          "finishing": 29
+        },
+        {
+          "id": "p_168",
+          "name": "Arlo Olaniyan",
+          "short_name": "Olaniyan",
+          "shirt": 15,
+          "position": "DF",
+          "role": "SUB",
+          "passing": 56,
+          "pace": 58,
+          "finishing": 31
+        },
+        {
+          "id": "p_169",
+          "name": "Emeka Ajala",
+          "short_name": "Ajala",
+          "shirt": 16,
+          "position": "MF",
+          "role": "SUB",
+          "passing": 67,
+          "pace": 58,
+          "finishing": 49
+        },
+        {
+          "id": "p_170",
+          "name": "Arlo Lindqvist",
+          "short_name": "Lindqvist",
+          "shirt": 18,
+          "position": "MF",
+          "role": "SUB",
+          "passing": 66,
+          "pace": 63,
+          "finishing": 51
+        },
+        {
+          "id": "p_171",
+          "name": "Dayo Babatunde",
+          "short_name": "Babatunde",
+          "shirt": 19,
+          "position": "FW",
+          "role": "SUB",
+          "passing": 72,
+          "pace": 66,
+          "finishing": 76
+        },
+        {
+          "id": "p_172",
+          "name": "Bayo Arbery",
+          "short_name": "Arbery",
+          "shirt": 20,
+          "position": "FW",
+          "role": "SUB",
+          "passing": 53,
+          "pace": 73,
+          "finishing": 73
+        }
+      ]
+    }
+  ]
+}

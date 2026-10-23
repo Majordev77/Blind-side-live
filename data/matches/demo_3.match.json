@@ -1,0 +1,83 @@
+{
+  "match_id": "demo_3",
+  "seed": 20181,
+  "home": {
+    "code": "ALD",
+    "name": "Aldmere Rovers",
+    "formation": "4-3-3",
+    "style": {
+      "directness": 0.35,
+      "press": 0.7,
+      "width": 0.6
+    },
+    "starting": [
+      "p_101",
+      "p_102",
+      "p_103",
+      "p_104",
+      "p_105",
+      "p_106",
+      "p_107",
+      "p_108",
+      "p_109",
+      "p_110",
+      "p_111"
+    ],
+    "bench": [
+      "p_112",
+      "p_113",
+      "p_114",
+      "p_115",
+      "p_116",
+      "p_117",
+      "p_118"
+    ],
+    "goals": 2
+  },
+  "away": {
+    "code": "OST",
+    "name": "Ostbury Town",
+    "formation": "4-3-3",
+    "style": {
+      "directness": 0.5,
+      "press": 0.55,
+      "width": 0.45
+    },
+    "starting": [
+      "p_137",
+      "p_138",
+      "p_139",
+      "p_140",
+      "p_141",
+      "p_142",
+      "p_143",
+      "p_144",
+      "p_145",
+      "p_146",
+      "p_147"
+    ],
+    "bench": [
+      "p_148",
+      "p_149",
+      "p_150",
+      "p_151",
+      "p_152",
+      "p_153",
+      "p_154"
+    ],
+    "goals": 4
+  },
+  "attacking": "home attacks toward x = 105 in both halves",
+  "events": 1871,
+  "demo": {
+    "drama": 25.5,
+    "goals": 6,
+    "lead_changes": 2,
+    "late_goals": 2,
+    "equalisers": 2,
+    "best_three_minutes": {
+      "t": 5350.93,
+      "clock": 5245.36
+    }
+  }
+}
