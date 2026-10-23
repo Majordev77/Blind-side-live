@@ -47,6 +47,7 @@ export interface Spoken {
   /** The team the line is about, for the caption colour. */
   team?: string | null
   source: 'caller' | 'agents' | 'template'
+  energy?: number
 }
 
 export interface Snapshot {
@@ -176,6 +177,7 @@ export class MatchPlayer {
       text: c.text,
       evidence: c.evidence,
       source: 'caller',
+      energy: c.energy ?? 0,
     }))
     // Analyst lines: the agents' verified lines for this listener's variant when they exist, else templates.
     // Goals are left to the caller, who calls them at once and then gives the build-up.
@@ -239,7 +241,8 @@ export class MatchPlayer {
       this.current = null
       if (analyst) this.engine.setDuck(false)
     }
-    if (!speak(s.text, this.settings.lang, { onEnd: done }, s.role)) done()
+    if (s.rank === 'big') buzz(s.text.startsWith('GOAL') ? [250, 80, 250, 80, 500] : [60])
+    if (!speak(s.text, this.settings.lang, { onEnd: done }, s.role, s.energy ?? 0)) done()
   }
 
   private cueAt(t: number): Cue | undefined {
@@ -268,6 +271,15 @@ export class MatchPlayer {
       if (c.sound === 'goal' && c.score) score = c.score
     }
     return score
+  }
+}
+
+/** Vibrate the phone for shots and goals, where the device allows it. */
+function buzz(pattern: number[]): void {
+  try {
+    navigator.vibrate?.(pattern)
+  } catch {
+    // not supported here
   }
 }
 

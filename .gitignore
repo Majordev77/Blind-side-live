@@ -31,3 +31,6 @@ Thumbs.db
 
 # Local Claude settings
 .claude/settings.local.json
+
+# Downloads waiting to be checked
+.cache/

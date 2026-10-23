@@ -31,6 +31,7 @@ export function Start({ onReady }: Props) {
       setStatus('failed')
       return
     }
+    await engine.loadSamples() // the recorded kicks, crowd and whistle; missing files fall back to synthesis
     speak('Left ear.', 'en')
     engine.earCheck('left')
     await wait(1200)

@@ -23,6 +23,7 @@ import type { AudioMode, Cue, Point } from '../match/types'
 import { makeWhiteNoise } from './buffers'
 import { Crowd } from './crowd'
 import { danger, hrtfPosition, panFor, type Orientation } from './mapping'
+import { loadSamples, pick, stadiumImpulse, type Samples } from './samples'
 
 const MASTER_LEVEL = 0.9
 const DUCK_LEVEL = 0.55 // the crowd and the ball stay audible under the voice, like a broadcast
@@ -46,6 +47,8 @@ export class SoundEngine {
   private readonly sfx: GainNode
   private readonly white: AudioBuffer
   private crowd: Crowd
+  private samples: Samples = {}
+  private drumsUntil = 0
   private settings: EngineSettings = { listenerClub: '', homeClub: '', mode: 'headphones' }
   private live = new Set<AudioScheduledSourceNode>()
 
@@ -67,6 +70,10 @@ export class SoundEngine {
     this.duck.connect(this.master)
     this.sfx = this.gain(1)
     this.sfx.connect(this.duck)
+    // The stadium: every strike and whistle also rings off the stands.
+    const stands = ctx.createConvolver()
+    stands.buffer = stadiumImpulse(ctx)
+    this.sfx.connect(this.gain(0.3)).connect(stands).connect(this.duck)
     this.white = makeWhiteNoise(ctx, 2)
     this.crowd = new Crowd(ctx, this.duck, 0.45)
   }
@@ -94,6 +101,12 @@ export class SoundEngine {
     return { listenerIsHome: this.settings.listenerClub === this.settings.homeClub }
   }
 
+  /** Load the recorded sounds in web/public/sounds/. Returns the names found; missing ones fall back to synthesis. */
+  async loadSamples(): Promise<string[]> {
+    this.samples = await loadSamples(this.ctx)
+    return Object.keys(this.samples)
+  }
+
   configure(settings: EngineSettings): void {
     this.settings = settings
   }
@@ -101,8 +114,9 @@ export class SoundEngine {
   /** Bring up the stadium. */
   start(at = this.ctx.currentTime + 0.05): void {
     this.stop()
-    this.crowd = new Crowd(this.ctx, this.duck, 0.45)
+    this.crowd = new Crowd(this.ctx, this.duck, 0.45, this.samples)
     this.crowd.start(at)
+    this.drumsUntil = 0
   }
 
   stop(): void {
@@ -143,8 +157,13 @@ export class SoundEngine {
     const from = cue.from
     const to = cue.to ?? from
     const travel = clamp(cue.duration ?? 0.4, 0.05, 4)
-    if (from) this.crowd.setExcitement(0.12 + 0.75 * danger(to ?? from))
     const ours = cue.team === this.settings.listenerClub
+    if (from) {
+      const heat = danger(to ?? from)
+      this.crowd.setExcitement(0.12 + 0.75 * heat)
+      // The supporters' drums pick up when your side gets near goal.
+      if (ours && heat > 0.55 && at > this.drumsUntil) this.drumsUntil = this.crowd.drums(at + 0.2, 4, 112, 0.35)
+    }
     switch (cue.sound) {
       case 'pass': {
         if (!from || !to) break
@@ -176,6 +195,7 @@ export class SoundEngine {
         this.net(at, from ? this.place(from) : this.sfx)
         this.crowd.roar(at + 0.15, ours)
         this.whistle(at + 1.2, 'short')
+        if (ours) this.drumsUntil = this.crowd.drums(at + 2.5, 12, 132, 0.6)
         break
       case 'tackle':
         if (from) this.scuffle(at, this.place(from))
@@ -251,6 +271,12 @@ export class SoundEngine {
    */
   private kick(t: number, out: AudioNode, power: number, shot = false): void {
     const p = clamp(power, 0, 1)
+    const rec = pick(this.samples, 'kick')
+    if (rec) {
+      // a real strike: harder kicks louder and a shade deeper
+      this.playSample(rec, t, out, 0.45 + 0.65 * p + (shot ? 0.25 : 0), (shot ? 0.9 : 1.04 - 0.1 * p) * (0.96 + Math.random() * 0.08))
+      return
+    }
     // leather click
     this.noise(t, t + 0.02).connect(this.filter('highpass', 2400, 0.7)).connect(this.env(t, 0.25 + 0.35 * p, 0.0008, 0.012)).connect(out)
     // panel slap
@@ -264,6 +290,13 @@ export class SoundEngine {
   /** The receiver's first touch: a muffled, softer contact. */
   private touch(t: number, out: AudioNode, power: number): void {
     const p = clamp(power, 0, 1)
+    const rec = pick(this.samples, 'touch')
+    const kick = rec ? null : pick(this.samples, 'kick')
+    if (rec || kick) {
+      // a first touch is a softer, duller contact than a strike
+      this.playSample((rec ?? kick) as AudioBuffer, t, out, rec ? 0.35 + 0.25 * p : 0.16 + 0.12 * p, rec ? 1 : 0.78)
+      return
+    }
     this.noise(t, t + 0.06).connect(this.filter('bandpass', 650, 1)).connect(this.env(t, 0.22 + 0.2 * p, 0.003, 0.04)).connect(out)
     const o = this.osc('sine', 120, t, t + 0.15)
     o.frequency.exponentialRampToValueAtTime(70, t + 0.07)
@@ -329,6 +362,17 @@ export class SoundEngine {
    */
   whistle(t: number, kind: 'short' | 'long' | 'full'): void {
     const blasts = kind === 'full' ? [0.55, 0.55, 1.2] : [kind === 'long' ? 1.0 : 0.3]
+    const short = pick(this.samples, 'whistle_short')
+    const long = pick(this.samples, 'whistle_long') ?? short
+    if (short || long) {
+      let at = t
+      for (const len of blasts) {
+        const rec = (len >= 0.5 ? long : short) ?? long
+        if (rec) this.playSample(rec, at, this.sfx, 0.6, 1)
+        at += Math.max(len, rec?.duration ?? len) + 0.15
+      }
+      return
+    }
     let at = t
     const out = this.gain(1)
     out.connect(this.sfx)
@@ -358,6 +402,15 @@ export class SoundEngine {
   }
 
   // ---------------------------------------------------------------- building blocks
+
+  private playSample(buf: AudioBuffer, t: number, out: AudioNode, level: number, rate = 1): void {
+    const src = this.ctx.createBufferSource()
+    src.buffer = buf
+    src.playbackRate.value = rate
+    src.connect(this.gain(level)).connect(out)
+    src.start(t)
+    this.track(src)
+  }
 
   private gain(v: number): GainNode {
     const g = this.ctx.createGain()

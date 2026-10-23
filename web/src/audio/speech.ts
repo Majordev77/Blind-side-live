@@ -133,6 +133,7 @@ export function speak(
   lang: Lang,
   handlers: { onStart?: () => void; onEnd?: () => void } = {},
   role: Role = 'caller',
+  energy = 0,
 ): boolean {
   if (!speechSupported() || !text.trim()) return false
   const pick = pickVoice(lang, role)
@@ -142,8 +143,10 @@ export function speak(
     u.lang = pick.tag
     if (pick.voice) u.voice = pick.voice
     // The caller is quicker and a touch brighter, like a play-by-play commentator.
-    u.rate = role === 'caller' ? Math.min(2, RATE * 1.18) : RATE
-    u.pitch = role === 'caller' ? 1.08 : 0.95
+    // Energy (0 to 1) lifts the caller as the ball nears goal: quicker and higher on a chance, highest on a goal.
+    const e = Math.min(1, Math.max(0, energy))
+    u.rate = role === 'caller' ? Math.min(2, RATE * (1.15 + 0.2 * e)) : RATE
+    u.pitch = role === 'caller' ? Math.min(2, 1.05 + 0.25 * e) : 0.95
     u.volume = 1
     let done = false
     const finish = () => {

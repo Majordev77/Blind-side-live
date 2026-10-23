@@ -22,6 +22,8 @@ export interface Call {
   /** touch: a name as the ball arrives; event: wins, crosses, set pieces; big: shots, saves, goals; buildup: after a goal. */
   kind: 'touch' | 'event' | 'big' | 'buildup'
   text: string
+  /** How excited the caller sounds, 0 to 1. */
+  energy?: number
   evidence: string[]
 }
 
@@ -97,7 +99,7 @@ const SAY = {
     saved: (gk: string) => `Saved by ${gk}!`,
     wide: 'Wide! Just off target.',
     blocked: 'Blocked!',
-    goal: (n: string, score: string) => `GOAL! ${n} scores! ${score}`,
+    goal: (n: string, club: string, score: string) => `GOAL! GOAL for ${club}! ${n} scores! ${score}`,
     corner: (club: string) => `Corner to ${club}.`,
     freeKick: (club: string) => `Free kick to ${club}.`,
     penalty: (club: string) => `Penalty to ${club}!`,
@@ -122,7 +124,7 @@ const SAY = {
     saved: (gk: string) => `${gk} hold am! Goalkeeper save am!`,
     wide: 'E no enter! E pass outside.',
     blocked: 'Dem block am!',
-    goal: (n: string, score: string) => `GOAL! ${n} don score! ${score}`,
+    goal: (n: string, club: string, score: string) => `GOAL! E don enter! ${n} don score for ${club}! ${score}`,
     corner: (club: string) => `Corner kick for ${club}.`,
     freeKick: (club: string) => `Free kick for ${club}.`,
     penalty: (club: string) => `Penalty for ${club}!`,
@@ -187,7 +189,7 @@ export function buildCalls(cues: Cue[], names: Names, lang: Lang): Call[] {
         lastNamed = { player: c.recipient, t: at }
         touchesSinceZone++
         const sayWhere = z !== lastZone || touchesSinceZone >= 3 || z === 'box' || z === 'edge'
-        push({ t: at, expires: at + 1.1, kind: 'touch', text: sayWhere ? say.touchWhere(who, zoneText(z, lang)) : say.touch(who), evidence: [c.event] })
+        push({ t: at, expires: at + 1.1, kind: 'touch', text: sayWhere ? say.touchWhere(who, zoneText(z, lang)) : say.touch(who), evidence: [c.event], energy: z === 'box' ? 0.6 : z === 'edge' || z === 'left' || z === 'right' ? 0.35 : 0 })
         if (sayWhere) {
           lastZone = z
           touchesSinceZone = 0
@@ -222,7 +224,7 @@ export function buildCalls(cues: Cue[], names: Names, lang: Lang): Call[] {
         if (!c.player || !c.from || !c.team) break
         team = c.team
         const z = zoneOf(c.from, c.team, names.home)
-        push({ t: c.t, expires: c.t + 0.8, kind: 'big', text: say.shoots(names.player(c.player), zoneText(z, lang)), evidence: [c.event] })
+        push({ t: c.t, expires: c.t + 0.8, kind: 'big', text: say.shoots(names.player(c.player), zoneText(z, lang)), evidence: [c.event], energy: 0.85 })
         const land = c.t + Math.min(c.duration ?? 0.6, 1.2) + 0.15
         if (c.outcome === 'off_target') push({ t: land, expires: land + 1.5, kind: 'big', text: say.wide, evidence: [c.event] })
         if (c.outcome === 'blocked') push({ t: land, expires: land + 1.5, kind: 'big', text: say.blocked, evidence: [c.event] })
@@ -235,7 +237,7 @@ export function buildCalls(cues: Cue[], names: Names, lang: Lang): Call[] {
         if (!c.player || !c.team) break
         const s = c.score ?? {}
         const score = `${names.club(names.home)} ${s[names.home] ?? 0}, ${names.club(names.away)} ${s[names.away] ?? 0}.`
-        push({ t: c.t + 0.1, expires: c.t + 3, kind: 'big', text: say.goal(names.player(c.player), score), evidence: [c.event] })
+        push({ t: c.t + 0.1, expires: c.t + 3, kind: 'big', text: say.goal(names.player(c.player), names.club(c.team), score), evidence: [c.event], energy: 1 })
         const b = buildUp(cues, i, names, lang)
         if (b) push({ t: c.t + 4, expires: c.t + 20, kind: 'buildup', text: b.text, evidence: b.evidence })
         team = undefined
