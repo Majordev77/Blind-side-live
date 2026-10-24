@@ -3,26 +3,41 @@ import type { SoundEngine } from '../audio/engine'
 import { along } from '../audio/mapping'
 import { club, loadAgentLines, loadMatch, SURNAMES, type AgentLine } from '../match/data'
 import { MatchPlayer, type Snapshot } from '../match/player'
+import { runTutorial } from '../match/tutorial'
 import type { Detail, MatchData } from '../match/types'
 import type { Choices } from './Setup'
 
 const LEVELS: Detail[] = ['essentials', 'full', 'analyst']
 const LEVEL_NAME: Record<Detail, string> = { essentials: 'Essentials', full: 'Full', analyst: 'Analyst' }
 const CONTEXT_BEFORE = 20 // seconds of play before the best three minutes
+const BUILD_UP = 45 // the instant demo starts this long before a goal
 
 const clockText = (s: number) => {
   const m = Math.floor(s / 60)
   return `${String(m).padStart(2, '0')}:${String(Math.floor(s % 60)).padStart(2, '0')}`
 }
 
+/** Where to start, and whose fan the listener is. The instant demo drops you in just before a goal. */
+function plan(data: MatchData, choices: Choices): { from: number; listener: string } {
+  const best = data.info.best_three_minutes.t
+  if (!choices.instant) return { from: Math.max(0, best - CONTEXT_BEFORE), listener: choices.listener }
+  const goal = data.cues.find((c) => c.sound === 'goal' && c.t >= best) ?? data.cues.find((c) => c.sound === 'goal')
+  if (!goal?.team) return { from: Math.max(0, best - CONTEXT_BEFORE), listener: data.info.home }
+  // You support the side that is about to score, so the first thing you feel is a roar.
+  return { from: Math.max(0, goal.t - BUILD_UP), listener: choices.listener === 'auto' ? goal.team : choices.listener }
+}
+
 /** The match screen: a huge score, a live caption, the ear bar and five controls in a fixed order. */
-export function Match({ engine, choices }: { engine: SoundEngine; choices: Choices }) {
+export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine; choices: Choices; onPersonalise: () => void }) {
   const [data, setData] = useState<MatchData | null>(null)
   const [agentLines, setAgentLines] = useState<AgentLine[] | null | undefined>(undefined)
   const [snap, setSnap] = useState<Snapshot | null>(null)
   const [detail, setDetail] = useState<Detail>(choices.detail)
   const [announce, setAnnounce] = useState('')
+  const [phase, setPhase] = useState<'loading' | 'tutorial' | 'playing'>('loading')
+  const [listener, setListener] = useState(choices.listener)
   const player = useRef<MatchPlayer | null>(null)
+  const skip = useRef<AbortController | null>(null)
 
   useEffect(() => {
     let alive = true
@@ -37,49 +52,81 @@ export function Match({ engine, choices }: { engine: SoundEngine; choices: Choic
 
   useEffect(() => {
     if (!data || agentLines === undefined) return
+    let alive = true
+    let raf = 0
     const name = (code: string) => club(code).name
     const names = { home: data.info.home, away: data.info.away, club: name, player: (id: string) => SURNAMES.get(id) ?? id }
-    const p = new MatchPlayer(engine, data, { listener: choices.listener, mode: choices.mode, detail: choices.detail, follow: null, lang: choices.lang }, names, agentLines)
+    const { from, listener: fan } = plan(data, choices)
+    setListener(fan)
+    const p = new MatchPlayer(engine, data, { listener: fan, mode: choices.mode, detail: choices.detail, follow: null, lang: choices.lang }, names, agentLines)
     p.onCaption = (line) => setAnnounce(line.text)
     player.current = p
-    const from = Math.max(0, data.info.best_three_minutes.t - CONTEXT_BEFORE)
+
     const startCue = data.cues.find((c) => c.t >= from)
     const minute = startCue ? Math.floor(startCue.clock / 60) + 1 : 1
     const goals = data.cues.filter((c) => c.sound === 'goal' && c.t < from).at(-1)?.score ?? { [data.info.home]: 0, [data.info.away]: 0 }
     const score = `${name(data.info.home)} ${goals[data.info.home] ?? 0}, ${name(data.info.away)} ${goals[data.info.away] ?? 0}`
     const intro =
       choices.lang === 'pcm'
-        ? `Welcome to the stadium. You dey support ${name(choices.listener)}, dem dey attack go your right ear. Na ${score}, minute ${minute}.`
-        : `Welcome to the stadium. You support ${name(choices.listener)}, attacking toward your right ear. It's ${score}, in minute ${minute}.`
-    p.start(from, intro)
-    let raf = 0
-    const frame = () => {
-      setSnap(p.snapshot())
+        ? `Welcome to the stadium. You dey support ${name(fan)}, dem dey attack go your right ear. Na ${score}, minute ${minute}.`
+        : `Welcome to the stadium. You support ${name(fan)}, attacking toward your right ear. It's ${score}, in minute ${minute}.`
+
+    const kickoff = () => {
+      if (!alive) return
+      setPhase('playing')
+      p.start(from, intro)
+      const frame = () => {
+        setSnap(p.snapshot())
+        raf = requestAnimationFrame(frame)
+      }
       raf = requestAnimationFrame(frame)
     }
-    raf = requestAnimationFrame(frame)
+
+    if (choices.tutorial) {
+      setPhase('tutorial')
+      const ctrl = new AbortController()
+      skip.current = ctrl
+      runTutorial(engine, choices.lang, choices.mode, ctrl.signal).then(() => {
+        try {
+          localStorage.setItem('blindside.tutorial', 'done')
+        } catch {
+          // private mode: the tutorial will simply play again next time
+        }
+        kickoff()
+      })
+    } else {
+      kickoff()
+    }
     return () => {
+      alive = false
+      skip.current?.abort()
       cancelAnimationFrame(raf)
       p.destroy()
       player.current = null
     }
   }, [data, agentLines, engine, choices])
 
-  const changeDetail = (dir: -1 | 1) => {
-    const i = Math.min(LEVELS.length - 1, Math.max(0, LEVELS.indexOf(detail) + dir))
-    const next = LEVELS[i] as Detail
+  const cycleDetail = () => {
+    const next = LEVELS[(LEVELS.indexOf(detail) + 1) % LEVELS.length] as Detail
     setDetail(next)
     player.current?.setDetail(next)
     setAnnounce(`${LEVEL_NAME[next]} description.`)
   }
 
+  const where = () => {
+    const text = player.current?.whereIsBall()
+    if (text) setAnnounce(text)
+  }
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLElement && e.target.tagName === 'BUTTON' && (e.key === ' ' || e.key === 'Enter')) return
-      if (e.key === 'r' || e.key === 'R') player.current?.repeat()
-      else if (e.key === '-' || e.key === 'ArrowDown') changeDetail(-1)
-      else if (e.key === '+' || e.key === '=' || e.key === 'ArrowUp') changeDetail(1)
-      else if (e.key === ' ' || e.key === 'p' || e.key === 'P') {
+      const k = e.key.toLowerCase()
+      if (phase === 'tutorial' && (k === 'escape' || k === 's')) skip.current?.abort()
+      else if (k === 'w' || k === 'b') where()
+      else if (k === 'r') player.current?.repeat()
+      else if (k === 'd') cycleDetail()
+      else if (k === ' ' || k === 'p') {
         e.preventDefault()
         void player.current?.togglePause()
       }
@@ -87,6 +134,24 @@ export function Match({ engine, choices }: { engine: SoundEngine; choices: Choic
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   })
+
+  if (phase === 'tutorial') {
+    return (
+      <main className="match tutorial">
+        <p className="label">Before kickoff</p>
+        <h1 className="tutorial-title">Learn the sounds</h1>
+        <ol className="tutorial-steps">
+          <li>A pass travels from your left ear to your right.</li>
+          <li>The crowd builds as an attack nears goal.</li>
+          <li>A shot, then a goal.</li>
+          <li>Tap “Where’s the ball?” any time.</li>
+        </ol>
+        <button className="skip" onClick={() => skip.current?.abort()} aria-keyshortcuts="S">
+          Skip to the match
+        </button>
+      </main>
+    )
+  }
 
   if (!data || !snap) {
     return (
@@ -98,12 +163,12 @@ export function Match({ engine, choices }: { engine: SoundEngine; choices: Choic
 
   const home = data.info.home
   const away = data.info.away
-  const listenerIsHome = choices.listener === home
+  const listenerIsHome = listener === home
   // Show the listener's club on the left, the way they hear it: attacking toward the right.
   const left = listenerIsHome ? home : away
   const right = listenerIsHome ? away : home
   const pos = (along(snap.ball, { listenerIsHome }) + 1) / 2
-  const ours = snap.team === choices.listener
+  const ours = snap.team === listener
   const caption = snap.caption
 
   return (
@@ -127,7 +192,7 @@ export function Match({ engine, choices }: { engine: SoundEngine; choices: Choic
         <p className="caption-text">{caption ? caption.text : 'Listening…'}</p>
         {caption && caption.evidence.length > 0 && (
           <p className="evidence">
-            {caption.evidence.length} {caption.evidence.length === 1 ? 'event' : 'events'} · {caption.evidence.join(' ')}
+            {caption.evidence.length} {caption.evidence.length === 1 ? 'event' : 'events'} · {caption.evidence.slice(0, 6).join(' ')}
           </p>
         )}
       </section>
@@ -143,19 +208,19 @@ export function Match({ engine, choices }: { engine: SoundEngine; choices: Choic
       </section>
 
       <nav className="controls" aria-label="Match controls">
+        <button className="where" onClick={where} aria-keyshortcuts="W">
+          Where’s the ball?
+        </button>
         <button onClick={() => player.current?.repeat()} aria-keyshortcuts="R">
           Repeat
         </button>
-        <button onClick={() => changeDetail(-1)} disabled={detail === 'essentials'} aria-keyshortcuts="-">
-          Less
-        </button>
-        <button onClick={() => changeDetail(1)} disabled={detail === 'analyst'} aria-keyshortcuts="+">
-          More
+        <button onClick={cycleDetail} aria-keyshortcuts="D" aria-label={`Detail: ${LEVEL_NAME[detail]}. Change`}>
+          {LEVEL_NAME[detail]}
         </button>
         <button onClick={() => void player.current?.togglePause()} aria-keyshortcuts="Space" aria-pressed={snap.paused}>
           {snap.paused ? 'Play' : 'Pause'}
         </button>
-        <p className="detail-now label">{LEVEL_NAME[detail]}</p>
+        <button onClick={onPersonalise}>Personalise</button>
       </nav>
 
       <p className="visually-hidden" aria-live="polite" role="log">

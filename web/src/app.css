@@ -305,3 +305,49 @@
   text-align: center;
   margin: 0;
 }
+
+/* ---------- the main question, and the tutorial ---------- */
+
+.controls .where {
+  grid-column: 1 / -1;
+  min-height: 76px;
+  background: var(--chalk);
+  color: var(--night);
+  border-color: var(--chalk);
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+}
+
+.controls .where:focus-visible {
+  outline-color: var(--home);
+}
+
+.match.tutorial {
+  justify-content: center;
+  gap: 24px;
+}
+
+.tutorial-title {
+  margin: 0;
+  font: 700 clamp(3rem, 14vw, 5rem) / 0.92 var(--font-display);
+  text-transform: uppercase;
+}
+
+.tutorial-steps {
+  margin: 0;
+  padding-left: 1.4em;
+  display: grid;
+  gap: 10px;
+  font-size: var(--text-caption);
+  line-height: 1.3;
+}
+
+.skip {
+  min-height: 64px;
+  border: 2px solid var(--chalk);
+  border-radius: var(--radius);
+  background: none;
+  font: 700 1.125rem / 1 var(--font-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

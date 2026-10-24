@@ -20,7 +20,7 @@ import type { SoundEngine } from '../audio/engine'
 import { cancelSpeech, speak, type Lang, type Role } from '../audio/speech'
 import { pickLines, type Fixture } from './commentary'
 import type { AgentLine } from './data'
-import { buildCalls, type Call, type Names } from './playbyplay'
+import { buildCalls, zoneOf, zoneText, type Call, type Names } from './playbyplay'
 import type { AudioMode, Cue, Detail, MatchData, Point } from './types'
 
 const LOOKAHEAD = 2.0
@@ -119,6 +119,42 @@ export class MatchPlayer {
       await this.engine.ctx.suspend()
       this.paused = true
     }
+  }
+
+  /**
+   * "Where's the ball?": who has it, where, for which club, the minute and the
+   * score, from the match as it stands this instant. Spoken at once.
+   */
+  whereIsBall(): string {
+    const t = this.clock.matchTime()
+    const cue = this.cueAt(t)
+    const lang = this.settings.lang
+    const { home, away } = this.data.info
+    const score = this.scoreAt(t)
+    const h = score[home] ?? 0
+    const a = score[away] ?? 0
+    const short = (code: string) => this.names.club(code).split(' ')[0] ?? code
+    const leader = h === a ? null : h > a ? home : away
+    const scoreText = lang === 'pcm'
+      ? leader ? `${short(leader)} dey lead, ${Math.max(h, a)} ${Math.min(h, a)}.` : `Na draw, ${h} ${a}.`
+      : leader ? `${short(leader)} lead ${Math.max(h, a)} ${Math.min(h, a)}.` : `It's level at ${h} each.`
+    const minute = cue ? Math.floor((cue.clock + Math.max(0, t - cue.t)) / 60) + 1 : 1
+    let text: string
+    if (!cue || !cue.team || !cue.from) {
+      text = lang === 'pcm' ? `Minute ${minute}. ${scoreText}` : `Minute ${minute}. ${scoreText}`
+    } else {
+      // the player on the ball: the receiver once a completed pass arrives, otherwise whoever played it
+      const arrived = cue.sound === 'pass' && cue.outcome === 'complete' && cue.recipient && t >= cue.t + (cue.duration ?? 0)
+      const holder = (arrived ? cue.recipient : cue.player) ?? ''
+      const where = zoneText(zoneOf(ballAt(cue, t), cue.team, home), lang)
+      const who = this.names.player(holder)
+      const club = this.names.club(cue.team)
+      text = lang === 'pcm'
+        ? `Na ${who} get the ball, ${where}, for ${club}. Minute ${minute}. ${scoreText}`
+        : `${who} has the ball, ${where}, for ${club}. Minute ${minute}. ${scoreText}`
+    }
+    this.say({ id: 'where', t, expires: t + 10, role: 'caller', rank: 'big', text, evidence: cue ? [cue.event] : [], source: 'caller' })
+    return text
   }
 
   /** Say the last line again. */

@@ -10,6 +10,10 @@ export interface Choices {
   listener: string
   mode: AudioMode
   detail: Detail
+  /** The one-tap demo: start just before a goal; listener may be "auto" (the side about to score). */
+  instant?: boolean
+  /** Play the 20-second sound tutorial before kickoff. */
+  tutorial?: boolean
 }
 
 interface Option {
