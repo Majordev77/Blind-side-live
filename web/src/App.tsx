@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { SoundEngine } from './audio/engine'
+import { Companion } from './companion/Companion'
 import { DEMOS } from './match/data'
 import { Match } from './screens/Match'
 import { Setup, type Choices } from './screens/Setup'
@@ -28,6 +29,12 @@ function instantDemo(): Choices {
 
 /** The listener app: start (unlock sound), straight into the match, and personalise any time. */
 export function App() {
+  // The companion screen is its own page: the same app, opened with #companion.
+  if (typeof window !== 'undefined' && window.location.hash === '#companion') return <Companion />
+  return <Listener />
+}
+
+function Listener() {
   const [engine, setEngine] = useState<SoundEngine | null>(null)
   const [choices, setChoices] = useState<Choices | null>(null)
   const [personalising, setPersonalising] = useState(false)

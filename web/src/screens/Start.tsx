@@ -58,7 +58,13 @@ export function Start({ onReady }: Props) {
             : 'Tap anywhere to start. You will hear a tone in your left ear, then your right.'}
         </span>
       </button>
-      <p className="start-note">All clubs, players and matches are invented. Every sound is made in your browser.</p>
+      <p className="start-note">
+        All clubs, players and matches are invented.{' '}
+        {!navigator.userAgent.includes('Edg/') && 'For the most natural voices, open this page in Microsoft Edge. '}
+        <a href="#companion" onClick={() => setTimeout(() => window.location.reload(), 0)}>
+          Watching with someone? Open the companion screen
+        </a>
+      </p>
       <p className="visually-hidden" role="status" aria-live="assertive">
         {status === 'failed' ? 'Sound could not start. Turn off silent mode, turn the volume up, then tap again.' : ''}
       </p>

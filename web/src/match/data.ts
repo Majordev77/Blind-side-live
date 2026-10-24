@@ -11,6 +11,7 @@ import type { Club, Cue, DemoInfo, MatchData, Moment } from './types'
 const cueFiles = import.meta.glob('../../../data/derived/*.cues.jsonl', { query: '?raw', import: 'default' })
 const momentFiles = import.meta.glob('../../../data/derived/*.moments.json', { import: 'default' })
 const commentaryFiles = import.meta.glob('../../../data/derived/*.commentary.json', { import: 'default' })
+const agentLogFiles = import.meta.glob('../../../data/derived/*.agentlog.json', { import: 'default' })
 
 export const DEMOS: DemoInfo[] = demos as DemoInfo[]
 const CLUBS = new Map<string, Club>((league.clubs as Club[]).map((c) => [c.code, c]))
@@ -46,11 +47,37 @@ export interface AgentLine {
 }
 
 /** The agents' verified lines for one match, if they have been generated. */
-export async function loadAgentLines(matchId: string): Promise<{ provider: string; lines: AgentLine[] } | null> {
+export async function loadAgentLines(matchId: string): Promise<{ provider: string; model: string; lines: AgentLine[] } | null> {
   const loader = commentaryFiles[`../../../data/derived/${matchId}.commentary.json`]
   if (!loader) return null
-  const data = (await loader()) as { provider: string; lines: AgentLine[] }
-  return { provider: data.provider, lines: data.lines }
+  const data = (await loader()) as { provider: string; model: string; lines: AgentLine[] }
+  return { provider: data.provider, model: data.model, lines: data.lines }
+}
+
+/** One step an agent took (data/derived/<match>.agentlog.json), for the agent desk. */
+export interface AgentStep {
+  t: number
+  clock: number
+  agent: 'editor' | 'narrator' | 'verifier' | 'publisher'
+  action: string
+  moment_id?: string
+  type?: string
+  variant?: string
+  text?: string
+  angle?: string
+  reasons?: string[]
+  attempt?: number
+  reason?: string
+  levels?: string[]
+  lines?: number
+  ms?: number
+}
+
+/** The agents' step-by-step log for one match, if it has been generated. */
+export async function loadAgentLog(matchId: string): Promise<AgentStep[] | null> {
+  const loader = agentLogFiles[`../../../data/derived/${matchId}.agentlog.json`]
+  if (!loader) return null
+  return (await loader()) as AgentStep[]
 }
 
 export function parseCues(text: string): Cue[] {

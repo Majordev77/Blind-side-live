@@ -70,6 +70,7 @@ export class MatchPlayer {
   private current: Spoken | null = null
   private lastSpoken: Spoken | null = null
   private timer: number | null = null
+  private timeouts = new Set<number>()
   private paused = false
   private ended = false
   readonly fixture: Fixture
@@ -105,6 +106,8 @@ export class MatchPlayer {
   destroy(): void {
     if (this.timer !== null) window.clearInterval(this.timer)
     this.timer = null
+    for (const id of this.timeouts) window.clearTimeout(id)
+    this.timeouts.clear()
     cancelSpeech()
     this.engine.stop()
   }
@@ -143,9 +146,7 @@ export class MatchPlayer {
     if (!cue || !cue.team || !cue.from) {
       text = lang === 'pcm' ? `Minute ${minute}. ${scoreText}` : `Minute ${minute}. ${scoreText}`
     } else {
-      // the player on the ball: the receiver once a completed pass arrives, otherwise whoever played it
-      const arrived = cue.sound === 'pass' && cue.outcome === 'complete' && cue.recipient && t >= cue.t + (cue.duration ?? 0)
-      const holder = (arrived ? cue.recipient : cue.player) ?? ''
+      const holder = this.onBall(t)?.player ?? ''
       const where = zoneText(zoneOf(ballAt(cue, t), cue.team, home), lang)
       const who = this.names.player(holder)
       const club = this.names.club(cue.team)
@@ -155,6 +156,15 @@ export class MatchPlayer {
     }
     this.say({ id: 'where', t, expires: t + 10, role: 'caller', rank: 'big', text, evidence: cue ? [cue.event] : [], source: 'caller' })
     return text
+  }
+
+  /** Who has the ball at match time t: the receiver once a completed pass arrives, otherwise whoever played it. */
+  onBall(t = this.clock.matchTime()): { player: string; team: string; cue: Cue } | null {
+    const cue = this.cueAt(t)
+    if (!cue?.team) return null
+    const arrived = cue.sound === 'pass' && cue.outcome === 'complete' && cue.recipient && t >= cue.t + (cue.duration ?? 0)
+    const player = (arrived ? cue.recipient : cue.player) ?? null
+    return player ? { player, team: cue.team, cue } : null
   }
 
   /** Say the last line again. */
@@ -173,6 +183,21 @@ export class MatchPlayer {
 
   get detail(): Detail {
     return this.settings.detail
+  }
+
+  /** Run fn when the audio clock reaches `at` (timers are only as precise as the browser allows). */
+  private later(at: number, fn: () => void): void {
+    const ms = Math.max(0, (at - this.engine.now) * 1000)
+    const id = window.setTimeout(() => {
+      this.timeouts.delete(id)
+      if (!this.paused) fn()
+    }, ms)
+    this.timeouts.add(id)
+  }
+
+  /** The match time playing right now, in seconds of play. */
+  get now(): number {
+    return this.clock.matchTime()
   }
 
   snapshot(): Snapshot {
@@ -237,7 +262,13 @@ export class MatchPlayer {
   private tick(): void {
     if (this.paused) return
     const { due, next } = dueCues(this.data.cues, this.next, this.clock, LOOKAHEAD)
-    for (const cue of due) if (!this.clock.isLate(cue.t)) this.engine.play(cue, this.clock.audioTime(cue.t))
+    for (const cue of due) {
+      if (this.clock.isLate(cue.t)) continue
+      const at = this.clock.audioTime(cue.t)
+      this.engine.play(cue, at)
+      // The phone celebrates the instant the ball hits the net, not when the caller gets there.
+      if (cue.sound === 'goal') this.later(at, () => buzz(cue.team === this.settings.listener ? GOAL_OURS : GOAL_THEIRS))
+    }
     this.next = next
 
     const now = this.clock.matchTime()
@@ -277,7 +308,7 @@ export class MatchPlayer {
       this.current = null
       if (analyst) this.engine.setDuck(false)
     }
-    if (s.rank === 'big') buzz(s.text.startsWith('GOAL') ? [250, 80, 250, 80, 500] : [60])
+    if (s.rank === 'big' && !s.text.startsWith('GOAL')) buzz([60]) // a shot or a save: one short pulse
     if (!speak(s.text, this.settings.lang, { onEnd: done }, s.role, s.energy ?? 0)) done()
   }
 
@@ -310,7 +341,11 @@ export class MatchPlayer {
   }
 }
 
-/** Vibrate the phone for shots and goals, where the device allows it. */
+/** A celebration you can feel: three strong pulses and a long one. For the other side, one long pulse. */
+const GOAL_OURS = [300, 90, 300, 90, 300, 90, 900]
+const GOAL_THEIRS = [500]
+
+/** Vibrate the phone for shots and goals, where the device allows it (Android; iPhones do not let web pages vibrate). */
 function buzz(pattern: number[]): void {
   try {
     navigator.vibrate?.(pattern)
