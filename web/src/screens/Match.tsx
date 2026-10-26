@@ -5,6 +5,7 @@ import { club, loadAgentLines, loadMatch, SURNAMES, type AgentLine } from '../ma
 import { MatchPlayer, type Snapshot } from '../match/player'
 import { runTutorial } from '../match/tutorial'
 import type { Detail, MatchData } from '../match/types'
+import { Recap } from './Recap'
 import type { Choices } from './Setup'
 
 const LEVELS: Detail[] = ['essentials', 'full', 'analyst']
@@ -126,6 +127,7 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
       else if (k === 'w' || k === 'b') where()
       else if (k === 'r') player.current?.repeat()
       else if (k === 'd') cycleDetail()
+      else if (k === 'f') player.current?.skipToFullTime()
       else if (k === ' ' || k === 'p') {
         e.preventDefault()
         void player.current?.togglePause()
@@ -159,6 +161,10 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
         <p className="label">Loading the match</p>
       </main>
     )
+  }
+
+  if (snap.ended) {
+    return <Recap data={data} listener={listener} lang={choices.lang} agentLines={agentLines ?? null} onPersonalise={onPersonalise} />
   }
 
   const home = data.info.home
@@ -226,7 +232,6 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
       <p className="visually-hidden" aria-live="polite" role="log">
         {announce}
       </p>
-      {snap.ended && <p className="ended label">Full time for this clip</p>}
     </main>
   )
 }

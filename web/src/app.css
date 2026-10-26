@@ -301,9 +301,61 @@
   text-align: center;
 }
 
-.ended {
-  text-align: center;
+/* ---------- the full-time recap ---------- */
+
+.recap h2 {
+  margin: 0 0 8px;
+}
+
+.recap-goals {
+  list-style: none;
   margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: var(--text-body);
+}
+
+.recap-goals li {
+  border-left: 4px solid var(--away);
+  padding-left: 10px;
+}
+
+.recap-goals li.ours {
+  border-left-color: var(--home);
+}
+
+.recap-minute {
+  font: 700 1.125rem / 1 var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
+
+.recap-club {
+  color: var(--chalk-2);
+}
+
+.recap-stats {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-body);
+  font-variant-numeric: tabular-nums;
+}
+
+.recap-stats th,
+.recap-stats td {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+}
+
+.recap-stats th[scope='row'] {
+  text-align: left;
+  font-weight: 400;
+  color: var(--chalk-2);
+}
+
+.recap .controls {
+  grid-template-columns: 1fr;
 }
 
 /* ---------- the main question, and the tutorial ---------- */

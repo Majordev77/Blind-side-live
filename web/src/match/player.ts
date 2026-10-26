@@ -167,6 +167,20 @@ export class MatchPlayer {
     return player ? { player, team: cue.team, cue } : null
   }
 
+  /** Jump to the last `secs` seconds of the match, so the final whistle and the recap come quickly. */
+  skipToFullTime(secs = 30): void {
+    const last = this.data.cues[this.data.cues.length - 1]
+    if (!last || this.ended) return
+    const t = Math.max(this.clock.matchTime(), last.t - secs)
+    cancelSpeech()
+    this.current = null
+    this.waiting = []
+    this.next = Math.max(0, this.data.cues.findIndex((c) => c.t >= t))
+    this.qi = this.queue.findIndex((s) => s.t >= t)
+    if (this.qi < 0) this.qi = this.queue.length
+    this.clock.anchor(t)
+  }
+
   /** Say the last line again. */
   repeat(): void {
     const line = this.lastSpoken

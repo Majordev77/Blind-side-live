@@ -58,3 +58,15 @@ describe("where's the ball", () => {
     expect(playerAt(data.info.best_three_minutes.t + 30, 'pcm').whereIsBall()).toMatch(/^(Na .+ get the ball|Minute)/)
   })
 })
+
+describe('skip to full time', () => {
+  it('jumps to the last thirty seconds and never goes backwards', () => {
+    const last = data.cues.at(-1)?.t ?? 0
+    const p = playerAt(data.info.best_three_minutes.t)
+    p.skipToFullTime()
+    expect(p.now).toBeCloseTo(last - 30, 1)
+    const late = playerAt(last - 5)
+    late.skipToFullTime()
+    expect(late.now).toBeCloseTo(last - 5, 1)
+  })
+})
