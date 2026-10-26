@@ -65,4 +65,4 @@ The code is the same in both: the model client and the transport sit behind inte
 
 ## Rules we hold to
 
-Synthetic data only: invented clubs, players and matches. No real club names, crests, kits, players, footage, broadcast audio or copyrighted music, in the app, repo or video. Every sound is synthesised in code. No secrets in the repo. No claimed figure we have not measured.
+Synthetic data only: invented clubs, players and matches. No real club names, crests, kits, players, footage, broadcast audio or copyrighted music, in the app, repo or video. Every sound is synthesised in code or is a CC0 recording credited in `web/public/sounds/CREDITS.md`, with a synthesised fallback. No secrets in the repo. No claimed figure we have not measured.

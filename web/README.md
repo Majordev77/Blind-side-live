@@ -1,6 +1,6 @@
 # web
 
-The listener app: React, TypeScript and the browser's Web Audio API. Every sound is synthesised in code; there are no audio files.
+The listener app: React, TypeScript and the browser's Web Audio API. A few match sounds (kicks, crowd, roars, whistle) are CC0 recordings credited in `public/sounds/CREDITS.md`; everything else is synthesised in code, and the engine synthesises any recording that is missing.
 
 ## Run it
 
