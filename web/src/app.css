@@ -301,6 +301,19 @@
   text-align: center;
 }
 
+/* A quiet way to the recap, below the five match controls. */
+.to-full-time {
+  align-self: center;
+  min-height: var(--touch);
+  padding: 0 16px;
+  border: 0;
+  background: none;
+  color: var(--chalk-2);
+  font: var(--text-body) / 1 var(--font-body);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* ---------- the full-time recap ---------- */
 
 .recap h2 {

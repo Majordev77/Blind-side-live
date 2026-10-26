@@ -228,6 +228,9 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
         </button>
         <button onClick={onPersonalise}>Personalise</button>
       </nav>
+      <button className="to-full-time" onClick={() => player.current?.skipToFullTime()} aria-keyshortcuts="F">
+        Skip to full time
+      </button>
 
       <p className="visually-hidden" aria-live="polite" role="log">
         {announce}

@@ -21,7 +21,7 @@ Read the prompts as written. Do not explain the sounds before task 2.
 | 5 | Ask for help | "Find out where the ball is right now." | Did they find "Where's the ball?" without help? |
 | 6 | More or less talk | "Change how much the commentator says." | Did they find the detail button? Which level did they keep? |
 | 7 | Their language | If they speak Pidgin: Personalise, pick Nigerian Pidgin, play 60 seconds. | Natural? Any wrong words? |
-| 8 | Full time | Press F to jump to full time and let the recap play. "Tell me how the match went." | What they remember |
+| 8 | Full time | Tap "Skip to full time" (or press F) to jump to full time and let the recap play. "Tell me how the match went." | What they remember |
 
 ## Questions at the end
 
