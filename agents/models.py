@@ -20,6 +20,7 @@ import json
 import os
 import re
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 from agent_framework import BaseChatClient, ChatResponse, Message
@@ -55,12 +56,28 @@ def make_client() -> tuple[Any, ModelInfo]:
             kwargs["credential"] = DefaultAzureCredential()
         return OpenAIChatCompletionClient(**kwargs), ModelInfo("foundry", model, True)
     if provider == "foundry-local":
+        model = os.environ.get("FOUNDRY_LOCAL_MODEL", "phi-4-mini")
+        url = os.environ.get("FOUNDRY_LOCAL_URL") or _foundry_local_url()
+        if url:
+            # Foundry Local 0.12+ serves an OpenAI-compatible API; load the model first (foundry model load <id>).
+            from agent_framework.openai import OpenAIChatCompletionClient
+
+            client = OpenAIChatCompletionClient(model=model, base_url=url.rstrip("/") + "/v1", api_key="foundry-local")
+            return client, ModelInfo("foundry-local", model, True)
         from agent_framework.foundry import FoundryLocalClient  # pip install agent-framework-foundry-local --pre
 
-        model = os.environ.get("FOUNDRY_LOCAL_MODEL", "phi-4-mini")
         return FoundryLocalClient(model=model), ModelInfo("foundry-local", model, True)
     rate = float(os.environ.get("BLINDSIDE_FAULT_RATE", "0"))
     return OfflineWriter(fault_rate=rate), ModelInfo("offline", f"templates, fault rate {rate}", False)
+
+
+def _foundry_local_url() -> str | None:
+    """The address of the running Foundry Local service, from the file it writes on start."""
+    try:
+        info = json.loads((Path.home() / ".foundry" / "daemon.json").read_text(encoding="utf-8"))
+        return (info.get("web_urls") or [None])[0]
+    except (OSError, ValueError):
+        return None
 
 
 def first_json(text: str) -> Any:
