@@ -9,6 +9,13 @@ dependencies = ["agent-framework-core>=1.23", "agent-framework-openai>=1.17", "m
 [project.optional-dependencies]
 dev = ["pytest>=8", "jsonschema>=4.20"]
 
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["agents*", "engine*", "simulator*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
