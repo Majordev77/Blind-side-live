@@ -1,5 +1,6 @@
 """Which model the agents run on, chosen by BLINDSIDE_MODEL.
 
+- "github": GitHub Models (no Azure subscription), with a GitHub token.
 - "foundry": a Microsoft Foundry deployment (Azure), through Agent
   Framework's OpenAI-compatible chat client.
 - "foundry-local": Foundry Local on this machine (no Azure subscription),
@@ -37,7 +38,15 @@ class ModelInfo:
 
 def make_client() -> tuple[Any, ModelInfo]:
     """The chat client for the configured provider, and a description of it."""
+    _load_dotenv()
     provider = os.environ.get("BLINDSIDE_MODEL", "offline")
+    if provider == "github":
+        # GitHub Models (Plan B in docs/MVP.md): an OpenAI-compatible endpoint, signed in with a GitHub token.
+        from agent_framework.openai import OpenAIChatCompletionClient
+
+        model = os.environ.get("GITHUB_MODEL", "openai/gpt-4o-mini")
+        client = OpenAIChatCompletionClient(model=model, base_url="https://models.github.ai/inference", api_key=os.environ["GITHUB_TOKEN"])
+        return client, ModelInfo("github-models", model, True)
     if provider == "foundry":
         from agent_framework.openai import OpenAIChatCompletionClient
 
@@ -69,6 +78,19 @@ def make_client() -> tuple[Any, ModelInfo]:
         return FoundryLocalClient(model=model), ModelInfo("foundry-local", model, True)
     rate = float(os.environ.get("BLINDSIDE_FAULT_RATE", "0"))
     return OfflineWriter(fault_rate=rate), ModelInfo("offline", f"templates, fault rate {rate}", False)
+
+
+def _load_dotenv() -> None:
+    """Read KEY=value lines from .env at the repository root; variables already set win."""
+    path = Path(__file__).resolve().parent.parent / ".env"
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return
+    for line in lines:
+        key, sep, value = line.strip().partition("=")
+        if sep and key and not key.startswith("#") and value:
+            os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
 
 
 def _foundry_local_url() -> str | None:
