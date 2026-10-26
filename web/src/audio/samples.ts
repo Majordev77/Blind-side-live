@@ -10,44 +10,48 @@
 
 export type SampleName = 'kick' | 'touch' | 'roll' | 'crowd' | 'goal' | 'cheer' | 'groan' | 'whistle_short' | 'whistle_long'
 
-/** File names tried for each sound, in web/public/sounds/. Several files make variations. */
-export const SAMPLE_FILES: Record<SampleName, string[]> = {
-  kick: ['kick-1', 'kick-2', 'kick-3'],
-  touch: ['touch-1', 'touch-2'],
-  roll: ['roll'],
+/**
+ * The files in web/public/sounds/ for each sound (several files make variations).
+ * List only files that exist: every name here is fetched. Sounds with no file
+ * (touch, roll, whistle_long) use the synthesised sound or a stand-in.
+ */
+export const SAMPLE_FILES: Partial<Record<SampleName, string[]>> = {
+  kick: ['kick-1', 'kick-2'],
   crowd: ['crowd-loop'],
   goal: ['goal-roar', 'goal-roar-2'],
   cheer: ['cheer'],
   groan: ['groan'],
   whistle_short: ['whistle-short'],
-  whistle_long: ['whistle-long'],
 }
 
-const EXTENSIONS = ['mp3', 'wav', 'ogg', 'flac']
+/** Needed from the first second of play: small files, loaded before kickoff. The rest load in the background. */
+export const FIRST_SAMPLES: SampleName[] = ['kick', 'crowd', 'whistle_short']
+
 
 export type Samples = Partial<Record<SampleName, AudioBuffer[]>>
 
 async function fetchOne(ctx: BaseAudioContext, base: string, name: string): Promise<AudioBuffer | null> {
-  for (const ext of EXTENSIONS) {
-    try {
-      const res = await fetch(`${base}${name}.${ext}`)
-      if (!res.ok) continue
-      const type = res.headers.get('content-type') ?? ''
-      if (type.includes('text/html')) continue // a dev server's fallback page, not audio
-      return await ctx.decodeAudioData(await res.arrayBuffer())
-    } catch {
-      // not there in this format; try the next
-    }
+  try {
+    const res = await fetch(`${base}${name}.mp3`)
+    if (!res.ok) return null
+    const type = res.headers.get('content-type') ?? ''
+    if (type.includes('text/html')) return null // a dev server's fallback page, not audio
+    return await ctx.decodeAudioData(await res.arrayBuffer())
+  } catch {
+    return null
   }
-  return null
 }
 
 /** Load whichever recordings are present. Never throws: a missing file just means the synth is used. */
-export async function loadSamples(ctx: BaseAudioContext, base = `${import.meta.env.BASE_URL}sounds/`): Promise<Samples> {
+export async function loadSamples(
+  ctx: BaseAudioContext,
+  names: SampleName[] = Object.keys(SAMPLE_FILES) as SampleName[],
+  base = `${import.meta.env.BASE_URL}sounds/`,
+): Promise<Samples> {
   const out: Samples = {}
   await Promise.all(
-    (Object.keys(SAMPLE_FILES) as SampleName[]).map(async (key) => {
-      const buffers = (await Promise.all(SAMPLE_FILES[key].map((n) => fetchOne(ctx, base, n)))).filter((b): b is AudioBuffer => b !== null)
+    names.map(async (key) => {
+      const buffers = (await Promise.all((SAMPLE_FILES[key] ?? []).map((n) => fetchOne(ctx, base, n)))).filter((b): b is AudioBuffer => b !== null)
       if (buffers.length) out[key] = buffers
     }),
   )

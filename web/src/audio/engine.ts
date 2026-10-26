@@ -23,7 +23,7 @@ import type { AudioMode, Cue, Point } from '../match/types'
 import { makeWhiteNoise } from './buffers'
 import { Crowd } from './crowd'
 import { danger, hrtfPosition, panFor, type Orientation } from './mapping'
-import { loadSamples, pick, stadiumImpulse, type Samples } from './samples'
+import { FIRST_SAMPLES, loadSamples, pick, SAMPLE_FILES, stadiumImpulse, type SampleName, type Samples } from './samples'
 
 const MASTER_LEVEL = 0.9
 const DUCK_LEVEL = 0.55 // the crowd and the ball stay audible under the voice, like a broadcast
@@ -101,10 +101,16 @@ export class SoundEngine {
     return { listenerIsHome: this.settings.listenerClub === this.settings.homeClub }
   }
 
-  /** Load the recorded sounds in web/public/sounds/. Returns the names found; missing ones fall back to synthesis. */
-  async loadSamples(): Promise<string[]> {
-    this.samples = await loadSamples(this.ctx)
-    return Object.keys(this.samples)
+  /**
+   * Load the recorded sounds in web/public/sounds/. Resolves once the small
+   * ones needed from kickoff are in; the big crowd reactions keep loading in
+   * the background and are used from the moment they arrive. Until then, and
+   * for any file that fails, the engine synthesises the sound.
+   */
+  async loadSamples(): Promise<void> {
+    const later = (Object.keys(SAMPLE_FILES) as SampleName[]).filter((n) => !FIRST_SAMPLES.includes(n))
+    void loadSamples(this.ctx, later).then((s) => Object.assign(this.samples, s))
+    Object.assign(this.samples, await loadSamples(this.ctx, FIRST_SAMPLES))
   }
 
   configure(settings: EngineSettings): void {

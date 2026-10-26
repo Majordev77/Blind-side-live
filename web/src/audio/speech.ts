@@ -10,7 +10,8 @@
 /** Languages the voice can speak: English and Nigerian Pidgin (on a Nigerian English voice where one exists). */
 export type Lang = 'en' | 'pcm'
 
-let RATE = 1.05
+// A little quicker than conversation, so the caller keeps up with the ball; blind listeners are used to fast speech.
+let RATE = 1.15
 
 /** Speech rate, 1 (normal) to 2 (double): experienced screen reader users often listen fast. */
 export function setSpeechRate(rate: number): void {

@@ -31,13 +31,16 @@ export function Start({ onReady }: Props) {
       setStatus('failed')
       return
     }
-    await engine.loadSamples() // the recorded kicks, crowd and whistle; missing files fall back to synthesis
+    // The recorded kicks, crowd and whistle download during the ear check, not before it.
+    // A slow connection waits at most three seconds more; anything missing is synthesised.
+    const samples = engine.loadSamples()
     speak('Left ear.', 'en')
     engine.earCheck('left')
     await wait(1200)
     speak('Right ear.', 'en')
     engine.earCheck('right')
     await wait(1200)
+    await Promise.race([samples, wait(3000)])
     onReady(engine)
   }
 

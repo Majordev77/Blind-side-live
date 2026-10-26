@@ -12,6 +12,7 @@ const LEVELS: Detail[] = ['essentials', 'full', 'analyst']
 const LEVEL_NAME: Record<Detail, string> = { essentials: 'Essentials', full: 'Full', analyst: 'Analyst' }
 const CONTEXT_BEFORE = 20 // seconds of play before the best three minutes
 const BUILD_UP = 45 // the instant demo starts this long before a goal
+const REDRAW_MS = 100
 
 const clockText = (s: number) => {
   const m = Math.floor(s / 60)
@@ -76,8 +77,14 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
       if (!alive) return
       setPhase('playing')
       p.start(from, intro)
-      const frame = () => {
-        setSnap(p.snapshot())
+      // Ten redraws a second is enough for the score, clock and ear bar (which glides between them in CSS),
+      // and leaves a phone's main thread free for the sound scheduler and the voice.
+      let last = 0
+      const frame = (now: number) => {
+        if (now - last >= REDRAW_MS) {
+          last = now
+          setSnap(p.snapshot())
+        }
         raf = requestAnimationFrame(frame)
       }
       raf = requestAnimationFrame(frame)
