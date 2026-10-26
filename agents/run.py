@@ -11,6 +11,8 @@ Run:
   BLINDSIDE_FAULT_RATE=0.3 python -m agents.run demo_1   # offline writer with planted errors: watch the verifier
   BLINDSIDE_MODEL=foundry-local python -m agents.run demo_1
   python -m agents.run demo_1 --full                # the whole match, with the full-time recap
+  BLINDSIDE_MODEL=github python -m agents.run demo_1 --merge   # a model writes the best three minutes, kept
+                                                    # inside the whole-match commentary already saved
 """
 
 from __future__ import annotations
@@ -63,9 +65,7 @@ async def run_match(match_id: str, full: bool = False, deadline: float = 8.0) ->
     variants = [Variant(lang, club, level) for lang in LANGS for club in (tools.home, tools.away) for level in LEVELS]
     desk = Desk(tools=tools, model=info, client=client, variants=variants, deadline_s=deadline)
     workflow = build(desk)
-    best = json.loads((ROOT / "data" / "matches" / f"{match_id}.match.json").read_text(encoding="utf-8"))["demo"]["best_three_minutes"]["t"]
-    start = 0.0 if full else max(0.0, best - CONTEXT_BEFORE)
-    end = float("inf") if full else start + WINDOW
+    start, end = (0.0, float("inf")) if full else window_of(match_id)
     tools.advance_to(start)  # the state before the window is known, but not narrated
     last_t = tools.events[-1]["t"]
     t = start
@@ -84,6 +84,31 @@ async def run_match(match_id: str, full: bool = False, deadline: float = 8.0) ->
         drafts_workflow = build_recap(desk)
         await drafts_workflow.run(a)
     return desk
+
+
+def window_of(match_id: str) -> tuple[float, float]:
+    """Match time of the best three minutes, with the run-up before them."""
+    best = json.loads((ROOT / "data" / "matches" / f"{match_id}.match.json").read_text(encoding="utf-8"))["demo"]["best_three_minutes"]["t"]
+    start = max(0.0, best - CONTEXT_BEFORE)
+    return start, start + WINDOW
+
+
+def merge_window(out: dict, log: list[dict], start: float, end: float) -> tuple[dict, list[dict]]:
+    """Put a best-three-minutes run inside the saved whole-match run: its lines and steps replace the window's.
+
+    Every line keeps its own source and provider, so the file still says which lines a model wrote.
+    """
+    path = DERIVED / f"{out['match_id']}.commentary.json"
+    if not path.exists():
+        return out, log
+    whole = json.loads(path.read_text(encoding="utf-8"))
+    whole_log = json.loads((DERIVED / f"{out['match_id']}.agentlog.json").read_text(encoding="utf-8"))
+    outside = lambda x: not (start <= x["t"] < end)  # noqa: E731
+    merged = dict(out)
+    merged["window"] = "best_three_minutes, inside the whole match"
+    merged["outside_window"] = {"provider": whole.get("provider"), "model": whole.get("model"), "stats": whole.get("stats")}
+    merged["lines"] = sorted([x for x in whole["lines"] if outside(x)] + out["lines"], key=lambda x: (x["t"], x["variant"]))
+    return merged, sorted([x for x in whole_log if outside(x)] + log, key=lambda x: x["t"])
 
 
 def build_recap(desk: Desk):
@@ -146,6 +171,7 @@ def main() -> None:
     ap.add_argument("match")
     ap.add_argument("--full", action="store_true", help="the whole match with the recap, not just the best three minutes")
     ap.add_argument("--deadline", type=float, default=8.0, help="seconds a line may take before the template airs")
+    ap.add_argument("--merge", action="store_true", help="write the best three minutes into the saved whole-match files")
     args = ap.parse_args()
     began = time.monotonic()
     desk = asyncio.run(run_match(args.match, args.full, args.deadline))
@@ -156,9 +182,12 @@ def main() -> None:
         "variants": [v.key for v in desk.variants], "stats": stats, "storylines": desk.storylines,
         "lines": sorted(desk.aired, key=lambda x: (x["t"], x["variant"])),
     }
+    log = desk.log
+    if args.merge and not args.full:
+        out, log = merge_window(out, log, *window_of(args.match))
     DERIVED.mkdir(parents=True, exist_ok=True)
     (DERIVED / f"{args.match}.commentary.json").write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
-    (DERIVED / f"{args.match}.agentlog.json").write_text(json.dumps(desk.log, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    (DERIVED / f"{args.match}.agentlog.json").write_text(json.dumps(log, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"{args.match}: {desk.model.provider} ({desk.model.model}), {time.monotonic() - began:.1f} s")
     for k, v in stats.items():
         print(f"  {k}: {v}")

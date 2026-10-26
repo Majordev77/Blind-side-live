@@ -1,0 +1,50 @@
+# Runs the commentary agents with a model on GitHub Models (Plan B in docs/MVP.md):
+# for each demo match, the model writes the best three minutes, merged into the
+# saved whole-match commentary. The results go to the agents/model-run branch
+# for review; nothing reaches main without a merge.
+name: Generate commentary with a model
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: GitHub Models model id
+        default: openai/gpt-4o-mini
+      matches:
+        description: Demo matches, separated by spaces
+        default: demo_1 demo_2 demo_3
+      deadline:
+        description: Seconds a line may take before its template airs
+        default: "30"
+
+permissions:
+  contents: write
+  models: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      BLINDSIDE_MODE: local
+      BLINDSIDE_MODEL: github
+      GITHUB_MODEL: ${{ inputs.model }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Run the agents
+        run: |
+          for m in ${{ inputs.matches }}; do
+            python -m agents.run "$m" --merge --deadline "${{ inputs.deadline }}" | tee -a run.txt
+          done
+      - name: Save the results to agents/model-run
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B agents/model-run
+          git add data/derived
+          git commit -m "Commentary written by ${{ inputs.model }} on GitHub Models" -m "$(cat run.txt)"
+          git push -f origin agents/model-run
