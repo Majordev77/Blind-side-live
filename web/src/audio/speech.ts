@@ -150,9 +150,19 @@ export function speak(
     u.pitch = role === 'caller' ? Math.min(2, 1.05 + 0.25 * e) : 0.95
     u.volume = 1
     let done = false
+    const synth = window.speechSynthesis
+    // Chrome, on Android especially, sometimes never fires onend; without this the voice would stay
+    // "busy" and go silent for the rest of the match. Allow the line's length at a slow pace, plus a margin.
+    const words = text.split(/\s+/).length
+    const watchdog = window.setTimeout(() => {
+      if (done) return
+      finish()
+      if (live.size === 0 && (synth.speaking || synth.pending)) synth.cancel() // clear the stuck queue
+    }, 3000 + (words / 2.2 / u.rate) * 1000)
     const finish = () => {
       if (done) return
       done = true
+      window.clearTimeout(watchdog)
       live.delete(u)
       handlers.onEnd?.()
     }
@@ -160,7 +170,6 @@ export function speak(
     u.onend = finish
     u.onerror = finish
     live.set(u, finish)
-    const synth = window.speechSynthesis
     if (synth.paused) synth.resume()
     synth.speak(u)
     return true

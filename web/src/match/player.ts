@@ -58,6 +58,8 @@ export interface Snapshot {
   caption: Spoken | null
   speaking: boolean
   paused: boolean
+  /** The phone suspended the sound (screen lock, a call, another app): everything is stopped until it resumes. */
+  stalled: boolean
   ended: boolean
 }
 
@@ -104,6 +106,7 @@ export class MatchPlayer {
   }
 
   destroy(): void {
+    this.engine.wantRunning = true
     if (this.timer !== null) window.clearInterval(this.timer)
     this.timer = null
     for (const id of this.timeouts) window.clearTimeout(id)
@@ -114,13 +117,15 @@ export class MatchPlayer {
 
   async togglePause(): Promise<void> {
     if (this.paused) {
-      await this.engine.ctx.resume()
+      this.engine.wantRunning = true
       this.paused = false
+      await this.engine.resume()
     } else {
+      this.engine.wantRunning = false
+      this.paused = true
       cancelSpeech()
       this.current = null
       await this.engine.ctx.suspend()
-      this.paused = true
     }
   }
 
@@ -225,6 +230,7 @@ export class MatchPlayer {
       caption: this.current ?? this.lastSpoken,
       speaking: this.current !== null,
       paused: this.paused,
+      stalled: !this.paused && !this.ended && !this.engine.running,
       ended: this.ended,
     }
   }

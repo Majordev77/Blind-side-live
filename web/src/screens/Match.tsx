@@ -40,17 +40,36 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
   const [listener, setListener] = useState(choices.listener)
   const player = useRef<MatchPlayer | null>(null)
   const skip = useRef<AbortController | null>(null)
+  const [loadFailed, setLoadFailed] = useState(false)
+  const [attempt, setAttempt] = useState(0)
 
   useEffect(() => {
     let alive = true
-    loadMatch(choices.matchId).then((d) => alive && setData(d))
+    setLoadFailed(false)
+    // On a weak connection the match data can fail to download: say so and offer a retry, never hang.
+    loadMatch(choices.matchId)
+      .then((d) => alive && setData(d))
+      .catch(() => alive && setLoadFailed(true))
     loadAgentLines(choices.matchId)
       .then((a) => alive && setAgentLines(a?.lines ?? null))
       .catch(() => alive && setAgentLines(null))
     return () => {
       alive = false
     }
-  }, [choices.matchId])
+  }, [choices.matchId, attempt])
+
+  // Any tap brings back sound the phone suspended; some browsers only allow it inside a gesture.
+  useEffect(() => {
+    const wake = () => {
+      if (engine.wantRunning && !engine.running) void engine.resume()
+    }
+    window.addEventListener('pointerdown', wake, true)
+    window.addEventListener('keydown', wake, true)
+    return () => {
+      window.removeEventListener('pointerdown', wake, true)
+      window.removeEventListener('keydown', wake, true)
+    }
+  }, [engine])
 
   useEffect(() => {
     if (!data || agentLines === undefined) return
@@ -162,6 +181,17 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
     )
   }
 
+  if (loadFailed) {
+    return (
+      <main className="match loading">
+        <p className="label" role="alert">The match did not load. Check your connection.</p>
+        <button className="skip" onClick={() => setAttempt((n) => n + 1)}>
+          Try again
+        </button>
+      </main>
+    )
+  }
+
   if (!data || !snap) {
     return (
       <main className="match loading" aria-busy="true">
@@ -238,6 +268,12 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
       <button className="to-full-time" onClick={() => player.current?.skipToFullTime()} aria-keyshortcuts="F">
         Skip to full time
       </button>
+
+      {snap.stalled && (
+        <button className="stalled" onClick={() => void engine.resume()} role="alert">
+          Sound stopped. Tap to carry on.
+        </button>
+      )}
 
       <p className="visually-hidden" aria-live="polite" role="log">
         {announce}

@@ -91,6 +91,24 @@ export class SoundEngine {
     }
     await Promise.race([ctx.resume().catch(() => undefined), new Promise((r) => setTimeout(r, 1500))])
     if ((ctx.state as string) !== 'running') throw new Error('Audio is still suspended')
+    // Phones suspend audio when the screen locks, a call or notification comes in, the app is
+    // switched or headphones reconnect. Everything runs on this clock, so bring it back on return.
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && this.wantRunning) void this.resume()
+    })
+  }
+
+  /** False only while the listener has paused. When true and the context is not running, the phone stopped it. */
+  wantRunning = true
+
+  get running(): boolean {
+    return (this.ctx.state as string) === 'running'
+  }
+
+  /** Restart sound the phone suspended. Some browsers only allow this inside a tap. */
+  async resume(): Promise<void> {
+    if (this.running) return
+    await Promise.race([this.ctx.resume().catch(() => undefined), new Promise((r) => setTimeout(r, 1000))])
   }
 
   get now(): number {

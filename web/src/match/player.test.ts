@@ -70,3 +70,15 @@ describe('skip to full time', () => {
     expect(late.now).toBeCloseTo(last - 5, 1)
   })
 })
+
+describe('sound the phone suspended', () => {
+  it('reports a stall when the audio stops without the listener pausing, and not when they paused', async () => {
+    const engine = { ...silent, running: false, wantRunning: true, resume: async () => {}, ctx: { suspend: async () => {} } } as unknown as SoundEngine
+    const names = { home: data.info.home, away: data.info.away, club: (c: string) => clubName.get(c) ?? c, player: (id: string) => surname.get(id) ?? id }
+    const p = new MatchPlayer(engine, data, { listener: data.info.home, mode: 'headphones', detail: 'full', follow: null, lang: 'en' }, names, null)
+    expect(p.snapshot().stalled).toBe(true)
+    await p.togglePause()
+    expect(p.snapshot().stalled).toBe(false)
+    expect(engine.wantRunning).toBe(false)
+  })
+})
