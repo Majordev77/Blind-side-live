@@ -1,9 +1,9 @@
 {
  "match_id": "demo_3",
- "provider": "offline",
- "model": "templates, fault rate 0.25",
- "model_writes": false,
- "window": "full",
+ "provider": "github-models",
+ "model": "openai/gpt-4o-mini",
+ "model_writes": true,
+ "window": "best_three_minutes, inside the whole match",
  "variants": [
   "en:ALD:essentials",
   "en:ALD:full",
@@ -19,118 +19,16 @@
   "pcm:OST:analyst"
  ],
  "stats": {
-  "lines_aired": 808,
-  "assignments": 79,
-  "first_attempt_pass_rate": 0.791,
-  "rejections": 169,
-  "template_fallbacks": 0,
+  "lines_aired": 36,
+  "assignments": 3,
+  "first_attempt_pass_rate": 0.0,
+  "rejections": 72,
+  "template_fallbacks": 36,
   "aired_with_a_wrong_number": 0,
-  "median_ms_to_line": 15.0,
-  "slowest_ms_to_line": 47
+  "median_ms_to_line": 18023.0,
+  "slowest_ms_to_line": 18035
  },
  "storylines": [
-  {
-   "kind": "momentum",
-   "team": "ALD",
-   "since": 2,
-   "text": "Aldmere Rovers on top since minute 2"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 13,
-   "text": "Ostbury Town on top since minute 13"
-  },
-  {
-   "kind": "press",
-   "team": "ALD",
-   "since": 13,
-   "text": "Aldmere Rovers pressing high since minute 13"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 14,
-   "text": "Ostbury Town on top since minute 14"
-  },
-  {
-   "kind": "momentum",
-   "team": "ALD",
-   "since": 18,
-   "text": "Aldmere Rovers on top since minute 18"
-  },
-  {
-   "kind": "press",
-   "team": "ALD",
-   "since": 28,
-   "text": "Aldmere Rovers pressing high since minute 28"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 31,
-   "text": "Ostbury Town on top since minute 31"
-  },
-  {
-   "kind": "momentum",
-   "team": "ALD",
-   "since": 41,
-   "text": "Aldmere Rovers on top since minute 41"
-  },
-  {
-   "kind": "press",
-   "team": "OST",
-   "since": 48,
-   "text": "Ostbury Town pressing high since minute 48"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 51,
-   "text": "Ostbury Town on top since minute 51"
-  },
-  {
-   "kind": "press",
-   "team": "ALD",
-   "since": 68,
-   "text": "Aldmere Rovers pressing high since minute 68"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 69,
-   "text": "Ostbury Town on top since minute 69"
-  },
-  {
-   "kind": "press",
-   "team": "OST",
-   "since": 70,
-   "text": "Ostbury Town pressing high since minute 70"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 71,
-   "text": "Ostbury Town on top since minute 71"
-  },
-  {
-   "kind": "momentum",
-   "team": "ALD",
-   "since": 72,
-   "text": "Aldmere Rovers on top since minute 72"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 75,
-   "text": "Ostbury Town on top since minute 75"
-  },
-  {
-   "kind": "momentum",
-   "team": "ALD",
-   "since": 82,
-   "text": "Aldmere Rovers on top since minute 82"
-  },
   {
    "kind": "momentum",
    "team": "OST",
@@ -148,18 +46,6 @@
    "team": "OST",
    "since": 90,
    "text": "Ostbury Town on top since minute 90"
-  },
-  {
-   "kind": "press",
-   "team": "ALD",
-   "since": 91,
-   "text": "Aldmere Rovers pressing high since minute 91"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 92,
-   "text": "Ostbury Town on top since minute 92"
   }
  ],
  "lines": [
@@ -14850,13 +14736,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "en:ALD:essentials",
@@ -14869,13 +14757,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "en:ALD:full",
@@ -14888,13 +14778,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "en:OST:analyst",
@@ -14907,13 +14799,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "en:OST:essentials",
@@ -14926,13 +14820,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "en:OST:full",
@@ -14945,13 +14841,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "pcm:ALD:analyst",
@@ -14964,13 +14862,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "pcm:ALD:essentials",
@@ -14983,13 +14883,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "pcm:ALD:full",
@@ -15002,13 +14904,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "pcm:OST:analyst",
@@ -15021,13 +14925,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "pcm:OST:essentials",
@@ -15040,13 +14946,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "pcm:OST:full",
@@ -15059,13 +14967,15 @@
    ],
    "moment_id": "mo_0088",
    "type": "high_turnover",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 75",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "winning the ball back near goal",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13593
   },
   {
    "variant": "en:ALD:analyst",
@@ -15078,13 +14988,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "en:ALD:essentials",
@@ -15097,13 +15009,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "en:ALD:full",
@@ -15116,13 +15030,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "en:OST:analyst",
@@ -15135,13 +15051,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "en:OST:essentials",
@@ -15154,13 +15072,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "en:OST:full",
@@ -15173,13 +15093,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "pcm:ALD:analyst",
@@ -15192,13 +15114,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "pcm:ALD:essentials",
@@ -15211,13 +15135,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "pcm:ALD:full",
@@ -15230,13 +15156,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "pcm:OST:analyst",
@@ -15249,13 +15177,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "pcm:OST:essentials",
@@ -15268,13 +15198,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "pcm:OST:full",
@@ -15287,13 +15219,15 @@
    ],
    "moment_id": "mo_0091",
    "type": "big_chance",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18023
   },
   {
    "variant": "en:ALD:analyst",
@@ -15308,20 +15242,22 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "en:ALD:essentials",
    "t": 5510.56,
    "expires_t": 5529.96,
    "priority": 1,
-   "text": "Goal for Ostbury Town. Anders Strand scores. Aldmere Rovers 3, Ostbury Town 3.",
+   "text": "Goal for Ostbury Town. Anders Strand scores. Aldmere Rovers 2, Ostbury Town 3.",
    "evidence": [
     "ev_001768",
     "ev_001769",
@@ -15329,20 +15265,22 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "en:ALD:full",
    "t": 5510.56,
    "expires_t": 5529.96,
    "priority": 1,
-   "text": "Goal for Ostbury Town. Anders Strand scores. Set up by Kofi Ogunleye. Aldmere Rovers 3, Ostbury Town 3.",
+   "text": "Goal for Ostbury Town. Anders Strand scores. Set up by Kofi Ogunleye. Aldmere Rovers 2, Ostbury Town 3.",
    "evidence": [
     "ev_001768",
     "ev_001769",
@@ -15350,13 +15288,15 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "en:OST:analyst",
@@ -15371,20 +15311,22 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "en:OST:essentials",
    "t": 5510.56,
    "expires_t": 5529.96,
    "priority": 1,
-   "text": "Goal! Anders Strand scores for Ostbury Town! Aldmere Rovers 3, Ostbury Town 3.",
+   "text": "Goal! Anders Strand scores for Ostbury Town! Aldmere Rovers 2, Ostbury Town 3.",
    "evidence": [
     "ev_001768",
     "ev_001769",
@@ -15392,13 +15334,15 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "en:OST:full",
@@ -15413,13 +15357,15 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "pcm:ALD:analyst",
@@ -15434,20 +15380,22 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "pcm:ALD:essentials",
    "t": 5510.56,
    "expires_t": 5529.96,
    "priority": 1,
-   "text": "Ostbury Town don score. Na Anders Strand. Aldmere Rovers 3, Ostbury Town 3.",
+   "text": "Ostbury Town don score. Na Anders Strand. Aldmere Rovers 2, Ostbury Town 3.",
    "evidence": [
     "ev_001768",
     "ev_001769",
@@ -15455,13 +15403,15 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "pcm:ALD:full",
@@ -15476,13 +15426,15 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "pcm:OST:analyst",
@@ -15497,13 +15449,15 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "pcm:OST:essentials",
@@ -15518,20 +15472,22 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "pcm:OST:full",
    "t": 5510.56,
    "expires_t": 5529.96,
    "priority": 1,
-   "text": "Goal! Anders Strand don score for Ostbury Town! Na Kofi Ogunleye set am up. Aldmere Rovers 3, Ostbury Town 3.",
+   "text": "Goal! Anders Strand don score for Ostbury Town! Na Kofi Ogunleye set am up. Aldmere Rovers 2, Ostbury Town 3.",
    "evidence": [
     "ev_001768",
     "ev_001769",
@@ -15539,13 +15495,15 @@
    ],
    "moment_id": "mo_0092",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18035
   },
   {
    "variant": "en:ALD:analyst",
@@ -17043,5 +17001,19 @@
    "provider": "offline",
    "ms": 16
   }
- ]
+ ],
+ "outside_window": {
+  "provider": "offline",
+  "model": "templates, fault rate 0.25",
+  "stats": {
+   "lines_aired": 808,
+   "assignments": 79,
+   "first_attempt_pass_rate": 0.791,
+   "rejections": 169,
+   "template_fallbacks": 0,
+   "aired_with_a_wrong_number": 0,
+   "median_ms_to_line": 15.0,
+   "slowest_ms_to_line": 47
+  }
+ }
 }

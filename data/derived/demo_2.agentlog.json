@@ -14763,177 +14763,325 @@
   "t": 3933.51,
   "clock": 3705.22,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
+  "moment_id": "mo_0061",
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 77
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0061",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4542
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0061",
   "variant": "en:KES:full",
-  "text": "That is shot number 10 for Corran Vale.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3933.51,
-  "clock": 3705.22,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0061",
-  "variant": "en:KES:analyst",
-  "text": "That is shot number 10 for Corran Vale.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3933.51,
-  "clock": 3705.22,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0061",
-  "variant": "en:CRV:full",
-  "text": "That is shot number 10 for Corran Vale.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3933.51,
-  "clock": 3705.22,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0061",
-  "variant": "en:CRV:analyst",
-  "text": "That is shot number 10 for Corran Vale.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3933.51,
-  "clock": 3705.22,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0061",
-  "variant": "pcm:KES:full",
-  "text": "That one na shot number 10 for Corran Vale.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3933.51,
-  "clock": 3705.22,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0061",
-  "variant": "pcm:KES:analyst",
-  "text": "That one na shot number 10 for Corran Vale.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3933.51,
-  "clock": 3705.22,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0061",
-  "variant": "pcm:CRV:full",
-  "text": "That one na shot number 10 for Corran Vale.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3933.51,
-  "clock": 3705.22,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0061",
-  "variant": "pcm:CRV:analyst",
-  "text": "That one na shot number 10 for Corran Vale.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 3933.51,
   "clock": 3705.22,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
+  "moment_id": "mo_0061",
+  "variant": "en:KES:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0061",
+  "variant": "en:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0061",
+  "variant": "en:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0061",
+  "variant": "pcm:KES:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0061",
+  "variant": "pcm:KES:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0061",
+  "variant": "pcm:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0061",
+  "variant": "pcm:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0061",
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4502
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0061",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9003
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0061",
   "variant": "en:KES:full",
-  "text": "That is shot number 10 for Corran Vale.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 3933.51,
   "clock": 3705.22,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0061",
   "variant": "en:KES:analyst",
-  "text": "That is shot number 10 for Corran Vale.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 3933.51,
   "clock": 3705.22,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0061",
   "variant": "en:CRV:full",
-  "text": "That is shot number 10 for Corran Vale.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 3933.51,
   "clock": 3705.22,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0061",
   "variant": "en:CRV:analyst",
-  "text": "That is shot number 10 for Corran Vale.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 3933.51,
   "clock": 3705.22,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0061",
   "variant": "pcm:KES:full",
-  "text": "That one na shot number 10 for Corran Vale.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 3933.51,
   "clock": 3705.22,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0061",
   "variant": "pcm:KES:analyst",
-  "text": "That one na shot number 10 for Corran Vale.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 3933.51,
   "clock": 3705.22,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0061",
   "variant": "pcm:CRV:full",
-  "text": "That one na shot number 10 for Corran Vale.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 3933.51,
   "clock": 3705.22,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0061",
   "variant": "pcm:CRV:analyst",
-  "text": "That one na shot number 10 for Corran Vale.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0061",
+  "variant": "en:KES:full",
+  "text": "That is shot number 10 for Corran Vale."
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0061",
+  "variant": "en:KES:analyst",
+  "text": "That is shot number 10 for Corran Vale."
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0061",
+  "variant": "en:CRV:full",
+  "text": "That is shot number 10 for Corran Vale."
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0061",
+  "variant": "en:CRV:analyst",
+  "text": "That is shot number 10 for Corran Vale."
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0061",
+  "variant": "pcm:KES:full",
+  "text": "That one na shot number 10 for Corran Vale."
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0061",
+  "variant": "pcm:KES:analyst",
+  "text": "That one na shot number 10 for Corran Vale."
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0061",
+  "variant": "pcm:CRV:full",
+  "text": "That one na shot number 10 for Corran Vale."
+ },
+ {
+  "t": 3933.51,
+  "clock": 3705.22,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0061",
+  "variant": "pcm:CRV:analyst",
+  "text": "That one na shot number 10 for Corran Vale."
  },
  {
   "t": 3933.51,
@@ -14964,220 +15112,126 @@
   "t": 3959.27,
   "clock": 3730.98,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
+  "moment_id": "mo_0062",
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4501
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0062",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9007
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "en:KES:essentials",
-  "text": "Goal for Corran Vale. Somto Odum scores. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "en:KES:full",
-  "text": "Goal for Corran Vale. Somto Odum scores. Set up by Lanre Varga. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "en:KES:analyst",
-  "text": "Goal for Corran Vale. Somto Odum scores. Set up by Lanre Varga. From 10 metres, at 39 kilometres an hour. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "en:CRV:essentials",
-  "text": "Goal! Somto Odum scores for Corran Vale! Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "en:CRV:full",
-  "text": "Goal! Somto Odum scores for Corran Vale! Set up by Lanre Varga. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "en:CRV:analyst",
-  "text": "Goal! Somto Odum scores for Corran Vale! Set up by Lanre Varga. From 10 metres, at 39 kilometres an hour. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "pcm:KES:essentials",
-  "text": "Corran Vale don score. Na Somto Odum. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "pcm:KES:full",
-  "text": "Corran Vale don score. Na Somto Odum. Na Lanre Varga set am up. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0062",
-  "variant": "pcm:KES:analyst",
-  "text": "Corran Vale don score. Na Somto Odum. Na Lanre Varga set am up. From 11 metres. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0062",
-  "variant": "pcm:CRV:essentials",
-  "text": "Goal! Somto Odum don score for Corran Vale! Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0062",
-  "variant": "pcm:CRV:full",
-  "text": "Goal! Somto Odum don score for Corran Vale! Na Lanre Varga set am up. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0062",
-  "variant": "pcm:CRV:analyst",
-  "text": "Goal! Somto Odum don score for Corran Vale! Na Lanre Varga set am up. From 10 metres. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0062",
-  "variant": "en:KES:essentials",
-  "text": "Goal for Corran Vale. Somto Odum scores. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0062",
-  "variant": "en:KES:full",
-  "text": "Goal for Corran Vale. Somto Odum scores. Set up by Lanre Varga. Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0062",
-  "variant": "en:KES:analyst",
-  "text": "Goal for Corran Vale. Somto Odum scores. Set up by Lanre Varga. From 10 metres, at 39 kilometres an hour. Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0062",
-  "variant": "en:CRV:essentials",
-  "text": "Goal! Somto Odum scores for Corran Vale! Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0062",
-  "variant": "en:CRV:full",
-  "text": "Goal! Somto Odum scores for Corran Vale! Set up by Lanre Varga. Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0062",
-  "variant": "en:CRV:analyst",
-  "text": "Goal! Somto Odum scores for Corran Vale! Set up by Lanre Varga. From 10 metres, at 39 kilometres an hour. Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0062",
-  "variant": "pcm:KES:essentials",
-  "text": "Corran Vale don score. Na Somto Odum. Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 3959.27,
-  "clock": 3730.98,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0062",
-  "variant": "pcm:KES:full",
-  "text": "Corran Vale don score. Na Somto Odum. Na Lanre Varga set am up. Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
@@ -15187,9 +15241,9 @@
   "action": "fail",
   "moment_id": "mo_0062",
   "variant": "pcm:KES:analyst",
-  "text": "Corran Vale don score. Na Somto Odum. Na Lanre Varga set am up. From 11 metres. Kestrel Wharf 1, Corran Vale 2.",
+  "text": "",
   "reasons": [
-   "number 11 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
@@ -15197,56 +15251,326 @@
   "t": 3959.27,
   "clock": 3730.98,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "pcm:CRV:essentials",
-  "text": "Goal! Somto Odum don score for Corran Vale! Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "pcm:CRV:full",
-  "text": "Goal! Somto Odum don score for Corran Vale! Na Lanre Varga set am up. Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "pcm:CRV:analyst",
-  "text": "Goal! Somto Odum don score for Corran Vale! Na Lanre Varga set am up. From 10 metres. Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0062",
-  "variant": "pcm:KES:analyst",
-  "text": "Corran Vale don score. Na Somto Odum. Na Lanre Varga set am up. From 10 metres. Kestrel Wharf 1, Corran Vale 2.",
-  "attempt": 2,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4498
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0062",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9003
  },
  {
   "t": 3959.27,
   "clock": 3730.98,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "en:KES:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "en:KES:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "en:KES:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "en:CRV:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "en:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "en:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "pcm:KES:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "pcm:KES:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0062",
   "variant": "pcm:KES:analyst",
-  "text": "Corran Vale don score. Na Somto Odum. Na Lanre Varga set am up. From 10 metres. Kestrel Wharf 1, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "pcm:CRV:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "pcm:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0062",
+  "variant": "pcm:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "en:KES:essentials",
+  "text": "Goal for Corran Vale. Somto Odum scores. Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "en:KES:full",
+  "text": "Goal for Corran Vale. Somto Odum scores. Set up by Lanre Varga. Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "en:KES:analyst",
+  "text": "Goal for Corran Vale. Somto Odum scores. Set up by Lanre Varga. From 10 metres, at 39 kilometres an hour. Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "en:CRV:essentials",
+  "text": "Goal! Somto Odum scores for Corran Vale! Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "en:CRV:full",
+  "text": "Goal! Somto Odum scores for Corran Vale! Set up by Lanre Varga. Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "en:CRV:analyst",
+  "text": "Goal! Somto Odum scores for Corran Vale! Set up by Lanre Varga. From 10 metres, at 39 kilometres an hour. Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "pcm:KES:essentials",
+  "text": "Corran Vale don score. Na Somto Odum. Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "pcm:KES:full",
+  "text": "Corran Vale don score. Na Somto Odum. Na Lanre Varga set am up. Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "pcm:KES:analyst",
+  "text": "Corran Vale don score. Na Somto Odum. Na Lanre Varga set am up. From 10 metres. Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "pcm:CRV:essentials",
+  "text": "Goal! Somto Odum don score for Corran Vale! Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "pcm:CRV:full",
+  "text": "Goal! Somto Odum don score for Corran Vale! Na Lanre Varga set am up. Kestrel Wharf 1, Corran Vale 2."
+ },
+ {
+  "t": 3959.27,
+  "clock": 3730.98,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0062",
+  "variant": "pcm:CRV:analyst",
+  "text": "Goal! Somto Odum don score for Corran Vale! Na Lanre Varga set am up. From 10 metres. Kestrel Wharf 1, Corran Vale 2."
  },
  {
   "t": 3959.27,
@@ -15256,6 +15580,14 @@
   "moment_id": "mo_0062",
   "lines": 12,
   "group": "match:demo_2:speech:<lang>:<club>:<level>"
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "editor",
+  "action": "model_failed",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'"
  },
  {
   "t": 4029.14,
@@ -15286,265 +15618,465 @@
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
+  "moment_id": "mo_0063",
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4506
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0063",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9008
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "en:KES:essentials",
-  "text": "Corran Vale on top now.",
-  "attempt": 1,
-  "ms": 15
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "en:KES:full",
-  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes.",
-  "attempt": 1,
-  "ms": 15
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "en:KES:analyst",
-  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes.",
-  "attempt": 1,
-  "ms": 15
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "en:CRV:essentials",
-  "text": "Corran Vale on top now.",
-  "attempt": 1,
-  "ms": 15
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "en:CRV:full",
-  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes.",
-  "attempt": 1,
-  "ms": 15
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "en:CRV:analyst",
-  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes.",
-  "attempt": 1,
-  "ms": 15
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "pcm:KES:essentials",
-  "text": "Corran Vale dey on top now.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "pcm:KES:full",
-  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "pcm:KES:analyst",
-  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "pcm:CRV:essentials",
-  "text": "Corran Vale dey on top now.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "pcm:CRV:full",
-  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 4029.14,
-  "clock": 3800.84,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0063",
-  "variant": "pcm:CRV:analyst",
-  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "en:KES:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "en:KES:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "en:CRV:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "en:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "en:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "pcm:KES:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "pcm:KES:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "pcm:KES:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "pcm:CRV:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "pcm:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0063",
+  "variant": "pcm:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0063",
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4504
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0063",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9011
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "en:KES:essentials",
-  "text": "Corran Vale on top now.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "en:KES:full",
-  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "en:KES:analyst",
-  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "en:CRV:essentials",
-  "text": "Corran Vale on top now.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "en:CRV:full",
-  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "en:CRV:analyst",
-  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "pcm:KES:essentials",
-  "text": "Corran Vale dey on top now.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "pcm:KES:full",
-  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "pcm:KES:analyst",
-  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "pcm:CRV:essentials",
-  "text": "Corran Vale dey on top now.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "pcm:CRV:full",
-  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4029.14,
   "clock": 3800.84,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0063",
   "variant": "pcm:CRV:analyst",
-  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "en:KES:essentials",
+  "text": "Corran Vale on top now."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "en:KES:full",
+  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "en:KES:analyst",
+  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "en:CRV:essentials",
+  "text": "Corran Vale on top now."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "en:CRV:full",
+  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "en:CRV:analyst",
+  "text": "Corran Vale have taken control. 2 shots to 1 in the last five minutes."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "pcm:KES:essentials",
+  "text": "Corran Vale dey on top now."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "pcm:KES:full",
+  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "pcm:KES:analyst",
+  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "pcm:CRV:essentials",
+  "text": "Corran Vale dey on top now."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "pcm:CRV:full",
+  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes."
+ },
+ {
+  "t": 4029.14,
+  "clock": 3800.84,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0063",
+  "variant": "pcm:CRV:analyst",
+  "text": "Corran Vale dey control the game now. Dem get 2 shots, the other side get 1, for last five minutes."
  },
  {
   "t": 4029.14,
@@ -15582,133 +16114,201 @@
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0065",
-  "variant": "en:KES:essentials",
-  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Kestrel Wharf 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4498
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
+  "moment_id": "mo_0065",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9000
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0065",
+  "variant": "en:KES:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:KES:full",
-  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Set up by Luca Oyelaran. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:KES:analyst",
-  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Set up by Luca Oyelaran. From 7 metres, at 36 kilometres an hour. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:CRV:essentials",
-  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Kestrel Wharf 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:CRV:full",
-  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Set up by Luca Oyelaran. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:CRV:analyst",
-  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Set up by Luca Oyelaran. From 7 metres, at 36 kilometres an hour. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:KES:essentials",
-  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:KES:full",
-  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Na Luca Oyelaran set am up. Kestrel Wharf 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:KES:analyst",
-  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Na Luca Oyelaran set am up. From 7 metres. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:CRV:essentials",
-  "text": "Kestrel Wharf don score. Na Somto Oguike. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:CRV:full",
-  "text": "Kestrel Wharf don score. Na Somto Oguike. Na Luca Oyelaran set am up. Kestrel Wharf 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0065",
+  "variant": "pcm:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0065",
-  "variant": "pcm:CRV:analyst",
-  "text": "Kestrel Wharf don score. Na Somto Oguike. Na Luca Oyelaran set am up. From 7 metres. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4507
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0065",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9008
  },
  {
   "t": 4082.88,
@@ -15717,33 +16317,37 @@
   "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:KES:essentials",
-  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Kestrel Wharf 3, Corran Vale 2.",
+  "text": "",
   "reasons": [
-   "number 3 is not in the facts"
+   "no line (ChatClientException)"
   ],
-  "attempt": 1
+  "attempt": 2
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:KES:full",
-  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Set up by Luca Oyelaran. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:KES:analyst",
-  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Set up by Luca Oyelaran. From 7 metres, at 36 kilometres an hour. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4082.88,
@@ -15752,44 +16356,50 @@
   "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:CRV:essentials",
-  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Kestrel Wharf 3, Corran Vale 2.",
+  "text": "",
   "reasons": [
-   "number 3 is not in the facts"
+   "no line (ChatClientException)"
   ],
-  "attempt": 1
+  "attempt": 2
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:CRV:full",
-  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Set up by Luca Oyelaran. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "en:CRV:analyst",
-  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Set up by Luca Oyelaran. From 7 metres, at 36 kilometres an hour. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:KES:essentials",
-  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4082.88,
@@ -15798,33 +16408,37 @@
   "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:KES:full",
-  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Na Luca Oyelaran set am up. Kestrel Wharf 3, Corran Vale 2.",
+  "text": "",
   "reasons": [
-   "number 3 is not in the facts"
+   "no line (ChatClientException)"
   ],
-  "attempt": 1
+  "attempt": 2
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:KES:analyst",
-  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Na Luca Oyelaran set am up. From 7 metres. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:CRV:essentials",
-  "text": "Kestrel Wharf don score. Na Somto Oguike. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4082.88,
@@ -15833,110 +16447,132 @@
   "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:CRV:full",
-  "text": "Kestrel Wharf don score. Na Somto Oguike. Na Luca Oyelaran set am up. Kestrel Wharf 3, Corran Vale 2.",
+  "text": "",
   "reasons": [
-   "number 3 is not in the facts"
+   "no line (ChatClientException)"
   ],
-  "attempt": 1
+  "attempt": 2
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0065",
   "variant": "pcm:CRV:analyst",
-  "text": "Kestrel Wharf don score. Na Somto Oguike. Na Luca Oyelaran set am up. From 7 metres. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "template",
   "moment_id": "mo_0065",
   "variant": "en:KES:essentials",
-  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 2,
-  "ms": 0
+  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Kestrel Wharf 2, Corran Vale 2."
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0065",
+  "variant": "en:KES:full",
+  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Set up by Luca Oyelaran. Kestrel Wharf 2, Corran Vale 2."
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0065",
+  "variant": "en:KES:analyst",
+  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Set up by Luca Oyelaran. From 7 metres, at 36 kilometres an hour. Kestrel Wharf 2, Corran Vale 2."
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "template",
   "moment_id": "mo_0065",
   "variant": "en:CRV:essentials",
-  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 2,
-  "ms": 0
+  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Kestrel Wharf 2, Corran Vale 2."
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0065",
+  "variant": "en:CRV:full",
+  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Set up by Luca Oyelaran. Kestrel Wharf 2, Corran Vale 2."
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0065",
+  "variant": "en:CRV:analyst",
+  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Set up by Luca Oyelaran. From 7 metres, at 36 kilometres an hour. Kestrel Wharf 2, Corran Vale 2."
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0065",
+  "variant": "pcm:KES:essentials",
+  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Kestrel Wharf 2, Corran Vale 2."
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "template",
   "moment_id": "mo_0065",
   "variant": "pcm:KES:full",
-  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Na Luca Oyelaran set am up. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 2,
-  "ms": 0
+  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Na Luca Oyelaran set am up. Kestrel Wharf 2, Corran Vale 2."
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0065",
+  "variant": "pcm:KES:analyst",
+  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Na Luca Oyelaran set am up. From 7 metres. Kestrel Wharf 2, Corran Vale 2."
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0065",
+  "variant": "pcm:CRV:essentials",
+  "text": "Kestrel Wharf don score. Na Somto Oguike. Kestrel Wharf 2, Corran Vale 2."
+ },
+ {
+  "t": 4082.88,
+  "clock": 3854.59,
+  "agent": "verifier",
+  "action": "template",
   "moment_id": "mo_0065",
   "variant": "pcm:CRV:full",
-  "text": "Kestrel Wharf don score. Na Somto Oguike. Na Luca Oyelaran set am up. Kestrel Wharf 2, Corran Vale 2.",
-  "attempt": 2,
-  "ms": 0
+  "text": "Kestrel Wharf don score. Na Somto Oguike. Na Luca Oyelaran set am up. Kestrel Wharf 2, Corran Vale 2."
  },
  {
   "t": 4082.88,
   "clock": 3854.59,
   "agent": "verifier",
-  "action": "pass",
+  "action": "template",
   "moment_id": "mo_0065",
-  "variant": "en:KES:essentials",
-  "text": "Goal! Somto Oguike scores for Kestrel Wharf! Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 2
- },
- {
-  "t": 4082.88,
-  "clock": 3854.59,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0065",
-  "variant": "en:CRV:essentials",
-  "text": "Goal for Kestrel Wharf. Somto Oguike scores. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 2
- },
- {
-  "t": 4082.88,
-  "clock": 3854.59,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0065",
-  "variant": "pcm:KES:full",
-  "text": "Goal! Somto Oguike don score for Kestrel Wharf! Na Luca Oyelaran set am up. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 2
- },
- {
-  "t": 4082.88,
-  "clock": 3854.59,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0065",
-  "variant": "pcm:CRV:full",
-  "text": "Kestrel Wharf don score. Na Somto Oguike. Na Luca Oyelaran set am up. Kestrel Wharf 2, Corran Vale 2.",
-  "reasons": [],
-  "attempt": 2
+  "variant": "pcm:CRV:analyst",
+  "text": "Kestrel Wharf don score. Na Somto Oguike. Na Luca Oyelaran set am up. From 7 metres. Kestrel Wharf 2, Corran Vale 2."
  },
  {
   "t": 4082.88,

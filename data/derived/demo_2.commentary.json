@@ -1,9 +1,9 @@
 {
  "match_id": "demo_2",
- "provider": "offline",
- "model": "templates, fault rate 0.25",
- "model_writes": false,
- "window": "full",
+ "provider": "github-models",
+ "model": "openai/gpt-4o-mini",
+ "model_writes": true,
+ "window": "best_three_minutes, inside the whole match",
  "variants": [
   "en:KES:essentials",
   "en:KES:full",
@@ -19,70 +19,16 @@
   "pcm:CRV:analyst"
  ],
  "stats": {
-  "lines_aired": 788,
-  "assignments": 81,
-  "first_attempt_pass_rate": 0.764,
-  "rejections": 186,
-  "template_fallbacks": 0,
+  "lines_aired": 44,
+  "assignments": 4,
+  "first_attempt_pass_rate": 0.0,
+  "rejections": 88,
+  "template_fallbacks": 44,
   "aired_with_a_wrong_number": 0,
-  "median_ms_to_line": 15.0,
-  "slowest_ms_to_line": 32
+  "median_ms_to_line": 18018.0,
+  "slowest_ms_to_line": 18026
  },
  "storylines": [
-  {
-   "kind": "momentum",
-   "team": "KES",
-   "since": 1,
-   "text": "Kestrel Wharf on top since minute 1"
-  },
-  {
-   "kind": "press",
-   "team": "CRV",
-   "since": 28,
-   "text": "Corran Vale pressing high since minute 28"
-  },
-  {
-   "kind": "momentum",
-   "team": "KES",
-   "since": 28,
-   "text": "Kestrel Wharf on top since minute 28"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 29,
-   "text": "Corran Vale on top since minute 29"
-  },
-  {
-   "kind": "press",
-   "team": "KES",
-   "since": 30,
-   "text": "Kestrel Wharf pressing high since minute 30"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 31,
-   "text": "Corran Vale on top since minute 31"
-  },
-  {
-   "kind": "momentum",
-   "team": "KES",
-   "since": 43,
-   "text": "Kestrel Wharf on top since minute 43"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 49,
-   "text": "Corran Vale on top since minute 49"
-  },
-  {
-   "kind": "momentum",
-   "team": "KES",
-   "since": 59,
-   "text": "Kestrel Wharf on top since minute 59"
-  },
   {
    "kind": "momentum",
    "team": "CRV",
@@ -94,72 +40,6 @@
    "team": "KES",
    "since": 65,
    "text": "Kestrel Wharf on top since minute 65"
-  },
-  {
-   "kind": "press",
-   "team": "CRV",
-   "since": 66,
-   "text": "Corran Vale pressing high since minute 66"
-  },
-  {
-   "kind": "momentum",
-   "team": "KES",
-   "since": 68,
-   "text": "Kestrel Wharf on top since minute 68"
-  },
-  {
-   "kind": "press",
-   "team": "KES",
-   "since": 71,
-   "text": "Kestrel Wharf pressing high since minute 71"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 75,
-   "text": "Corran Vale on top since minute 75"
-  },
-  {
-   "kind": "press",
-   "team": "CRV",
-   "since": 81,
-   "text": "Corran Vale pressing high since minute 81"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 83,
-   "text": "Corran Vale on top since minute 83"
-  },
-  {
-   "kind": "momentum",
-   "team": "KES",
-   "since": 88,
-   "text": "Kestrel Wharf on top since minute 88"
-  },
-  {
-   "kind": "press",
-   "team": "KES",
-   "since": 89,
-   "text": "Kestrel Wharf pressing high since minute 89"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 91,
-   "text": "Corran Vale on top since minute 91"
-  },
-  {
-   "kind": "momentum",
-   "team": "KES",
-   "since": 94,
-   "text": "Kestrel Wharf on top since minute 94"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 95,
-   "text": "Corran Vale on top since minute 95"
   }
  ],
  "lines": [
@@ -10238,13 +10118,15 @@
    ],
    "moment_id": "mo_0061",
    "type": "milestone",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13581
   },
   {
    "variant": "en:CRV:full",
@@ -10257,13 +10139,15 @@
    ],
    "moment_id": "mo_0061",
    "type": "milestone",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13581
   },
   {
    "variant": "en:KES:analyst",
@@ -10276,13 +10160,15 @@
    ],
    "moment_id": "mo_0061",
    "type": "milestone",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13581
   },
   {
    "variant": "en:KES:full",
@@ -10295,13 +10181,15 @@
    ],
    "moment_id": "mo_0061",
    "type": "milestone",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13581
   },
   {
    "variant": "pcm:CRV:analyst",
@@ -10314,13 +10202,15 @@
    ],
    "moment_id": "mo_0061",
    "type": "milestone",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13581
   },
   {
    "variant": "pcm:CRV:full",
@@ -10333,13 +10223,15 @@
    ],
    "moment_id": "mo_0061",
    "type": "milestone",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13581
   },
   {
    "variant": "pcm:KES:analyst",
@@ -10352,13 +10244,15 @@
    ],
    "moment_id": "mo_0061",
    "type": "milestone",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13581
   },
   {
    "variant": "pcm:KES:full",
@@ -10371,13 +10265,15 @@
    ],
    "moment_id": "mo_0061",
    "type": "milestone",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13581
   },
   {
    "variant": "en:CRV:analyst",
@@ -10392,13 +10288,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "en:CRV:essentials",
@@ -10413,13 +10311,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "en:CRV:full",
@@ -10434,13 +10334,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "en:KES:analyst",
@@ -10455,20 +10357,22 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "en:KES:essentials",
    "t": 3959.87,
    "expires_t": 3979.27,
    "priority": 1,
-   "text": "Goal for Corran Vale. Somto Odum scores. Kestrel Wharf 2, Corran Vale 2.",
+   "text": "Goal for Corran Vale. Somto Odum scores. Kestrel Wharf 1, Corran Vale 2.",
    "evidence": [
     "ev_001305",
     "ev_001306",
@@ -10476,13 +10380,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "en:KES:full",
@@ -10497,13 +10403,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "pcm:CRV:analyst",
@@ -10518,13 +10426,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "pcm:CRV:essentials",
@@ -10539,13 +10449,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "pcm:CRV:full",
@@ -10560,13 +10472,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "pcm:KES:analyst",
@@ -10581,13 +10495,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "pcm:KES:essentials",
@@ -10602,13 +10518,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "pcm:KES:full",
@@ -10623,13 +10541,15 @@
    ],
    "moment_id": "mo_0062",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18018
   },
   {
    "variant": "en:CRV:analyst",
@@ -10646,13 +10566,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "en:CRV:essentials",
@@ -10669,13 +10591,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "en:CRV:full",
@@ -10692,13 +10616,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "en:KES:analyst",
@@ -10715,13 +10641,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "en:KES:essentials",
@@ -10738,13 +10666,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "en:KES:full",
@@ -10761,13 +10691,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "pcm:CRV:analyst",
@@ -10784,13 +10716,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "pcm:CRV:essentials",
@@ -10807,13 +10741,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "pcm:CRV:full",
@@ -10830,13 +10766,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "pcm:KES:analyst",
@@ -10853,13 +10791,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "pcm:KES:essentials",
@@ -10876,13 +10816,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "pcm:KES:full",
@@ -10899,13 +10841,15 @@
    ],
    "moment_id": "mo_0063",
    "type": "momentum_swing",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "Corran Vale on top since minute 62",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 15
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18026
   },
   {
    "variant": "en:CRV:analyst",
@@ -10920,13 +10864,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "en:CRV:essentials",
@@ -10941,13 +10887,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "en:CRV:full",
@@ -10962,13 +10910,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "en:KES:analyst",
@@ -10983,13 +10933,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "en:KES:essentials",
@@ -11004,13 +10956,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "en:KES:full",
@@ -11025,13 +10979,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "pcm:CRV:analyst",
@@ -11046,13 +11002,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "pcm:CRV:essentials",
@@ -11067,13 +11025,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "pcm:CRV:full",
@@ -11088,13 +11048,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "pcm:KES:analyst",
@@ -11109,13 +11071,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "pcm:KES:essentials",
@@ -11130,13 +11094,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "pcm:KES:full",
@@ -11151,13 +11117,15 @@
    ],
    "moment_id": "mo_0065",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18015
   },
   {
    "variant": "en:CRV:analyst",
@@ -16447,5 +16415,19 @@
    "provider": "offline",
    "ms": 15
   }
- ]
+ ],
+ "outside_window": {
+  "provider": "offline",
+  "model": "templates, fault rate 0.25",
+  "stats": {
+   "lines_aired": 788,
+   "assignments": 81,
+   "first_attempt_pass_rate": 0.764,
+   "rejections": 186,
+   "template_fallbacks": 0,
+   "aired_with_a_wrong_number": 0,
+   "median_ms_to_line": 15.0,
+   "slowest_ms_to_line": 32
+  }
+ }
 }

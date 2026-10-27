@@ -20715,14 +20715,14 @@
   "group": "match:demo_3:speech:<lang>:<club>:<level>"
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
+  "t": 5375.35,
+  "clock": 5267.46,
   "agent": "editor",
   "action": "assigned",
   "moment_id": "mo_0088",
   "type": "high_turnover",
   "priority": 2,
-  "angle": "Ostbury Town on top since minute 75",
+  "angle": "winning the ball back near goal",
   "levels": [
    "essentials",
    "full",
@@ -20731,320 +20731,472 @@
   "variants": 12
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
+  "t": 5375.35,
+  "clock": 5267.46,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0088",
-  "variant": "en:ALD:essentials",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 47
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
+  "t": 5375.35,
+  "clock": 5267.46,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0088",
-  "variant": "en:ALD:full",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4582
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "en:ALD:analyst",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "en:OST:essentials",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "en:OST:full",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "en:OST:analyst",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "pcm:ALD:essentials",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "pcm:ALD:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "pcm:ALD:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "pcm:OST:essentials",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "pcm:OST:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0088",
-  "variant": "pcm:OST:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "en:ALD:essentials",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "en:ALD:full",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "en:ALD:analyst",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "en:OST:essentials",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "en:OST:full",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "en:OST:analyst",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "pcm:ALD:essentials",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "pcm:ALD:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "pcm:ALD:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0088",
-  "variant": "pcm:OST:essentials",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5379.1,
-  "clock": 5271.21,
+  "t": 5375.35,
+  "clock": 5267.46,
   "agent": "verifier",
   "action": "fail",
   "moment_id": "mo_0088",
-  "variant": "pcm:OST:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
+  "variant": "en:ALD:essentials",
+  "text": "",
   "reasons": [
-   "number 2 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
+  "t": 5375.35,
+  "clock": 5267.46,
   "agent": "verifier",
   "action": "fail",
   "moment_id": "mo_0088",
-  "variant": "pcm:OST:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
+  "variant": "en:ALD:full",
+  "text": "",
   "reasons": [
-   "number 2 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0088",
-  "variant": "pcm:OST:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "attempt": 2,
-  "ms": 0
+  "variant": "en:ALD:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "en:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "en:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "en:OST:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:ALD:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:ALD:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:ALD:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0088",
   "variant": "pcm:OST:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "attempt": 2,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
-  "agent": "verifier",
-  "action": "pass",
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "narrator",
+  "action": "failed",
   "moment_id": "mo_0088",
-  "variant": "pcm:OST:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "reasons": [],
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4508
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0088",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9005
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "en:ALD:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
+  "t": 5375.35,
+  "clock": 5267.46,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0088",
-  "variant": "pcm:OST:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "reasons": [],
+  "variant": "en:ALD:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
  },
  {
-  "t": 5379.1,
-  "clock": 5271.21,
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "en:ALD:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "en:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "en:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "en:OST:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:ALD:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:ALD:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:ALD:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0088",
+  "variant": "pcm:OST:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "en:ALD:essentials",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "en:ALD:full",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "en:ALD:analyst",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "en:OST:essentials",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "en:OST:full",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "en:OST:analyst",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "pcm:ALD:essentials",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "pcm:ALD:full",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "pcm:ALD:analyst",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "pcm:OST:essentials",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "pcm:OST:full",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0088",
+  "variant": "pcm:OST:analyst",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5375.35,
+  "clock": 5267.46,
   "agent": "publisher",
   "action": "published",
   "moment_id": "mo_0088",
@@ -21085,6 +21237,14 @@
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "editor",
+  "action": "model_failed",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'"
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "editor",
   "action": "assigned",
   "moment_id": "mo_0091",
   "type": "big_chance",
@@ -21110,143 +21270,35 @@
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0091",
-  "variant": "en:ALD:essentials",
-  "text": "Big chance for Tariq Lunde, blocked!",
-  "attempt": 1,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4502
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0091",
-  "variant": "en:ALD:full",
-  "text": "Big chance for Tariq Lunde, blocked! That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "en:ALD:analyst",
-  "text": "Big chance for Tariq Lunde, blocked! That was a 29 percent chance.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "en:OST:essentials",
-  "text": "Big chance for Tariq Lunde, blocked!",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "en:OST:full",
-  "text": "Big chance for Tariq Lunde, blocked!",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "en:OST:analyst",
-  "text": "Big chance for Tariq Lunde, blocked! That was a 29 percent chance.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "pcm:ALD:essentials",
-  "text": "Chance for Tariq Lunde! Dem block am!",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "pcm:ALD:full",
-  "text": "Chance for Tariq Lunde! Dem block am! That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "pcm:ALD:analyst",
-  "text": "Chance for Tariq Lunde! Dem block am! That chance na 29 percent.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "pcm:OST:essentials",
-  "text": "Chance for Tariq Lunde! Dem block am!",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "pcm:OST:full",
-  "text": "Chance for Tariq Lunde! Dem block am!",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5464.42,
-  "clock": 5356.53,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0091",
-  "variant": "pcm:OST:analyst",
-  "text": "Chance for Tariq Lunde! Dem block am! That chance na 29 percent.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9007
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "en:ALD:essentials",
-  "text": "Big chance for Tariq Lunde, blocked!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
@@ -21256,9 +21308,9 @@
   "action": "fail",
   "moment_id": "mo_0091",
   "variant": "en:ALD:full",
-  "text": "Big chance for Tariq Lunde, blocked! That is 2 in a row.",
+  "text": "",
   "reasons": [
-   "number 2 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
@@ -21266,55 +21318,65 @@
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "en:ALD:analyst",
-  "text": "Big chance for Tariq Lunde, blocked! That was a 29 percent chance.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "en:OST:essentials",
-  "text": "Big chance for Tariq Lunde, blocked!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "en:OST:full",
-  "text": "Big chance for Tariq Lunde, blocked!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "en:OST:analyst",
-  "text": "Big chance for Tariq Lunde, blocked! That was a 29 percent chance.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "pcm:ALD:essentials",
-  "text": "Chance for Tariq Lunde! Dem block am!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
@@ -21324,9 +21386,9 @@
   "action": "fail",
   "moment_id": "mo_0091",
   "variant": "pcm:ALD:full",
-  "text": "Chance for Tariq Lunde! Dem block am! That is 2 in a row.",
+  "text": "",
   "reasons": [
-   "number 2 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
@@ -21334,89 +21396,339 @@
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "pcm:ALD:analyst",
-  "text": "Chance for Tariq Lunde! Dem block am! That chance na 29 percent.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "pcm:OST:essentials",
-  "text": "Chance for Tariq Lunde! Dem block am!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "pcm:OST:full",
-  "text": "Chance for Tariq Lunde! Dem block am!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "pcm:OST:analyst",
-  "text": "Chance for Tariq Lunde! Dem block am! That chance na 29 percent.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0091",
-  "variant": "en:ALD:full",
-  "text": "Big chance for Tariq Lunde, blocked!",
-  "attempt": 2,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4506
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0091",
-  "variant": "pcm:ALD:full",
-  "text": "Chance for Tariq Lunde! Dem block am!",
-  "attempt": 2,
-  "ms": 0
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9009
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "en:ALD:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "en:ALD:full",
-  "text": "Big chance for Tariq Lunde, blocked!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
  },
  {
   "t": 5464.42,
   "clock": 5356.53,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "en:ALD:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "en:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "en:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "en:OST:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "pcm:ALD:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0091",
   "variant": "pcm:ALD:full",
-  "text": "Chance for Tariq Lunde! Dem block am!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "pcm:ALD:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "pcm:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "pcm:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0091",
+  "variant": "pcm:OST:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "en:ALD:essentials",
+  "text": "Big chance for Tariq Lunde, blocked!"
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "en:ALD:full",
+  "text": "Big chance for Tariq Lunde, blocked!"
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "en:ALD:analyst",
+  "text": "Big chance for Tariq Lunde, blocked! That was a 29 percent chance."
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "en:OST:essentials",
+  "text": "Big chance for Tariq Lunde, blocked!"
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "en:OST:full",
+  "text": "Big chance for Tariq Lunde, blocked!"
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "en:OST:analyst",
+  "text": "Big chance for Tariq Lunde, blocked! That was a 29 percent chance."
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "pcm:ALD:essentials",
+  "text": "Chance for Tariq Lunde! Dem block am!"
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "pcm:ALD:full",
+  "text": "Chance for Tariq Lunde! Dem block am!"
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "pcm:ALD:analyst",
+  "text": "Chance for Tariq Lunde! Dem block am! That chance na 29 percent."
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "pcm:OST:essentials",
+  "text": "Chance for Tariq Lunde! Dem block am!"
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "pcm:OST:full",
+  "text": "Chance for Tariq Lunde! Dem block am!"
+ },
+ {
+  "t": 5464.42,
+  "clock": 5356.53,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0091",
+  "variant": "pcm:OST:analyst",
+  "text": "Chance for Tariq Lunde! Dem block am! That chance na 29 percent."
  },
  {
   "t": 5464.42,
@@ -21447,187 +21759,87 @@
   "t": 5509.96,
   "clock": 5402.08,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
+  "moment_id": "mo_0092",
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4496
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0092",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9001
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "en:ALD:essentials",
-  "text": "Goal for Ostbury Town. Anders Strand scores. Aldmere Rovers 3, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "en:ALD:full",
-  "text": "Goal for Ostbury Town. Anders Strand scores. Set up by Kofi Ogunleye. Aldmere Rovers 3, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "en:ALD:analyst",
-  "text": "Goal for Ostbury Town. Anders Strand scores. Set up by Kofi Ogunleye. From 9 metres, at 37 kilometres an hour. Aldmere Rovers 2, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "en:OST:essentials",
-  "text": "Goal! Anders Strand scores for Ostbury Town! Aldmere Rovers 3, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "en:OST:full",
-  "text": "Goal! Anders Strand scores for Ostbury Town! Set up by Kofi Ogunleye. Aldmere Rovers 2, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0092",
-  "variant": "en:OST:analyst",
-  "text": "Goal! Anders Strand scores for Ostbury Town! Set up by Kofi Ogunleye. From 10 metres, at 37 kilometres an hour. Aldmere Rovers 2, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0092",
-  "variant": "pcm:ALD:essentials",
-  "text": "Ostbury Town don score. Na Anders Strand. Aldmere Rovers 3, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0092",
-  "variant": "pcm:ALD:full",
-  "text": "Ostbury Town don score. Na Anders Strand. Na Kofi Ogunleye set am up. Aldmere Rovers 2, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0092",
-  "variant": "pcm:ALD:analyst",
-  "text": "Ostbury Town don score. Na Anders Strand. Na Kofi Ogunleye set am up. From 9 metres. Aldmere Rovers 2, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0092",
-  "variant": "pcm:OST:essentials",
-  "text": "Goal! Anders Strand don score for Ostbury Town! Aldmere Rovers 2, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0092",
-  "variant": "pcm:OST:full",
-  "text": "Goal! Anders Strand don score for Ostbury Town! Na Kofi Ogunleye set am up. Aldmere Rovers 3, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0092",
-  "variant": "pcm:OST:analyst",
-  "text": "Goal! Anders Strand don score for Ostbury Town! Na Kofi Ogunleye set am up. From 9 metres. Aldmere Rovers 2, Ostbury Town 3.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0092",
-  "variant": "en:ALD:essentials",
-  "text": "Goal for Ostbury Town. Anders Strand scores. Aldmere Rovers 3, Ostbury Town 3.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0092",
-  "variant": "en:ALD:full",
-  "text": "Goal for Ostbury Town. Anders Strand scores. Set up by Kofi Ogunleye. Aldmere Rovers 3, Ostbury Town 3.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0092",
-  "variant": "en:ALD:analyst",
-  "text": "Goal for Ostbury Town. Anders Strand scores. Set up by Kofi Ogunleye. From 9 metres, at 37 kilometres an hour. Aldmere Rovers 2, Ostbury Town 3.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0092",
-  "variant": "en:OST:essentials",
-  "text": "Goal! Anders Strand scores for Ostbury Town! Aldmere Rovers 3, Ostbury Town 3.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5509.96,
-  "clock": 5402.08,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0092",
-  "variant": "en:OST:full",
-  "text": "Goal! Anders Strand scores for Ostbury Town! Set up by Kofi Ogunleye. Aldmere Rovers 2, Ostbury Town 3.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
@@ -21637,9 +21849,9 @@
   "action": "fail",
   "moment_id": "mo_0092",
   "variant": "en:OST:analyst",
-  "text": "Goal! Anders Strand scores for Ostbury Town! Set up by Kofi Ogunleye. From 10 metres, at 37 kilometres an hour. Aldmere Rovers 2, Ostbury Town 3.",
+  "text": "",
   "reasons": [
-   "number 10 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
@@ -21647,89 +21859,365 @@
   "t": 5509.96,
   "clock": 5402.08,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "pcm:ALD:essentials",
-  "text": "Ostbury Town don score. Na Anders Strand. Aldmere Rovers 3, Ostbury Town 3.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "pcm:ALD:full",
-  "text": "Ostbury Town don score. Na Anders Strand. Na Kofi Ogunleye set am up. Aldmere Rovers 2, Ostbury Town 3.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "pcm:ALD:analyst",
-  "text": "Ostbury Town don score. Na Anders Strand. Na Kofi Ogunleye set am up. From 9 metres. Aldmere Rovers 2, Ostbury Town 3.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "pcm:OST:essentials",
-  "text": "Goal! Anders Strand don score for Ostbury Town! Aldmere Rovers 2, Ostbury Town 3.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "pcm:OST:full",
-  "text": "Goal! Anders Strand don score for Ostbury Town! Na Kofi Ogunleye set am up. Aldmere Rovers 3, Ostbury Town 3.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "pcm:OST:analyst",
-  "text": "Goal! Anders Strand don score for Ostbury Town! Na Kofi Ogunleye set am up. From 9 metres. Aldmere Rovers 2, Ostbury Town 3.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0092",
-  "variant": "en:OST:analyst",
-  "text": "Goal! Anders Strand scores for Ostbury Town! Set up by Kofi Ogunleye. From 9 metres, at 37 kilometres an hour. Aldmere Rovers 2, Ostbury Town 3.",
-  "attempt": 2,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4512
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0092",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9027
  },
  {
   "t": 5509.96,
   "clock": 5402.08,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "en:ALD:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "en:ALD:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "en:ALD:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "en:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "en:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0092",
   "variant": "en:OST:analyst",
-  "text": "Goal! Anders Strand scores for Ostbury Town! Set up by Kofi Ogunleye. From 9 metres, at 37 kilometres an hour. Aldmere Rovers 2, Ostbury Town 3.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "pcm:ALD:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "pcm:ALD:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "pcm:ALD:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "pcm:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "pcm:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0092",
+  "variant": "pcm:OST:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "en:ALD:essentials",
+  "text": "Goal for Ostbury Town. Anders Strand scores. Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "en:ALD:full",
+  "text": "Goal for Ostbury Town. Anders Strand scores. Set up by Kofi Ogunleye. Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "en:ALD:analyst",
+  "text": "Goal for Ostbury Town. Anders Strand scores. Set up by Kofi Ogunleye. From 9 metres, at 37 kilometres an hour. Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "en:OST:essentials",
+  "text": "Goal! Anders Strand scores for Ostbury Town! Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "en:OST:full",
+  "text": "Goal! Anders Strand scores for Ostbury Town! Set up by Kofi Ogunleye. Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "en:OST:analyst",
+  "text": "Goal! Anders Strand scores for Ostbury Town! Set up by Kofi Ogunleye. From 9 metres, at 37 kilometres an hour. Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "pcm:ALD:essentials",
+  "text": "Ostbury Town don score. Na Anders Strand. Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "pcm:ALD:full",
+  "text": "Ostbury Town don score. Na Anders Strand. Na Kofi Ogunleye set am up. Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "pcm:ALD:analyst",
+  "text": "Ostbury Town don score. Na Anders Strand. Na Kofi Ogunleye set am up. From 9 metres. Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "pcm:OST:essentials",
+  "text": "Goal! Anders Strand don score for Ostbury Town! Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "pcm:OST:full",
+  "text": "Goal! Anders Strand don score for Ostbury Town! Na Kofi Ogunleye set am up. Aldmere Rovers 2, Ostbury Town 3."
+ },
+ {
+  "t": 5509.96,
+  "clock": 5402.08,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0092",
+  "variant": "pcm:OST:analyst",
+  "text": "Goal! Anders Strand don score for Ostbury Town! Na Kofi Ogunleye set am up. From 9 metres. Aldmere Rovers 2, Ostbury Town 3."
  },
  {
   "t": 5509.96,

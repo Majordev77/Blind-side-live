@@ -1,9 +1,9 @@
 {
  "match_id": "demo_1",
- "provider": "offline",
- "model": "templates, fault rate 0.25",
- "model_writes": false,
- "window": "full",
+ "provider": "github-models",
+ "model": "openai/gpt-4o-mini",
+ "model_writes": true,
+ "window": "best_three_minutes, inside the whole match",
  "variants": [
   "en:OST:essentials",
   "en:OST:full",
@@ -19,159 +19,33 @@
   "pcm:CRV:analyst"
  ],
  "stats": {
-  "lines_aired": 872,
-  "assignments": 88,
-  "first_attempt_pass_rate": 0.78,
-  "rejections": 192,
-  "template_fallbacks": 0,
+  "lines_aired": 40,
+  "assignments": 4,
+  "first_attempt_pass_rate": 0.0,
+  "rejections": 80,
+  "template_fallbacks": 40,
   "aired_with_a_wrong_number": 0,
-  "median_ms_to_line": 15.0,
-  "slowest_ms_to_line": 32
+  "median_ms_to_line": 18014.0,
+  "slowest_ms_to_line": 18137
  },
  "storylines": [
   {
    "kind": "momentum",
    "team": "OST",
-   "since": 1,
-   "text": "Ostbury Town on top since minute 1"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 1,
-   "text": "Corran Vale on top since minute 1"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 12,
-   "text": "Ostbury Town on top since minute 12"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 15,
-   "text": "Corran Vale on top since minute 15"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 17,
-   "text": "Ostbury Town on top since minute 17"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 20,
-   "text": "Corran Vale on top since minute 20"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 40,
-   "text": "Ostbury Town on top since minute 40"
-  },
-  {
-   "kind": "press",
-   "team": "OST",
-   "since": 41,
-   "text": "Ostbury Town pressing high since minute 41"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 41,
-   "text": "Ostbury Town on top since minute 41"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 41,
-   "text": "Corran Vale on top since minute 41"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 46,
-   "text": "Ostbury Town on top since minute 46"
-  },
-  {
-   "kind": "press",
-   "team": "CRV",
-   "since": 54,
-   "text": "Corran Vale pressing high since minute 54"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 55,
-   "text": "Ostbury Town on top since minute 55"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 64,
-   "text": "Corran Vale on top since minute 64"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 67,
-   "text": "Ostbury Town on top since minute 67"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 72,
-   "text": "Corran Vale on top since minute 72"
-  },
-  {
-   "kind": "press",
-   "team": "CRV",
-   "since": 73,
-   "text": "Corran Vale pressing high since minute 73"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 73,
-   "text": "Ostbury Town on top since minute 73"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 80,
-   "text": "Corran Vale on top since minute 80"
-  },
-  {
-   "kind": "press",
-   "team": "OST",
-   "since": 80,
-   "text": "Ostbury Town pressing high since minute 80"
-  },
-  {
-   "kind": "momentum",
-   "team": "CRV",
-   "since": 82,
-   "text": "Corran Vale on top since minute 82"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
-   "since": 85,
-   "text": "Ostbury Town on top since minute 85"
-  },
-  {
-   "kind": "press",
-   "team": "CRV",
-   "since": 89,
-   "text": "Corran Vale pressing high since minute 89"
-  },
-  {
-   "kind": "momentum",
-   "team": "OST",
    "since": 90,
    "text": "Ostbury Town on top since minute 90"
+  },
+  {
+   "kind": "press",
+   "team": "CRV",
+   "since": 90,
+   "text": "Corran Vale pressing high since minute 90"
+  },
+  {
+   "kind": "momentum",
+   "team": "OST",
+   "since": 91,
+   "text": "Ostbury Town on top since minute 91"
   }
  ],
  "lines": [
@@ -16866,13 +16740,15 @@
    ],
    "moment_id": "mo_0103",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Corran Vale pressing high since minute 89",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Corran Vale pressing high since minute 90",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13589
   },
   {
    "variant": "en:CRV:full",
@@ -16885,13 +16761,15 @@
    ],
    "moment_id": "mo_0103",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Corran Vale pressing high since minute 89",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Corran Vale pressing high since minute 90",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13589
   },
   {
    "variant": "en:OST:analyst",
@@ -16904,13 +16782,15 @@
    ],
    "moment_id": "mo_0103",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Corran Vale pressing high since minute 89",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Corran Vale pressing high since minute 90",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13589
   },
   {
    "variant": "en:OST:full",
@@ -16923,13 +16803,15 @@
    ],
    "moment_id": "mo_0103",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Corran Vale pressing high since minute 89",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Corran Vale pressing high since minute 90",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13589
   },
   {
    "variant": "pcm:CRV:analyst",
@@ -16942,13 +16824,15 @@
    ],
    "moment_id": "mo_0103",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Corran Vale pressing high since minute 89",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Corran Vale pressing high since minute 90",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13589
   },
   {
    "variant": "pcm:CRV:full",
@@ -16961,13 +16845,15 @@
    ],
    "moment_id": "mo_0103",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Corran Vale pressing high since minute 89",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Corran Vale pressing high since minute 90",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13589
   },
   {
    "variant": "pcm:OST:analyst",
@@ -16980,13 +16866,15 @@
    ],
    "moment_id": "mo_0103",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Corran Vale pressing high since minute 89",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Corran Vale pressing high since minute 90",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13589
   },
   {
    "variant": "pcm:OST:full",
@@ -16999,13 +16887,15 @@
    ],
    "moment_id": "mo_0103",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Corran Vale pressing high since minute 89",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Corran Vale pressing high since minute 90",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 13589
   },
   {
    "variant": "en:CRV:analyst",
@@ -17018,13 +16908,15 @@
    ],
    "moment_id": "mo_0104",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18021
   },
   {
    "variant": "en:CRV:full",
@@ -17037,13 +16929,15 @@
    ],
    "moment_id": "mo_0104",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18021
   },
   {
    "variant": "en:OST:analyst",
@@ -17056,13 +16950,15 @@
    ],
    "moment_id": "mo_0104",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18021
   },
   {
    "variant": "en:OST:full",
@@ -17075,13 +16971,15 @@
    ],
    "moment_id": "mo_0104",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18021
   },
   {
    "variant": "pcm:CRV:analyst",
@@ -17094,13 +16992,15 @@
    ],
    "moment_id": "mo_0104",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18021
   },
   {
    "variant": "pcm:CRV:full",
@@ -17113,13 +17013,15 @@
    ],
    "moment_id": "mo_0104",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18021
   },
   {
    "variant": "pcm:OST:analyst",
@@ -17132,13 +17034,15 @@
    ],
    "moment_id": "mo_0104",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18021
   },
   {
    "variant": "pcm:OST:full",
@@ -17151,13 +17055,15 @@
    ],
    "moment_id": "mo_0104",
    "type": "hard_pass",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18021
   },
   {
    "variant": "en:CRV:analyst",
@@ -17171,33 +17077,37 @@
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "en:CRV:essentials",
    "t": 5566.69,
    "expires_t": 5574.09,
    "priority": 2,
-   "text": "Kofi Ogunleye wins it back high up for Ostbury Town. That is 2 in a row.",
+   "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
    "evidence": [
     "ev_001791",
     "ev_001873"
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "en:CRV:full",
@@ -17211,13 +17121,15 @@
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "en:OST:analyst",
@@ -17231,13 +17143,15 @@
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "en:OST:essentials",
@@ -17251,13 +17165,15 @@
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "en:OST:full",
@@ -17271,33 +17187,37 @@
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "pcm:CRV:analyst",
    "t": 5566.69,
    "expires_t": 5574.09,
    "priority": 2,
-   "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
+   "text": "Kofi Ogunleye don collect the ball back for their half.",
    "evidence": [
     "ev_001791",
     "ev_001873"
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "pcm:CRV:essentials",
@@ -17311,53 +17231,59 @@
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "pcm:CRV:full",
    "t": 5566.69,
    "expires_t": 5574.09,
    "priority": 2,
-   "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
+   "text": "Kofi Ogunleye don collect the ball back for their half.",
    "evidence": [
     "ev_001791",
     "ev_001873"
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "pcm:OST:analyst",
    "t": 5566.69,
    "expires_t": 5574.09,
    "priority": 2,
-   "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
+   "text": "Kofi Ogunleye don collect the ball back for their half.",
    "evidence": [
     "ev_001791",
     "ev_001873"
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "pcm:OST:essentials",
@@ -17371,13 +17297,15 @@
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "pcm:OST:full",
@@ -17391,13 +17319,15 @@
    ],
    "moment_id": "mo_0105",
    "type": "high_turnover",
-   "source": "offline",
-   "attempts": 1,
-   "rejected": [],
-   "angle": "Ostbury Town on top since minute 90",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 0
+   "source": "template",
+   "attempts": 2,
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
+   "angle": "Ostbury Town on top since minute 91",
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18007
   },
   {
    "variant": "en:CRV:analyst",
@@ -17411,53 +17341,59 @@
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "en:CRV:essentials",
    "t": 5575.86,
    "expires_t": 5595.26,
    "priority": 1,
-   "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 4, Corran Vale 2.",
+   "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 3, Corran Vale 2.",
    "evidence": [
     "ev_001877",
     "ev_001878"
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "en:CRV:full",
    "t": 5575.86,
    "expires_t": 5595.26,
    "priority": 1,
-   "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 4, Corran Vale 2.",
+   "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 3, Corran Vale 2.",
    "evidence": [
     "ev_001877",
     "ev_001878"
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "en:OST:analyst",
@@ -17471,13 +17407,15 @@
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "en:OST:essentials",
@@ -17491,13 +17429,15 @@
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "en:OST:full",
@@ -17511,13 +17451,15 @@
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "pcm:CRV:analyst",
@@ -17531,13 +17473,15 @@
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "pcm:CRV:essentials",
@@ -17551,13 +17495,15 @@
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "pcm:CRV:full",
@@ -17571,13 +17517,15 @@
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "pcm:OST:analyst",
@@ -17591,33 +17539,37 @@
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "pcm:OST:essentials",
    "t": 5575.86,
    "expires_t": 5595.26,
    "priority": 1,
-   "text": "Goal! Kofi Ogunleye don score for Ostbury Town! Ostbury Town 4, Corran Vale 2.",
+   "text": "Goal! Kofi Ogunleye don score for Ostbury Town! Ostbury Town 3, Corran Vale 2.",
    "evidence": [
     "ev_001877",
     "ev_001878"
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "pcm:OST:full",
@@ -17631,13 +17583,15 @@
    ],
    "moment_id": "mo_0106",
    "type": "goal",
-   "source": "offline",
+   "source": "template",
    "attempts": 2,
-   "rejected": [],
+   "rejected": [
+    "no line (ChatClientException)"
+   ],
    "angle": "a goal: say who scored and the score",
-   "model": "templates, fault rate 0.25",
-   "provider": "offline",
-   "ms": 16
+   "model": "openai/gpt-4o-mini",
+   "provider": "github-models",
+   "ms": 18137
   },
   {
    "variant": "en:CRV:analyst",
@@ -18291,5 +18245,19 @@
    "provider": "offline",
    "ms": 16
   }
- ]
+ ],
+ "outside_window": {
+  "provider": "offline",
+  "model": "templates, fault rate 0.25",
+  "stats": {
+   "lines_aired": 872,
+   "assignments": 88,
+   "first_attempt_pass_rate": 0.78,
+   "rejections": 192,
+   "template_fallbacks": 0,
+   "aired_with_a_wrong_number": 0,
+   "median_ms_to_line": 15.0,
+   "slowest_ms_to_line": 32
+  }
+ }
 }

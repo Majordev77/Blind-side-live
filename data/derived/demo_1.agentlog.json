@@ -24201,11 +24201,18 @@
   "t": 5488.6,
   "clock": 5341.14,
   "agent": "editor",
+  "action": "storyline",
+  "text": "Corran Vale pressing high since minute 90"
+ },
+ {
+  "t": 5488.6,
+  "clock": 5341.14,
+  "agent": "editor",
   "action": "assigned",
   "moment_id": "mo_0103",
   "type": "hard_pass",
   "priority": 3,
-  "angle": "Corran Vale pressing high since minute 89",
+  "angle": "Corran Vale pressing high since minute 90",
   "levels": [
    "full",
    "analyst"
@@ -24216,89 +24223,149 @@
   "t": 5488.6,
   "clock": 5341.14,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0103",
-  "variant": "en:OST:full",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 91
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
+  "moment_id": "mo_0103",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4546
+ },
+ {
+  "t": 5488.6,
+  "clock": 5341.14,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0103",
+  "variant": "en:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5488.6,
+  "clock": 5341.14,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "en:OST:analyst",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. Only a 65 percent pass.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "en:CRV:full",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "en:CRV:analyst",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. Only a 66 percent pass.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "pcm:OST:full",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola!",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "pcm:OST:analyst",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola! Na 65 percent pass be that.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "pcm:CRV:full",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola! That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5488.6,
+  "clock": 5341.14,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0103",
+  "variant": "pcm:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0103",
-  "variant": "pcm:CRV:analyst",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola! Na 65 percent pass be that.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4618
+ },
+ {
+  "t": 5488.6,
+  "clock": 5341.14,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0103",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9002
  },
  {
   "t": 5488.6,
@@ -24307,22 +24374,24 @@
   "action": "fail",
   "moment_id": "mo_0103",
   "variant": "en:OST:full",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. That is 2 in a row.",
+  "text": "",
   "reasons": [
-   "number 2 is not in the facts"
+   "no line (ChatClientException)"
   ],
-  "attempt": 1
+  "attempt": 2
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "en:OST:analyst",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. Only a 65 percent pass.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 5488.6,
@@ -24331,11 +24400,11 @@
   "action": "fail",
   "moment_id": "mo_0103",
   "variant": "en:CRV:full",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. That is 2 in a row.",
+  "text": "",
   "reasons": [
-   "number 2 is not in the facts"
+   "no line (ChatClientException)"
   ],
-  "attempt": 1
+  "attempt": 2
  },
  {
   "t": 5488.6,
@@ -24344,33 +24413,37 @@
   "action": "fail",
   "moment_id": "mo_0103",
   "variant": "en:CRV:analyst",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. Only a 66 percent pass.",
+  "text": "",
   "reasons": [
-   "number 66 is not in the facts"
+   "no line (ChatClientException)"
   ],
-  "attempt": 1
+  "attempt": 2
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "pcm:OST:full",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola!",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "pcm:OST:analyst",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola! Na 65 percent pass be that.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 5488.6,
@@ -24379,110 +24452,96 @@
   "action": "fail",
   "moment_id": "mo_0103",
   "variant": "pcm:CRV:full",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola! That is 2 in a row.",
+  "text": "",
   "reasons": [
-   "number 2 is not in the facts"
+   "no line (ChatClientException)"
   ],
-  "attempt": 1
+  "attempt": 2
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0103",
   "variant": "pcm:CRV:analyst",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola! Na 65 percent pass be that.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "template",
   "moment_id": "mo_0103",
   "variant": "en:OST:full",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola.",
-  "attempt": 2,
-  "ms": 0
+  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola."
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0103",
+  "variant": "en:OST:analyst",
+  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. Only a 65 percent pass."
+ },
+ {
+  "t": 5488.6,
+  "clock": 5341.14,
+  "agent": "verifier",
+  "action": "template",
   "moment_id": "mo_0103",
   "variant": "en:CRV:full",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola.",
-  "attempt": 2,
-  "ms": 0
+  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola."
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "template",
   "moment_id": "mo_0103",
   "variant": "en:CRV:analyst",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. Only a 65 percent pass.",
-  "attempt": 2,
-  "ms": 0
+  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. Only a 65 percent pass."
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
-  "agent": "narrator",
-  "action": "draft",
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0103",
+  "variant": "pcm:OST:full",
+  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola!"
+ },
+ {
+  "t": 5488.6,
+  "clock": 5341.14,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0103",
+  "variant": "pcm:OST:analyst",
+  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola! Na 65 percent pass be that."
+ },
+ {
+  "t": 5488.6,
+  "clock": 5341.14,
+  "agent": "verifier",
+  "action": "template",
   "moment_id": "mo_0103",
   "variant": "pcm:CRV:full",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola!",
-  "attempt": 2,
-  "ms": 0
+  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola!"
  },
  {
   "t": 5488.6,
   "clock": 5341.14,
   "agent": "verifier",
-  "action": "pass",
+  "action": "template",
   "moment_id": "mo_0103",
-  "variant": "en:OST:full",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola.",
-  "reasons": [],
-  "attempt": 2
- },
- {
-  "t": 5488.6,
-  "clock": 5341.14,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0103",
-  "variant": "en:CRV:full",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola.",
-  "reasons": [],
-  "attempt": 2
- },
- {
-  "t": 5488.6,
-  "clock": 5341.14,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0103",
-  "variant": "en:CRV:analyst",
-  "text": "Superb pass from Kelechi Akande to Nnamdi Abiola. Only a 65 percent pass.",
-  "reasons": [],
-  "attempt": 2
- },
- {
-  "t": 5488.6,
-  "clock": 5341.14,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0103",
-  "variant": "pcm:CRV:full",
-  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola!",
-  "reasons": [],
-  "attempt": 2
+  "variant": "pcm:CRV:analyst",
+  "text": "Na correct pass be that, from Kelechi Akande to Nnamdi Abiola! Na 65 percent pass be that."
  },
  {
   "t": 5488.6,
@@ -24494,14 +24553,21 @@
   "group": "match:demo_1:speech:<lang>:<club>:<level>"
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "editor",
+  "action": "storyline",
+  "text": "Ostbury Town on top since minute 91"
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "editor",
   "action": "assigned",
   "moment_id": "mo_0104",
   "type": "hard_pass",
   "priority": 3,
-  "angle": "Ostbury Town on top since minute 90",
+  "angle": "Ostbury Town on top since minute 91",
   "levels": [
    "full",
    "analyst"
@@ -24509,232 +24575,332 @@
   "variants": 8
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0104",
-  "variant": "en:OST:full",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4515
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0104",
-  "variant": "en:OST:analyst",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. Only a 61 percent pass.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9006
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0104",
-  "variant": "en:CRV:full",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5553.77,
-  "clock": 5406.32,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0104",
-  "variant": "en:CRV:analyst",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. Only a 60 percent pass.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5553.77,
-  "clock": 5406.32,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0104",
-  "variant": "pcm:OST:full",
-  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde!",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5553.77,
-  "clock": 5406.32,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0104",
-  "variant": "pcm:OST:analyst",
-  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde! Na 60 percent pass be that.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5553.77,
-  "clock": 5406.32,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0104",
-  "variant": "pcm:CRV:full",
-  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde!",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5553.77,
-  "clock": 5406.32,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0104",
-  "variant": "pcm:CRV:analyst",
-  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde! Na 60 percent pass be that.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5553.77,
-  "clock": 5406.32,
-  "agent": "verifier",
-  "action": "pass",
-  "moment_id": "mo_0104",
-  "variant": "en:OST:full",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde.",
-  "reasons": [],
-  "attempt": 1
- },
- {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "verifier",
   "action": "fail",
   "moment_id": "mo_0104",
-  "variant": "en:OST:analyst",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. Only a 61 percent pass.",
+  "variant": "en:OST:full",
+  "text": "",
   "reasons": [
-   "number 61 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "verifier",
   "action": "fail",
   "moment_id": "mo_0104",
-  "variant": "en:CRV:full",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. That is 2 in a row.",
+  "variant": "en:OST:analyst",
+  "text": "",
   "reasons": [
-   "number 2 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
+  "moment_id": "mo_0104",
+  "variant": "en:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0104",
   "variant": "en:CRV:analyst",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. Only a 60 percent pass.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0104",
   "variant": "pcm:OST:full",
-  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0104",
   "variant": "pcm:OST:analyst",
-  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde! Na 60 percent pass be that.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0104",
   "variant": "pcm:CRV:full",
-  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde!",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0104",
   "variant": "pcm:CRV:analyst",
-  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde! Na 60 percent pass be that.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0104",
-  "variant": "en:OST:analyst",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. Only a 60 percent pass.",
-  "attempt": 2,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4495
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0104",
-  "variant": "en:CRV:full",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde.",
-  "attempt": 2,
-  "ms": 0
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9008
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0104",
-  "variant": "en:OST:analyst",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. Only a 60 percent pass.",
-  "reasons": [],
+  "variant": "en:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0104",
-  "variant": "en:CRV:full",
-  "text": "Superb pass from Ruben Ugwu to Tariq Lunde.",
-  "reasons": [],
+  "variant": "en:OST:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
  },
  {
-  "t": 5553.77,
-  "clock": 5406.32,
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0104",
+  "variant": "en:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0104",
+  "variant": "en:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0104",
+  "variant": "pcm:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0104",
+  "variant": "pcm:OST:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0104",
+  "variant": "pcm:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0104",
+  "variant": "pcm:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0104",
+  "variant": "en:OST:full",
+  "text": "Superb pass from Ruben Ugwu to Tariq Lunde."
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0104",
+  "variant": "en:OST:analyst",
+  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. Only a 60 percent pass."
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0104",
+  "variant": "en:CRV:full",
+  "text": "Superb pass from Ruben Ugwu to Tariq Lunde."
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0104",
+  "variant": "en:CRV:analyst",
+  "text": "Superb pass from Ruben Ugwu to Tariq Lunde. Only a 60 percent pass."
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0104",
+  "variant": "pcm:OST:full",
+  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde!"
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0104",
+  "variant": "pcm:OST:analyst",
+  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde! Na 60 percent pass be that."
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0104",
+  "variant": "pcm:CRV:full",
+  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde!"
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0104",
+  "variant": "pcm:CRV:analyst",
+  "text": "Na correct pass be that, from Ruben Ugwu to Tariq Lunde! Na 60 percent pass be that."
+ },
+ {
+  "t": 5550.9,
+  "clock": 5403.44,
   "agent": "publisher",
   "action": "published",
   "moment_id": "mo_0104",
@@ -24742,14 +24908,14 @@
   "group": "match:demo_1:speech:<lang>:<club>:<level>"
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "editor",
   "action": "assigned",
   "moment_id": "mo_0105",
   "type": "high_turnover",
   "priority": 2,
-  "angle": "Ostbury Town on top since minute 90",
+  "angle": "Ostbury Town on top since minute 91",
   "levels": [
    "essentials",
    "full",
@@ -24758,272 +24924,472 @@
   "variants": 12
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
+  "moment_id": "mo_0105",
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4498
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0105",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 8995
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:OST:essentials",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:OST:full",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:OST:analyst",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:CRV:essentials",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town. That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:CRV:full",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:CRV:analyst",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:OST:essentials",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:OST:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:OST:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:CRV:essentials",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:CRV:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
-  "agent": "narrator",
-  "action": "draft",
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:CRV:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
-  "attempt": 1,
-  "ms": 0
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 1
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0105",
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4502
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "narrator",
+  "action": "failed",
+  "moment_id": "mo_0105",
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9004
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:OST:essentials",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:OST:full",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:OST:analyst",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:CRV:essentials",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town. That is 2 in a row.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:CRV:full",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "en:CRV:analyst",
-  "text": "Kofi Ogunleye wins it back high up for Ostbury Town.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:OST:essentials",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:OST:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:OST:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:CRV:essentials",
-  "text": "Kofi Ogunleye don collect the ball back for their half.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:CRV:full",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0105",
   "variant": "pcm:CRV:analyst",
-  "text": "Kofi Ogunleye don collect the ball back for their half. That is 2 in a row.",
-  "reasons": [],
-  "attempt": 1
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
  },
  {
-  "t": 5567.52,
-  "clock": 5420.07,
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "en:OST:essentials",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "en:OST:full",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "en:OST:analyst",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "en:CRV:essentials",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "en:CRV:full",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "en:CRV:analyst",
+  "text": "Kofi Ogunleye wins it back high up for Ostbury Town."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "pcm:OST:essentials",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "pcm:OST:full",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "pcm:OST:analyst",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "pcm:CRV:essentials",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "pcm:CRV:full",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0105",
+  "variant": "pcm:CRV:analyst",
+  "text": "Kofi Ogunleye don collect the ball back for their half."
+ },
+ {
+  "t": 5566.09,
+  "clock": 5418.63,
   "agent": "publisher",
   "action": "published",
   "moment_id": "mo_0105",
@@ -25050,154 +25416,48 @@
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0106",
-  "variant": "en:OST:essentials",
-  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! Ostbury Town 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4519
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0106",
-  "variant": "en:OST:full",
-  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! Ostbury Town 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "en:OST:analyst",
-  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! From 5 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "en:CRV:essentials",
-  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 4, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "en:CRV:full",
-  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 4, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "en:CRV:analyst",
-  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. From 5 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "pcm:OST:essentials",
-  "text": "Goal! Kofi Ogunleye don score for Ostbury Town! Ostbury Town 4, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "pcm:OST:full",
-  "text": "Goal! Kofi Ogunleye don score for Ostbury Town! Ostbury Town 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "pcm:OST:analyst",
-  "text": "Goal! Kofi Ogunleye don score for Ostbury Town! From 4 metres. Ostbury Town 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "pcm:CRV:essentials",
-  "text": "Ostbury Town don score. Na Kofi Ogunleye. Ostbury Town 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "pcm:CRV:full",
-  "text": "Ostbury Town don score. Na Kofi Ogunleye. Ostbury Town 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
- },
- {
-  "t": 5575.26,
-  "clock": 5427.81,
-  "agent": "narrator",
-  "action": "draft",
-  "moment_id": "mo_0106",
-  "variant": "pcm:CRV:analyst",
-  "text": "Ostbury Town don score. Na Kofi Ogunleye. From 4 metres. Ostbury Town 3, Corran Vale 2.",
-  "attempt": 1,
-  "ms": 0
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9004
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "en:OST:essentials",
-  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! Ostbury Town 3, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "en:OST:full",
-  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! Ostbury Town 3, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
@@ -25207,9 +25467,9 @@
   "action": "fail",
   "moment_id": "mo_0106",
   "variant": "en:OST:analyst",
-  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! From 5 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2.",
+  "text": "",
   "reasons": [
-   "number 5 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
@@ -25217,22 +25477,26 @@
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "en:CRV:essentials",
-  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 4, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "en:CRV:full",
-  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 4, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
@@ -25242,9 +25506,9 @@
   "action": "fail",
   "moment_id": "mo_0106",
   "variant": "en:CRV:analyst",
-  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. From 5 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2.",
+  "text": "",
   "reasons": [
-   "number 5 is not in the facts"
+   "no line (ChatClientException)"
   ],
   "attempt": 1
  },
@@ -25252,111 +25516,365 @@
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "pcm:OST:essentials",
-  "text": "Goal! Kofi Ogunleye don score for Ostbury Town! Ostbury Town 4, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "pcm:OST:full",
-  "text": "Goal! Kofi Ogunleye don score for Ostbury Town! Ostbury Town 3, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "pcm:OST:analyst",
-  "text": "Goal! Kofi Ogunleye don score for Ostbury Town! From 4 metres. Ostbury Town 3, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "pcm:CRV:essentials",
-  "text": "Ostbury Town don score. Na Kofi Ogunleye. Ostbury Town 3, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "pcm:CRV:full",
-  "text": "Ostbury Town don score. Na Kofi Ogunleye. Ostbury Town 3, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "pcm:CRV:analyst",
-  "text": "Ostbury Town don score. Na Kofi Ogunleye. From 4 metres. Ostbury Town 3, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 1
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0106",
-  "variant": "en:OST:analyst",
-  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! From 4 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2.",
-  "attempt": 2,
-  "ms": 0
+  "lang": "en",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 4504
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "narrator",
-  "action": "draft",
+  "action": "failed",
   "moment_id": "mo_0106",
-  "variant": "en:CRV:analyst",
-  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. From 4 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2.",
-  "attempt": 2,
-  "ms": 0
+  "lang": "pcm",
+  "reason": "ChatClientException",
+  "detail": "(\"<class 'agent_framework_openai._chat_completion_client.OpenAIChatCompletionClient'> service failed to complete the prompt: 'str' object has no attribute 'choices'\", AttributeError(\"'str' object has no attribute 'choices'\")) | 'str' object has no attribute 'choices'",
+  "ms": 9125
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "en:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "en:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "en:OST:analyst",
-  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! From 4 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
  },
  {
   "t": 5575.26,
   "clock": 5427.81,
   "agent": "verifier",
-  "action": "pass",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "en:CRV:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "en:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
   "moment_id": "mo_0106",
   "variant": "en:CRV:analyst",
-  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. From 4 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2.",
-  "reasons": [],
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
   "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "pcm:OST:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "pcm:OST:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "pcm:OST:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "pcm:CRV:essentials",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "pcm:CRV:full",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "fail",
+  "moment_id": "mo_0106",
+  "variant": "pcm:CRV:analyst",
+  "text": "",
+  "reasons": [
+   "no line (ChatClientException)"
+  ],
+  "attempt": 2
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "en:OST:essentials",
+  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "en:OST:full",
+  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "en:OST:analyst",
+  "text": "Goal! Kofi Ogunleye scores for Ostbury Town! From 4 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "en:CRV:essentials",
+  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "en:CRV:full",
+  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "en:CRV:analyst",
+  "text": "Goal for Ostbury Town. Kofi Ogunleye scores. From 4 metres, at 69 kilometres an hour. Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "pcm:OST:essentials",
+  "text": "Goal! Kofi Ogunleye don score for Ostbury Town! Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "pcm:OST:full",
+  "text": "Goal! Kofi Ogunleye don score for Ostbury Town! Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "pcm:OST:analyst",
+  "text": "Goal! Kofi Ogunleye don score for Ostbury Town! From 4 metres. Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "pcm:CRV:essentials",
+  "text": "Ostbury Town don score. Na Kofi Ogunleye. Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "pcm:CRV:full",
+  "text": "Ostbury Town don score. Na Kofi Ogunleye. Ostbury Town 3, Corran Vale 2."
+ },
+ {
+  "t": 5575.26,
+  "clock": 5427.81,
+  "agent": "verifier",
+  "action": "template",
+  "moment_id": "mo_0106",
+  "variant": "pcm:CRV:analyst",
+  "text": "Ostbury Town don score. Na Kofi Ogunleye. From 4 metres. Ostbury Town 3, Corran Vale 2."
  },
  {
   "t": 5575.26,
