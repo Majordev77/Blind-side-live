@@ -177,7 +177,7 @@ class EditorExecutor(Executor):
     def __init__(self, desk: Desk) -> None:
         super().__init__(id="editor")
         self.desk = desk
-        self.agent = Agent(client=desk.client, name="Editor", instructions=EDITOR_RULES) if desk.model.writes else None
+        self.agent = Agent(client=desk.client, name="Editor", instructions=EDITOR_RULES, default_options=desk.model.options or None) if desk.model.writes else None
 
     @handler
     async def on_tick(self, tick: Tick, ctx: WorkflowContext[Assignment]) -> None:
@@ -318,7 +318,7 @@ class NarratorExecutor(Executor):
             },
         }
         started = time.monotonic()
-        agent = Agent(client=self.desk.client, name=f"Narrator-{lang}", instructions=NARRATOR_RULES)
+        agent = Agent(client=self.desk.client, name=f"Narrator-{lang}", instructions=NARRATOR_RULES, default_options=self.desk.model.options or None)
         try:
             budget = max(0.5, a.remaining)
             reply = await asyncio.wait_for(agent.run(json.dumps(request, ensure_ascii=False)), timeout=budget)
@@ -345,7 +345,7 @@ class VerifierExecutor(Executor):
     def __init__(self, desk: Desk) -> None:
         super().__init__(id="verifier")
         self.desk = desk
-        self.checker = Agent(client=desk.client, name="Checker", instructions=CHECKER_RULES) if desk.model.writes else None
+        self.checker = Agent(client=desk.client, name="Checker", instructions=CHECKER_RULES, default_options=desk.model.options or None) if desk.model.writes else None
         league_names = desk.tools.names
         self.all_clubs = {c: n for c, n in _league_clubs().items()}
         self.league_names = league_names

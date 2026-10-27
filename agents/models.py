@@ -22,7 +22,7 @@ import hashlib
 import json
 import os
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
@@ -36,6 +36,7 @@ class ModelInfo:
     provider: str
     model: str
     writes: bool  # False when no model writes (offline): lines are templates
+    options: dict[str, Any] = field(default_factory=dict, compare=False)  # chat options every agent sends
 
 
 def make_client() -> tuple[Any, ModelInfo]:
@@ -77,14 +78,42 @@ def make_client() -> tuple[Any, ModelInfo]:
         if url:
             # Foundry Local 0.12+ serves an OpenAI-compatible API; load the model first (foundry model load <id>).
             from agent_framework.openai import OpenAIChatCompletionClient
+            from openai import AsyncOpenAI, DefaultAsyncHttpxClient
 
-            client = OpenAIChatCompletionClient(model=model, base_url=url.rstrip("/") + "/v1", api_key="foundry-local")
-            return client, ModelInfo("foundry-local", model, True)
+            # A laptop GPU runs one generation at a time: two at once dropped the connection after minutes.
+            # Replies need room for six variants of a line; the server's default length cut them off.
+            http = DefaultAsyncHttpxClient(transport=_OneAtATime(), timeout=900)
+            openai = AsyncOpenAI(base_url=url.rstrip("/") + "/v1", api_key="foundry-local", http_client=http, max_retries=1)
+            info = ModelInfo("foundry-local", model, True, {"max_tokens": 1500})
+            return OpenAIChatCompletionClient(model=model, async_client=openai), info
         from agent_framework.foundry import FoundryLocalClient  # pip install agent-framework-foundry-local --pre
 
         return FoundryLocalClient(model=model), ModelInfo("foundry-local", model, True)
     rate = float(os.environ.get("BLINDSIDE_FAULT_RATE", "0"))
     return OfflineWriter(fault_rate=rate), ModelInfo("offline", f"templates, fault rate {rate}", False)
+
+
+def _one_at_a_time_transport() -> Any:
+    import httpx2
+
+    class OneAtATime(httpx2.AsyncHTTPTransport):
+        """Sends one request at a time and reads its whole reply before letting the next one go."""
+
+        def __init__(self) -> None:
+            super().__init__()
+            self.lock: asyncio.Lock | None = None
+
+        async def handle_async_request(self, request: Any) -> Any:
+            self.lock = self.lock or asyncio.Lock()
+            async with self.lock:
+                response = await super().handle_async_request(request)
+                await response.aread()
+                return response
+
+    return OneAtATime()
+
+
+_OneAtATime = _one_at_a_time_transport
 
 
 class _Pacer:
