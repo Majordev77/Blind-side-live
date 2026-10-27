@@ -1,6 +1,7 @@
 """Which model the agents run on, chosen by BLINDSIDE_MODEL.
 
-- "github": GitHub Models (no Azure subscription), with a GitHub token.
+- "github": GitHub Models, with a GitHub token. GitHub retired the service on
+  30 July 2026; its endpoint now answers a bare "OK", so this no longer works.
 - "foundry": a Microsoft Foundry deployment (Azure), through Agent
   Framework's OpenAI-compatible chat client.
 - "foundry-local": Foundry Local on this machine (no Azure subscription),

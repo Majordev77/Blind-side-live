@@ -63,7 +63,7 @@ A writer never grades its own work, and a wrong number never reaches the listene
 ## Microsoft technology
 
 - **Microsoft Agent Framework** for the agent workflow (Editor, Narrator, Verifier, Publisher, with a retry loop)
-- **Foundry Local** runs the models on this machine; the same code runs on **Microsoft Foundry** by setting `BLINDSIDE_MODEL=foundry`
+- The model client sits behind one setting, `BLINDSIDE_MODEL`: **Microsoft Foundry** (`foundry`), **Foundry Local** (`foundry-local`) or no model (`offline`). The demo's saved commentary was written by the offline writer, which puts planted errors in front of the verifier; see [Results](#results).
 - **MCP** server exposing the match tools the agents use
 - **Microsoft neural voices** in Edge for speech
 - **GitHub Actions** and **GitHub Pages** for build, tests and hosting
