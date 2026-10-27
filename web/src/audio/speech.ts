@@ -10,12 +10,16 @@
 /** Languages the voice can speak: English and Nigerian Pidgin (on a Nigerian English voice where one exists). */
 export type Lang = 'en' | 'pcm'
 
-// A little quicker than conversation, so the caller keeps up with the ball; blind listeners are used to fast speech.
-let RATE = 1.15
+// Conversational pace by default: a blind tester could not keep up at 1.15. Listeners choose slower or faster in setup.
+let RATE = 1
 
-/** Speech rate, 1 (normal) to 2 (double): experienced screen reader users often listen fast. */
+/** How fast the commentators speak, chosen by the listener. */
+export type VoiceSpeed = 'slower' | 'normal' | 'faster'
+export const SPEED_RATE: Record<VoiceSpeed, number> = { slower: 0.85, normal: 1, faster: 1.3 }
+
+/** Speech rate, 0.7 to 2 (double): experienced screen reader users often listen fast, newcomers slower. */
 export function setSpeechRate(rate: number): void {
-  RATE = Math.min(2, Math.max(0.8, rate))
+  RATE = Math.min(2, Math.max(0.7, rate))
 }
 const NATURAL = /natural|neural|enhanced|premium|online/i
 
@@ -146,7 +150,7 @@ export function speak(
     // The caller is quicker and a touch brighter, like a play-by-play commentator.
     // Energy (0 to 1) lifts the caller as the ball nears goal: quicker and higher on a chance, highest on a goal.
     const e = Math.min(1, Math.max(0, energy))
-    u.rate = role === 'caller' ? Math.min(2, RATE * (1.15 + 0.2 * e)) : RATE
+    u.rate = role === 'caller' ? Math.min(2, RATE * (1.05 + 0.15 * e)) : RATE
     u.pitch = role === 'caller' ? Math.min(2, 1.05 + 0.25 * e) : 0.95
     u.volume = 1
     let done = false

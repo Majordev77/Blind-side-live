@@ -25,8 +25,9 @@ import { Crowd } from './crowd'
 import { danger, hrtfPosition, panFor, type Orientation } from './mapping'
 import { FIRST_SAMPLES, loadSamples, pick, SAMPLE_FILES, stadiumImpulse, type SampleName, type Samples } from './samples'
 
-const MASTER_LEVEL = 0.9
+const MASTER_LEVEL = 1
 const DUCK_LEVEL = 0.55 // the crowd and the ball stay audible under the voice, like a broadcast
+const CROWD_LEVEL = 0.75 // the crowd carries the match between strikes; a tester found everything but the ball too quiet
 
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v))
 
@@ -75,7 +76,7 @@ export class SoundEngine {
     stands.buffer = stadiumImpulse(ctx)
     this.sfx.connect(this.gain(0.3)).connect(stands).connect(this.duck)
     this.white = makeWhiteNoise(ctx, 2)
-    this.crowd = new Crowd(ctx, this.duck, 0.45)
+    this.crowd = new Crowd(ctx, this.duck, CROWD_LEVEL)
   }
 
   /** Resume the context (and play one silent sample for iOS). Rejects if sound cannot start. */
@@ -138,7 +139,7 @@ export class SoundEngine {
   /** Bring up the stadium. */
   start(at = this.ctx.currentTime + 0.05): void {
     this.stop()
-    this.crowd = new Crowd(this.ctx, this.duck, 0.45, this.samples)
+    this.crowd = new Crowd(this.ctx, this.duck, CROWD_LEVEL, this.samples)
     this.crowd.start(at)
     this.drumsUntil = 0
   }
@@ -156,13 +157,14 @@ export class SoundEngine {
     this.live.clear()
   }
 
-  /** Lower the match under the voice, the way a broadcast mix does. */
-  setDuck(on: boolean, strong = false): void {
+  /** Lower the match under the voice, the way a broadcast mix does. `light` dips it less, for the quick caller. */
+  setDuck(on: boolean, strong = false, light = false): void {
     const now = this.ctx.currentTime
     const g = this.duck.gain
     g.cancelScheduledValues(now)
     g.setValueAtTime(g.value, now)
-    g.linearRampToValueAtTime(on ? (strong ? 0.35 : DUCK_LEVEL) : 1, now + (on ? 0.1 : 0.5))
+    const level = strong ? 0.35 : light ? 0.75 : DUCK_LEVEL
+    g.linearRampToValueAtTime(on ? level : 1, now + (on ? 0.1 : 0.5))
   }
 
   /** A short tone in one ear, for the ear check at the start. */
@@ -297,8 +299,9 @@ export class SoundEngine {
     const p = clamp(power, 0, 1)
     const rec = pick(this.samples, 'kick')
     if (rec) {
-      // a real strike: harder kicks louder and a shade deeper
-      this.playSample(rec, t, out, 0.45 + 0.65 * p + (shot ? 0.25 : 0), (shot ? 0.9 : 1.04 - 0.1 * p) * (0.96 + Math.random() * 0.08))
+      // a real strike: harder kicks louder and a shade deeper. The recordings are hot, so kept well
+      // below the voice and the crowd; louder, they set off the compressor and pushed everything else down.
+      this.playSample(rec, t, out, 0.25 + 0.35 * p + (shot ? 0.15 : 0), (shot ? 0.9 : 1.04 - 0.1 * p) * (0.96 + Math.random() * 0.08))
       return
     }
     // leather click
@@ -318,7 +321,7 @@ export class SoundEngine {
     const kick = rec ? null : pick(this.samples, 'kick')
     if (rec || kick) {
       // a first touch is a softer, duller contact than a strike
-      this.playSample((rec ?? kick) as AudioBuffer, t, out, rec ? 0.35 + 0.25 * p : 0.16 + 0.12 * p, rec ? 1 : 0.78)
+      this.playSample((rec ?? kick) as AudioBuffer, t, out, rec ? 0.25 + 0.15 * p : 0.1 + 0.08 * p, rec ? 1 : 0.78)
       return
     }
     this.noise(t, t + 0.06).connect(this.filter('bandpass', 650, 1)).connect(this.env(t, 0.22 + 0.2 * p, 0.003, 0.04)).connect(out)
@@ -392,7 +395,7 @@ export class SoundEngine {
       let at = t
       for (const len of blasts) {
         const rec = (len >= 0.5 ? long : short) ?? long
-        if (rec) this.playSample(rec, at, this.sfx, 0.6, 1)
+        if (rec) this.playSample(rec, at, this.sfx, 0.4, 1)
         at += Math.max(len, rec?.duration ?? len) + 0.15
       }
       return

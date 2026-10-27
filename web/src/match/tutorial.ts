@@ -16,20 +16,24 @@ const OTHER = 'OPP'
 
 const LINES: Record<Lang, string[]> = {
   en: [
-    'Before kickoff: twenty seconds to learn the sounds.',
+    'Before kickoff: half a minute to learn the sounds.',
     'This is a pass. Hear the ball travel from your left ear to your right.',
+    'When the other team attacks, the ball comes back toward your left ear, toward your own goal.',
     'Your team always attacks toward your right ear. As an attack gets close to goal, the crowd builds.',
     'A shot.',
     'And a goal!',
-    'The commentator names who has the ball and where. Tap Where is the ball at any time. Here we go!',
+    'The commentator names who has the ball and where.',
+    'At the bottom of the screen is a big button: Where is the ball. Tap it any time to hear who has the ball, where, and the score. Below it are Repeat, Detail, Pause, and Personalise, to change your language, club or voice speed. Here we go!',
   ],
   pcm: [
-    'Before the match start: make we learn the sounds for twenty seconds.',
+    'Before the match start: make we learn the sounds small.',
     'This one na pass. Hear as the ball dey move from your left ear go your right.',
+    'When the other team dey attack, the ball go come back to your left ear, near your own goal.',
     'Your team dey always attack go your right ear. When dem near the goal, the crowd go dey shout.',
     'Shot.',
     'Goal!',
-    'The commentator go dey tell you who get the ball and where e dey. Press Where the ball dey any time. Make we go!',
+    'The commentator go dey tell you who get the ball and where e dey.',
+    'For the bottom of the screen, one big button dey: Where is the ball. Press am any time to hear who get the ball, where e dey, and the score. Under am na Repeat, Detail, Pause, and Personalise, to change your language, club or how fast the voice dey talk. Make we go!',
   ],
 }
 
@@ -74,22 +78,28 @@ export async function runTutorial(engine: SoundEngine, lang: Lang, mode: Paramet
   await pause(2200, signal)
 
   await sayAndWait(say[2] as string, lang, signal)
+  // and back again: the other side attacking, toward the listener's own goal on the left
+  play(cue(0, 'pass', [88, 30], [18, 38], { team: OTHER, outcome: 'complete', distance_m: 70, subtype: 'long_ball', duration: 1.6 }))
+  await pause(2200, signal)
+
+  await sayAndWait(say[3] as string, lang, signal)
   // a short attack: three passes getting closer to the goal on your right
   const attack: [Point, Point, number][] = [[[55, 30], [72, 40], 0], [[72, 40], [86, 24], 1.2], [[86, 24], [95, 36], 2.4]]
   for (const [a, b, d] of attack) play(cue(0, 'pass', a, b, { outcome: 'complete', distance_m: 18, duration: 0.8 }), d)
   await pause(3600, signal)
 
-  await sayAndWait(say[3] as string, lang, signal)
+  await sayAndWait(say[4] as string, lang, signal)
   play(cue(0, 'shot', [95, 36], [105, 35], { outcome: 'on_target', speed_kmh: 95, xg: 0.5, duration: 0.45 }))
   play(cue(0, 'save', [104, 35], [104, 35], { team: OTHER }), 0.5)
   await pause(2200, signal)
 
-  await sayAndWait(say[4] as string, lang, signal)
+  await sayAndWait(say[5] as string, lang, signal)
   play(cue(0, 'shot', [96, 33], [105, 34], { outcome: 'goal', speed_kmh: 105, xg: 0.6, duration: 0.4 }))
   play(cue(0, 'goal', [105, 34], [105, 34]), 0.45)
   await pause(3200, signal)
 
-  await sayAndWait(say[5] as string, lang, signal)
+  await sayAndWait(say[6] as string, lang, signal)
+  await sayAndWait(say[7] as string, lang, signal)
   if (signal.aborted) cancelSpeech()
   engine.stop()
 }

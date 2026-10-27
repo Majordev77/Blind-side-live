@@ -11,7 +11,7 @@
  * outcomes), so it cannot say anything the match data does not contain.
  */
 
-import type { Cue, Point } from './types'
+import type { Cue, Detail, Point } from './types'
 
 export type Lang = 'en' | 'pcm'
 
@@ -140,10 +140,16 @@ const SAY = {
   },
 }
 
-const MIN_GAP = 1.4 // seconds between name calls, so the caller never gabbles
+/**
+ * Seconds between the caller's name calls at each detail level. Shots, saves, goals,
+ * tackles and changes of possession are always called; this spaces out the rest.
+ * A blind tester could not keep up with a name every 1.4 seconds.
+ */
+export const CALL_GAP: Record<Detail, number> = { essentials: 6, full: 4, analyst: 2.5 }
 
 /** Every call for a stream of cues, in time order. */
-export function buildCalls(cues: Cue[], names: Names, lang: Lang): Call[] {
+export function buildCalls(cues: Cue[], names: Names, lang: Lang, detail: Detail = 'full'): Call[] {
+  const MIN_GAP = CALL_GAP[detail]
   const say = SAY[lang]
   const calls: Call[] = []
   let team: string | undefined

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { SoundEngine } from '../audio/engine'
 import { along } from '../audio/mapping'
+import { setSpeechRate, SPEED_RATE } from '../audio/speech'
 import { club, loadAgentLines, loadMatch, SURNAMES, type AgentLine } from '../match/data'
 import { MatchPlayer, type Snapshot } from '../match/player'
 import { runTutorial } from '../match/tutorial'
@@ -75,6 +76,7 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
     if (!data || agentLines === undefined) return
     let alive = true
     let raf = 0
+    setSpeechRate(SPEED_RATE[choices.speed ?? 'normal'])
     const name = (code: string) => club(code).name
     const names = { home: data.info.home, away: data.info.away, club: name, player: (id: string) => SURNAMES.get(id) ?? id }
     const { from, listener: fan } = plan(data, choices)
@@ -170,9 +172,10 @@ export function Match({ engine, choices, onPersonalise }: { engine: SoundEngine;
         <h1 className="tutorial-title">Learn the sounds</h1>
         <ol className="tutorial-steps">
           <li>A pass travels from your left ear to your right.</li>
+          <li>When the other side attacks, the ball comes back to your left.</li>
           <li>The crowd builds as an attack nears goal.</li>
           <li>A shot, then a goal.</li>
-          <li>Tap “Where’s the ball?” any time.</li>
+          <li>The big button at the bottom: “Where’s the ball?” Tap it any time.</li>
         </ol>
         <button className="skip" onClick={() => skip.current?.abort()} aria-keyshortcuts="S">
           Skip to the match

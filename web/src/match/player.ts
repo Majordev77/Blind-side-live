@@ -11,8 +11,9 @@
  * - shots, saves and goals interrupt anything;
  * - a name call is spoken only while it is fresh, or dropped;
  * - the goal build-up and the analyst wait for silence, and expire;
- * - the match ducks under the analyst, not under the caller, so the roar
- *   for a goal is never pushed down.
+ * - the match ducks under the analyst, a little under the caller's name
+ *   calls, and never under shots, saves and goals, so the roar is not
+ *   pushed down.
  */
 
 import { dueCues, MatchClock } from '../audio/clock'
@@ -249,7 +250,7 @@ export class MatchPlayer {
   /** Merge the caller's calls and the analyst's lines into one time-ordered queue. */
   private build(): void {
     const { lang, detail, listener } = this.settings
-    const calls: Spoken[] = buildCalls(this.data.cues, this.names, lang).map((c: Call, i) => ({
+    const calls: Spoken[] = buildCalls(this.data.cues, this.names, lang, detail).map((c: Call, i) => ({
       id: `call_${i}`,
       t: c.t,
       expires: c.expires,
@@ -321,12 +322,14 @@ export class MatchPlayer {
     this.current = s
     this.lastSpoken = s
     this.onCaption?.(s)
-    const analyst = s.role === 'analyst'
-    if (analyst) this.engine.setDuck(true)
+    // The match dips under both voices so every word is heard; less under the quick caller,
+    // and not at all for shots, saves and goals, so the roar is never pushed down.
+    const ducks = s.role === 'analyst' || s.rank !== 'big'
+    if (ducks) this.engine.setDuck(true, false, s.role !== 'analyst')
     const done = () => {
       if (this.current !== s) return
       this.current = null
-      if (analyst) this.engine.setDuck(false)
+      if (ducks) this.engine.setDuck(false)
     }
     if (s.rank === 'big' && !s.text.startsWith('GOAL')) buzz([60]) // a shot or a save: one short pulse
     if (!speak(s.text, this.settings.lang, { onEnd: done }, s.role, s.energy ?? 0)) done()

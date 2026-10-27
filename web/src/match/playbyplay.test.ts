@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { parseCues } from './data'
-import { buildCalls, buildUp, zoneOf, type Names } from './playbyplay'
+import { buildCalls, buildUp, CALL_GAP, zoneOf, type Names } from './playbyplay'
 
 const root = new URL('../../../', import.meta.url)
 const read = (path: string) => readFileSync(new URL(path, root), 'utf8')
@@ -58,7 +58,7 @@ describe.each(['demo_1', 'demo_2', 'demo_3'])('calls for %s', (id) => {
   it('never crowds name calls closer than the minimum gap', () => {
     const touches = calls.filter((c) => c.kind === 'touch')
     for (let i = 1; i < touches.length; i++) {
-      expect((touches[i] as { t: number }).t - (touches[i - 1] as { t: number }).t).toBeGreaterThanOrEqual(1.39)
+      expect((touches[i] as { t: number }).t - (touches[i - 1] as { t: number }).t).toBeGreaterThanOrEqual(CALL_GAP.full - 0.01)
     }
   })
 
@@ -99,10 +99,12 @@ describe.each(['demo_1', 'demo_2', 'demo_3'])('calls for %s', (id) => {
     })
   })
 
-  it('keeps the caller busy through the best three minutes', () => {
+  it('keeps the listener oriented through the best three minutes without crowding them', () => {
     const start = meta.demo.best_three_minutes.t
     const window = calls.filter((c) => c.t >= start && c.t < start + 180)
-    expect(window.length).toBeGreaterThan(25)
+    // at least one call every ten seconds or so, but well under the old one-every-seven-seconds pace a tester could not follow
+    expect(window.length).toBeGreaterThan(15)
+    expect(window.length).toBeLessThan(45)
     if (id === 'demo_1') {
       const mmss = (t: number) => {
         const s = cues.find((c) => c.t >= t)?.clock ?? 0

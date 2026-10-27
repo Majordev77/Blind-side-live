@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
-import { speak } from '../audio/speech'
+import { setSpeechRate, speak, SPEED_RATE, type VoiceSpeed } from '../audio/speech'
 import { club, DEMOS } from '../match/data'
 import type { Lang } from '../audio/speech'
 import type { AudioMode, Detail } from '../match/types'
 
 export interface Choices {
   lang: Lang
+  /** How fast the commentators speak. */
+  speed?: VoiceSpeed
   matchId: string
   listener: string
   mode: AudioMode
@@ -35,6 +37,15 @@ const STEPS: Step[] = [
     options: () => [
       { value: 'en', label: 'English' },
       { value: 'pcm', label: 'Nigerian Pidgin', hint: 'Commentary in Pidgin' },
+    ],
+  },
+  {
+    key: 'speed',
+    question: 'How fast should the commentator speak?',
+    options: () => [
+      { value: 'slower', label: 'Slower', hint: 'Easier to follow at first' },
+      { value: 'normal', label: 'Normal' },
+      { value: 'faster', label: 'Faster', hint: 'For fast screen reader listeners' },
     ],
   },
   {
@@ -76,7 +87,7 @@ const STEPS: Step[] = [
   },
 ]
 
-/** Four questions, one per screen, each answered with large real buttons. Each question is also spoken. */
+/** Six questions, one per screen, each answered with large real buttons. Each question is also spoken. */
 export function Setup({ onDone }: { onDone: (c: Choices) => void }) {
   const [step, setStep] = useState(0)
   const [choices, setChoices] = useState<Partial<Choices>>({})
@@ -92,6 +103,8 @@ export function Setup({ onDone }: { onDone: (c: Choices) => void }) {
 
   const pick = (value: string) => {
     const next = { ...choices, [current.key]: value }
+    // The rest of setup is spoken at the speed just chosen.
+    if (current.key === 'speed') setSpeechRate(SPEED_RATE[value as VoiceSpeed])
     setChoices(next)
     if (step + 1 < STEPS.length) setStep(step + 1)
     else onDone(next as Choices)
