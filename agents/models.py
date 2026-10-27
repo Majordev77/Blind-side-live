@@ -45,13 +45,12 @@ def make_client() -> tuple[Any, ModelInfo]:
         # GitHub Models (Plan B in docs/MVP.md): an OpenAI-compatible endpoint, signed in with a GitHub token.
         from agent_framework.openai import OpenAIChatCompletionClient
 
-        import httpx
-        from openai import AsyncOpenAI
+        from openai import AsyncOpenAI, DefaultAsyncHttpxClient
 
         model = os.environ.get("GITHUB_MODEL", "openai/gpt-4o-mini")
         # The free tier allows about 15 requests a minute: space them out rather than be refused.
         interval = float(os.environ.get("GITHUB_MODELS_INTERVAL", "4.5"))
-        http = httpx.AsyncClient(timeout=60, event_hooks={"request": [_Pacer(interval)]})
+        http = DefaultAsyncHttpxClient(timeout=60, event_hooks={"request": [_Pacer(interval)]})
         openai = AsyncOpenAI(base_url="https://models.github.ai/inference", api_key=os.environ["GITHUB_TOKEN"], http_client=http, max_retries=3)
         return OpenAIChatCompletionClient(model=model, async_client=openai), ModelInfo("github-models", model, True)
     if provider == "foundry":

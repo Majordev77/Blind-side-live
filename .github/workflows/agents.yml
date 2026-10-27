@@ -44,14 +44,15 @@ jobs:
         # One raw request, so a failure below can be read from the results commit.
         run: |
           python - <<'PY' | tee run.txt
-          import os, httpx
-          r = httpx.post("https://models.github.ai/inference/chat/completions", timeout=60,
+          import os, httpx2
+          r = httpx2.post("https://models.github.ai/inference/chat/completions", timeout=60,
                          headers={"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}", "Content-Type": "application/json"},
                          json={"model": os.environ["GITHUB_MODEL"], "messages": [{"role": "user", "content": "Say hello."}], "max_tokens": 10})
           print("model check:", r.status_code, r.headers.get("content-type"), r.text[:400].replace(chr(10), " "))
           PY
       - name: Run the agents
         run: |
+          set -o pipefail  # a crashed match fails the job, not just the log
           for m in $MATCHES; do
             python -m agents.run "$m" --merge --deadline "$DEADLINE" | tee -a run.txt
           done
@@ -60,6 +61,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B agents/model-run
-          git add data/derived
+          mkdir -p docs/results/runs && cp run.txt docs/results/runs/latest.txt
+          git add data/derived docs/results/runs/latest.txt
           git commit -m "Commentary written by $GITHUB_MODEL on GitHub Models" -m "$(cat run.txt)"
           git push -f origin agents/model-run
