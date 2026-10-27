@@ -35,26 +35,20 @@ Read the prompts as written. Do not explain the sounds before task 2.
 
 Fill in one block per tester.
 
-### Tester A
+### Tester A (26 October 2026, remote session)
 
-- Sight and tools: 
-- Date, setup (phone, browser, headphones): 
-- Task results:
-
-| # | Result | Notes |
-|---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
-| 6 | | |
-| 7 | | |
-| 8 | | |
-
-- Follow score (1 to 5): 
-- Quotes (exact words, with consent): 
-- Problems found, and what we changed: 
+- Problems found:
+  1. Could not keep up with the commentator: too many calls, too fast.
+  2. The voice was not loud enough.
+  3. The match was quiet apart from the whistle and the ball.
+  4. Heard passes only in the right ear.
+  5. Did not know how to use the app.
+- What we changed (commit 0482dc0):
+  1. The caller now speaks at most every 6 seconds on Essentials, 4 on Full and 2.5 on Analyst (it was every 1.4 seconds), and speech is back to normal speed. Setup now asks how fast the commentator should speak.
+  2. and 3. The recorded kicks and whistle are much quieter, the crowd is louder, and the match dips under both voices except on shots, saves and goals.
+  4. In the opening demo the listener's side is attacking, so the ball really is mostly on the right. The tutorial now also plays a pass back toward the left and explains it.
+  5. The tutorial now ends by describing the "Where's the ball?" button and the four controls below it.
+- To fill in: sight and screen reader, phone and browser, task results, follow score, quotes (with consent).
 
 ## Summary
 
