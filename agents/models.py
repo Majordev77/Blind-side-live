@@ -16,6 +16,7 @@ workflow code runs on all of them.
 
 from __future__ import annotations
 
+import asyncio
 import hashlib
 import json
 import os
@@ -44,9 +45,15 @@ def make_client() -> tuple[Any, ModelInfo]:
         # GitHub Models (Plan B in docs/MVP.md): an OpenAI-compatible endpoint, signed in with a GitHub token.
         from agent_framework.openai import OpenAIChatCompletionClient
 
+        import httpx
+        from openai import AsyncOpenAI
+
         model = os.environ.get("GITHUB_MODEL", "openai/gpt-4o-mini")
-        client = OpenAIChatCompletionClient(model=model, base_url="https://models.github.ai/inference", api_key=os.environ["GITHUB_TOKEN"])
-        return client, ModelInfo("github-models", model, True)
+        # The free tier allows about 15 requests a minute: space them out rather than be refused.
+        interval = float(os.environ.get("GITHUB_MODELS_INTERVAL", "4.5"))
+        http = httpx.AsyncClient(timeout=60, event_hooks={"request": [_Pacer(interval)]})
+        openai = AsyncOpenAI(base_url="https://models.github.ai/inference", api_key=os.environ["GITHUB_TOKEN"], http_client=http, max_retries=3)
+        return OpenAIChatCompletionClient(model=model, async_client=openai), ModelInfo("github-models", model, True)
     if provider == "foundry":
         from agent_framework.openai import OpenAIChatCompletionClient
 
@@ -78,6 +85,24 @@ def make_client() -> tuple[Any, ModelInfo]:
         return FoundryLocalClient(model=model), ModelInfo("foundry-local", model, True)
     rate = float(os.environ.get("BLINDSIDE_FAULT_RATE", "0"))
     return OfflineWriter(fault_rate=rate), ModelInfo("offline", f"templates, fault rate {rate}", False)
+
+
+class _Pacer:
+    """An httpx request hook that lets one request through every `interval` seconds."""
+
+    def __init__(self, interval: float) -> None:
+        self.interval = interval
+        self.next = 0.0
+        self.lock: asyncio.Lock | None = None
+
+    async def __call__(self, request: Any) -> None:
+        self.lock = self.lock or asyncio.Lock()
+        async with self.lock:
+            loop = asyncio.get_running_loop()
+            wait = self.next - loop.time()
+            if wait > 0:
+                await asyncio.sleep(wait)
+            self.next = loop.time() + self.interval
 
 
 def _load_dotenv() -> None:

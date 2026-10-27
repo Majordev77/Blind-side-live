@@ -1,10 +1,13 @@
 # Runs the commentary agents with a model on GitHub Models (Plan B in docs/MVP.md):
 # for each demo match, the model writes the best three minutes, merged into the
 # saved whole-match commentary. The results go to the agents/model-run branch
-# for review; nothing reaches main without a merge.
+# for review; nothing reaches main without a merge. Pushing to the agents/run
+# branch also starts it, with the defaults below.
 name: Generate commentary with a model
 
 on:
+  push:
+    branches: [agents/run]
   workflow_dispatch:
     inputs:
       model:
@@ -15,7 +18,7 @@ on:
         default: demo_1 demo_2 demo_3
       deadline:
         description: Seconds a line may take before its template airs
-        default: "30"
+        default: "180"
 
 permissions:
   contents: write
@@ -27,7 +30,9 @@ jobs:
     env:
       BLINDSIDE_MODE: local
       BLINDSIDE_MODEL: github
-      GITHUB_MODEL: ${{ inputs.model }}
+      GITHUB_MODEL: ${{ inputs.model || 'openai/gpt-4o-mini' }}
+      MATCHES: ${{ inputs.matches || 'demo_1 demo_2 demo_3' }}
+      DEADLINE: ${{ inputs.deadline || '180' }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
@@ -35,10 +40,20 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -e .
+      - name: Check the model answers
+        # One raw request, so a failure below can be read from the results commit.
+        run: |
+          python - <<'PY' | tee run.txt
+          import os, httpx
+          r = httpx.post("https://models.github.ai/inference/chat/completions", timeout=60,
+                         headers={"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}", "Content-Type": "application/json"},
+                         json={"model": os.environ["GITHUB_MODEL"], "messages": [{"role": "user", "content": "Say hello."}], "max_tokens": 10})
+          print("model check:", r.status_code, r.headers.get("content-type"), r.text[:400].replace(chr(10), " "))
+          PY
       - name: Run the agents
         run: |
-          for m in ${{ inputs.matches }}; do
-            python -m agents.run "$m" --merge --deadline "${{ inputs.deadline }}" | tee -a run.txt
+          for m in $MATCHES; do
+            python -m agents.run "$m" --merge --deadline "$DEADLINE" | tee -a run.txt
           done
       - name: Save the results to agents/model-run
         run: |
@@ -46,5 +61,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B agents/model-run
           git add data/derived
-          git commit -m "Commentary written by ${{ inputs.model }} on GitHub Models" -m "$(cat run.txt)"
+          git commit -m "Commentary written by $GITHUB_MODEL on GitHub Models" -m "$(cat run.txt)"
           git push -f origin agents/model-run

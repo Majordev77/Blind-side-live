@@ -192,6 +192,10 @@ def main() -> None:
     for k, v in stats.items():
         print(f"  {k}: {v}")
     for x in desk.log:
+        if x["action"] in ("failed", "model_failed", "model_check_skipped"):
+            print(f"  MODEL ERROR ({x['agent']}): {x.get('reason')}: {x.get('detail', '')}")
+            break
+    for x in desk.log:
         if x["agent"] == "verifier" and x["action"] == "fail":
             print(f"  REJECTED {x['variant']}: {x['text']!r} -> {'; '.join(x['reasons'])}")
             break

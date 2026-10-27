@@ -37,6 +37,12 @@ def speaking_time(text: str) -> float:
     return 0.4 + len(text.split()) / 2.6
 
 
+def _detail(exc: BaseException) -> str:
+    """The error's own message, with its cause, short enough for the agent log."""
+    parts = [str(exc)] + ([str(exc.__cause__)] if exc.__cause__ else [])
+    return " | ".join(p for p in parts if p)[:300]
+
+
 # ---------------------------------------------------------------- messages
 
 
@@ -212,7 +218,7 @@ class EditorExecutor(Executor):
                 self.desk.note("editor", "model_pick", picks=[{"moment_id": m["moment_id"], "angle": a} for m, a in chosen])
                 return chosen
         except Exception as exc:  # a slow or broken model must never stop the match
-            self.desk.note("editor", "model_failed", reason=type(exc).__name__)
+            self.desk.note("editor", "model_failed", reason=type(exc).__name__, detail=_detail(exc))
         return default
 
     def default_angle(self, m: dict) -> str:
@@ -328,7 +334,7 @@ class NarratorExecutor(Executor):
             return out
         except Exception as exc:
             reason = "late" if isinstance(exc, (asyncio.TimeoutError, TimeoutError)) else type(exc).__name__
-            self.desk.note("narrator", "failed", moment_id=m["moment_id"], lang=lang, reason=reason,
+            self.desk.note("narrator", "failed", moment_id=m["moment_id"], lang=lang, reason=reason, detail=_detail(exc),
                            ms=round((time.monotonic() - started) * 1000))
             return {v.key: {"text": "", "claims": [], "source": "none", "error": reason} for v in variants}
 
@@ -402,7 +408,7 @@ class VerifierExecutor(Executor):
             return {k: [f"model check: {r.get('reason', 'unsupported claim')}"] for k, r in results.items()
                     if k in lines and str(r.get("verdict", "")).lower() == "fail"}
         except Exception as exc:  # if the checker cannot answer, the code checks stand
-            self.desk.note("verifier", "model_check_skipped", moment_id=m["moment_id"], reason=type(exc).__name__)
+            self.desk.note("verifier", "model_check_skipped", moment_id=m["moment_id"], reason=type(exc).__name__, detail=_detail(exc))
             return {}
 
 
