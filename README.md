@@ -6,7 +6,7 @@ Built for the Microsoft Premier League Hackathon (October 2026), entered for **B
 
 - **Live demo:** https://majordev77.github.io/Blind-side-live/ (phone, headphones, Edge or Chrome)
 - **Companion screen:** https://majordev77.github.io/Blind-side-live/#companion (laptop)
-- **Video:** _link to add_
+- **Video:** https://youtu.be/IrY3Gcx--oc (under two minutes; wear headphones)
 
 ## Try it in two minutes
 
