@@ -14,6 +14,18 @@ Every planted error was caught by the code checks, sent back to the narrator onc
 
 Failure drills (`tests/test_agents.py`): with the model endpoint off, every goal is still announced and every line falls back to its template; with a model too slow for its deadline, templates air within the deadline.
 
-## Run 2: a model writes (to do)
+## Run 2: a real model, and why the demo does not use it
 
-To be run with Microsoft Foundry (or Foundry Local) as the narrator, editor and checker: first-attempt pass rate, rejections by reason, template fallback rate, lines aired with a wrong number, and median and slowest time to a line.
+We tried to have a real model write the commentary. It did not produce usable lines in time for the submission. Every failure was caught: the template aired instead, and no line reached the listener with a wrong number.
+
+**GitHub Models (Plan B).** Every request failed. GitHub retired GitHub Models on 30 July 2026, and its endpoint now answers a bare "OK", both from this machine and from GitHub's own Actions runners (raw request checked on both).
+
+**Foundry Local, Qwen2.5-3B-Instruct on a laptop GPU (DirectML), demo 1, best three minutes, 27 October.** The model loaded and answered: about 5.5 tokens a second on short replies and about 2.3 on long ones. The narrator asks for six variants of a line in one JSON reply, which took several minutes per call.
+
+| Attempt | Line deadline | What happened | Lines from the model | Template fallbacks | Aired with a wrong number |
+|---|---|---|---|---|---|
+| 1 | 120 s | Every narrator reply was late | 0 | 40 of 40 | **0** |
+| 2 | 900 s | Replies cut short by the server's default length; English and Pidgin calls at once dropped connections | 0 | 40 of 40 | **0** |
+| 3 | 900 s, one request at a time, 1500-token replies | Replies still ended mid-JSON | 0 | 40 of 40 | **0** |
+
+What this shows: the safety net works against a real, struggling model, not only against planted errors. What it does not show: the quality of model-written commentary. A model of this size on a laptop is far too slow for live use; live, the same agents would run on Microsoft Foundry (`BLINDSIDE_MODEL=foundry`), which needs the Azure subscription we could not verify in time. The saved demo commentary is therefore the offline writer's (run 1).

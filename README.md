@@ -57,8 +57,8 @@ A writer never grades its own work, and a wrong number never reaches the listene
 
 - **Verifier against planted errors:** a stand-in writer put a wrong number into a quarter of first drafts across all three demo matches. The verifier caught every one, the retry fixed it, and no line aired with a number outside its facts ([agent evaluation, run 1](docs/results/agent-eval.md)).
 - **Simulator calibration:** goals, shots and other per-match figures over 200 simulated matches fall within typical ranges ([calibration](docs/results/calibration.md)).
-- **Model-written commentary:** _to add (run 2)_.
-- **Listener test:** _to add_ ([session guide and results](docs/results/user-test.md)).
+- **A real model:** GitHub Models was retired in July 2026, and Qwen2.5-3B on Foundry Local ran on a laptop GPU but was too slow to finish a line. Across three attempts every line fell back to its template and none aired with a wrong number ([agent evaluation, run 2](docs/results/agent-eval.md)). The demo's commentary comes from the offline writer.
+- **Listener test:** a blind tester used the app in a remote session on 26 October and found five problems: the commentary was too fast and too busy, the voice too quiet, the match quiet apart from the ball and whistle, passes heard only on the right, and the controls unclear. All five were changed the same day; the changes have not yet been re-tested with a listener ([session guide and results](docs/results/user-test.md)).
 
 ## Microsoft technology
 
